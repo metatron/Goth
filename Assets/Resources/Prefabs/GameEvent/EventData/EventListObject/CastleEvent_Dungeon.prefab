@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &110198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 492706}
+  - 65: {fileID: 6559492}
+  - 114: {fileID: 11445330}
+  m_Layer: 0
+  m_Name: CastleEvent_Dungeon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &492706
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4700, y: 100, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!65 &6559492
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110198}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11445330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Dungeon
+  eventDataList:
+  - {fileID: 11409870, guid: a8a67593cee7e4d7bae13977539746bc, type: 2}
+  - {fileID: 11409870, guid: fa1495d74f3ee42b0acd43738eeb3043, type: 2}
+  - {fileID: 11409870, guid: 1a18a1a56bf834e65bd4ed1cebdd6891, type: 2}
+  - {fileID: 11409870, guid: 0e7e7331b67594bd3b5735a3a9dab8a2, type: 2}
+  - {fileID: 11409870, guid: d1c22fb3770cf4d06931df50e8e054fd, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: eventDataList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eventDataList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11409870, guid: a8a67593cee7e4d7bae13977539746bc,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: id
+      value: Dungeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eventDataList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11409870, guid: fa1495d74f3ee42b0acd43738eeb3043,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: eventDataList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11409870, guid: 1a18a1a56bf834e65bd4ed1cebdd6891,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: eventDataList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11409870, guid: 0e7e7331b67594bd3b5735a3a9dab8a2,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: eventDataList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11409870, guid: d1c22fb3770cf4d06931df50e8e054fd,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 110198}
+  m_IsPrefabParent: 1

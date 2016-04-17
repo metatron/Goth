@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - BGBack
+  - Player
+  - BGFront
+  - Fikidashi
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BGBack
+    uniqueID: 1582736581
+    locked: 0
+  - name: Player
+    uniqueID: 869762615
+    locked: 0
+  - name: BGFront
+    uniqueID: 4116076825
+    locked: 0
+  - name: Fukidashi
+    uniqueID: 786187073
+    locked: 0
+  - name: UI
+    uniqueID: 2591421295
+    locked: 0

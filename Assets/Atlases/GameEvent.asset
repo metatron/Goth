@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 529336600, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
+  m_Name: GameEvent
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 86014d816e1a04d09a09782d2c28189d, type: 2}
+  uvs:
+  - serializedVersion: 2
+    x: 0.6855469
+    y: 0.79003906
+    width: 0.111328125
+    height: 0.18847656
+  - serializedVersion: 2
+    x: 0.2998047
+    y: 0
+    width: 0.20898438
+    height: 0.21289062
+  - serializedVersion: 2
+    x: 0.2998047
+    y: 0.86035156
+    width: 0.16699219
+    height: 0.13085938
+  - serializedVersion: 2
+    x: 0
+    y: 0.30566406
+    width: 0.23046875
+    height: 0.3154297
+  - serializedVersion: 2
+    x: 0.84472656
+    y: 0.40820312
+    width: 0.15332031
+    height: 0.15527344
+  - serializedVersion: 2
+    x: 0.5
+    y: 0.21386719
+    width: 0.2841797
+    height: 0.12402344
+  - serializedVersion: 2
+    x: 0.66796875
+    y: 0.40820312
+    width: 0.17578125
+    height: 0.140625
+  - serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.29882812
+    height: 0.3046875
+  - serializedVersion: 2
+    x: 0.2998047
+    y: 0.40820312
+    width: 0.23730469
+    height: 0.13574219
+  - serializedVersion: 2
+    x: 0.2998047
+    y: 0.71484375
+    width: 0.18066406
+    height: 0.14453125
+  - serializedVersion: 2
+    x: 0.2998047
+    y: 0.21386719
+    width: 0.19921875
+    height: 0.19335938
+  - serializedVersion: 2
+    x: 0.5097656
+    y: 0
+    width: 0.29296875
+    height: 0.14941406
+  - serializedVersion: 2
+    x: 0.53808594
+    y: 0.40820312
+    width: 0.12890625
+    height: 0.19628906
+  - serializedVersion: 2
+    x: 0.80371094
+    y: 0
+    width: 0.17578125
+    height: 0.17480469
+  - serializedVersion: 2
+    x: 0
+    y: 0.6220703
+    width: 0.21191406
+    height: 0.23144531
+  - serializedVersion: 2
+    x: 0.53808594
+    y: 0.76464844
+    width: 0.14648438
+    height: 0.15527344
+  - serializedVersion: 2
+    x: 0.6855469
+    y: 0.60546875
+    width: 0.1171875
+    height: 0.18359375
+  - serializedVersion: 2
+    x: 0.21289062
+    y: 0.6220703
+    width: 0.08300781
+    height: 0.14453125
+  - serializedVersion: 2
+    x: 0.80371094
+    y: 0.60546875
+    width: 0.15722656
+    height: 0.13183594
+  - serializedVersion: 2
+    x: 0.78515625
+    y: 0.21386719
+    width: 0.1640625
+    height: 0.18554688
+  - serializedVersion: 2
+    x: 0.23144531
+    y: 0.30566406
+    width: 0.046875
+    height: 0.13964844
+  - serializedVersion: 2
+    x: 0
+    y: 0.8544922
+    width: 0.29785156
+    height: 0.14355469
+  - serializedVersion: 2
+    x: 0.2998047
+    y: 0.5449219
+    width: 0.17578125
+    height: 0.16894531
+  - serializedVersion: 2
+    x: 0.53808594
+    y: 0.60546875
+    width: 0.14648438
+    height: 0.15820312
+  - serializedVersion: 2
+    x: 0.5097656
+    y: 0.15039062
+    width: 0.14648438
+    height: 0.0390625
+  textureGUIDs:
+  - aa3200b0610cf4536a36e5c4dcb4117c
+  - d38a2af011d7346408711d97934e6ff8
+  - 8e1e40f19d1c24159aad487492794c3a
+  - 566da1f22046b499eab3c483f00a5572
+  - 8a12ea43fe5b545089c6b5ad616362b4
+  - e15b72a4735c843e9b85c8acb71f66c9
+  - e0b05465eca3e4a2685b82dfd4b434b0
+  - 4529e5a5c145040c2b86bd2ecdd8eddf
+  - 41d6e4b500af0457caf2a41605059927
+  - 3f313406e1390494bb7e132a414e2503
+  - e462d516962de4b84afaf135026a4779
+  - f541f8a7205fa4b1f8cc35eed3da86a2
+  - ed79ddf7727b34093b78b5b8d1da2b87
+  - b608272834fa84b69901ff2cefd98a11
+  - 646fe598a82bf47ef90af114a93d33f4
+  - fe5e3ed8b936c470ebbd2042709aaa94
+  - e030c7b99f0d24870b96f5bf595ce408
+  - 35b1b02acd7bc46948f94b722ea99bcf
+  - 8466413a8bf6e4f60b5c6c223b79544a
+  - 7bbe656ac55fa4d84a98e9332abfda5b
+  - 86fb9fdaf8c194cae8747c904bc65b3e
+  - 0f65d23ba29aa47aebe0eddf8229e033
+  - 50de0f4b1c2804ec8b0533d051005986
+  - 4fe16f1dabe434cd8aa20e4c9affe4ce
+  - 4341696d9c0e741fcabce704edf7eaab
+  textureSizes:
+  - {x: 114, y: 193}
+  - {x: 214, y: 218}
+  - {x: 171, y: 134}
+  - {x: 236, y: 323}
+  - {x: 157, y: 159}
+  - {x: 291, y: 127}
+  - {x: 180, y: 144}
+  - {x: 306, y: 312}
+  - {x: 243, y: 139}
+  - {x: 185, y: 148}
+  - {x: 204, y: 198}
+  - {x: 300, y: 153}
+  - {x: 132, y: 201}
+  - {x: 180, y: 179}
+  - {x: 217, y: 237}
+  - {x: 150, y: 159}
+  - {x: 120, y: 188}
+  - {x: 85, y: 148}
+  - {x: 161, y: 135}
+  - {x: 168, y: 190}
+  - {x: 48, y: 143}
+  - {x: 305, y: 147}
+  - {x: 180, y: 173}
+  - {x: 150, y: 162}
+  - {x: 150, y: 40}
+  defaultPivotOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  textureNames:
+  - bikkuri
+  - taran1
+  - broken
+  - fukidashi_think
+  - hit
+  - notice1
+  - sweat1
+  - fukidashi_yell
+  - sweat2
+  - bandaid
+  - ira
+  - star
+  - notice2
+  - maru
+  - fukidashi_normal
+  - onpu
+  - question
+  - sweat
+  - love
+  - taran2
+  - surprise
+  - yell
+  - batsu
+  - punpun
+  - none
+  texturePaths:
+  - Assets/Textures/GameEvent/bikkuri.png
+  - Assets/Textures/GameEvent/taran1.png
+  - Assets/Textures/GameEvent/broken.png
+  - Assets/Textures/GameEvent/fukidashi_think.png
+  - Assets/Textures/GameEvent/hit.png
+  - Assets/Textures/GameEvent/notice1.png
+  - Assets/Textures/GameEvent/sweat1.png
+  - Assets/Textures/GameEvent/fukidashi_yell.png
+  - Assets/Textures/GameEvent/sweat2.png
+  - Assets/Textures/GameEvent/bandaid.png
+  - Assets/Textures/GameEvent/ira.png
+  - Assets/Textures/GameEvent/star.png
+  - Assets/Textures/GameEvent/notice2.png
+  - Assets/Textures/GameEvent/maru.png
+  - Assets/Textures/GameEvent/fukidashi_normal.png
+  - Assets/Textures/GameEvent/onpu.png
+  - Assets/Textures/GameEvent/question.png
+  - Assets/Textures/GameEvent/sweat.png
+  - Assets/Textures/GameEvent/love.png
+  - Assets/Textures/GameEvent/taran2.png
+  - Assets/Textures/GameEvent/surprise.png
+  - Assets/Textures/GameEvent/yell.png
+  - Assets/Textures/GameEvent/batsu.png
+  - Assets/Textures/GameEvent/punpun.png
+  - Assets/Textures/GameEvent/none.png
+  lastBuildID: 20160122231833180
+  needsRebuilt: 0
+  dataVersion: 4
+  maxAtlasSize: 1024
+  padding: 1
+  forceSquare: 0

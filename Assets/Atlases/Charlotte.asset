@@ -1,0 +1,386 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 529336600, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
+  m_Name: Charlotte
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: dc8e98e5ae0ab46fcaea88e8f978ed30, type: 2}
+  uvs:
+  - serializedVersion: 2
+    x: 0.12109375
+    y: 0.234375
+    width: 0.28710938
+    height: 0.072265625
+  - serializedVersion: 2
+    x: 0.115234375
+    y: 0.38378906
+    width: 0.111328125
+    height: 0.09375
+  - serializedVersion: 2
+    x: 0.72265625
+    y: 0
+    width: 0.123046875
+    height: 0.14648438
+  - serializedVersion: 2
+    x: 0.59375
+    y: 0.33007812
+    width: 0.03125
+    height: 0.025390625
+  - serializedVersion: 2
+    x: 0
+    y: 0.7558594
+    width: 0.072265625
+    height: 0.12988281
+  - serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.23828125
+    height: 0.16015625
+  - serializedVersion: 2
+    x: 0.84765625
+    y: 0.09667969
+    width: 0.14453125
+    height: 0.05859375
+  - serializedVersion: 2
+    x: 0.9375
+    y: 0.3095703
+    width: 0.05859375
+    height: 0.07324219
+  - serializedVersion: 2
+    x: 0.76953125
+    y: 0.16113281
+    width: 0.083984375
+    height: 0.17480469
+  - serializedVersion: 2
+    x: 0
+    y: 0.61621094
+    width: 0.068359375
+    height: 0.13867188
+  - serializedVersion: 2
+    x: 0
+    y: 0.16113281
+    width: 0.119140625
+    height: 0.22167969
+  - serializedVersion: 2
+    x: 0
+    y: 0.38378906
+    width: 0.11328125
+    height: 0.09472656
+  - serializedVersion: 2
+    x: 0.6113281
+    y: 0.11621094
+    width: 0.10546875
+    height: 0.040039062
+  - serializedVersion: 2
+    x: 0.47070312
+    y: 0
+    width: 0.25
+    height: 0.115234375
+  - serializedVersion: 2
+    x: 0.47070312
+    y: 0.11621094
+    width: 0.13867188
+    height: 0.038085938
+  - serializedVersion: 2
+    x: 0.85546875
+    y: 0.3095703
+    width: 0.080078125
+    height: 0.07324219
+  - serializedVersion: 2
+    x: 0.22851562
+    y: 0.38378906
+    width: 0.16015625
+    height: 0.048828125
+  - serializedVersion: 2
+    x: 0.62890625
+    y: 0.32617188
+    width: 0.123046875
+    height: 0.0234375
+  - serializedVersion: 2
+    x: 0.42382812
+    y: 0.13574219
+    width: 0.029296875
+    height: 0.0107421875
+  - serializedVersion: 2
+    x: 0.41015625
+    y: 0.234375
+    width: 0.0703125
+    height: 0.068359375
+  - serializedVersion: 2
+    x: 0.390625
+    y: 0.38378906
+    width: 0.08203125
+    height: 0.07714844
+  - serializedVersion: 2
+    x: 0.62890625
+    y: 0.35058594
+    width: 0.0546875
+    height: 0.028320312
+  - serializedVersion: 2
+    x: 0.31054688
+    y: 0.3076172
+    width: 0.14453125
+    height: 0.06933594
+  - serializedVersion: 2
+    x: 0.12109375
+    y: 0.3076172
+    width: 0.1875
+    height: 0.06542969
+  - serializedVersion: 2
+    x: 0.48632812
+    y: 0.16113281
+    width: 0.140625
+    height: 0.16796875
+  - serializedVersion: 2
+    x: 0.47460938
+    y: 0.38378906
+    width: 0.07421875
+    height: 0.057617188
+  - serializedVersion: 2
+    x: 0.9355469
+    y: 0.16113281
+    width: 0.056640625
+    height: 0.08691406
+  - serializedVersion: 2
+    x: 0.24023438
+    y: 0.13574219
+    width: 0.18164062
+    height: 0.022460938
+  - serializedVersion: 2
+    x: 0.24023438
+    y: 0
+    width: 0.22851562
+    height: 0.13476562
+  - serializedVersion: 2
+    x: 0.62890625
+    y: 0.16113281
+    width: 0.13867188
+    height: 0.1640625
+  - serializedVersion: 2
+    x: 0.84765625
+    y: 0
+    width: 0.12890625
+    height: 0.095703125
+  - serializedVersion: 2
+    x: 0
+    y: 0.4794922
+    width: 0.076171875
+    height: 0.13574219
+  - serializedVersion: 2
+    x: 0.48632812
+    y: 0.33007812
+    width: 0.10546875
+    height: 0.0390625
+  - serializedVersion: 2
+    x: 0.85546875
+    y: 0.16113281
+    width: 0.078125
+    height: 0.14746094
+  - serializedVersion: 2
+    x: 0.76953125
+    y: 0.33691406
+    width: 0.060546875
+    height: 0.036132812
+  - serializedVersion: 2
+    x: 0.12109375
+    y: 0.16113281
+    width: 0.36328125
+    height: 0.072265625
+  textureGUIDs:
+  - d86baf1035443403dbd4807af10be588
+  - 1556b0208964a4ec0b1985a112506341
+  - 664f9330b9b114d828d00d2e303551f6
+  - d07f1830852bd4b34991980328e985e3
+  - 7f70f9705fe904e8aaf0fd618c214a6b
+  - 2f752a80282de4632a28549d009e2e31
+  - 4dd2b12183f0845c59257edf6a31e6a9
+  - 2e2095e14f3af4b9e8ab734cb0f38890
+  - 01699ee175e6d4b25b2180d982bf1491
+  - 97dbff32cba1a4c009b92c59690ccfb1
+  - 8f216662325fd455f94c7ccec01ee13c
+  - 42b0d074b26ba4afdabeafc4018d7571
+  - f537e584e305f4610a5e3fbeb2bb6e3b
+  - c3f6c8b42db8c471c8db29e9892dc36b
+  - 80ad8fe4db6824c78b27bec0f4c8ee38
+  - bc388ef4b02c94e35b61ac6f64ab6af1
+  - 39c3c8253b92148789e25fc47b6409e5
+  - f3ec9b0669b3e49ce992f474be148066
+  - a9e99e661563c4b489a6b004af038582
+  - 8fe823766132e453e832d7aa3f4b2f08
+  - e7cfa5075427841cfa3847743935a7cd
+  - b8b2aa58728d64b1fa7adf44395f9472
+  - 93860868693c04aa391a0ac880188bf3
+  - 07a216a8ab90a4648a8c3dbe8769fb5c
+  - 728ac4eb5580e4f1198a9b45bd1d71da
+  - 8b5c0efb7dc0d4debbf436c93826a555
+  - 805ceefbc0d89438dbb2d8392b2e56bf
+  - 7832da0c731674550b2539f292c7b764
+  - 48c2d36ca8dcd4dc1a4e225be7f613fd
+  - 751fb0ac1135d4c88a50a19bf7c71443
+  - a02484bc2fefb4580b3ee61b1d4014b3
+  - 4dcf9d4ef7d99498fbacb62eeb3629c9
+  - e3ceb45ea366a455aa77cc0e539f3904
+  - a887f60fe4b714a20bba10daa5b6782f
+  - 267a9b3f17ccf4bfcb9cf558c9f39ba6
+  - 20a439cf8280749b896049b217db71c3
+  textureSizes:
+  - {x: 147, y: 74}
+  - {x: 57, y: 96}
+  - {x: 63, y: 150}
+  - {x: 16, y: 26}
+  - {x: 37, y: 133}
+  - {x: 122, y: 164}
+  - {x: 74, y: 60}
+  - {x: 30, y: 75}
+  - {x: 43, y: 179}
+  - {x: 35, y: 142}
+  - {x: 61, y: 227}
+  - {x: 58, y: 97}
+  - {x: 54, y: 41}
+  - {x: 128, y: 118}
+  - {x: 71, y: 39}
+  - {x: 41, y: 75}
+  - {x: 82, y: 50}
+  - {x: 63, y: 24}
+  - {x: 15, y: 11}
+  - {x: 36, y: 70}
+  - {x: 42, y: 79}
+  - {x: 28, y: 29}
+  - {x: 74, y: 71}
+  - {x: 96, y: 67}
+  - {x: 72, y: 172}
+  - {x: 38, y: 59}
+  - {x: 29, y: 89}
+  - {x: 93, y: 23}
+  - {x: 117, y: 138}
+  - {x: 71, y: 168}
+  - {x: 66, y: 98}
+  - {x: 39, y: 139}
+  - {x: 54, y: 40}
+  - {x: 40, y: 151}
+  - {x: 31, y: 37}
+  - {x: 186, y: 74}
+  defaultPivotOffsets:
+  - {x: 0.026785713, y: 0.30861485}
+  - {x: -0.17647058, y: 0.44558823}
+  - {x: 0.15756302, y: 0.45882353}
+  - {x: 0, y: 0}
+  - {x: -0.14272654, y: 0.45441175}
+  - {x: -0.3617647, y: 0.4720588}
+  - {x: 0, y: 0}
+  - {x: 0.20955881, y: 0.45882353}
+  - {x: -0.22038303, y: 0.42352942}
+  - {x: -0.30428573, y: 0.47205883}
+  - {x: -0.36118612, y: 0.38823527}
+  - {x: -0.07378296, y: 0.44558823}
+  - {x: -0.36964285, y: 0.07761324}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: -0.11298422, y: 0.44117647}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: -0.33455884, y: 0.45441175}
+  - {x: 0.2987395, y: 0.44558823}
+  - {x: 0, y: 0}
+  - {x: -0.053571433, y: -0.11725353}
+  - {x: -0.30535716, y: 0.29936036}
+  - {x: 0.2634804, y: 0.44558823}
+  - {x: 0, y: 0}
+  - {x: -0.35202837, y: 0.44558823}
+  - {x: 0, y: 0}
+  - {x: -0.0053571425, y: -0.44965062}
+  - {x: -0.42800334, y: 0.46323532}
+  - {x: -0.37994653, y: 0.4279412}
+  - {x: 0.047171947, y: 0.45441175}
+  - {x: 0.40714285, y: 0.014464285}
+  - {x: 0.016654411, y: 0.45882353}
+  - {x: 0, y: 0}
+  - {x: -0.02142857, y: 0.40395752}
+  textureNames:
+  - skirt_outer4
+  - arms_left_lower
+  - hair_front1
+  - eye_right
+  - hair_front4
+  - ribbon_tail1
+  - body
+  - arms_right_upper
+  - legs_left_lower
+  - hair_front3
+  - ponytail1
+  - arms_right_lower
+  - ribbon_top1
+  - hair
+  - lashes_left
+  - legs_left_upper
+  - chest
+  - belt
+  - mouth
+  - arms_left_upper
+  - legs_right_upper
+  - eye_left
+  - cloth
+  - hair_font2
+  - ribbon_tail2
+  - hairband
+  - hair_front5
+  - browse
+  - face
+  - ponytail2
+  - hair_back1
+  - ponytail3
+  - ribbon_top2
+  - legs_right_lower
+  - lases_right
+  - skirt_inner
+  texturePaths:
+  - Assets/Textures/Charlotte/skirt_outer4.png
+  - Assets/Textures/Charlotte/arms_left_lower.png
+  - Assets/Textures/Charlotte/hair_front1.png
+  - Assets/Textures/Charlotte/eye_right.png
+  - Assets/Textures/Charlotte/hair_front4.png
+  - Assets/Textures/Charlotte/ribbon_tail1.png
+  - Assets/Textures/Charlotte/body.png
+  - Assets/Textures/Charlotte/arms_right_upper.png
+  - Assets/Textures/Charlotte/legs_left_lower.png
+  - Assets/Textures/Charlotte/hair_front3.png
+  - Assets/Textures/Charlotte/ponytail1.png
+  - Assets/Textures/Charlotte/arms_right_lower.png
+  - Assets/Textures/Charlotte/ribbon_top1.png
+  - Assets/Textures/Charlotte/hair.png
+  - Assets/Textures/Charlotte/lashes_left.png
+  - Assets/Textures/Charlotte/legs_left_upper.png
+  - Assets/Textures/Charlotte/chest.png
+  - Assets/Textures/Charlotte/belt.png
+  - Assets/Textures/Charlotte/mouth.png
+  - Assets/Textures/Charlotte/arms_left_upper.png
+  - Assets/Textures/Charlotte/legs_right_upper.png
+  - Assets/Textures/Charlotte/eye_left.png
+  - Assets/Textures/Charlotte/cloth.png
+  - Assets/Textures/Charlotte/hair_font2.png
+  - Assets/Textures/Charlotte/ribbon_tail2.png
+  - Assets/Textures/Charlotte/hairband.png
+  - Assets/Textures/Charlotte/hair_front5.png
+  - Assets/Textures/Charlotte/browse.png
+  - Assets/Textures/Charlotte/face.png
+  - Assets/Textures/Charlotte/ponytail2.png
+  - Assets/Textures/Charlotte/hair_back1.png
+  - Assets/Textures/Charlotte/ponytail3.png
+  - Assets/Textures/Charlotte/ribbon_top2.png
+  - Assets/Textures/Charlotte/legs_right_lower.png
+  - Assets/Textures/Charlotte/lases_right.png
+  - Assets/Textures/Charlotte/skirt_inner.png
+  lastBuildID: 20150830235322903
+  needsRebuilt: 0
+  dataVersion: 4
+  maxAtlasSize: 1024
+  padding: 1
+  forceSquare: 0

@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 453766}
+  - 114: {fileID: 11409870}
+  m_Layer: 0
+  m_Name: HangEveng_Scared6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453766
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4600, y: 240, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11409870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e332aefc667b5436fa551bd4a2a890ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fType: 0
+  eType: 0
+  id: HangScared4
+  eventListObj: {fileID: 0}
+  targetType: 1
+  targetPath: Prefabs/Enemies/WillOWisp
+  targetEnemyStatus:
+    minHp: 10
+    maxHp: 100
+    crntHp: 10
+    minAtk: 10
+    maxAtk: 10
+    crntAtk: 10
+    minMoveSpeed: 100
+    maxMoveSpeed: 200
+    crntMoveSpeed: 100
+    minAtkSpeed: 10
+    maxAtkSpeed: 100
+    crntAtkSpeed: 10
+    level: 1
+    type: 2
+    pattern: 0
+    rarity: 1
+    cost: 100
+    spiritNum: 1
+    friendPossibility: 100
+    spawner: {fileID: 0}
+  targetObject: {fileID: 0}
+  targetByName: 
+  targetInitPos: {x: 5738, y: 0, z: 0}
+  direction: 0
+  animationName: 
+  tweenAnimType: 0
+  tweenAnimTime: 0
+  effectType: 0
+  stagePrefPath: 
+  animAftrStgLoad: 
+  OnDestroyEnemyPrefab: {fileID: 112822, guid: aeb16614852554c0db276d9951f3fbdf, type: 2}
+  totalTime: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: id
+      value: HangScared4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: animationName
+      value: Mom
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tweenAnimName
+      value: shake
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: totalTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tweenAnimTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tweenAnimType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: targetByName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: effectType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: targetPath
+      value: Prefabs/Enemies/WillOWisp
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: targetInitPos.x
+      value: 5738
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnDestroyEnemyPrefab
+      value: 
+      objectReference: {fileID: 112822, guid: aeb16614852554c0db276d9951f3fbdf, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 105586}
+  m_IsPrefabParent: 1
