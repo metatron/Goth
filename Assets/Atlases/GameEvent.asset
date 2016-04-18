@@ -14,130 +14,150 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 86014d816e1a04d09a09782d2c28189d, type: 2}
   uvs:
   - serializedVersion: 2
-    x: 0.6855469
-    y: 0.79003906
+    x: 0
+    y: 0.7207031
     width: 0.111328125
-    height: 0.18847656
+    height: 0.09423828
   - serializedVersion: 2
-    x: 0.2998047
+    x: 0.5126953
     y: 0
     width: 0.20898438
-    height: 0.21289062
+    height: 0.10644531
   - serializedVersion: 2
-    x: 0.2998047
-    y: 0.86035156
+    x: 0.35839844
+    y: 0.45703125
     width: 0.16699219
-    height: 0.13085938
+    height: 0.06542969
   - serializedVersion: 2
     x: 0
-    y: 0.30566406
+    y: 0.15283203
     width: 0.23046875
-    height: 0.3154297
+    height: 0.15771484
   - serializedVersion: 2
-    x: 0.84472656
-    y: 0.40820312
+    x: 0.12988281
+    y: 0.52978516
     width: 0.15332031
-    height: 0.15527344
+    height: 0.07763672
   - serializedVersion: 2
-    x: 0.5
-    y: 0.21386719
+    x: 0.23144531
+    y: 0.22802734
     width: 0.2841797
-    height: 0.12402344
+    height: 0.06201172
   - serializedVersion: 2
-    x: 0.66796875
-    y: 0.40820312
+    x: 0.18164062
+    y: 0.45703125
     width: 0.17578125
-    height: 0.140625
+    height: 0.0703125
   - serializedVersion: 2
     x: 0
     y: 0
     width: 0.29882812
-    height: 0.3046875
+    height: 0.15234375
   - serializedVersion: 2
-    x: 0.2998047
-    y: 0.40820312
+    x: 0.5253906
+    y: 0.22509766
     width: 0.23730469
-    height: 0.13574219
-  - serializedVersion: 2
-    x: 0.2998047
-    y: 0.71484375
-    width: 0.18066406
-    height: 0.14453125
-  - serializedVersion: 2
-    x: 0.2998047
-    y: 0.21386719
-    width: 0.19921875
-    height: 0.19335938
-  - serializedVersion: 2
-    x: 0.5097656
-    y: 0
-    width: 0.29296875
-    height: 0.14941406
-  - serializedVersion: 2
-    x: 0.53808594
-    y: 0.40820312
-    width: 0.12890625
-    height: 0.19628906
-  - serializedVersion: 2
-    x: 0.80371094
-    y: 0
-    width: 0.17578125
-    height: 0.17480469
+    height: 0.067871094
   - serializedVersion: 2
     x: 0
-    y: 0.6220703
-    width: 0.21191406
-    height: 0.23144531
+    y: 0.45703125
+    width: 0.18066406
+    height: 0.072265625
   - serializedVersion: 2
-    x: 0.53808594
-    y: 0.76464844
-    width: 0.14648438
-    height: 0.15527344
-  - serializedVersion: 2
-    x: 0.6855469
-    y: 0.60546875
-    width: 0.1171875
-    height: 0.18359375
-  - serializedVersion: 2
-    x: 0.21289062
-    y: 0.6220703
-    width: 0.08300781
-    height: 0.14453125
-  - serializedVersion: 2
-    x: 0.80371094
-    y: 0.60546875
-    width: 0.15722656
-    height: 0.13183594
-  - serializedVersion: 2
-    x: 0.78515625
-    y: 0.21386719
-    width: 0.1640625
-    height: 0.18554688
+    x: 0.72265625
+    y: 0
+    width: 0.19921875
+    height: 0.09667969
   - serializedVersion: 2
     x: 0.23144531
-    y: 0.30566406
-    width: 0.046875
-    height: 0.13964844
+    y: 0.15283203
+    width: 0.29296875
+    height: 0.07470703
   - serializedVersion: 2
     x: 0
-    y: 0.8544922
-    width: 0.29785156
-    height: 0.14355469
+    y: 0.52978516
+    width: 0.12890625
+    height: 0.09814453
+  - serializedVersion: 2
+    x: 0
+    y: 0.36914062
+    width: 0.17578125
+    height: 0.087402344
   - serializedVersion: 2
     x: 0.2998047
-    y: 0.5449219
+    y: 0
+    width: 0.21191406
+    height: 0.115722656
+  - serializedVersion: 2
+    x: 0.2841797
+    y: 0.52978516
+    width: 0.14648438
+    height: 0.07763672
+  - serializedVersion: 2
+    x: 0
+    y: 0.62841797
+    width: 0.1171875
+    height: 0.091796875
+  - serializedVersion: 2
+    x: 0.8642578
+    y: 0.36914062
+    width: 0.08300781
+    height: 0.072265625
+  - serializedVersion: 2
+    x: 0.5263672
+    y: 0.45703125
+    width: 0.15722656
+    height: 0.06591797
+  - serializedVersion: 2
+    x: 0.82421875
+    y: 0.15283203
+    width: 0.1640625
+    height: 0.09277344
+  - serializedVersion: 2
+    x: 0.92285156
+    y: 0
+    width: 0.046875
+    height: 0.06982422
+  - serializedVersion: 2
+    x: 0.5253906
+    y: 0.15283203
+    width: 0.29785156
+    height: 0.071777344
+  - serializedVersion: 2
+    x: 0.17675781
+    y: 0.36914062
     width: 0.17578125
-    height: 0.16894531
+    height: 0.084472656
   - serializedVersion: 2
-    x: 0.53808594
-    y: 0.60546875
+    x: 0.12988281
+    y: 0.60791016
     width: 0.14648438
-    height: 0.15820312
+    height: 0.07910156
   - serializedVersion: 2
-    x: 0.5097656
-    y: 0.15039062
+    x: 0.2998047
+    y: 0.11621094
     width: 0.14648438
-    height: 0.0390625
+    height: 0.01953125
+  - serializedVersion: 2
+    x: 0.515625
+    y: 0.36914062
+    width: 0.17578125
+    height: 0.07861328
+  - serializedVersion: 2
+    x: 0
+    y: 0.31103516
+    width: 0.2685547
+    height: 0.057617188
+  - serializedVersion: 2
+    x: 0.6923828
+    y: 0.36914062
+    width: 0.17089844
+    height: 0.080078125
+  - serializedVersion: 2
+    x: 0.35351562
+    y: 0.36914062
+    width: 0.16113281
+    height: 0.0859375
   textureGUIDs:
   - aa3200b0610cf4536a36e5c4dcb4117c
   - d38a2af011d7346408711d97934e6ff8
@@ -164,6 +184,10 @@ MonoBehaviour:
   - 50de0f4b1c2804ec8b0533d051005986
   - 4fe16f1dabe434cd8aa20e4c9affe4ce
   - 4341696d9c0e741fcabce704edf7eaab
+  - f427846a51ca742bdb0343f362b4a54b
+  - 9d9d796aa4ba1427993deac969d743b0
+  - 6f8275ec999e54d39acee224e550fb35
+  - 2148abed481ea45c0960b104272cae74
   textureSizes:
   - {x: 114, y: 193}
   - {x: 214, y: 218}
@@ -190,7 +214,15 @@ MonoBehaviour:
   - {x: 180, y: 173}
   - {x: 150, y: 162}
   - {x: 150, y: 40}
+  - {x: 180, y: 161}
+  - {x: 275, y: 118}
+  - {x: 175, y: 164}
+  - {x: 165, y: 176}
   defaultPivotOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -242,6 +274,10 @@ MonoBehaviour:
   - batsu
   - punpun
   - none
+  - blood2
+  - blood4
+  - blood3
+  - blood1
   texturePaths:
   - Assets/Textures/GameEvent/bikkuri.png
   - Assets/Textures/GameEvent/taran1.png
@@ -268,7 +304,11 @@ MonoBehaviour:
   - Assets/Textures/GameEvent/batsu.png
   - Assets/Textures/GameEvent/punpun.png
   - Assets/Textures/GameEvent/none.png
-  lastBuildID: 20160122231833180
+  - Assets/Textures/UI/blood2.png
+  - Assets/Textures/UI/blood4.png
+  - Assets/Textures/UI/blood3.png
+  - Assets/Textures/UI/blood1.png
+  lastBuildID: 20160418133851145
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 1024
