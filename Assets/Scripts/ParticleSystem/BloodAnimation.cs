@@ -10,20 +10,40 @@ public class BloodAnimation : MonoBehaviour {
 		"blood3",
 		"blood4",
 	};
-	public BoneAnimation boneAnimation;
+	private SmoothMoves.Sprite sprite;
 	public float destroyTime = 2.0f;
 	public float size = 1.0f;
 
 	public TextureAtlas bloodAtlas;
 
 	void Start () {
-		transform.localScale = Vector3.one * size;
+		transform.localScale = Vector3.zero;
+		sprite = GetComponent<SmoothMoves.Sprite> ();
 
 		int rnd = Random.Range (0, textureNameList.Count);
-		string replaceId = bloodAtlas.GetTextureGUIDFromName ("blood1");
-		string newTextureId = bloodAtlas.GetTextureGUIDFromName (textureNameList [rnd]);
-		boneAnimation.ReplaceAnimationBoneTexture ("spill", "blood", bloodAtlas, replaceId, bloodAtlas, newTextureId);
+		sprite.SetTextureName (textureNameList [rnd]);
 
 		Destroy (gameObject, destroyTime);
+
+		//サイズを
+		iTween.ScaleTo(gameObject, iTween.Hash(
+			"scale", Vector3.one * size,
+			"time", destroyTime-0.1f //上記Destroyの前に破棄される可能性があるのでアニメーションの終了を若干早める。
+		));
+
+
+		//Start fading
+		iTween.ValueTo(gameObject, iTween.Hash(
+			"from", 255f,
+			"to", 0f,
+			"time", destroyTime-0.1f, //上記Destroyの前に破棄される可能性があるのでアニメーションの終了を若干早める。
+			"onupdatetarget", gameObject,
+			"onupdate", "OnUpdateFading",
+			"oncompletetarget", gameObject
+		));
+	}
+
+	private void OnUpdateFading(float value) {
+		sprite.color = new Color (0, 0, 0, value);
 	}
 }
