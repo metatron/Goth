@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour {
 
 			enemyWpnObj.GetComponent<Collider>().enabled = false;
 			if (hitParticlePrefab == null) {
-				hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/Blood") as GameObject;
+				hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/BloodEmitter") as GameObject;
 			}
 			GameObject hitParticleObj1 = (GameObject) Instantiate (hitParticlePrefab);
 			hitParticleObj1.transform.position = other.ClosestPointOnBounds(enemyWpnObj.transform.position);
@@ -74,7 +74,7 @@ public class Weapon : MonoBehaviour {
 
 		//generate particle
 		if (hitParticlePrefab == null) {
-			hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/Blood") as GameObject;
+			hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/BloodEmitter") as GameObject;
 		}
 		GameObject hitParticleObj = (GameObject) Instantiate (hitParticlePrefab);
 		hitParticleObj.transform.parent = transform;

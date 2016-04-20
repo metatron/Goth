@@ -5,7 +5,7 @@ using SmoothMoves;
 
 public class BloodAnimation : MonoBehaviour {
 	const int BLOOD_MAX_NUM				= 3;
-	const int MAX_POSITION_DIS			= 30;
+	const int MAX_POSITION_DIS			= 80;
 	const float INSTANTIATE_INTERVAL	= 0.2f;
 
 	public List<string> textureNameList = new List<string> () {
@@ -14,19 +14,14 @@ public class BloodAnimation : MonoBehaviour {
 		"blood3",
 		"blood4",
 	};
-	public float destroyTime = 2.0f;
+	public float destroyTime = 0.5f;
 	public float size = 1.0f;
 
 	public TextureAtlas bloodAtlas;
 	public GameObject bloodPrefab;
 
 	void Start () {
-		StartCoroutine(IEnumerator() => {
-			for (int i = 0; i < BLOOD_MAX_NUM; i++) {
-				InitBloodParticle ();
-				yield return new WaitForSeconds(INSTANTIATE_INTERVAL);
-			}
-		});
+		StartCoroutine(InstantiateBloodParticle());
 	}
 
 	private IEnumerator InstantiateBloodParticle() {
@@ -44,8 +39,8 @@ public class BloodAnimation : MonoBehaviour {
 		Vector3 pos = new Vector3 (transform.localPosition.x + rndX, transform.localPosition.y + rndY, transform.localPosition.z);
 
 		GameObject bloodObj = (GameObject)Instantiate (bloodPrefab);
+		bloodObj.transform.position = pos;
 		bloodObj.transform.SetParent (transform);
-		bloodObj.transform.localPosition = pos;
 
 		bloodObj.transform.localScale = Vector3.zero;
 		SmoothMoves.Sprite sprite = bloodObj.GetComponent<SmoothMoves.Sprite> ();

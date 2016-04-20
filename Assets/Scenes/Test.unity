@@ -1122,10 +1122,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 11497294, guid: 42b7e0cdada044ad88b441ea383178cb, type: 2}
-      propertyPath: bloodPrefab
-      value: 
-      objectReference: {fileID: 171738, guid: e6f1ed5aff52c44649802e2c9123091b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42b7e0cdada044ad88b441ea383178cb, type: 2}
   m_IsPrefabParent: 0
@@ -1432,7 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01d9e6f9766d47cba2dc016b825a6f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortingLayerName: Player
+  sortingLayerName: Default
   sortingOrder: 0
 --- !u!54 &983475134
 Rigidbody:
@@ -1468,16 +1464,16 @@ MonoBehaviour:
   npcObject: {fileID: 0}
   status:
     minHp: 10
-    maxHp: 10
+    maxHp: 100
     crntHp: 10
     minAtk: 10
-    maxAtk: 10
+    maxAtk: 100
     crntAtk: 10
-    minMoveSpeed: 10
-    maxMoveSpeed: 10
+    minMoveSpeed: 100
+    maxMoveSpeed: 200
     crntMoveSpeed: 10
     minAtkSpeed: 10
-    maxAtkSpeed: 10
+    maxAtkSpeed: 100
     crntAtkSpeed: 10
     level: 1
     type: 99

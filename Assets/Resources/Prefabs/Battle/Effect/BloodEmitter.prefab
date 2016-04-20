@@ -44,9 +44,10 @@ MonoBehaviour:
   - blood2
   - blood3
   - blood4
-  destroyTime: 2
-  size: 1
+  destroyTime: 0.5
+  size: 2
   bloodAtlas: {fileID: 11400000, guid: 001c74e3c83704ad7aca86b91099a0bc, type: 2}
+  bloodPrefab: {fileID: 171738, guid: e6f1ed5aff52c44649802e2c9123091b, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
