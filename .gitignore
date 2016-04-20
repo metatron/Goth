@@ -27,3 +27,5 @@ sysinfo.txt
 
 *.apk
 *.DS_Store
+
+*SmoothMoves_Runtime*
