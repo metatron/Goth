@@ -101,7 +101,7 @@ public class EnemyWeapon : MonoBehaviour {
 
 		//generate particle
 		if (hitParticlePrefab == null) {
-			hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/particle") as GameObject;
+			hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/Blood") as GameObject;
 		}
 		GameObject hitParticleObj = (GameObject) Instantiate (hitParticlePrefab);
 		Vector3 hitPosition = other.ClosestPointOnBounds(hitParticleObj.transform.position);
