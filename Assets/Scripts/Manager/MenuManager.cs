@@ -196,6 +196,23 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	 * 
 	 */
 	private void CalculateCellSize(GameObject cell) {
+		//現画面サイズの比率を取得。
+		Vector2 preSize = GetResizedSize ();
+
+		cell.GetComponent<LayoutElement> ().minWidth = preSize.x;
+		cell.GetComponent<LayoutElement> ().minHeight = preSize.y;
+	}
+
+	/**
+	 * 
+	 * リスト生成する際に使用。
+	 * ノードが画面リサイズについてこれない。（Anchorが自由に設定できない）
+	 * 
+	 * ゴースト、コレクションのところではモノのリサイズにも使用。
+	 * 
+	 * 
+	 */
+	public static Vector2 GetResizedSize() {
 		float expectedWidth = 480;
 		float expectedHeight = 800;
 		float defaultWidth = 300;
@@ -205,11 +222,11 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		float wRatio = defaultWidth / expectedWidth;
 		float hRatio = defaultHeight / expectedHeight;
 
+		Vector2 preSizeVec = Vector2.zero;
 		//現画面でのセルの縦横
-		float prefWidth = Screen.width * wRatio;
-		float prefHeight = Screen.height * hRatio;
+		preSizeVec.x = Screen.width * wRatio;
+		preSizeVec.y = Screen.height * hRatio;
 
-		cell.GetComponent<LayoutElement> ().minWidth = prefWidth;
-		cell.GetComponent<LayoutElement> ().minHeight = prefHeight;
+		return preSizeVec;
 	}
 }
