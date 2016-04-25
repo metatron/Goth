@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 using System.IO;
 using System.Collections;
@@ -130,12 +131,16 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 				string rootPath = "Assets/Resources/";
 				string relativePath = "Prefabs/Collection/";
 				string fullPath = rootPath + relativePath;
-				DirectoryInfo dir = new DirectoryInfo (fullPath);
-				FileInfo[] infoList = dir.GetFiles ("*.prefab");
+				//TODO 実機でできる？
+				string[] infoFilePathArray = AssetDatabase.GetAllAssetPaths ();
 
-				foreach (FileInfo assetInfo in infoList) {
-					string[] prefabPaths = assetInfo.FullName.Split (new string[] {"Resources/"}, System.StringSplitOptions.RemoveEmptyEntries);
-					string prefabName = prefabPaths[1].Replace(".prefab", "");
+				foreach (string assetPath in infoFilePathArray) {
+					if (!assetPath.Contains (relativePath)) {
+						continue;
+					}
+					Debug.Log ("*****************1: " + assetPath);
+					string prefabName = assetPath.Replace("Assets/Resources/", "").Replace(".prefab", "");
+					Debug.Log ("*****************2: " + prefabName);
 					GameObject prefabObject = Resources.Load (prefabName) as GameObject;
 					CollectionData collection = prefabObject.GetComponent<CollectionData>();
 					collectionPrefabDict.Add(collection.id, collection);
