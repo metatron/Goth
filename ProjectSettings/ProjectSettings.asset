@@ -158,7 +158,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: /Users/merabi/Documents/MyProject/releasekey.keystore
+  AndroidKeystoreName: releasekey.keystore
   AndroidKeyaliasName: release
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

@@ -11,7 +11,7 @@ GameObject:
   - 222: {fileID: 22211028}
   - 114: {fileID: 11412826}
   m_Layer: 5
-  m_Name: HpText
+  m_Name: Desc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   - 222: {fileID: 22283804}
   - 114: {fileID: 11487232}
   m_Layer: 5
-  m_Name: NameText
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,23 +66,6 @@ GameObject:
   - 114: {fileID: 11423054}
   m_Layer: 5
   m_Name: StageNode
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &199812
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 22459602}
-  - 222: {fileID: 22224090}
-  - 114: {fileID: 11480320}
-  m_Layer: 5
-  m_Name: AttackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,15 +95,15 @@ MonoBehaviour:
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 4
+    m_MinSize: 20
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'HP: 9999'
+  m_Text: Stage Description
 --- !u!114 &11423054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,39 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 11487232}
---- !u!114 &11480320
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Attack:  9999'
 --- !u!114 &11487232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,15 +246,15 @@ MonoBehaviour:
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 25
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name: Ghost'
+  m_Text: Stage Title
 --- !u!114 &11493544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,12 +279,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105260}
---- !u!222 &22224090
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199812}
 --- !u!222 &22240296
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -364,28 +308,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22470100}
-  m_RootOrder: 2
-  m_AnchorMin: {x: 0.07, y: 0.77889484}
-  m_AnchorMax: {x: 0.5866667, y: 0.77889484}
-  m_AnchoredPosition: {x: 3.4999695, y: -13}
-  m_SizeDelta: {x: 5, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &22459602
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22470100}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.07, y: 0.86310524}
-  m_AnchorMax: {x: 0.5866667, y: 0.86310524}
-  m_AnchoredPosition: {x: 3.4999695, y: -13}
-  m_SizeDelta: {x: 5, y: 30}
+  m_AnchorMin: {x: 0.07, y: 0.10547369}
+  m_AnchorMax: {x: 0.95000005, y: 0.77889484}
+  m_AnchoredPosition: {x: -3.5, y: 0}
+  m_SizeDelta: {x: -9, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22459828
 RectTransform:
@@ -417,10 +344,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22470100}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.07, y: 0.9393684}
-  m_AnchorMax: {x: 0.5866667, y: 0.9393684}
-  m_AnchoredPosition: {x: 3.4999695, y: -13}
-  m_SizeDelta: {x: 5, y: 30}
+  m_AnchorMin: {x: 0.21666668, y: 0.8525265}
+  m_AnchorMax: {x: 0.7766667, y: 0.9578948}
+  m_AnchoredPosition: {x: 1, y: 0}
+  m_SizeDelta: {x: -8, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22470100
 RectTransform:
@@ -433,7 +360,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22468502}
-  - {fileID: 22459602}
   - {fileID: 22455316}
   m_Father: {fileID: 22459828}
   m_RootOrder: 0
@@ -456,7 +382,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: attackText
       value: 
-      objectReference: {fileID: 11480320}
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: hpText
       value: 
