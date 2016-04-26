@@ -171,6 +171,8 @@ public class Weapon : MonoBehaviour {
 			npcParameter.rarity = targetParam.rarity;
 
 			GameManager.Instance.SetNpc (npcParameter);
+
+			SaveLoadStatus.SaveUserParameters ();
 		}
 	}
 

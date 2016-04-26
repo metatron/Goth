@@ -126,7 +126,7 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 			return ;
 		}
 
-		Debug.Log ("OnTouchUp");
+//		Debug.Log ("OnTouchUp");
 		if (IsAbleToGetInput()) {
 			girlAnimationObj.Play ("stand");
 		}
