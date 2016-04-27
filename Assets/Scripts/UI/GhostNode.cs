@@ -26,13 +26,16 @@ public class GhostNode : MonoBehaviour {
 		this.index = index;
 		GameObject ghostPrefab = npcStatus.GetPrefab ();
 		ghostObj = (GameObject)Instantiate(ghostPrefab);
-		ghostObj.GetComponent<EnemyAI>().transform.parent = transform;
+		ghostObj.GetComponent<EnemyAI>().transform.SetParent(transform);
 
 		if (GhostNode.ghostYPosList.Count != System.Enum.GetNames (typeof(BaseParameterStatus.GhostType)).Length-1) {
 			Debug.LogError ("ghostYPosList count and GhostType count is Wrong! check the definition! " + (GhostNode.ghostYPosList.Count) + "," + (System.Enum.GetNames (typeof(BaseParameterStatus.GhostType)).Length-1));
 		}
-		ghostObj.transform.localPosition = new Vector3(0.0f, GhostNode.ghostYPosList[(int)npcStatus.type], -10.0f);
-		ghostObj.GetComponent<EnemyAI>().defaultSizeVec = ghostObj.GetComponent<EnemyAI> ().ghostListSizeVec;
+		float resizeRatio = MenuManager.GetResizedRatio ();
+		ghostObj.transform.localPosition = new Vector3(0.0f, GhostNode.ghostYPosList[(int)npcStatus.type]*resizeRatio, -10.0f);
+		float resizeX = ghostObj.GetComponent<EnemyAI> ().ghostListSizeVec.x*resizeRatio;
+		float resizeY = ghostObj.GetComponent<EnemyAI> ().ghostListSizeVec.y*resizeRatio;
+		ghostObj.GetComponent<EnemyAI>().defaultSizeVec = new Vector3(resizeX, resizeY, 1.0f);
 //		ghostObj.GetComponent<EnemyAI>().defaultSizeVec = new Vector3 (0.3f, 0.3f, 1.0f);
 //		ghostObj.layer = 5;
 		ghostObj.GetComponent<MeshSortingLayer> ().SetSortingLayerNameAndOrder("UI", 5);

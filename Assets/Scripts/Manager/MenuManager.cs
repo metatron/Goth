@@ -215,11 +215,20 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		float wRatio = defaultWidth / expectedWidth;
 		float hRatio = defaultHeight / expectedHeight;
 
-		Vector2 preSizeVec = Vector2.zero;
+		Vector2 preSizeVec = new Vector2(Screen.width, Screen.height);
 		//現画面でのセルの縦横
-		preSizeVec.x = Screen.width * wRatio;
-		preSizeVec.y = Screen.height * hRatio;
+		preSizeVec.x *= wRatio;
+		preSizeVec.y *= hRatio;
 
 		return preSizeVec;
+	}
+
+	public static float GetResizedRatio() {
+		float expectedWidth = 480;
+		float expectedHeight = 800;
+		float wRatio = Screen.width / expectedWidth;
+		float hRatio = Screen.height / expectedHeight;
+
+		return Mathf.Min(wRatio, hRatio);
 	}
 }

@@ -16,10 +16,13 @@ public class CollectionNode : MonoBehaviour {
 		GameObject collectionObj = Instantiate (collectionData.gameObject) as GameObject;
 		collectionObj.transform.SetParent (transform);
 		collectionObj.transform.localPosition = new Vector3(0.0f, 0.0f, -10.0f);
-		collectionObj.transform.localScale = collectionData.resizeVec;
+
+		float resizeRatio = MenuManager.GetResizedRatio ();
+		Vector3 resizedScale = collectionData.resizeVec * resizeRatio;
+		collectionObj.transform.localScale = resizedScale;
 		collectionObj.layer = 5; //UI layer.
 		foreach(Transform child in collectionObj.GetComponentsInChildren<Transform>()) {
-			child.localScale = collectionData.resizeVec;
+			child.localScale = resizedScale;
 			child.gameObject.layer = 5; //UI layer.
 			Renderer renderer = child.GetComponent<Renderer>();
 			if (renderer != null) {
