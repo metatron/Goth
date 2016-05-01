@@ -18,6 +18,7 @@ public class StageData : MonoBehaviour {
 
 	public List<EventListObject> stageEventList = new List<EventListObject> ();
 
+	public GameObject homeDoorObj; //only home stage has this object.
 
 
 	void Start() {

@@ -28,4 +28,32 @@ public class HomeDoor : MonoBehaviour {
 		//open stage select menu
 		MenuManager.Instance.OnSelectStageMenuButtonOpened();
 	}
+
+	/**
+	 * 
+	 * used in Home Stage.
+	 * when player pressed back button,
+	 * need to push back the player and 
+	 * reverse animate the door.
+	 * 
+	 * 
+	 */
+	public void PlayReversedAnimation() {
+		iTween.ValueTo(gameObject, 
+			iTween.Hash(
+				"from", 0f, 
+				"to", 90f, 
+				"time", 1f, 
+				"onupdate", "UpdateRotateValue",
+				"oncomplete", "OnCompleteReverseRotate",
+				"oncompletetarget", gameObject)
+		);
+	}
+
+	private void OnCompleteReverseRotate() {
+		//turn on the collider
+		GetComponent<BoxCollider> ().enabled = true;
+	}
+
+
 }

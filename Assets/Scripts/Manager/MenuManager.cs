@@ -103,6 +103,21 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	public void OnSelectStageMenuClose() {
 		currentActiveMenu = null;
 		selectStageMenuPanel.SetActive (false);
+
+		//stage close logic
+		StageMenuClose ();
+	}
+
+	private void StageMenuClose() {
+		//move player
+		Vector3 playerPos = GameManager.Instance.player.transform.position;
+		iTween.MoveTo (GameManager.Instance.player,
+			iTween.Hash (
+				"position", new Vector3(playerPos.x-250.0f, playerPos.y, playerPos.z),
+				"time", 1.0f
+			));
+		//shut the door
+		GameManager.Instance.crntStageData.homeDoorObj.GetComponentInChildren<HomeDoor>().PlayReversedAnimation();
 	}
 
 	//================= Select Collection Menu ==============//
