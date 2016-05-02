@@ -85,7 +85,7 @@ public class EventData: MonoBehaviour {
 	private GameObject emotionObject;
 
 	public void InitEvent() {
-		Debug.Log ("*** EventData: " + gameObject + ", time: " + Time.realtimeSinceStartup);
+		Debug.Log ("*** EventData: " + gameObject + ", id: " + id + ", time: " + Time.realtimeSinceStartup);
 		/****** init fukidashi ******/
 		if (fType != FukidashiType.None) {
 			string fukidashiPath = "Prefabs/GameEvent/Fukidashi/";

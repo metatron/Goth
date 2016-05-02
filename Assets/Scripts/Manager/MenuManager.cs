@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using SmoothMoves;
 
 public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	public GameObject currentActiveMenu;

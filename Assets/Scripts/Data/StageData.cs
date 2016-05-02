@@ -36,15 +36,15 @@ public class StageData : MonoBehaviour {
 			}
 		}
 
-		List<string> checkedEventIdList = new List<string>();
+//		List<string> checkedDoneEventIdList = new List<string>();
 		//check if player already experienced the event on the list.
 		//if so, remove it from the stage
 		for (int i = 0; i < stageEventList.Count; i++) {
 			foreach (string doneEventId in GameManager.Instance.eventDoneList) {
 				//if the eventId has been checked, skip it.
-				if (checkedEventIdList.Contains (doneEventId)) {
-					continue;
-				}
+//				if (checkedDoneEventIdList.Contains (doneEventId)) {
+//					continue;
+//				}
 
 				//player has Exped the event.
 				if (stageEventList [i].id == doneEventId) {
@@ -67,9 +67,9 @@ public class StageData : MonoBehaviour {
 						stageEventList [i] = nextEventObj.GetComponent<EventListObject>();
 
 					}
+					//store eventId into checkedList.
+//					checkedDoneEventIdList.Add (doneEventId);
 				}
-				//store eventId into checkedList.
-				checkedEventIdList.Add (doneEventId);
 			}
 		}
 	}
