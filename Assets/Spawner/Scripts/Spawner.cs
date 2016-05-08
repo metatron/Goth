@@ -106,13 +106,17 @@ public class Spawner : MonoBehaviour
     {
         if (unitList[(int)unitLevel] != null)
         {
-			Transform enemyPrefab = GameManager.Instance.crntStageData.GetEnemyPrefab(this).transform;
+			EnemyParameterStatus enemyStatus = null;
+			Transform enemyPrefab = GameManager.Instance.crntStageData.GetEnemyPrefab(this, out enemyStatus).transform;
 			if(enemyPrefab == null) {
 				enemyPrefab = unitList[(int)unitLevel].transform; //origin
 			}
 			Transform unit = InstanceManager.Spawn(enemyPrefab, spawnLocation.position, Quaternion.identity);
 			unit.localScale = new Vector3(TouchDetection.DEFAULT_SCALE, TouchDetection.DEFAULT_SCALE, 1.0f);
 			GameManager.Instance.UpdateSummonedEnemyParam(unit);
+			if (enemyStatus != null) {
+				unit.GetComponent<EnemyAI> ().CopyEnemyStatus (enemyStatus);
+			}
 			unit.GetComponent<SpawnAI>().SetOwner(this);
             // Increase the total number of enemies spawned and the number of spawned enemies
             numberOfUnits++;

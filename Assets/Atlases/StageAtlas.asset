@@ -14,200 +14,205 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: ab91cd1132a8d4ca198156236c46aafb, type: 2}
   uvs:
   - serializedVersion: 2
-    x: 0.9277344
-    y: 0.11035156
+    x: 0.55615234
+    y: 0.17285156
     width: 0.04345703
-    height: 0.038085938
-  - serializedVersion: 2
-    x: 0.67089844
-    y: 0.39160156
-    width: 0.1953125
-    height: 0.12011719
+    height: 0.019042969
   - serializedVersion: 2
     x: 0.19580078
-    y: 0.79003906
+    y: 0.12841797
+    width: 0.1953125
+    height: 0.060058594
+  - serializedVersion: 2
+    x: 0.14697266
+    y: 0.56689453
     width: 0.09033203
-    height: 0.19726562
+    height: 0.09863281
   - serializedVersion: 2
-    x: 0.5776367
-    y: 0.36035156
+    x: 0.39160156
+    y: 0.12841797
     width: 0.037109375
-    height: 0.038085938
+    height: 0.019042969
   - serializedVersion: 2
-    x: 0.9277344
-    y: 0.072265625
+    x: 0.43066406
+    y: 0.17675781
     width: 0.049804688
-    height: 0.037109375
+    height: 0.018554688
   - serializedVersion: 2
-    x: 0.57421875
-    y: 0.76660156
+    x: 0.31298828
+    y: 0.46142578
     width: 0.068359375
-    height: 0.19726562
+    height: 0.09863281
   - serializedVersion: 2
     x: 0
     y: 0
     width: 0.1953125
-    height: 0.390625
+    height: 0.1953125
   - serializedVersion: 2
-    x: 0.55615234
-    y: 0.5527344
+    x: 0.31298828
+    y: 0.3623047
     width: 0.071777344
-    height: 0.19726562
-  - serializedVersion: 2
-    x: 0.30908203
-    y: 0.79003906
-    width: 0.084472656
-    height: 0.19726562
-  - serializedVersion: 2
-    x: 0.39404297
-    y: 0.9277344
-    width: 0.024414062
-    height: 0.047851562
-  - serializedVersion: 2
-    x: 0.67089844
-    y: 0.18261719
-    width: 0.24853516
-    height: 0.103515625
-  - serializedVersion: 2
-    x: 0.67089844
-    y: 0.28710938
-    width: 0.2397461
-    height: 0.103515625
-  - serializedVersion: 2
-    x: 0.67871094
-    y: 0
-    width: 0.24853516
-    height: 0.17675781
-  - serializedVersion: 2
-    x: 0.43066406
-    y: 0.18261719
-    width: 0.2397461
-    height: 0.17675781
-  - serializedVersion: 2
-    x: 0.4165039
-    y: 0.79003906
-    width: 0.013183594
     height: 0.09863281
   - serializedVersion: 2
-    x: 0.43066406
-    y: 0.76660156
-    width: 0.1430664
-    height: 0.18164062
+    x: 0
+    y: 0.88623047
+    width: 0.084472656
+    height: 0.09863281
   - serializedVersion: 2
-    x: 0.39404297
-    y: 0.79003906
+    x: 0.39160156
+    y: 0.14794922
+    width: 0.024414062
+    height: 0.023925781
+  - serializedVersion: 2
+    x: 0.39257812
+    y: 0.19580078
+    width: 0.24853516
+    height: 0.051757812
+  - serializedVersion: 2
+    x: 0.64160156
+    y: 0.19580078
+    width: 0.2397461
+    height: 0.051757812
+  - serializedVersion: 2
+    x: 0
+    y: 0.19580078
+    width: 0.24853516
+    height: 0.088378906
+  - serializedVersion: 2
+    x: 0.6254883
+    y: 0.091308594
+    width: 0.2397461
+    height: 0.088378906
+  - serializedVersion: 2
+    x: 0.2290039
+    y: 0.36572266
+    width: 0.013183594
+    height: 0.049316406
+  - serializedVersion: 2
+    x: 0.24902344
+    y: 0.19580078
+    width: 0.1430664
+    height: 0.09082031
+  - serializedVersion: 2
+    x: 0.08496094
+    y: 0.88623047
     width: 0.021972656
-    height: 0.13671875
+    height: 0.068359375
   - serializedVersion: 2
     x: 0.19580078
     y: 0
     width: 0.234375
-    height: 0.25585938
+    height: 0.12792969
   - serializedVersion: 2
-    x: 0.2866211
-    y: 0.79003906
+    x: 0.2290039
+    y: 0.28466797
     width: 0.01953125
-    height: 0.16113281
+    height: 0.080566406
   - serializedVersion: 2
-    x: 0.43066406
+    x: 0.6254883
     y: 0
     width: 0.2475586
-    height: 0.18164062
+    height: 0.09082031
   - serializedVersion: 2
-    x: 0.4243164
-    y: 0.25683594
+    x: 0.86572266
+    y: 0.091308594
     width: 0.005859375
-    height: 0.14257812
-  - serializedVersion: 2
-    x: 0.9277344
-    y: 0
-    width: 0.048828125
     height: 0.07128906
   - serializedVersion: 2
-    x: 0.43066406
-    y: 0.36035156
-    width: 0.14648438
-    height: 0.19140625
-  - serializedVersion: 2
-    x: 0.19580078
-    y: 0.25683594
-    width: 0.13232422
-    height: 0.28125
-  - serializedVersion: 2
-    x: 0.67089844
-    y: 0.5126953
-    width: 0.13916016
-    height: 0.14941406
-  - serializedVersion: 2
-    x: 0
-    y: 0.6386719
-    width: 0.1328125
-    height: 0.28125
-  - serializedVersion: 2
-    x: 0.43066406
-    y: 0.5527344
-    width: 0.125
-    height: 0.21289062
-  - serializedVersion: 2
-    x: 0.13330078
-    y: 0.88964844
+    x: 0.14697266
+    y: 0.68310547
     width: 0.048828125
-    height: 0.09765625
+    height: 0.03564453
   - serializedVersion: 2
     x: 0
-    y: 0.39160156
-    width: 0.19433594
-    height: 0.24609375
+    y: 0.68310547
+    width: 0.14648438
+    height: 0.095703125
   - serializedVersion: 2
     x: 0
-    y: 0.92089844
+    y: 0.42578125
+    width: 0.13232422
+    height: 0.140625
+  - serializedVersion: 2
+    x: 0.24902344
+    y: 0.28710938
+    width: 0.13916016
+    height: 0.07470703
+  - serializedVersion: 2
+    x: 0
+    y: 0.28466797
+    width: 0.1328125
+    height: 0.140625
+  - serializedVersion: 2
+    x: 0
+    y: 0.7792969
     width: 0.125
-    height: 0.053710938
+    height: 0.10644531
+  - serializedVersion: 2
+    x: 0.55615234
+    y: 0.123535156
+    width: 0.048828125
+    height: 0.048828125
+  - serializedVersion: 2
+    x: 0.43066406
+    y: 0
+    width: 0.19433594
+    height: 0.123046875
+  - serializedVersion: 2
+    x: 0.87353516
+    y: 0.16699219
+    width: 0.125
+    height: 0.026855469
+  - serializedVersion: 2
+    x: 0.24902344
+    y: 0.48779297
+    width: 0.056640625
+    height: 0.125
+  - serializedVersion: 2
+    x: 0.24902344
+    y: 0.3623047
+    width: 0.06347656
+    height: 0.125
   - serializedVersion: 2
     x: 0.13330078
-    y: 0.6386719
-    width: 0.056640625
-    height: 0.25
-  - serializedVersion: 2
-    x: 0.74072266
-    y: 0.66308594
-    width: 0.06347656
-    height: 0.25
-  - serializedVersion: 2
-    x: 0.32861328
-    y: 0.25683594
+    y: 0.28466797
     width: 0.095214844
-    height: 0.25
+    height: 0.125
   - serializedVersion: 2
-    x: 0.8105469
-    y: 0.5126953
+    x: 0.87353516
+    y: 0.12548828
     width: 0.125
-    height: 0.08203125
+    height: 0.041015625
   - serializedVersion: 2
-    x: 0.30908203
-    y: 0.5390625
+    x: 0.1328125
+    y: 0.42578125
     width: 0.08251953
-    height: 0.25
+    height: 0.125
   - serializedVersion: 2
-    x: 0.67089844
-    y: 0.66308594
+    x: 0.12548828
+    y: 0.7792969
     width: 0.06933594
-    height: 0.25
+    height: 0.125
   - serializedVersion: 2
-    x: 0.8666992
-    y: 0.39160156
+    x: 0.43066406
+    y: 0.123535156
     width: 0.125
-    height: 0.10546875
+    height: 0.052734375
   - serializedVersion: 2
-    x: 0.19580078
-    y: 0.5390625
+    x: 0.87353516
+    y: 0
     width: 0.11279297
-    height: 0.25
+    height: 0.125
   - serializedVersion: 2
-    x: 0.39208984
-    y: 0.5390625
+    x: 0.21582031
+    y: 0.42578125
     width: 0.029785156
-    height: 0.25
+    height: 0.125
+  - serializedVersion: 2
+    x: 0
+    y: 0.56689453
+    width: 0.14648438
+    height: 0.115722656
   textureGUIDs:
   - b33deaa443144440c9542e718cec8e72
   - 0d96e43699998469582faa6a1e0bf672
@@ -248,6 +253,7 @@ MonoBehaviour:
   - c73a1f9da77ec454380da2ca504a6423
   - 2760b91e735a8424dab78a1b042c3714
   - 691ddd8ff183142feaae4cdac34550dd
+  - 47ecd5150588e4abdbab8a68a3a40aff
   textureSizes:
   - {x: 89, y: 39}
   - {x: 400, y: 123}
@@ -288,6 +294,7 @@ MonoBehaviour:
   - {x: 256, y: 108}
   - {x: 231, y: 256}
   - {x: 61, y: 256}
+  - {x: 300, y: 237}
   defaultPivotOffsets:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -310,6 +317,7 @@ MonoBehaviour:
   - {x: -0.023130842, y: 0.36588785}
   - {x: 0, y: 0}
   - {x: -0.03411215, y: 0.47523364}
+  - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -368,6 +376,7 @@ MonoBehaviour:
   - toture4
   - toture6
   - toture3
+  - blackwhitewall
   texturePaths:
   - Assets/Textures/Stage/Desert/rock2.png
   - Assets/Textures/Stage/Desert/field.png
@@ -408,7 +417,8 @@ MonoBehaviour:
   - Assets/Textures/Stage/Dungeon/toture4.png
   - Assets/Textures/Stage/Dungeon/toture6.png
   - Assets/Textures/Stage/Dungeon/toture3.png
-  lastBuildID: 2016030100244069
+  - Assets/Textures/Stage/Torture/blackwhitewall.jpg
+  lastBuildID: 20160506013400555
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 1024

@@ -2620,27 +2620,27 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: -14.383986, y: 9.205751, z: -0.002734375}
+        value: {x: -14.383986, y: 9.205751, z: -0.00234375}
         inSlope: {x: 0, y: 0, z: Infinity}
         outSlope: {x: 0, y: 0, z: Infinity}
         tangentMode: 0
       - time: 5
-        value: {x: -14.383986, y: 9.205751, z: -0.002734375}
+        value: {x: -14.383986, y: 9.205751, z: -0.00234375}
         inSlope: {x: 0, y: 0, z: Infinity}
         outSlope: {x: 0, y: 0, z: Infinity}
         tangentMode: 0
       - time: 8
-        value: {x: -12.230988, y: 9.205751, z: -0.002734375}
+        value: {x: -12.230988, y: 9.205751, z: -0.00234375}
         inSlope: {x: 0, y: 0, z: Infinity}
         outSlope: {x: 0, y: 0, z: Infinity}
         tangentMode: 0
       - time: 11
-        value: {x: -12.230988, y: 9.205751, z: -0.002734375}
+        value: {x: -12.230988, y: 9.205751, z: -0.00234375}
         inSlope: {x: 0, y: 0, z: Infinity}
         outSlope: {x: 0, y: 0, z: Infinity}
         tangentMode: 0
       - time: 15
-        value: {x: -14.383986, y: 9.205751, z: -0.002734375}
+        value: {x: -14.383986, y: 9.205751, z: -0.00234375}
         inSlope: {x: 0, y: 0, z: Infinity}
         outSlope: {x: 0, y: 0, z: Infinity}
         tangentMode: 0

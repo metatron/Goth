@@ -10,6 +10,6 @@ public class CollectionPopup : MonoBehaviour {
 	public void InitializeCollectionPopup(CollectionData data) {
 		collectionData = data;
 		nameText.text = collectionData.title;
-		descText.text = collectionData.desc;
+		descText.text = collectionData.desc.Replace("\\n", "\n");
 	}
 }

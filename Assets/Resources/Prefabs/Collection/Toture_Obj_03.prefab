@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &112866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 471722}
+  - 114: {fileID: 11407128}
+  - 33: {fileID: 3360504}
+  - 23: {fileID: 2335742}
+  - 114: {fileID: 11453988}
+  m_Layer: 0
+  m_Name: torture5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &184778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 404674}
+  - 33: {fileID: 3342538}
+  - 65: {fileID: 6537080}
+  - 114: {fileID: 11460752}
+  m_Layer: 0
+  m_Name: Toture_Obj_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404674
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1015, y: 75, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 471722}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &471722
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.04, y: -0.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 404674}
+  m_RootOrder: 0
+--- !u!23 &2335742
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112866}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ab91cd1132a8d4ca198156236c46aafb, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1703546001
+  m_SortingOrder: 20
+--- !u!33 &3342538
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184778}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &3360504
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112866}
+  m_Mesh: {fileID: 0}
+--- !u!65 &6537080
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 200, z: 200}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11407128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1951896578, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 2335742}
+  _meshFilter: {fileID: 3360504}
+  _mesh: {fileID: 0}
+  _halfSize: {x: 97.5, y: 128}
+  _meshGameObject: {fileID: 112866}
+  _textureIndex: 32
+  _topLeft: {x: -97.5, y: 128}
+  _topRight: {x: 97.5, y: 128}
+  _bottomLeft: {x: -97.5, y: -128}
+  _bottomRight: {x: 97.5, y: -128}
+  _vertices:
+  - {x: -97.5, y: 128, z: 0}
+  - {x: -97.5, y: -128, z: 0}
+  - {x: 97.5, y: -128, z: 0}
+  - {x: 97.5, y: 128, z: 0}
+  _colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  _uvs:
+  - {x: 0.32861328, y: 0.50683594}
+  - {x: 0.32861328, y: 0.25683594}
+  - {x: 0.42382812, y: 0.25683594}
+  - {x: 0.42382812, y: 0.50683594}
+  _triangles: 000000000300000001000000030000000200000001000000
+  _normals:
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  atlas: {fileID: 11400000, guid: fcb3898ba22c94b90b83284beb3f71a1, type: 2}
+  textureGUID: 88f45ec41476e491ebc5fde3bbb1c541
+  sizeMode: 0
+  size: {x: 195, y: 256}
+  scale: {x: 1, y: 1}
+  pivotOffsetOverride: {x: 0, y: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  useDefaultPivot: 1
+--- !u!114 &11453988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f22aef9855a04ac289be2076d4a8a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerName: UI
+  orderInLayer: 20
+--- !u!114 &11460752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7dd2907ac1f47e39c325b96c7274ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: TotureObj03
+  title: "\u4E73\u623F\u88C2\u304D\u5668"
+  desc: "\u5973\u6027\u5C02\u7528\u306E\u3053\u306E\u62F7\u554F\u5177\u306F\u5148\u304C\u92ED\u304F4\u3064\u306B\u5206\u304B\u308C\u305F\u30C8\u30F3\u30B0\u306E\u3088\u3046\u306A\u5F62\u3092\u3057\u3066\u3044\u308B\u3002\\n\u9AD8\u6E29\u306B\u71B1\u3057\u305F\u5C16\u3063\u305F\u90E8\u5206\u3067\u4E73\u623F\u3054\u3068\u5F15\u304D\u88C2\u304F\u3002"
+  prefabPath: Prefabs/Collection/Toture_Obj_02
+  resizeVec: {x: 1, y: 1, z: 1}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 184778}
+  m_IsPrefabParent: 1

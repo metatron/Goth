@@ -264,6 +264,8 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		enemyAI.npcStatus = npcParam;
 		enemyAI.npcStatus.SelfObj = npcObject;
 		enemyAI.charType = EnemyAI.CharacterType.NPC;
+		//if this is true on summon, it wont follow the player.
+		enemyAI.npcStatus.isSearchingOnAttack = false;
 
 		enemyAI.npcStatus.InitCharacterParameterNums ();
 
@@ -500,6 +502,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 * 
 	 */
 	public void SetDoNothingAllCharacters(bool doNothing) {
+		Debug.LogError ("SetDoNothingAllCharacters: " + doNothing);
 		//NPC
 		if (crntNpcObj != null) {
 			crntNpcObj.GetComponent<EnemyAI> ().doNothing = doNothing;

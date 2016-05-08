@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using SmoothMoves;
 
 [RequireComponent (typeof (Rigidbody))]
@@ -172,6 +173,12 @@ public class EnemyAI : MonoBehaviour {
 
 			//if the npc spotted the enemy on her site, set the target
 			GameObject targetEnemy = GameManager.Instance.GetEnemyOnNpcSite ();
+			//check if the player spotted the enemy
+			List<GameObject> targetEnemyList = GameManager.Instance.GetEnemiesOnSite();
+			if (targetEnemy == null && targetEnemyList.Count > 0) {
+				targetEnemy = targetEnemyList [0];
+			}
+
 			if(targetEnemy != null) {
 				target = targetEnemy.transform;
 
@@ -332,15 +339,19 @@ public class EnemyAI : MonoBehaviour {
 	public void CopyEnemyStatus(EnemyParameterStatus enemyStatus) {
 		status.minHp = enemyStatus.minHp;
 		status.maxHp = enemyStatus.maxHp;
+		status.crntHp = enemyStatus.crntHp;
 
 		status.minAtk = enemyStatus.minAtk;
 		status.maxAtk = enemyStatus.maxAtk;
+		status.crntAtk = enemyStatus.crntAtk;
 
 		status.minMoveSpeed = enemyStatus.minMoveSpeed;
 		status.maxMoveSpeed = enemyStatus.maxMoveSpeed;
+		status.crntMoveSpeed = enemyStatus.crntMoveSpeed;
 
 		status.minAtkSpeed = enemyStatus.minAtkSpeed;
 		status.maxAtkSpeed = enemyStatus.maxAtkSpeed;
+		status.crntAtkSpeed = enemyStatus.crntAtkSpeed;
 
 		status.level = enemyStatus.level;
 

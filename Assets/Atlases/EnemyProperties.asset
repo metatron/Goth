@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 529336600, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
+  m_Name: EnemyProperties
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 6cf8746fda235401398cba398d751f97, type: 2}
+  uvs:
+  - serializedVersion: 2
+    x: 0.45507812
+    y: 0
+    width: 0.21484375
+    height: 0.23242188
+  - serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.453125
+    height: 0.8339844
+  textureGUIDs:
+  - 72d3cde98fe8e43f795817863f5a7670
+  - a10a74fe6cd4a4f8685b5b3679776e89
+  textureSizes:
+  - {x: 110, y: 119}
+  - {x: 232, y: 427}
+  defaultPivotOffsets:
+  - {x: -0.1125, y: -0.48214284}
+  - {x: -0.33749998, y: 0.40714285}
+  textureNames:
+  - hood
+  - mant_big
+  texturePaths:
+  - Assets/Textures/Queen/hood.png
+  - Assets/Textures/Queen/mant_big.png
+  lastBuildID: 20160503001251148
+  needsRebuilt: 0
+  dataVersion: 4
+  maxAtlasSize: 1024
+  padding: 1
+  forceSquare: 0

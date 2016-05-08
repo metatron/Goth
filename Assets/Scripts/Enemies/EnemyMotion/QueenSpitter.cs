@@ -3,9 +3,6 @@ using System.Collections;
 using SmoothMoves;
 
 public class QueenSpitter : EnemyMotionInterface {
-	public float attackDistance = 600.0f; //distance bt the target right before getting into attack
-	public float attackMoveTime = 1.0f;
-
 	public GameObject spiritBallPrefab;
 
 	public GameObject ballPosition;
@@ -65,7 +62,7 @@ public class QueenSpitter : EnemyMotionInterface {
 			Transform tmpTransform = boneAnim.GetSpriteTransform("weapon");
 
 			//set destroy time
-			ballObject.GetComponent<EnemyWeapon>().SetTime2Destroy(5.0f);
+			ballObject.GetComponent<EnemyWeapon>().SetTime2Destroy(3.0f);
 
 			//set the owner of the weapon
 			ballObject.GetComponent<EnemyWeapon>().owner = transform.parent.gameObject;

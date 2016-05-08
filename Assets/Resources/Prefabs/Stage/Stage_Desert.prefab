@@ -781,6 +781,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -212, y: 579, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 422034}
   m_RootOrder: 0
@@ -793,6 +794,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -332, y: 579, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497190}
   m_RootOrder: 0
@@ -805,6 +807,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 320, y: 433, z: -492}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497190}
   m_RootOrder: 2
@@ -817,6 +820,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5972, y: 800, z: 588}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 453218}
   m_Father: {fileID: 485302}
@@ -830,6 +834,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10004, y: 462, z: 162}
   m_LocalScale: {x: 100, y: 3000, z: 500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 485302}
   m_RootOrder: 7
@@ -842,6 +847,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -212, y: 579, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 477926}
   m_RootOrder: 0
@@ -854,6 +860,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3976, y: 800, z: 588}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 461884}
   m_Father: {fileID: 485302}
@@ -867,6 +874,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 320, y: 433, z: -492}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 453218}
   m_RootOrder: 3
@@ -879,6 +887,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -212, y: 579, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 461884}
   m_RootOrder: 0
@@ -891,6 +900,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -333, y: 579, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497450}
   m_RootOrder: 1
@@ -903,6 +913,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -994, y: 528, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 422034}
   m_RootOrder: 3
@@ -915,6 +926,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 345, y: 693, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497190}
   m_RootOrder: 1
@@ -927,6 +939,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -987, z: -147}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 403480}
   - {fileID: 463372}
@@ -944,6 +957,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -945, y: 117, z: -550}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497450}
   m_RootOrder: 5
@@ -956,6 +970,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 320, y: 433, z: -492}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 461884}
   m_RootOrder: 2
@@ -968,6 +983,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2987, y: 599, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497450}
   m_RootOrder: 0
@@ -980,6 +996,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -994, y: 528, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 453218}
   m_RootOrder: 4
@@ -992,6 +1009,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 345, y: 693, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497450}
   m_RootOrder: 2
@@ -1004,6 +1022,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -362, y: 462, z: 162}
   m_LocalScale: {x: 100, y: 3000, z: 500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 485302}
   m_RootOrder: 6
@@ -1016,6 +1035,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -945, y: 270, z: -492}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 422034}
   m_RootOrder: 4
@@ -1028,6 +1048,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2987, y: 599, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 453218}
   m_RootOrder: 0
@@ -1040,6 +1061,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -987, z: -147}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 450604}
   - {fileID: 477900}
@@ -1059,6 +1081,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1996, y: 800, z: 588}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 422034}
   m_Father: {fileID: 485302}
@@ -1072,6 +1095,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 320, y: 433, z: -492}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 422034}
   m_RootOrder: 2
@@ -1084,6 +1108,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -987, z: -147}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 416648}
   - {fileID: 480254}
@@ -1099,6 +1124,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 320, y: 433, z: -492}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497450}
   m_RootOrder: 3
@@ -1111,6 +1137,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2932, y: 187, z: -550}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497450}
   m_RootOrder: 6
@@ -1123,6 +1150,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 345, y: 693, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 422034}
   m_RootOrder: 1
@@ -1135,6 +1163,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 345, y: 693, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 477926}
   m_RootOrder: 1
@@ -1147,6 +1176,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 320, y: 433, z: -492}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 477926}
   m_RootOrder: 2
@@ -1159,6 +1189,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1000, y: 174, z: -550}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 453218}
   m_RootOrder: 5
@@ -1171,6 +1202,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -994, y: 528, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 497450}
   m_RootOrder: 4
@@ -1183,6 +1215,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2932, y: 187, z: -550}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 453218}
   m_RootOrder: 6
@@ -1195,6 +1228,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7963, y: 800, z: 588}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 497190}
   m_Father: {fileID: 485302}
@@ -1208,6 +1242,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -212, y: 579, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 453218}
   m_RootOrder: 1
@@ -1220,6 +1255,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -987, z: -147}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 409218}
   - {fileID: 466226}
@@ -1235,6 +1271,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 345, y: 693, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 461884}
   m_RootOrder: 1
@@ -1247,6 +1284,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 345, y: 693, z: -164}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 453218}
   m_RootOrder: 2
@@ -1259,6 +1297,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 489180}
   - {fileID: 455298}
@@ -1279,6 +1318,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 800, z: 588}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 477926}
   m_Father: {fileID: 485302}
@@ -1292,6 +1332,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9959, y: 800, z: 588}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 497450}
   m_Father: {fileID: 485302}
@@ -1305,6 +1346,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -987, z: -147}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 403696}
   - {fileID: 419318}
@@ -1320,6 +1362,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -987, z: -147}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 428256}
   - {fileID: 417448}
@@ -2736,10 +2779,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -2786,10 +2829,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.5703125, y: 0.9658203}
-  - {x: 0.5703125, y: 0.7685547}
-  - {x: 0.64208984, y: 0.7685547}
-  - {x: 0.64208984, y: 0.9658203}
+  - {x: 0.31298828, y: 0.4609375}
+  - {x: 0.31298828, y: 0.3623047}
+  - {x: 0.38476562, y: 0.3623047}
+  - {x: 0.38476562, y: 0.4609375}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -2836,10 +2879,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.691}
   - {r: 1, g: 1, b: 1, a: 0.691}
   _uvs:
-  - {x: 0.32128906, y: 0.92871094}
-  - {x: 0.32128906, y: 0.7314453}
-  - {x: 0.40576172, y: 0.7314453}
-  - {x: 0.40576172, y: 0.92871094}
+  - {x: 0, y: 0.9848633}
+  - {x: 0, y: 0.88623047}
+  - {x: 0.084472656, y: 0.88623047}
+  - {x: 0.084472656, y: 0.9848633}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -2886,10 +2929,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -2922,6 +2965,7 @@ MonoBehaviour:
   enemyStatusList: []
   collectionItemList: []
   stageEventList: []
+  homeDoorObj: {fileID: 0}
 --- !u!114 &11413570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2965,10 +3009,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   _uvs:
-  - {x: 0.32128906, y: 0.92871094}
-  - {x: 0.32128906, y: 0.7314453}
-  - {x: 0.40576172, y: 0.7314453}
-  - {x: 0.40576172, y: 0.92871094}
+  - {x: 0, y: 0.9848633}
+  - {x: 0, y: 0.88623047}
+  - {x: 0.084472656, y: 0.88623047}
+  - {x: 0.084472656, y: 0.9848633}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3015,10 +3059,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3065,10 +3109,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.43066406, y: 0.7675781}
-  - {x: 0.43066406, y: 0.64746094}
-  - {x: 0.62597656, y: 0.64746094}
-  - {x: 0.62597656, y: 0.7675781}
+  - {x: 0.19580078, y: 0.18847656}
+  - {x: 0.19580078, y: 0.12841797}
+  - {x: 0.39111328, y: 0.12841797}
+  - {x: 0.39111328, y: 0.18847656}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3115,10 +3159,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.691}
   - {r: 1, g: 1, b: 1, a: 0.691}
   _uvs:
-  - {x: 0.32128906, y: 0.92871094}
-  - {x: 0.32128906, y: 0.7314453}
-  - {x: 0.40576172, y: 0.7314453}
-  - {x: 0.40576172, y: 0.92871094}
+  - {x: 0, y: 0.9848633}
+  - {x: 0, y: 0.88623047}
+  - {x: 0.084472656, y: 0.88623047}
+  - {x: 0.084472656, y: 0.9848633}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3165,10 +3209,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0, y: 0.390625}
+  - {x: 0, y: 0.1953125}
   - {x: 0, y: 0}
   - {x: 0.1953125, y: 0}
-  - {x: 0.1953125, y: 0.390625}
+  - {x: 0.1953125, y: 0.1953125}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3215,10 +3259,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0, y: 0.390625}
+  - {x: 0, y: 0.1953125}
   - {x: 0, y: 0}
   - {x: 0.1953125, y: 0}
-  - {x: 0.1953125, y: 0.390625}
+  - {x: 0.1953125, y: 0.1953125}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3265,10 +3309,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0, y: 0.390625}
+  - {x: 0, y: 0.1953125}
   - {x: 0, y: 0}
   - {x: 0.1953125, y: 0}
-  - {x: 0.1953125, y: 0.390625}
+  - {x: 0.1953125, y: 0.1953125}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3315,10 +3359,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.43066406, y: 0.7675781}
-  - {x: 0.43066406, y: 0.64746094}
-  - {x: 0.62597656, y: 0.64746094}
-  - {x: 0.62597656, y: 0.7675781}
+  - {x: 0.19580078, y: 0.18847656}
+  - {x: 0.19580078, y: 0.12841797}
+  - {x: 0.39111328, y: 0.12841797}
+  - {x: 0.39111328, y: 0.18847656}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3415,10 +3459,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0, y: 0.390625}
+  - {x: 0, y: 0.1953125}
   - {x: 0, y: 0}
   - {x: 0.1953125, y: 0}
-  - {x: 0.1953125, y: 0.390625}
+  - {x: 0.1953125, y: 0.1953125}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3465,10 +3509,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3515,10 +3559,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0, y: 0.390625}
+  - {x: 0, y: 0.1953125}
   - {x: 0, y: 0}
   - {x: 0.1953125, y: 0}
-  - {x: 0.1953125, y: 0.390625}
+  - {x: 0.1953125, y: 0.1953125}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3565,10 +3609,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.43066406, y: 0.7675781}
-  - {x: 0.43066406, y: 0.64746094}
-  - {x: 0.62597656, y: 0.64746094}
-  - {x: 0.62597656, y: 0.7675781}
+  - {x: 0.19580078, y: 0.18847656}
+  - {x: 0.19580078, y: 0.12841797}
+  - {x: 0.39111328, y: 0.12841797}
+  - {x: 0.39111328, y: 0.18847656}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3615,10 +3659,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3665,10 +3709,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.691}
   - {r: 1, g: 1, b: 1, a: 0.691}
   _uvs:
-  - {x: 0.32128906, y: 0.92871094}
-  - {x: 0.32128906, y: 0.7314453}
-  - {x: 0.40576172, y: 0.7314453}
-  - {x: 0.40576172, y: 0.92871094}
+  - {x: 0, y: 0.9848633}
+  - {x: 0, y: 0.88623047}
+  - {x: 0.084472656, y: 0.88623047}
+  - {x: 0.084472656, y: 0.9848633}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3715,10 +3759,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3765,10 +3809,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.5703125, y: 0.9658203}
-  - {x: 0.5703125, y: 0.7685547}
-  - {x: 0.64208984, y: 0.7685547}
-  - {x: 0.64208984, y: 0.9658203}
+  - {x: 0.31298828, y: 0.4609375}
+  - {x: 0.31298828, y: 0.3623047}
+  - {x: 0.38476562, y: 0.3623047}
+  - {x: 0.38476562, y: 0.4609375}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3815,10 +3859,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.691}
   - {r: 1, g: 1, b: 1, a: 0.691}
   _uvs:
-  - {x: 0.32128906, y: 0.92871094}
-  - {x: 0.32128906, y: 0.7314453}
-  - {x: 0.40576172, y: 0.7314453}
-  - {x: 0.40576172, y: 0.92871094}
+  - {x: 0, y: 0.9848633}
+  - {x: 0, y: 0.88623047}
+  - {x: 0.084472656, y: 0.88623047}
+  - {x: 0.084472656, y: 0.9848633}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3865,10 +3909,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.691}
   - {r: 1, g: 1, b: 1, a: 0.691}
   _uvs:
-  - {x: 0.32128906, y: 0.92871094}
-  - {x: 0.32128906, y: 0.7314453}
-  - {x: 0.40576172, y: 0.7314453}
-  - {x: 0.40576172, y: 0.92871094}
+  - {x: 0, y: 0.9848633}
+  - {x: 0, y: 0.88623047}
+  - {x: 0.084472656, y: 0.88623047}
+  - {x: 0.084472656, y: 0.9848633}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -3976,10 +4020,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4026,10 +4070,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.43066406, y: 0.7675781}
-  - {x: 0.43066406, y: 0.64746094}
-  - {x: 0.62597656, y: 0.64746094}
-  - {x: 0.62597656, y: 0.7675781}
+  - {x: 0.19580078, y: 0.18847656}
+  - {x: 0.19580078, y: 0.12841797}
+  - {x: 0.39111328, y: 0.12841797}
+  - {x: 0.39111328, y: 0.18847656}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4076,10 +4120,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4126,10 +4170,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.5703125, y: 0.9658203}
-  - {x: 0.5703125, y: 0.7685547}
-  - {x: 0.64208984, y: 0.7685547}
-  - {x: 0.64208984, y: 0.9658203}
+  - {x: 0.31298828, y: 0.4609375}
+  - {x: 0.31298828, y: 0.3623047}
+  - {x: 0.38476562, y: 0.3623047}
+  - {x: 0.38476562, y: 0.4609375}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4176,10 +4220,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4226,10 +4270,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4276,10 +4320,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4326,10 +4370,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4376,10 +4420,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0, y: 0.390625}
+  - {x: 0, y: 0.1953125}
   - {x: 0, y: 0}
   - {x: 0.1953125, y: 0}
-  - {x: 0.1953125, y: 0.390625}
+  - {x: 0.1953125, y: 0.1953125}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4426,10 +4470,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4476,10 +4520,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.43066406, y: 0.7675781}
-  - {x: 0.43066406, y: 0.64746094}
-  - {x: 0.62597656, y: 0.64746094}
-  - {x: 0.62597656, y: 0.7675781}
+  - {x: 0.19580078, y: 0.18847656}
+  - {x: 0.19580078, y: 0.12841797}
+  - {x: 0.39111328, y: 0.12841797}
+  - {x: 0.39111328, y: 0.18847656}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4526,10 +4570,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4576,10 +4620,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   _uvs:
-  - {x: 0.32861328, y: 0.45410156}
-  - {x: 0.32861328, y: 0.25683594}
-  - {x: 0.4189453, y: 0.25683594}
-  - {x: 0.4189453, y: 0.45410156}
+  - {x: 0.14697266, y: 0.66552734}
+  - {x: 0.14697266, y: 0.56689453}
+  - {x: 0.23730469, y: 0.56689453}
+  - {x: 0.23730469, y: 0.66552734}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4626,10 +4670,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   - {r: 1, g: 1, b: 1, a: 0.6901961}
   _uvs:
-  - {x: 0.32128906, y: 0.92871094}
-  - {x: 0.32128906, y: 0.7314453}
-  - {x: 0.40576172, y: 0.7314453}
-  - {x: 0.40576172, y: 0.92871094}
+  - {x: 0, y: 0.9848633}
+  - {x: 0, y: 0.88623047}
+  - {x: 0.084472656, y: 0.88623047}
+  - {x: 0.084472656, y: 0.9848633}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4676,10 +4720,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.43066406, y: 0.7675781}
-  - {x: 0.43066406, y: 0.64746094}
-  - {x: 0.62597656, y: 0.64746094}
-  - {x: 0.62597656, y: 0.7675781}
+  - {x: 0.19580078, y: 0.18847656}
+  - {x: 0.19580078, y: 0.12841797}
+  - {x: 0.39111328, y: 0.12841797}
+  - {x: 0.39111328, y: 0.18847656}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -4726,10 +4770,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.67089844, y: 0.484375}
-  - {x: 0.67089844, y: 0.28710938}
-  - {x: 0.7392578, y: 0.28710938}
-  - {x: 0.7392578, y: 0.484375}
+  - {x: 0.31298828, y: 0.5600586}
+  - {x: 0.31298828, y: 0.46142578}
+  - {x: 0.38134766, y: 0.46142578}
+  - {x: 0.38134766, y: 0.5600586}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}

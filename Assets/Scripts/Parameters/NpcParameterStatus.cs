@@ -21,7 +21,7 @@ public class NpcParameterStatus : BaseParameterStatus {
 
 	//flag that currently searching target on attack
 	//(if this flag is on, npc will not follow Player)
-	public bool isSearchingOnAttack;
+	public bool isSearchingOnAttack = false;
 
 
 

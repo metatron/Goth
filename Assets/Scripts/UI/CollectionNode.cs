@@ -10,8 +10,8 @@ public class CollectionNode : MonoBehaviour {
 
 	public void SetCollectionInfo (CollectionData collection) {
 		collectionData = collection;
-		nameText.text = "Name: " + collectionData.title;
-		descText.text = "Description: " + collectionData.desc;
+		nameText.text = collectionData.title;
+		descText.text = collectionData.desc.Replace("\\n", "\n");
 
 		GameObject collectionObj = Instantiate (collectionData.gameObject) as GameObject;
 		collectionObj.transform.SetParent (transform);

@@ -1618,13 +1618,13 @@ MonoBehaviour:
   enemyStatusList:
   - minHp: 10
     maxHp: 100
-    crntHp: 10
+    crntHp: 30
     minAtk: 10
     maxAtk: 100
     crntAtk: 10
-    minMoveSpeed: 10
-    maxMoveSpeed: 100
-    crntMoveSpeed: 10
+    minMoveSpeed: 100
+    maxMoveSpeed: 200
+    crntMoveSpeed: 100
     minAtkSpeed: 10
     maxAtkSpeed: 100
     crntAtkSpeed: 10

@@ -33,8 +33,8 @@ public class EventData: MonoBehaviour {
 		Rotate,
 		Fall,
 		Alpha,
-		Left,
-		Right
+		MoveLeftRight,
+		MoveUpDown
 	}
 
 	public enum EffectType: int
@@ -66,11 +66,13 @@ public class EventData: MonoBehaviour {
 	public string targetByName; //名前によるターゲット特定
 
 	public Vector3 targetInitPos; //screen上のポジション。
+	public Vector3 targetInitScale = Vector3.one; //初期サイズ
 	public BaseParameterStatus.CharacterDirection direction; //右or左に設置
 	public string animationName; //吹き出しと同時に再生するアニメーション
 
 	public TweenAnimType tweenAnimType = TweenAnimType.None; //iTweenを使用したあにめーしょん
 	public float tweenAnimTime;
+	public float tweenValue; //どれだけ進むか、どれだけ回転するかなど。
 
 	public EffectType effectType = EffectType.None; //effectを再生（Particles）
 
@@ -109,6 +111,9 @@ public class EventData: MonoBehaviour {
 				if (!IdTargetMap.ContainsKey (id)) {
 					if (targetType == TargetType.Path && !string.IsNullOrEmpty (targetPath)) {
 						targetObject = (GameObject)Instantiate (Resources.Load (targetPath));
+						targetObject.name = targetObject.name.Replace ("(Clone)", "");
+						targetObject.transform.localScale = targetInitScale;
+						Debug.Log ("targetInitScale: " + targetObject + ", " + targetInitScale);
 					} else if (targetType == TargetType.EnemyStatus && targetEnemyStatus != null) {
 						//load EnemyAI w/ status
 						targetObject = GameManager.Instance.SummonEnemyByStatus (targetEnemyStatus);
@@ -147,6 +152,7 @@ public class EventData: MonoBehaviour {
 			if (targetObject == null) {
 				Debug.LogError (targetByName + " does not exists!");
 			}
+//			targetObject.transform.localScale = targetInitScale;
 		}
 		else {
 			targetObject = GameManager.Instance.player;
@@ -155,7 +161,7 @@ public class EventData: MonoBehaviour {
 
 		/****** target direction *******/
 
-		Vector3 defaultSizeVec = Vector3.one;
+		Vector3 defaultSizeVec = targetInitScale;
 		if (targetObject.GetComponent<EnemyAI> () != null) {
 			defaultSizeVec = targetObject.GetComponent<EnemyAI> ().defaultSizeVec;
 		} else if (targetObject.GetComponent<PlayerCharacter> () != null) {
@@ -268,8 +274,9 @@ public class EventData: MonoBehaviour {
 		
 		case TweenAnimType.Fall:
 			iTween.MoveTo (targetObject, iTween.Hash (
-				"position", new Vector3 (targetObject.transform.localPosition.x, -400.0f, targetObject.transform.localPosition.z),
+				"position", new Vector3 (targetObject.transform.localPosition.x, tweenValue, targetObject.transform.localPosition.z),
 				"islocal", true,
+				"easetype", iTween.EaseType.linear,
 				"time", tweenAnimTime));
 			break;
 
@@ -279,10 +286,19 @@ public class EventData: MonoBehaviour {
 				"time", tweenAnimTime));
 			break;
 
-		case TweenAnimType.Left:
+		case TweenAnimType.MoveLeftRight:
 			iTween.MoveTo (targetObject, iTween.Hash (
-				"position", new Vector3 (targetObject.transform.localPosition.x-100.0f, targetObject.transform.localPosition.y, targetObject.transform.localPosition.z),
+				"position", new Vector3 (targetObject.transform.localPosition.x+tweenValue, targetObject.transform.localPosition.y, targetObject.transform.localPosition.z),
 				"islocal", true,
+				"easetype", iTween.EaseType.linear,
+				"time", tweenAnimTime));
+			break;
+
+		case TweenAnimType.MoveUpDown:
+			iTween.MoveTo (targetObject, iTween.Hash (
+				"position", new Vector3 (targetObject.transform.localPosition.x, targetObject.transform.localPosition.y+tweenValue, targetObject.transform.localPosition.z),
+				"islocal", true,
+				"easetype", iTween.EaseType.linear,
 				"time", tweenAnimTime));
 			break;
 

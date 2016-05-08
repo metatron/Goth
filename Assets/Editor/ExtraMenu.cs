@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEditor;
 using System.IO;
+using SmoothMoves;
 
 public class ExtraMenu : MonoBehaviour {
 
@@ -83,4 +84,20 @@ public class ExtraMenu : MonoBehaviour {
 		//after load status, remove collected items
 		GameManager.Instance.crntStageData.InitStageCollectionItems();
 	}
+
+	[MenuItem ("Tools/Goth/LoadStage/Torture")]
+	static void LoadStage_Torture () {
+		//delete enemy related objests
+		StageManager.Instance.DeleteCurrentStage ();
+		//instantilate stage data
+		StageManager.Instance.InstantiateStage ("Prefabs/Stage/Stage_Dungeon_Torture");
+		//after load status, remove collected items
+		GameManager.Instance.crntStageData.InitStageCollectionItems();
+	}
+
+	[MenuItem ("Tools/Goth/RefreshAtlas")]
+	static void RefreshAtlas () {
+		StageData stage;
+	}
+
 }

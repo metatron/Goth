@@ -42,6 +42,9 @@ public class BloodAnimation : MonoBehaviour {
 		bloodObj.transform.position = pos;
 		bloodObj.transform.SetParent (transform);
 
+		int rndRotation = Random.Range (0, 360);
+		bloodObj.transform.localRotation = Quaternion.Euler (new Vector3 (0.0f, 0.0f, rndRotation));
+
 		bloodObj.transform.localScale = Vector3.zero;
 		SmoothMoves.Sprite sprite = bloodObj.GetComponent<SmoothMoves.Sprite> ();
 

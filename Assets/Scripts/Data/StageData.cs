@@ -81,7 +81,7 @@ public class StageData : MonoBehaviour {
 	 * 
 	 * 
 	 */
-	public GameObject GetEnemyPrefab(Spawner spawner, bool getPrefab=true) {
+	public GameObject GetEnemyPrefab(Spawner spawner, out EnemyParameterStatus chosenEnemy) {
 		//get the list of enemystatus that can be instantiated.
 		List<EnemyParameterStatus> possibleEnemyList = new List<EnemyParameterStatus> ();
 		foreach (EnemyParameterStatus enemyStatus in enemyStatusList) {
@@ -97,17 +97,10 @@ public class StageData : MonoBehaviour {
 
 		//get the enemy type
 		int rnd = Random.Range (0, possibleEnemyList.Count);
-		EnemyParameterStatus chosenEnemy = possibleEnemyList [rnd];
+		chosenEnemy = possibleEnemyList [rnd];
 
 		//get Prefab (init enemy param status)
-		if (getPrefab) {
-			GameObject enemyPrefab = chosenEnemy.GetPrefab ();
-			enemyPrefab.GetComponent<EnemyAI>().CopyEnemyStatus(chosenEnemy);
-			return enemyPrefab;
-		}
-
-		//TODO return Instantilated object
-
-		return null;
+		return chosenEnemy.GetPrefab ();
+//		enemyPrefab.GetComponent<EnemyAI>().CopyEnemyStatus(chosenEnemy);
 	}
 }
