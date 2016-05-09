@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e332aefc667b5436fa551bd4a2a890ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fType: 1
-  eType: 4
+  fType: 0
+  eType: 0
   id: TotureRealize08
   eventListObj: {fileID: 0}
   targetType: 3
@@ -70,17 +70,17 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetByName: HoodedQueen
   targetInitPos: {x: 0, y: 0, z: 0}
-  targetInitScale: {x: 1, y: 1, z: 1}
+  targetInitScale: {x: 1.5, y: 1.5, z: 1}
   direction: 0
   animationName: normal
   tweenAnimType: 5
   tweenAnimTime: 5
   tweenValue: 1000
-  effectType: 1
+  effectType: 0
   stagePrefPath: 
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
-  totalTime: 5
+  totalTime: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

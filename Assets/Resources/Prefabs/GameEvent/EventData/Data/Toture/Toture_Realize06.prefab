@@ -70,9 +70,9 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetByName: HoodedQueen
   targetInitPos: {x: 0, y: 0, z: 0}
-  targetInitScale: {x: 1, y: 1, z: 1}
+  targetInitScale: {x: 1.5, y: 1.5, z: 1}
   direction: 0
-  animationName: 
+  animationName: normal
   tweenAnimType: 0
   tweenAnimTime: 0
   tweenValue: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   stagePrefPath: 
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
-  totalTime: 0
+  totalTime: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

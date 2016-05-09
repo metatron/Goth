@@ -20,6 +20,8 @@ public class BloodAnimation : MonoBehaviour {
 	public TextureAtlas bloodAtlas;
 	public GameObject bloodPrefab;
 
+	private int count = 0;
+
 	void Start () {
 		StartCoroutine(InstantiateBloodParticle());
 	}
@@ -53,11 +55,19 @@ public class BloodAnimation : MonoBehaviour {
 
 		Destroy (bloodObj.gameObject, destroyTime);
 
-		//サイズを
+		//サイズアニメーション
 		iTween.ScaleTo(bloodObj.gameObject, iTween.Hash(
 			"scale", Vector3.one * size,
 			"time", destroyTime-0.1f //上記Destroyの前に破棄される可能性があるのでアニメーションの終了を若干早める。
 		));
+
+		//increment count
+		count++;
+
+		//destroy self
+		if (count >= BLOOD_MAX_NUM) {
+			Destroy (gameObject, destroyTime);
+		}
 
 
 		//Start fading

@@ -423,9 +423,10 @@ namespace Xft
             mVertexPool = new VertexPool(mf.sharedMesh, MyMaterial);
             mVertexSegment = mVertexPool.GetVertices(Granularity * 3, (Granularity - 1) * 12);
 
+			MeshSortingLayer mSort = mMeshObj.AddComponent<MeshSortingLayer> ();
+			mSort.SetSortingLayerNameAndOrder ("Player", 5);
 
             UpdateIndices();
-
         }
 
 		public void DestroyMeshObj() {
