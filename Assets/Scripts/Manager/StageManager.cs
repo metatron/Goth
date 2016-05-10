@@ -75,6 +75,7 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 
 		if (!string.IsNullOrEmpty (animAftrStgLoad) && GameManager.Instance.player != null) {
 			GameManager.Instance.player.GetComponent<BoneAnimation> ().Play (animAftrStgLoad);
+			GameManager.Instance.player.GetComponent<BoneAnimation> ().PlayQueued ("stand");
 		}
 	}
 

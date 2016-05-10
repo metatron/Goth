@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 304, y: 100, z: 0}
+  m_LocalPosition: {x: 2295, y: 100, z: 0}
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -62,6 +62,15 @@ MonoBehaviour:
   - {fileID: 11409870, guid: e0beaf76e6bba40d4887b10dc919e3fc, type: 2}
   - {fileID: 11409870, guid: 7dc5132ebc8b8451cab67681b59375cd, type: 2}
   - {fileID: 11409870, guid: 1874c6c8a43974f93826014f744e87ea, type: 2}
+  - {fileID: 11409870, guid: e7015a0cf89b045139c524a65ff48b26, type: 2}
+  - {fileID: 11409870, guid: 33b89d19b608a404a9360f73e07bfc53, type: 2}
+  - {fileID: 11409870, guid: 6e9b62700aec740299b81ae1c19e27c9, type: 2}
+  - {fileID: 11409870, guid: 03ffd432fe488482ea0937e5c7ed5652, type: 2}
+  - {fileID: 11409870, guid: 1eb29da1c764641e6b4bfc753bc4cffc, type: 2}
+  - {fileID: 11409870, guid: 85d097e748d2146c7879d7824ed461a8, type: 2}
+  - {fileID: 11409870, guid: 96b94b6be3dd4411eae92c155ac3661c, type: 2}
+  - {fileID: 11409870, guid: 983ee5868c87e4d9980df71c9641c4b7, type: 2}
+  - {fileID: 11409870, guid: c8015a7acbe2c40379fe2dc9715340ae, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

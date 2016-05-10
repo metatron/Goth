@@ -74,8 +74,8 @@ MonoBehaviour:
   direction: 0
   animationName: normal
   tweenAnimType: 5
-  tweenAnimTime: 5
-  tweenValue: 1000
+  tweenAnimTime: 3
+  tweenValue: 2000
   effectType: 0
   stagePrefPath: 
   animAftrStgLoad: 
