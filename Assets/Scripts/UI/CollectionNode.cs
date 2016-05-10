@@ -17,12 +17,12 @@ public class CollectionNode : MonoBehaviour {
 		collectionObj.transform.SetParent (transform);
 		collectionObj.transform.localPosition = new Vector3(0.0f, 0.0f, -10.0f);
 
-		float resizeRatio = MenuManager.GetResizedRatio ();
-		Vector3 resizedScale = collectionData.resizeVec * resizeRatio;
-		collectionObj.transform.localScale = resizedScale;
+//		float resizeRatio = MenuManager.GetResizedRatio ();
+//		Vector3 resizedScale = collectionData.resizeVec * resizeRatio;
+//		collectionObj.transform.localScale = resizedScale;
 		collectionObj.layer = 5; //UI layer.
 		foreach(Transform child in collectionObj.GetComponentsInChildren<Transform>()) {
-			child.localScale = resizedScale;
+//			child.localScale = resizedScale;
 			child.gameObject.layer = 5; //UI layer.
 			Renderer renderer = child.GetComponent<Renderer>();
 			if (renderer != null) {
