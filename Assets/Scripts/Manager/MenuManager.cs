@@ -118,7 +118,9 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 				"time", 1.0f
 			));
 		//shut the door
-		GameManager.Instance.crntStageData.homeDoorObj.GetComponentInChildren<HomeDoor>().PlayReversedAnimation();
+		if (GameManager.Instance.crntStageData.homeDoorObj != null) {
+			GameManager.Instance.crntStageData.homeDoorObj.GetComponentInChildren<HomeDoor> ().PlayReversedAnimation ();
+		}
 	}
 
 	//================= Select Collection Menu ==============//
