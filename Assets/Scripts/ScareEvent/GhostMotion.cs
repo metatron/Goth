@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SmoothMoves;
 
 public class GhostMotion : MonoBehaviour {
 	private const int MAX_RANGE = 1000;
+	private const int X_START_POS = 1000;
 
 	void Start () {
 		//left edge of screen = camera.x + (screen.width/2) + 300
-		Vector3 Vec1 = new Vector3(Camera.main.transform.position.x + (Screen.width/2) + 300, 0.0f, -10.0f);
+		Vector3 Vec1 = new Vector3(Camera.main.transform.position.x + (Screen.width/2) + 1000, 0.0f, -10.0f);
 		//right edge of screen = camera.x - (screen.width/2) - 300
-		Vector3 Vec2 = new Vector3(Camera.main.transform.position.x - (Screen.width/2) - 300, 0.0f, -10.0f);
+		Vector3 Vec2 = new Vector3(Camera.main.transform.position.x - (Screen.width/2) - 1000, 0.0f, -10.0f);
 
 		Vector3 startVec = Vector3.zero;
 		Vector3 endVec = Vector3.zero;
@@ -26,19 +28,33 @@ public class GhostMotion : MonoBehaviour {
 		//set to start pos
 		transform.position = startVec;
 
-		Debug.LogError ("**************** startVec: " + startVec + ", endVec: " + endVec);
 
-
+		//move
 		iTween.MoveTo (gameObject, iTween.Hash (
 			"position", endVec,
 			"islocal", false,
-			"time", 1.0f,
+			"time", 4.0f,
 			"oncompletetarget", gameObject,
 			"oncomplete", "DestroySelf"
 		));
+
+		//alpha
+		iTween.ValueTo(gameObject, iTween.Hash(
+				"from", 1.0f, 
+				"to", 0f, 
+				"time", 3.9f, 
+				"onupdate", "UpdateValue"
+		));
+
 	}
 
 	private void DestroySelf() {
+		Debug.LogError ("****DestroySelf");
 		Destroy (gameObject);
+	}
+
+	private void UpdateValue(float alpha) {
+		Debug.LogError ("****alpha: " + alpha);
+		GetComponent<SmoothMoves.Sprite> ().color.a = alpha;
 	}
 }

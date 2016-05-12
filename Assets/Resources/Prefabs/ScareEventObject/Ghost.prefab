@@ -12,6 +12,7 @@ GameObject:
   - 33: {fileID: 3372726}
   - 23: {fileID: 2384010}
   - 114: {fileID: 11453664}
+  - 114: {fileID: 11451778}
   m_Layer: 10
   m_Name: Ghost
   m_TagString: Untagged
@@ -92,10 +93,10 @@ MonoBehaviour:
   - {x: 234, y: -13.335282, z: 0}
   - {x: 234, y: 919.06476, z: 0}
   _colors:
-  - {r: 1, g: 1, b: 1, a: 0.659}
-  - {r: 1, g: 1, b: 1, a: 0.659}
-  - {r: 1, g: 1, b: 1, a: 0.659}
-  - {r: 1, g: 1, b: 1, a: 0.659}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
   - {x: 0, y: 0.984375}
   - {x: 0, y: 0}
@@ -113,8 +114,19 @@ MonoBehaviour:
   size: {x: 468, y: 932.4}
   scale: {x: 3.6, y: 3.7}
   pivotOffsetOverride: {x: 0, y: 0}
-  color: {r: 1, g: 1, b: 1, a: 0.659}
+  color: {r: 1, g: 1, b: 1, a: 1}
   useDefaultPivot: 1
+--- !u!114 &11451778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364133215e69a4174b77b28997d1686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11453664
 MonoBehaviour:
   m_ObjectHideFlags: 1

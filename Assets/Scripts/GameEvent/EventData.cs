@@ -341,7 +341,7 @@ public class EventData: MonoBehaviour {
 		}
 
 		//make all iTween animation off
-		iTween.Stop();
+//		iTween.Stop();
 
 		//set reference to null.
 		StageManager.crntEvent = null;
