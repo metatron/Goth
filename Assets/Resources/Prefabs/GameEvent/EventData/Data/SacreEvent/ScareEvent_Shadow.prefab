@@ -45,7 +45,7 @@ MonoBehaviour:
   id: SacreEvent_Shadow
   eventListObj: {fileID: 0}
   targetType: 0
-  targetPath: 
+  targetPath: Prefabs/ScareEventObject/Ghost
   targetEnemyStatus:
     minHp: 10
     maxHp: 100
@@ -69,10 +69,11 @@ MonoBehaviour:
     spawner: {fileID: 0}
   targetObject: {fileID: 0}
   targetByName: 
+  posSetOnInstantiate: 1
   targetInitPos: {x: 0, y: 0, z: 0}
   targetInitScale: {x: 1, y: 1, z: 1}
-  direction: 1
-  animationName: stand
+  direction: 99
+  animationName: 
   tweenAnimType: 0
   tweenAnimTime: 0
   tweenValue: 0
@@ -80,7 +81,7 @@ MonoBehaviour:
   stagePrefPath: 
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
-  totalTime: 2
+  totalTime: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

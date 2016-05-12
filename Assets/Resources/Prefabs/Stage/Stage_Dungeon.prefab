@@ -52,16 +52,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &116306
+--- !u!1 &116248
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 401308}
-  - 65: {fileID: 6576492}
-  - 114: {fileID: 11481316}
+  - 4: {fileID: 452172}
+  - 65: {fileID: 6513704}
+  - 114: {fileID: 11478606}
   m_Layer: 0
   m_Name: CastleEvent_Dungeon
   m_TagString: Untagged
@@ -296,6 +296,23 @@ GameObject:
   - 23: {fileID: 2399336}
   m_Layer: 0
   m_Name: torture5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &138796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 401032}
+  - 65: {fileID: 6562732}
+  - 114: {fileID: 11455732}
+  m_Layer: 0
+  m_Name: ScareEventList_Shadow2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -849,6 +866,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &189936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 412892}
+  - 65: {fileID: 6565710}
+  - 114: {fileID: 11469894}
+  m_Layer: 0
+  m_Name: ScareEventList_Shadow1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &191868
 GameObject:
   m_ObjectHideFlags: 1
@@ -1012,19 +1046,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &401308
+--- !u!4 &401032
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116306}
+  m_GameObject: {fileID: 138796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 304, y: 100, z: 0}
+  m_LocalPosition: {x: 8255, y: 100, z: 0}
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 423414}
-  m_RootOrder: 21
+  m_RootOrder: 31
 --- !u!4 &408444
 Transform:
   m_ObjectHideFlags: 1
@@ -1039,6 +1073,19 @@ Transform:
   - {fileID: 491014}
   m_Father: {fileID: 423414}
   m_RootOrder: 0
+--- !u!4 &412892
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2562, y: 100, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 423414}
+  m_RootOrder: 30
 --- !u!4 &415820
 Transform:
   m_ObjectHideFlags: 1
@@ -1136,7 +1183,7 @@ Transform:
   - {fileID: 416816}
   - {fileID: 430888}
   - {fileID: 465808}
-  - {fileID: 401308}
+  - {fileID: 452172}
   - {fileID: 426452}
   - {fileID: 430262}
   - {fileID: 487580}
@@ -1145,6 +1192,8 @@ Transform:
   - {fileID: 451022}
   - {fileID: 458210}
   - {fileID: 478796}
+  - {fileID: 412892}
+  - {fileID: 401032}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &426452
@@ -1369,6 +1418,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 423414}
   m_RootOrder: 27
+--- !u!4 &452172
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 321, y: 100, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 423414}
+  m_RootOrder: 21
 --- !u!4 &452530
 Transform:
   m_ObjectHideFlags: 1
@@ -3579,6 +3641,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6513704
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6519422
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3627,6 +3701,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 200, y: 200, z: 200}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6562732
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6565710
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6576466
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3638,18 +3736,6 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 200, y: 200, z: 200}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &6576492
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116306}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6586760
 BoxCollider:
@@ -4478,6 +4564,23 @@ MonoBehaviour:
   pivotOffsetOverride: {x: 0, y: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   useDefaultPivot: 1
+--- !u!114 &11455732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: ScareEventList_Shadow
+  needClrNum4NxtEvnt: 0
+  nextEventListObj: {fileID: 0}
+  willStoreOnDoneList: 0
+  eventDataList:
+  - {fileID: 11461774, guid: c612f5fe0f88c406ba6ee2f1b256d954, type: 2}
 --- !u!114 &11456744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4616,11 +4719,11 @@ MonoBehaviour:
     friendPossibility: 90
     spawner: {fileID: 0}
   collectionItemList:
-  - {fileID: 0}
+  - {fileID: 11483840}
   - {fileID: 11448620}
   - {fileID: 11483682}
   stageEventList:
-  - {fileID: 11481316}
+  - {fileID: 11478606}
   homeDoorObj: {fileID: 0}
 --- !u!114 &11463522
 MonoBehaviour:
@@ -4772,6 +4875,23 @@ MonoBehaviour:
   pivotOffsetOverride: {x: 0, y: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   useDefaultPivot: 1
+--- !u!114 &11469894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: ScareEventList_Shadow
+  needClrNum4NxtEvnt: 0
+  nextEventListObj: {fileID: 0}
+  willStoreOnDoneList: 0
+  eventDataList:
+  - {fileID: 11461774, guid: c612f5fe0f88c406ba6ee2f1b256d954, type: 2}
 --- !u!114 &11470922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4889,6 +5009,27 @@ MonoBehaviour:
   willStoreOnDoneList: 0
   eventDataList:
   - {fileID: 11409870, guid: 5b2531f7d5cda4313b199423a70a8216, type: 2}
+--- !u!114 &11478606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Dungeon
+  needClrNum4NxtEvnt: 0
+  nextEventListObj: {fileID: 0}
+  willStoreOnDoneList: 1
+  eventDataList:
+  - {fileID: 11409870, guid: a8a67593cee7e4d7bae13977539746bc, type: 2}
+  - {fileID: 11409870, guid: fa1495d74f3ee42b0acd43738eeb3043, type: 2}
+  - {fileID: 11409870, guid: 1a18a1a56bf834e65bd4ed1cebdd6891, type: 2}
+  - {fileID: 11409870, guid: 0e7e7331b67594bd3b5735a3a9dab8a2, type: 2}
+  - {fileID: 11409870, guid: d1c22fb3770cf4d06931df50e8e054fd, type: 2}
 --- !u!114 &11479146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5000,23 +5141,6 @@ MonoBehaviour:
   pivotOffsetOverride: {x: 0, y: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   useDefaultPivot: 1
---- !u!114 &11481316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: ScareEventList_Shadow
-  needClrNum4NxtEvnt: 0
-  nextEventListObj: {fileID: 0}
-  willStoreOnDoneList: 0
-  eventDataList:
-  - {fileID: 11461774, guid: c612f5fe0f88c406ba6ee2f1b256d954, type: 2}
 --- !u!114 &11483682
 MonoBehaviour:
   m_ObjectHideFlags: 1

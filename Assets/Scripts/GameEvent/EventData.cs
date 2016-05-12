@@ -65,7 +65,8 @@ public class EventData: MonoBehaviour {
 	public GameObject targetObject; //どのターゲットに設置するか
 	public string targetByName; //名前によるターゲット特定
 
-	public Vector3 targetInitPos; //screen上のポジション。
+	public bool posSetOnInstantiate = false; //オブジェクトがインスタンス化されたさいに自身のクラスで初期化される。
+	public Vector3 targetInitPos; //screen上のポジション。（上記がfalseの時のみ有効）
 	public Vector3 targetInitScale = Vector3.one; //初期サイズ
 	public BaseParameterStatus.CharacterDirection direction; //右or左に設置
 	public string animationName; //吹き出しと同時に再生するアニメーション
@@ -120,7 +121,11 @@ public class EventData: MonoBehaviour {
 					} else {
 						Debug.LogError ("WARNING! Check the targetType and targetPath or targetEnemyStatus!");
 					}
-					targetObject.transform.position = targetInitPos;
+					//if pos flag is not set use targetInitPos as default position.
+					//otherwise the position must be defined on its Start method.
+					if (!posSetOnInstantiate) {
+						targetObject.transform.position = targetInitPos;
+					}
 					IdTargetMap.Add (id, targetObject);
 
 					//if instantiating object is EnemyAI, set DoNothing flag

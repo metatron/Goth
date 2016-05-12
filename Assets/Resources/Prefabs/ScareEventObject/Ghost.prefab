@@ -12,7 +12,7 @@ GameObject:
   - 33: {fileID: 3372726}
   - 23: {fileID: 2384010}
   - 114: {fileID: 11453664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
