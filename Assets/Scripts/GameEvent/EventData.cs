@@ -74,6 +74,7 @@ public class EventData: MonoBehaviour {
 	public TweenAnimType tweenAnimType = TweenAnimType.None; //iTweenを使用したあにめーしょん
 	public float tweenAnimTime;
 	public float tweenValue; //どれだけ進むか、どれだけ回転するかなど。
+	public string iTweenID = ""; //iTweenアニメを行った場合のID
 
 	public EffectType effectType = EffectType.None; //effectを再生（Particles）
 
@@ -269,7 +270,7 @@ public class EventData: MonoBehaviour {
 		}
 	}
 
-	private void iTweenAnimation(TweenAnimType animType) {
+	private string iTweenAnimation(TweenAnimType animType) {
 		switch (animType) {
 		case TweenAnimType.Shake:
 			iTween.ShakePosition (targetObject, iTween.Hash (
@@ -308,6 +309,7 @@ public class EventData: MonoBehaviour {
 			break;
 
 		}
+		return targetObject.GetComponent<iTween> ().id;
 	}
 
 	private void InitEffect() {

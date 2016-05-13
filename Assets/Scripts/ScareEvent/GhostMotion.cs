@@ -29,32 +29,30 @@ public class GhostMotion : MonoBehaviour {
 		transform.position = startVec;
 
 
-		//move
-		iTween.MoveTo (gameObject, iTween.Hash (
-			"position", endVec,
-			"islocal", false,
-			"time", 4.0f,
-			"oncompletetarget", gameObject,
-			"oncomplete", "DestroySelf"
-		));
-
 		//alpha
 		iTween.ValueTo(gameObject, iTween.Hash(
 				"from", 1.0f, 
 				"to", 0f, 
-				"time", 3.9f, 
+				"time", 2.0f, 
 				"onupdate", "UpdateValue"
 		));
 
+		//move
+		iTween.MoveTo (gameObject, iTween.Hash (
+			"position", endVec,
+			"islocal", false,
+			"time", 5.0f,
+			"oncompletetarget", gameObject,
+			"oncomplete", "DestroySelf"
+		));
 	}
 
 	private void DestroySelf() {
-		Debug.LogError ("****DestroySelf");
+		Debug.LogError ("*********1");
 		Destroy (gameObject);
 	}
 
 	private void UpdateValue(float alpha) {
-		Debug.LogError ("****alpha: " + alpha);
 		GetComponent<SmoothMoves.Sprite> ().color.a = alpha;
 	}
 }

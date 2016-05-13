@@ -4580,6 +4580,7 @@ MonoBehaviour:
   nextEventListObj: {fileID: 0}
   willStoreOnDoneList: 0
   eventDataList:
+  - {fileID: 11461774, guid: ed0d5dd7dcc7142d59c85d400d022203, type: 2}
   - {fileID: 11461774, guid: c612f5fe0f88c406ba6ee2f1b256d954, type: 2}
 --- !u!114 &11456744
 MonoBehaviour:
@@ -4891,6 +4892,7 @@ MonoBehaviour:
   nextEventListObj: {fileID: 0}
   willStoreOnDoneList: 0
   eventDataList:
+  - {fileID: 11461774, guid: ed0d5dd7dcc7142d59c85d400d022203, type: 2}
   - {fileID: 11461774, guid: c612f5fe0f88c406ba6ee2f1b256d954, type: 2}
 --- !u!114 &11470922
 MonoBehaviour:
