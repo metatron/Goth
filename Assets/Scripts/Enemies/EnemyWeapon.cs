@@ -124,6 +124,17 @@ public class EnemyWeapon : MonoBehaviour {
 //			enemyAnim.PlayQueued("normal");
 //		}
 
+		//if player is dmgs, shake camera
+		//(avoid double shake)
+		if (Camera.main.GetComponent<iTween> () == null) {
+			iTween.ShakePosition (Camera.main.gameObject,
+				iTween.Hash (
+					"amount", new Vector3(20f, 20f, 0f),
+					"islocal", false,
+					"time", 0.2f
+				));
+		}
+
 		//back off target by dmg
 		Hashtable paramTable = new Hashtable ();
 		paramTable.Add ("status", status);

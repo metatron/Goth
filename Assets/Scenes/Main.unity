@@ -7381,7 +7381,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  animationData: {fileID: 11400000, guid: 1c710ec54a1c84b8ea56b9cec33152a3, type: 2}
+  animationData: {fileID: 0}
   animationDataGUID: 1c710ec54a1c84b8ea56b9cec33152a3
   mMaterialSource:
   - {fileID: 2100000, guid: dc8e98e5ae0ab46fcaea88e8f978ed30, type: 2}

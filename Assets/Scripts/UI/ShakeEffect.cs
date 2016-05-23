@@ -39,7 +39,7 @@ public class ShakeEffect : MonoBehaviour {
 	}
 
 	private void UpdateBlackObjectAlpha(float delta) {
-		blackObject.color = new Color (0.0f, 0.0f, 0.0f, delta);
+		blackObject.color = new Color (GetRemHpAsRedColor(), 0.0f, 0.0f, delta);
 	}
 
 	private void OnCompleteUpdate() {
@@ -61,6 +61,21 @@ public class ShakeEffect : MonoBehaviour {
 				"oncompletetarget", gameObject)
 		);
 
+	}
+
+	private float GetRemHpAsRedColor() {
+		if (GameManager.Instance.player != null) {
+			PlayerParameterStatus status = GameManager.Instance.playerParam;
+			float dmgPercent = 1.0f - (float)(status.crntHp) / (float)(status.GetBaseHp ());
+//			Debug.LogError (dmgPercent);
+			//if rem hp is 60 or avove do not display red alert.
+			if (dmgPercent <= 0.3f) {
+				return 0.0f;
+			}
+
+			return dmgPercent;
+		}
+		return 0.0f;
 	}
 
 	// Update is called once per frame

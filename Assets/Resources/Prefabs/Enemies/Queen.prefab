@@ -1984,8 +1984,6 @@ MonoBehaviour:
   targetPos: {fileID: 0}
   closeWeaponPrefab: {fileID: 0}
   crntWeaponObj: {fileID: 0}
-  attackDistance: 600
-  attackMoveTime: 1
   spiritBallPrefab: {fileID: 165910, guid: 5f5fd80196a814f0e920f67d80db0ca8, type: 2}
   ballPosition: {fileID: 0}
   waitTime: 1
@@ -2051,8 +2049,8 @@ MonoBehaviour:
     minAtk: 10
     maxAtk: 100
     crntAtk: 10
-    minMoveSpeed: 10
-    maxMoveSpeed: 100
+    minMoveSpeed: 100
+    maxMoveSpeed: 200
     crntMoveSpeed: 100
     minAtkSpeed: 10
     maxAtkSpeed: 100
@@ -2507,7 +2505,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  animationData: {fileID: 11400000, guid: dca6fef32d1bc4bb3be2192b7aa33392, type: 2}
+  animationData: {fileID: 0}
   animationDataGUID: dca6fef32d1bc4bb3be2192b7aa33392
   mMaterialSource:
   - {fileID: 2100000, guid: acbbc160a8f72423caa3db51b3791284, type: 2}

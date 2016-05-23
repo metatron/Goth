@@ -6,7 +6,8 @@ public class Weapon : MonoBehaviour {
 	private GameObject player;
 	private BoneAnimation playerAnimation;
 
-	private GameObject hitParticlePrefab;
+	private GameObject hitParticleBloodPrefab;
+	private GameObject hitParticleSparkPrefab;
 
 	public int attack;
 
@@ -27,6 +28,17 @@ public class Weapon : MonoBehaviour {
 			return;
 		}
 
+		//if weapon hits something shake camera
+		//(avoid double shake)
+		if (Camera.main.GetComponent<iTween> () == null) {
+			iTween.ShakePosition (Camera.main.gameObject,
+				iTween.Hash (
+					"amount", new Vector3(10f, 10f, 0f),
+					"islocal", false,
+					"time", 0.2f
+				));
+		}
+
 		/** Hitting EnemyBullet **/
 		EnemyWeapon enemyWpnObj = other.gameObject.GetComponent<EnemyWeapon> ();
 		if (enemyWpnObj != null &&
@@ -39,10 +51,10 @@ public class Weapon : MonoBehaviour {
 			Debug.Log ("Hitting enemy bullet with: " + other.gameObject);
 
 			enemyWpnObj.GetComponent<Collider>().enabled = false;
-			if (hitParticlePrefab == null) {
-				hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/BloodEmitter") as GameObject;
+			if (hitParticleSparkPrefab == null) {
+				hitParticleSparkPrefab = Resources.Load ("Prefabs/Battle/Effect/particle") as GameObject;
 			}
-			GameObject hitParticleObj1 = (GameObject) Instantiate (hitParticlePrefab);
+			GameObject hitParticleObj1 = (GameObject) Instantiate (hitParticleSparkPrefab);
 			hitParticleObj1.transform.position = other.ClosestPointOnBounds(enemyWpnObj.transform.position);
 
 			return ;
@@ -73,10 +85,10 @@ public class Weapon : MonoBehaviour {
 		}
 
 		//generate particle
-		if (hitParticlePrefab == null) {
-			hitParticlePrefab = Resources.Load ("Prefabs/Battle/Effect/BloodEmitter") as GameObject;
+		if (hitParticleBloodPrefab == null) {
+			hitParticleBloodPrefab = Resources.Load ("Prefabs/Battle/Effect/BloodEmitter") as GameObject;
 		}
-		GameObject hitParticleObj = (GameObject) Instantiate (hitParticlePrefab);
+		GameObject hitParticleObj = (GameObject) Instantiate (hitParticleBloodPrefab);
 		hitParticleObj.transform.parent = transform;
 		hitParticleObj.transform.localPosition = GetComponent<BoxCollider> ().center;
 		hitParticleObj.transform.parent = null;

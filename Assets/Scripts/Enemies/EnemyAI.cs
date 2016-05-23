@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour {
 
 	private Vector3 lastTargetPlace; //last spotted position
 
-	public float maxNpcDetectTargetTime = 0.5f;			//wait for npc to detect target
+	public float maxNpcDetectTargetTime = 0.2f;			//wait for npc to detect target
 	public float cumulativeNpcDetectTargetTime = 0.0f;	//cumulate time
 
 
