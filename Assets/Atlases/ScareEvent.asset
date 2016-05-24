@@ -15,20 +15,70 @@ MonoBehaviour:
   uvs:
   - serializedVersion: 2
     x: 0
+    y: 0.4296875
+    width: 0.25390625
+    height: 0.24609375
+  - serializedVersion: 2
+    x: 0
+    y: 0.23242188
+    width: 0.5
+    height: 0.19628906
+  - serializedVersion: 2
+    x: 0
     y: 0
-    width: 0.5078125
-    height: 0.984375
+    width: 0.5
+    height: 0.23144531
+  - serializedVersion: 2
+    x: 0.25585938
+    y: 0.4296875
+    width: 0.34179688
+    height: 0.16015625
+  - serializedVersion: 2
+    x: 0.5019531
+    y: 0.23242188
+    width: 0.3515625
+    height: 0.15722656
+  - serializedVersion: 2
+    x: 0.5019531
+    y: 0
+    width: 0.32226562
+    height: 0.171875
   textureGUIDs:
   - b40171b4b3626494bac7cf85624ee8fe
+  - 81c2df70c3bd34401a3a3342e295fa37
+  - 63d0259be01aa42a78d501e9beba5d97
+  - cb8f65a1a794a4c3f987075b3ec039fd
+  - 530e86332ffe749bbbd838367ee56fff
+  - 202ced0572f744b3c84d3628220268ff
   textureSizes:
   - {x: 130, y: 252}
+  - {x: 256, y: 201}
+  - {x: 256, y: 237}
+  - {x: 175, y: 164}
+  - {x: 180, y: 161}
+  - {x: 165, y: 176}
   defaultPivotOffsets:
   - {x: 0, y: -0.4856979}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
   textureNames:
   - sacreevent_shadow
+  - blood4
+  - blood5
+  - blood3
+  - blood2
+  - blood1
   texturePaths:
   - Assets/Textures/ScareEvent/sacreevent_shadow.png
-  lastBuildID: 20160512141108230
+  - Assets/Textures/ScareEvent/blood4.png
+  - Assets/Textures/ScareEvent/blood5.png
+  - Assets/Textures/ScareEvent/blood3.png
+  - Assets/Textures/ScareEvent/blood2.png
+  - Assets/Textures/ScareEvent/blood1.png
+  lastBuildID: 20160525000403864
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 1024

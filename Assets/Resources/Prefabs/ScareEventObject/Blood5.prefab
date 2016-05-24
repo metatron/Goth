@@ -12,9 +12,8 @@ GameObject:
   - 33: {fileID: 3372726}
   - 23: {fileID: 2384010}
   - 114: {fileID: 11453664}
-  - 114: {fileID: 11451778}
-  m_Layer: 10
-  m_Name: Ghost
+  m_Layer: 8
+  m_Name: Blood5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,28 +79,28 @@ MonoBehaviour:
   _meshRenderer: {fileID: 2384010}
   _meshFilter: {fileID: 3372726}
   _mesh: {fileID: 0}
-  _halfSize: {x: 234, y: 466.2}
+  _halfSize: {x: 460.8, y: 438.45}
   _meshGameObject: {fileID: 164084}
-  _textureIndex: 0
-  _topLeft: {x: -234, y: 919.06476}
-  _topRight: {x: 234, y: 919.06476}
-  _bottomLeft: {x: -234, y: -13.335282}
-  _bottomRight: {x: 234, y: -13.335282}
+  _textureIndex: 2
+  _topLeft: {x: -460.8, y: 438.45}
+  _topRight: {x: 460.8, y: 438.45}
+  _bottomLeft: {x: -460.8, y: -438.45}
+  _bottomRight: {x: 460.8, y: -438.45}
   _vertices:
-  - {x: -234, y: 919.06476, z: 0}
-  - {x: -234, y: -13.335282, z: 0}
-  - {x: 234, y: -13.335282, z: 0}
-  - {x: 234, y: 919.06476, z: 0}
+  - {x: -460.8, y: 438.45, z: 0}
+  - {x: -460.8, y: -438.45, z: 0}
+  - {x: 460.8, y: -438.45, z: 0}
+  - {x: 460.8, y: 438.45, z: 0}
   _colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0, y: 0.67578125}
-  - {x: 0, y: 0.4296875}
-  - {x: 0.25390625, y: 0.4296875}
-  - {x: 0.25390625, y: 0.67578125}
+  - {x: 0, y: 0.23144531}
+  - {x: 0, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0.23144531}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}
@@ -109,24 +108,13 @@ MonoBehaviour:
   - {x: 0, y: 0, z: -1}
   - {x: 0, y: 0, z: -1}
   atlas: {fileID: 11400000, guid: 33e6fd66955ae4415b7936533ef4a8a0, type: 2}
-  textureGUID: b40171b4b3626494bac7cf85624ee8fe
+  textureGUID: 63d0259be01aa42a78d501e9beba5d97
   sizeMode: 0
-  size: {x: 468, y: 932.4}
+  size: {x: 921.6, y: 876.9}
   scale: {x: 3.6, y: 3.7}
   pivotOffsetOverride: {x: 0, y: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   useDefaultPivot: 1
---- !u!114 &11451778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 364133215e69a4174b77b28997d1686f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11453664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01d9e6f9766d47cba2dc016b825a6f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortingLayerName: BGFront
+  sortingLayerName: BGBack
   sortingOrder: 0
 --- !u!1001 &100100000
 Prefab:
