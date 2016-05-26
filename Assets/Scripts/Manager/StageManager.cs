@@ -67,6 +67,11 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 		//move character to the original position
 		GameManager.Instance.player.transform.position = Vector3.zero;
 
+		//reset HP if and only if the palyer is going back to HOME stage
+		if (path.Contains ("Stage_Home")) {
+			GameManager.Instance.playerParam.crntHp = GameManager.Instance.playerParam.GetBaseHp ();
+		}
+
 		//move camera
 		Camera.main.transform.position = new Vector3(0.0f, 550.0f, -1200.0f);
 

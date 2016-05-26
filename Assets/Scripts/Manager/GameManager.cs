@@ -45,6 +45,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		SaveLoadStatus.LoadUserParameters ();
 
+		//reset HP param
+		playerParam.crntHp = playerParam.GetBaseHp();
+
 		//after load status, remove collected items
 		crntStageData.InitStageCollectionItems();
 	}

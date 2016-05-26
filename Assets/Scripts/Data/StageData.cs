@@ -20,8 +20,13 @@ public class StageData : MonoBehaviour {
 
 	public GameObject homeDoorObj; //only home stage has this object.
 
+	public float minStageLight = 0.0f;
+	public float maxStageLight = 0.4f;
+
 
 	void Start() {
+		ShakeEffect.ALPHA_MIN = minStageLight;
+		ShakeEffect.ALPHA_MAX = maxStageLight;
 	}
 
 	public void InitStageCollectionItems() {

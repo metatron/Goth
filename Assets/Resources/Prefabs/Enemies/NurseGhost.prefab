@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d71c53efee1d94a2c98276cb7bdbcf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAttackDistance: 800
+  maxAttackDistance: 1000
   maxAttackWait: 3
   cumulativeAttackWaitTime: 3
   isFirstAttack: 1
@@ -2022,7 +2022,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  animationData: {fileID: 0}
+  animationData: {fileID: 11400000, guid: cfb7f534c5ab14ce88b6097e30b4a2e3, type: 2}
   animationDataGUID: cfb7f534c5ab14ce88b6097e30b4a2e3
   mMaterialSource:
   - {fileID: 2100000, guid: 2dfbd93288baf46098100e4e188d7201, type: 2}

@@ -27,6 +27,9 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	//Fading Object
 	public FaderObject faderObj;
 
+	//GrundgeEffect
+	public ShakeEffect grundgeObj;
+
 	void Start() {
 		ghostMenuPanel.SetActive (false);
 		selectStageMenuPanel.SetActive (false);
