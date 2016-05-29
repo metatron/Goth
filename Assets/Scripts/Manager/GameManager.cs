@@ -255,11 +255,12 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		// update spot distance
 		//npcvisibility = maxSpotDist + additional + followOffset
 		float baseDistance = enemyAI.maxSpotDistance;
-		npcParam.crntVisibleDistance = baseDistance + npcParam.addVisibleDistance + followScpt.OffsetPos.x;
+		npcParam.crntVisibleDistance = baseDistance + npcParam.GetBaseVisibleDistance();
 		enemyAI.maxSpotDistance = npcParam.crntVisibleDistance; //make it same
+		Debug.Log("[" + npcObject.name + "] SpotDistance: " + enemyAI.maxSpotDistance);
 
 		//update attack distance (add the dist bt. npc and player
-		enemyAI.maxAttackDistance += followScpt.OffsetPos.x;
+		//enemyAI.maxAttackDistance += Mathf.Abs(followScpt.OffsetPos.x);
 
 
 		//initialize NPC status

@@ -88,6 +88,12 @@ public class EventData: MonoBehaviour {
 	private GameObject fukidashiObject;
 	private GameObject emotionObject;
 
+	//can control the lights of the stages
+	//if min, max < 0.0f, it is off
+	public float minStageLight = -1.0f;
+	public float maxStageLight = -1.0f;
+
+
 	public void InitEvent() {
 		Debug.Log ("*** EventData: " + gameObject + ", id: " + id + ", time: " + Time.realtimeSinceStartup);
 		/****** init fukidashi ******/
@@ -247,6 +253,13 @@ public class EventData: MonoBehaviour {
 			emotionObject.transform.SetParent (fukidashiObject.transform);
 			emotionObject.transform.localPosition = new Vector3 (0.0f, 0.0f, -10.0f);
 		}
+
+		/****** init stage darkness ******/
+		if (minStageLight >= 0.0f || maxStageLight >= 0.0f) {
+			ShakeEffect.ALPHA_MIN = minStageLight;
+			ShakeEffect.ALPHA_MAX = maxStageLight;
+		}
+
 
 		/****** init stage ******/
 		if (!string.IsNullOrEmpty (stagePrefPath)) {

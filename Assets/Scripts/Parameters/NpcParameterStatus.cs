@@ -7,8 +7,8 @@ public class NpcParameterStatus : BaseParameterStatus {
 	[SerializeField]
 	public int intimate;
 
-	[SerializeField]
-	public float addVisibleDistance = 0.0f; //distance added by the level up
+	public float minVisibleDistance = 0.0f; //distance added by the level up
+	public float maxVisibleDistance = 100.0f; //distance added by the level up
 
 	public float crntVisibleDistance = 0.0f;
 
@@ -84,7 +84,7 @@ public class NpcParameterStatus : BaseParameterStatus {
 		SelfObj.GetComponent<EnemyAI> ().enemyMotion.targetPos = null;
 	}
 
-	public void UpdateStatus(int newAtk, int newHp, int newMoveSpeed, int newAtkSpeed, int level) {
+	public void UpdateStatus(int newAtk, int newHp, int newMoveSpeed, float newAtkSpeed, int level) {
 		this.level = level;
 		this.crntAtk = newAtk;
 		this.crntHp = newHp;
@@ -97,4 +97,9 @@ public class NpcParameterStatus : BaseParameterStatus {
 //			closeContactWeapon.GetComponent<EnemyWeapon> ().attack = crntAtk;
 //		}
 	}
+
+	public int GetBaseVisibleDistance() {
+		return GhostLevelMaster.CalculateLevelParams ((int)minVisibleDistance, (int)maxVisibleDistance, level, GhostLevelMaster.GetMaxLevel (this), pattern);
+	}
+
 }

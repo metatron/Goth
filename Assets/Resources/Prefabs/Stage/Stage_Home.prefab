@@ -1641,6 +1641,8 @@ MonoBehaviour:
   - {fileID: 11484532}
   - {fileID: 11432452}
   homeDoorObj: {fileID: 134630}
+  minStageLight: 0
+  maxStageLight: 0.4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -72,6 +72,26 @@ public class GhostLevelMaster {
 		return (int)(min+(max-min)*x);
 	}
 
+	public static float CalculateLevelParams(float min, float max, int level, int maxLevel, LevelPattern pattern) {
+		float x = 0;
+		switch (pattern) {
+		case LevelPattern.soujuku:
+			x = Mathf.Abs (Mathf.Log (level, maxLevel) - Mathf.Log (1, maxLevel));
+			break;
+		case LevelPattern.bansei:
+			x = Mathf.Abs (Mathf.Log (maxLevel-level+1, maxLevel) - Mathf.Log (maxLevel, maxLevel));
+			break;
+		default:
+			if (maxLevel != 1) {
+				x = (float)(level - 1) / (float)(maxLevel - 1);
+			}
+			break;
+
+		}
+
+		return (min+(max-min)*x);
+	}
+
 	public static int CalculateCost(int cost, int ghostLevel, int rarity) {
 		float rarityRatio = RarityLevelMasterDic [rarity].compoCostRatio;
 		float compCost = (BASE_COST + cost) * (ghostLevel*2) * rarityRatio;

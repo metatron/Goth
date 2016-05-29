@@ -53,11 +53,11 @@ public class BaseParameterStatus {
 	public int crntMoveSpeed = 10;
 
 	[SerializeField]
-	public int minAtkSpeed = 10;
+	public float minAtkSpeed = 0.0f;
 	[SerializeField]
-	public int maxAtkSpeed = 100;
+	public float maxAtkSpeed = 1.0f;
 
-	public int crntAtkSpeed = 10;
+	public float crntAtkSpeed = 0.0f;
 
 	[SerializeField]
 	public int level = 1;
@@ -119,7 +119,7 @@ public class BaseParameterStatus {
 	public int GetBaseMoveSpeed() {
 		return GhostLevelMaster.CalculateLevelParams (minMoveSpeed, maxMoveSpeed, level, GhostLevelMaster.GetMaxLevel(this), pattern);
 	}
-	public int GetBaseAtkSpeed() {
+	public float GetBaseAtkSpeed() {
 		return GhostLevelMaster.CalculateLevelParams (minAtkSpeed, maxAtkSpeed, level, GhostLevelMaster.GetMaxLevel(this), pattern);
 	}
 }
