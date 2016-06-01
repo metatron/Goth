@@ -273,9 +273,6 @@ public class EnemyAI : MonoBehaviour {
 		//wait if it is not 1st attack,
 		//if the attack is finished,
 		//and cumulative time is less than max wait time.
-		if (charType == CharacterType.NPC) {
-			Debug.LogError (gameObject.name + ": isFirstAttack: " + isFirstAttack + ", isMotionStarted: " + enemyMotion.isMotionStarted + ", maxAttackWait: " + ((maxAttackWait - GetStatus ().crntAtkSpeed)));
-		}
 		if (!isFirstAttack && !enemyMotion.isMotionStarted && cumulativeAttackWaitTime < (maxAttackWait - GetStatus ().crntAtkSpeed)) {
 			cumulativeAttackWaitTime += Time.deltaTime;
 			return;

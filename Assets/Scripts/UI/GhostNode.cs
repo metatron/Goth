@@ -8,6 +8,9 @@ public class GhostNode : MonoBehaviour {
 	public Text nameText;
 	public Text attackText;
 	public Text hpText;
+	public Text attackSpdText;
+	public Text moveSpdText;
+
 	private EnemyParameterStatus.GhostType type = EnemyParameterStatus.GhostType.TiedGhost;
 	private GameObject ghostObj;
 	private NpcParameterStatus npcStatus;
@@ -32,7 +35,7 @@ public class GhostNode : MonoBehaviour {
 			Debug.LogError ("ghostYPosList count and GhostType count is Wrong! check the definition! " + (GhostNode.ghostYPosList.Count) + "," + (System.Enum.GetNames (typeof(BaseParameterStatus.GhostType)).Length-1));
 		}
 		float resizeRatio = MenuManager.GetResizedRatio ();
-		ghostObj.transform.localPosition = new Vector3(0.0f, GhostNode.ghostYPosList[(int)npcStatus.type]*resizeRatio, -10.0f);
+		ghostObj.transform.localPosition = new Vector3(40.0f, GhostNode.ghostYPosList[(int)npcStatus.type]*resizeRatio, -10.0f);
 		float resizeX = ghostObj.GetComponent<EnemyAI> ().ghostListSizeVec.x*resizeRatio;
 		float resizeY = ghostObj.GetComponent<EnemyAI> ().ghostListSizeVec.y*resizeRatio;
 		ghostObj.GetComponent<EnemyAI>().defaultSizeVec = new Vector3(resizeX, resizeY, 1.0f);
@@ -47,6 +50,8 @@ public class GhostNode : MonoBehaviour {
 		nameText.text = "Name: " + npcStatus.type;
 		attackText.text = "Attack: " + npcStatus.GetBaseAtk();
 		hpText.text = "HP: " + npcStatus.GetBaseHp();
+		attackSpdText.text = "Attack Speed: " + npcStatus.GetBaseAtkSpeed();
+		moveSpdText.text = "Move Speed: " + npcStatus.GetBaseMoveSpeed();
 
 		//change color of the select button if it is selected already
 		MenuManager.Instance.resetSelectedButtonColor();
@@ -58,7 +63,7 @@ public class GhostNode : MonoBehaviour {
 	}
 
 	public void OnSelectGhostPressed() {
-		MenuManager.Instance.okCancelPopup.GetComponent<OkCancelPopup> ().InitializeCollectionPopup ("Select Summoning Ghost", "Set as Summoning Ghost?", SetMainGhost);
+		MenuManager.Instance.okCancelPopup.GetComponent<OkCancelPopup> ().InitializeCollectionPopup ("Set Summoning Ghost", "Set as Default Summoning Ghost?", SetMainGhost);
 	}
 
 	private void SetMainGhost() {

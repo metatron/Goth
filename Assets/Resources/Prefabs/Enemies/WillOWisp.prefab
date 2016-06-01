@@ -2231,9 +2231,9 @@ MonoBehaviour:
     minMoveSpeed: 10
     maxMoveSpeed: 100
     crntMoveSpeed: 10
-    minAtkSpeed: 10
-    maxAtkSpeed: 100
-    crntAtkSpeed: 10
+    minAtkSpeed: 0
+    maxAtkSpeed: 1
+    crntAtkSpeed: 0
     level: 1
     type: 2
     pattern: 0

@@ -1674,16 +1674,17 @@ MonoBehaviour:
     minMoveSpeed: 100
     maxMoveSpeed: 200
     crntMoveSpeed: 100
-    minAtkSpeed: 10
-    maxAtkSpeed: 100
-    crntAtkSpeed: 10
+    minAtkSpeed: 0
+    maxAtkSpeed: 1
+    crntAtkSpeed: 0
     level: 1
     type: 0
     pattern: 0
     rarity: 1
     cost: 100
     intimate: 0
-    addVisibleDistance: 0
+    minVisibleDistance: 0
+    maxVisibleDistance: 100
     crntVisibleDistance: 0
     crntSearchTime: 0
     isSearchingOnAttack: 0
