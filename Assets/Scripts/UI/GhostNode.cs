@@ -50,8 +50,8 @@ public class GhostNode : MonoBehaviour {
 		nameText.text = "Name: " + npcStatus.type;
 		attackText.text = "Attack: " + npcStatus.GetBaseAtk();
 		hpText.text = "HP: " + npcStatus.GetBaseHp();
-		attackSpdText.text = "Attack Speed: " + npcStatus.GetBaseAtkSpeed();
-		moveSpdText.text = "Move Speed: " + npcStatus.GetBaseMoveSpeed();
+		attackSpdText.text = "Attack Speed: " + System.Math.Round ((double)npcStatus.GetBaseAtkSpeed (), 2, System.MidpointRounding.AwayFromZero); //小数点2以下四捨五入
+		moveSpdText.text = "Move Speed: " + System.Math.Round ((double)npcStatus.GetBaseMoveSpeed(), 2, System.MidpointRounding.AwayFromZero); //小数点2以下四捨五入
 
 		//change color of the select button if it is selected already
 		MenuManager.Instance.resetSelectedButtonColor();

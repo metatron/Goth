@@ -3284,6 +3284,7 @@ GameObject:
   - 224: {fileID: 255448425}
   - 222: {fileID: 255448427}
   - 114: {fileID: 255448426}
+  - 114: {fileID: 255448428}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -3298,16 +3299,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255448424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00008392334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 667880922}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.38500002, y: 0.87640893}
-  m_AnchorMax: {x: 0.615, y: 0.9592365}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: -4, y: -4}
+  m_AnchorMin: {x: 0.224, y: 0.8718373}
+  m_AnchorMax: {x: 0.8105006, y: 0.95800006}
+  m_AnchoredPosition: {x: 0.9999995, y: 1.4998627}
+  m_SizeDelta: {x: -4, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255448426
 MonoBehaviour:
@@ -3330,15 +3331,15 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 20
-    m_MaxSize: 40
+    m_MinSize: 2
+    m_MaxSize: 25
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Title:'
@@ -3348,6 +3349,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255448424}
+--- !u!114 &255448428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255448424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 0
+  m_AspectRatio: 6.5831995
 --- !u!1 &267314916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,7 +3948,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 564458178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -5980,6 +5994,7 @@ GameObject:
   - 224: {fileID: 1241386330}
   - 222: {fileID: 1241386332}
   - 114: {fileID: 1241386331}
+  - 114: {fileID: 1241386333}
   m_Layer: 5
   m_Name: Desc
   m_TagString: Untagged
@@ -6000,10 +6015,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 667880922}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.08050394, y: 0.41000003}
-  m_AnchorMax: {x: 0.87924975, y: 0.77735865}
-  m_AnchoredPosition: {x: 2, y: 2}
-  m_SizeDelta: {x: -16, y: -10}
+  m_AnchorMin: {x: 0.031625427, y: 0.22916272}
+  m_AnchorMax: {x: 0.96550184, y: 0.77219594}
+  m_AnchoredPosition: {x: -1.5, y: 1}
+  m_SizeDelta: {x: -10, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241386331
 MonoBehaviour:
@@ -6026,11 +6041,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 25
-    m_MaxSize: 30
+    m_MinSize: 10
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6050,6 +6065,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1241386329}
+--- !u!114 &1241386333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241386329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 0
+  m_AspectRatio: 1.5711657
 --- !u!1 &1248352629
 GameObject:
   m_ObjectHideFlags: 0
@@ -67232,7 +67260,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Title:'
