@@ -387,9 +387,9 @@ GameObject:
   - 114: {fileID: 11480356}
   - 65: {fileID: 6508212}
   - 54: {fileID: 5476136}
+  - 114: {fileID: 11446118}
   - 114: {fileID: 11426382}
   - 114: {fileID: 11441940}
-  - 114: {fileID: 11446118}
   - 114: {fileID: 11452338}
   - 111: {fileID: 11199354}
   - 137: {fileID: 13758914}
@@ -2038,7 +2038,7 @@ MonoBehaviour:
   cumulativeMoveWaitTime: 0
   target: {fileID: 0}
   distanceTarget: 0
-  maxNpcDetectTargetTime: 0.5
+  maxNpcDetectTargetTime: 0.2
   cumulativeNpcDetectTargetTime: 0
   charType: 1
   enemyMotion: {fileID: 11407618}
@@ -2052,9 +2052,12 @@ MonoBehaviour:
     minMoveSpeed: 100
     maxMoveSpeed: 200
     crntMoveSpeed: 100
-    minAtkSpeed: 10
-    maxAtkSpeed: 100
-    crntAtkSpeed: 10
+    minAtkSpeed: 0
+    maxAtkSpeed: 1
+    crntAtkSpeed: 0
+    minVisibleDistance: 0
+    maxVisibleDistance: 100
+    crntVisibleDistance: 0
     level: 1
     type: 3
     pattern: 0
@@ -2076,15 +2079,15 @@ MonoBehaviour:
     minAtkSpeed: 0
     maxAtkSpeed: 1
     crntAtkSpeed: 0
+    minVisibleDistance: 0
+    maxVisibleDistance: 100
+    crntVisibleDistance: 0
     level: 1
     type: 3
     pattern: 0
     rarity: 1
     cost: 100
     intimate: 0
-    minVisibleDistance: 0
-    maxVisibleDistance: 100
-    crntVisibleDistance: 0
     crntSearchTime: 0
     isSearchingOnAttack: 0
   crntNumOfMultiHit: 0

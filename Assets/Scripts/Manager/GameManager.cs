@@ -83,7 +83,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		}
 
 		if (playerCharacter.status.GetCharacterDirection () == BaseParameterStatus.CharacterDirection.LEFT) {
-			float minX = player.transform.position.x - playerParam.maxVisibleDistance;
+			float minX = player.transform.position.x - playerParam.crntVisibleDistance;
 			foreach (GameObject enemyObj in totalEnemyList) {
 				if (enemyObj != null && 
 					enemyObj.GetComponent<EnemyAI> ().status.crntHp > 0 && 
@@ -98,7 +98,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 				}
 			}
 		} else {
-			float manX = player.transform.position.x + playerParam.maxVisibleDistance;
+			float manX = player.transform.position.x + playerParam.crntVisibleDistance;
 			foreach (GameObject enemyObj in totalEnemyList) {
 				if (enemyObj != null && 
 				    enemyObj.GetComponent<EnemyAI> ().status.crntHp > 0 && 
@@ -254,9 +254,11 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		FollowScript followScpt = npcObject.GetComponent<FollowScript> ();
 		// update spot distance
 		//npcvisibility = maxSpotDist + additional + followOffset
-		float baseDistance = enemyAI.maxSpotDistance;
-		npcParam.crntVisibleDistance = baseDistance + npcParam.GetBaseVisibleDistance();
-		enemyAI.maxSpotDistance = npcParam.crntVisibleDistance; //make it same
+
+		//the base spotting distance is the players visible dist (cannot be 0)
+		float baseDistance = playerParam.crntVisibleDistance;
+		//add level up visible dist
+		enemyAI.maxSpotDistance = baseDistance + npcParam.GetBaseVisibleDistance();
 		Debug.Log("[" + npcObject.name + "] SpotDistance: " + enemyAI.maxSpotDistance);
 
 		//update attack distance (add the dist bt. npc and player
@@ -385,7 +387,8 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			}
 
 			//if too close, target the enemy
-			if(distance <= (npcStatus.crntVisibleDistance/3)) {
+			float minDist = Mathf.Max(100.0f, npcStatus.crntVisibleDistance/3);
+			if(distance <= minDist) {
 				Debug.Log ("**********Too close enemy ("+(npcStatus.crntVisibleDistance/3)+"): " + distance);
 				return enemy.gameObject;
 			}
@@ -506,7 +509,6 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 * 
 	 */
 	public void SetDoNothingAllCharacters(bool doNothing) {
-		Debug.LogError ("SetDoNothingAllCharacters: " + doNothing);
 		//NPC
 		if (crntNpcObj != null) {
 			crntNpcObj.GetComponent<EnemyAI> ().doNothing = doNothing;

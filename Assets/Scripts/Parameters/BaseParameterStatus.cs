@@ -60,6 +60,12 @@ public class BaseParameterStatus {
 	public float crntAtkSpeed = 0.0f;
 
 	[SerializeField]
+	public float minVisibleDistance = 0.0f; //distance added by the level up
+	[SerializeField]
+	public float maxVisibleDistance = 100.0f; //distance added by the level up
+	public float crntVisibleDistance = 0.0f;
+
+	[SerializeField]
 	public int level = 1;
 
 	[SerializeField]
@@ -121,5 +127,8 @@ public class BaseParameterStatus {
 	}
 	public float GetBaseAtkSpeed() {
 		return GhostLevelMaster.CalculateLevelParams (minAtkSpeed, maxAtkSpeed, level, GhostLevelMaster.GetMaxLevel(this), pattern);
+	}
+	public int GetBaseVisibleDistance() {
+		return GhostLevelMaster.CalculateLevelParams ((int)minVisibleDistance, (int)maxVisibleDistance, level, GhostLevelMaster.GetMaxLevel (this), pattern);
 	}
 }

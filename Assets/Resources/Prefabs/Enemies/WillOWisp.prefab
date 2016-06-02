@@ -2189,14 +2189,14 @@ MonoBehaviour:
   maxAttackWait: 5
   cumulativeAttackWaitTime: 5
   isFirstAttack: 1
-  maxSpotDistance: 1500
+  maxSpotDistance: 1000
   maxMoveTime: 30
   maxMoveWait: 1
   cumulativeMoveTime: 0
   cumulativeMoveWaitTime: 0
   target: {fileID: 0}
   distanceTarget: 0
-  maxNpcDetectTargetTime: 1
+  maxNpcDetectTargetTime: 0.2
   cumulativeNpcDetectTargetTime: 0
   charType: 1
   enemyMotion: {fileID: 0}
@@ -2213,6 +2213,9 @@ MonoBehaviour:
     minAtkSpeed: 0
     maxAtkSpeed: 1
     crntAtkSpeed: 0
+    minVisibleDistance: 0
+    maxVisibleDistance: 100
+    crntVisibleDistance: 0
     level: 1
     type: 2
     pattern: 0
@@ -2234,15 +2237,15 @@ MonoBehaviour:
     minAtkSpeed: 0
     maxAtkSpeed: 1
     crntAtkSpeed: 0
+    minVisibleDistance: 0
+    maxVisibleDistance: 100
+    crntVisibleDistance: 0
     level: 1
     type: 2
     pattern: 0
     rarity: 1
     cost: 100
     intimate: 0
-    minVisibleDistance: 0
-    maxVisibleDistance: 100
-    crntVisibleDistance: 0
     crntSearchTime: 0
     isSearchingOnAttack: 0
   crntNumOfMultiHit: 0

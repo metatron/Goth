@@ -5,10 +5,14 @@ using System.Collections;
 public class PlayerParameterStatus : BaseParameterStatus {
 	public PlayerParameterStatus() {
 		type = GhostType.Player;
+
+//		minVisibleDistance = 1000;
+//		maxVisibleDistance = 2000;
+//		crntVisibleDistance = 1000;
 	}
 
-	[SerializeField]
-	public float maxVisibleDistance = 1000;
+//	[SerializeField]
+//	public float maxVisibleDistance = 1000;
 
 	[SerializeField]
 	public int totalSpirit = 1000;

@@ -150,6 +150,12 @@ public class Weapon : MonoBehaviour {
 
 	}
 
+	/**
+	 * 
+	 * Set the DEFEATED enemy parameter. not the default enemy param.
+	 * need divergence.
+	 * 
+	 */
 	public static void RegisterAsNpc(EnemyParameterStatus targetParam) {
 		if (targetParam.friendPossibility <= 0) {
 			return ;
@@ -157,8 +163,8 @@ public class Weapon : MonoBehaviour {
 
 		//calculate the possibility
 		int rnd = Random.Range(0,101); //max exclusive
-		Debug.Log("RegisterAsNpc friendPossibility: " + targetParam.friendPossibility + ", rnd: " + rnd);
 		if (rnd > 0 && rnd <= targetParam.friendPossibility) {
+			Debug.LogError("RegisterAsNpc [Succeeded] friendPossibility: " + targetParam.friendPossibility + ", rnd: " + rnd);
 			//Convert EnemyParam to NpcParam
 			NpcParameterStatus npcParameter = new NpcParameterStatus ();
 			npcParameter.minHp = targetParam.minHp;
@@ -177,6 +183,10 @@ public class Weapon : MonoBehaviour {
 			npcParameter.maxAtkSpeed = targetParam.maxAtkSpeed;
 			npcParameter.crntAtkSpeed = targetParam.maxAtkSpeed;
 
+			npcParameter.minVisibleDistance = targetParam.minVisibleDistance;
+			npcParameter.maxVisibleDistance = targetParam.maxVisibleDistance;
+			npcParameter.crntVisibleDistance = targetParam.crntVisibleDistance;
+
 			npcParameter.level = targetParam.level;
 			npcParameter.type = targetParam.type;
 			npcParameter.pattern = targetParam.pattern;
@@ -185,7 +195,11 @@ public class Weapon : MonoBehaviour {
 			GameManager.Instance.SetNpc (npcParameter);
 
 			SaveLoadStatus.SaveUserParameters ();
+
+			return;
 		}
+
+		Debug.LogError("RegisterAsNpc [Failed] friendPossibility: " + targetParam.friendPossibility + ", rnd: " + rnd);
 	}
 
 }

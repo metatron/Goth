@@ -93,18 +93,20 @@ public class GhostNode : MonoBehaviour {
 			int nextAtk =		GhostLevelMaster.CalculateLevelParams (npcStatus.minAtk, npcStatus.maxAtk, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			int nextMoveSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minMoveSpeed, npcStatus.maxMoveSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			float nextAtkSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minAtkSpeed, npcStatus.maxAtkSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			float nextVisibleDistance =	GhostLevelMaster.CalculateLevelParams (npcStatus.minVisibleDistance, npcStatus.maxVisibleDistance, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			Debug.Log (
 				"cost2LevelUp: " + cost2LevelUp + 
 				", nextHp: " + nextHp + 
 				", nextAtk: " + nextAtk + 
 				", nextMoveSpeed: " + nextMoveSpeed + 
-				", nextAtkSpeed: " + nextAtkSpeed
+				", nextAtkSpeed: " + nextAtkSpeed +
+				", nextVisibleDistance: " + nextVisibleDistance
 			);
 
 			//check if the user has money
 			if (GameManager.Instance.playerParam.totalSpirit >= cost2LevelUp) {
 				//update
-				npcStatus.UpdateStatus (nextAtk, nextHp, nextMoveSpeed, nextAtkSpeed, npcStatus.level + 1);
+				npcStatus.UpdateStatus (nextAtk, nextHp, nextMoveSpeed, nextAtkSpeed, nextVisibleDistance, npcStatus.level + 1);
 				//decrement money
 				GameManager.Instance.playerParam.totalSpirit -= cost2LevelUp;
 				//save to the disk

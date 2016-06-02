@@ -21,10 +21,12 @@ public class EnemyAI : MonoBehaviour {
 	public float cumulativeAttackWaitTime;
 	public bool isFirstAttack = true;
 
-	public float maxSpotDistance;	//if the target is closer than this value enemy will start moving
-//	public float maxMoveSpeed;		//how fast move
-	public float maxMoveTime;		//how long move at once
-	public float maxMoveWait;		//how log wait for another move
+	//need this for only enemy. npc's default = players visible dist.
+	public float maxSpotDistance = 1000.0f;	 //if the target is closer than this value enemy will start moving
+
+//	public float maxMoveSpeed;				//how fast move
+	public float maxMoveTime;				//how long move at once
+	public float maxMoveWait;				//how log wait for another move
 
 	public float cumulativeMoveTime;
 	public float cumulativeMoveWaitTime;
