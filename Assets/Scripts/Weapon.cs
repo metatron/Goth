@@ -169,23 +169,23 @@ public class Weapon : MonoBehaviour {
 			NpcParameterStatus npcParameter = new NpcParameterStatus ();
 			npcParameter.minHp = targetParam.minHp;
 			npcParameter.maxHp = targetParam.maxHp;
-			npcParameter.crntHp = targetParam.maxHp; //do not set crntHp. it will be less than 0.
+			npcParameter.crntHp = targetParam.minHp; //do not set crntHp. should be minimum.
 
-			npcParameter.minHp = targetParam.maxAtk;
+			npcParameter.minHp = targetParam.minHp;
 			npcParameter.maxAtk = targetParam.maxAtk;
-			npcParameter.crntAtk = targetParam.maxAtk;
+			npcParameter.crntAtk = targetParam.minHp;
 
 			npcParameter.minMoveSpeed = targetParam.minMoveSpeed;
 			npcParameter.maxMoveSpeed = targetParam.maxMoveSpeed;
-			npcParameter.crntMoveSpeed = targetParam.maxMoveSpeed;
+			npcParameter.crntMoveSpeed = targetParam.minMoveSpeed;
 
 			npcParameter.minAtkSpeed = targetParam.minAtkSpeed;
 			npcParameter.maxAtkSpeed = targetParam.maxAtkSpeed;
-			npcParameter.crntAtkSpeed = targetParam.maxAtkSpeed;
+			npcParameter.crntAtkSpeed = targetParam.minAtkSpeed;
 
 			npcParameter.minVisibleDistance = targetParam.minVisibleDistance;
 			npcParameter.maxVisibleDistance = targetParam.maxVisibleDistance;
-			npcParameter.crntVisibleDistance = targetParam.crntVisibleDistance;
+			npcParameter.crntVisibleDistance = targetParam.minVisibleDistance;
 
 			npcParameter.level = targetParam.level;
 			npcParameter.type = targetParam.type;

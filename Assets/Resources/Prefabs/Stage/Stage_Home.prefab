@@ -1628,6 +1628,9 @@ MonoBehaviour:
     minAtkSpeed: 10
     maxAtkSpeed: 100
     crntAtkSpeed: 10
+    minVisibleDistance: 0
+    maxVisibleDistance: 100
+    crntVisibleDistance: 0
     level: 1
     type: 0
     pattern: 0
