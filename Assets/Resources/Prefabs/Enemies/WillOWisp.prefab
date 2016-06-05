@@ -2186,17 +2186,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAttackDistance: 400
-  maxAttackWait: 5
-  cumulativeAttackWaitTime: 5
+  maxAttackWait: 4
+  cumulativeAttackWaitTime: 0
   isFirstAttack: 1
   maxSpotDistance: 1000
   maxMoveTime: 30
-  maxMoveWait: 1
+  maxMoveWait: 3
   cumulativeMoveTime: 0
   cumulativeMoveWaitTime: 0
   target: {fileID: 0}
   distanceTarget: 0
-  maxNpcDetectTargetTime: 0.2
+  maxNpcDetectTargetTime: 3
   cumulativeNpcDetectTargetTime: 0
   charType: 1
   enemyMotion: {fileID: 0}

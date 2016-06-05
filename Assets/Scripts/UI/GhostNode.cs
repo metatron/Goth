@@ -10,6 +10,7 @@ public class GhostNode : MonoBehaviour {
 	public Text hpText;
 	public Text attackSpdText;
 	public Text moveSpdText;
+	public Text visibilityText;
 
 	private EnemyParameterStatus.GhostType type = EnemyParameterStatus.GhostType.TiedGhost;
 	private GameObject ghostObj;
@@ -52,6 +53,7 @@ public class GhostNode : MonoBehaviour {
 		hpText.text = "HP: " + npcStatus.GetBaseHp();
 		attackSpdText.text = "Attack Speed: " + System.Math.Round ((double)npcStatus.GetBaseAtkSpeed (), 2, System.MidpointRounding.AwayFromZero); //小数点2以下四捨五入
 		moveSpdText.text = "Move Speed: " + System.Math.Round ((double)npcStatus.GetBaseMoveSpeed(), 2, System.MidpointRounding.AwayFromZero); //小数点2以下四捨五入
+		visibilityText.text = "Visibility: " + npcStatus.GetBaseVisibleDistance();
 
 		//change color of the select button if it is selected already
 		MenuManager.Instance.resetSelectedButtonColor();
@@ -63,7 +65,29 @@ public class GhostNode : MonoBehaviour {
 	}
 
 	public void OnSelectGhostPressed() {
-		MenuManager.Instance.okCancelPopup.GetComponent<OkCancelPopup> ().InitializeCollectionPopup ("Set Summoning Ghost", "Set as Default Summoning Ghost?", SetMainGhost);
+		MenuManager.Instance.okCancelPopup.GetComponent<OkCancelPopup> ().InitializeCollectionPopup ("Set Summoning Ghost", "Set as Default Summoning Ghost", SetMainGhost);
+	}
+
+	private string GetNextLevelInfo() {
+		int maxLevel = GhostLevelMaster.GetMaxLevel (npcStatus);
+		if (npcStatus.level + 1 < maxLevel) {
+			int cost2LevelUp =	GhostLevelMaster.CalculateCost (npcStatus.cost, npcStatus.level + 1, npcStatus.rarity);
+			int nextHp = GhostLevelMaster.CalculateLevelParams (npcStatus.minHp, npcStatus.maxHp, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			int nextAtk = GhostLevelMaster.CalculateLevelParams (npcStatus.minAtk, npcStatus.maxAtk, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			int nextMoveSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minMoveSpeed, npcStatus.maxMoveSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			float nextAtkSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minAtkSpeed, npcStatus.maxAtkSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			float nextVisibleDistance =	GhostLevelMaster.CalculateLevelParams (npcStatus.minVisibleDistance, npcStatus.maxVisibleDistance, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			string info = "\n[Next Level]\n" + 
+				"Cost: " + cost2LevelUp + "\n" +
+				">Hp: " + nextHp + "\n" +
+				">Atk: " + nextAtk + "\n" +
+				">Move Speed: " + nextMoveSpeed + "\n" +
+				">Atk Speed: " + System.Math.Round ((double)nextAtkSpeed, 2, System.MidpointRounding.AwayFromZero) + "\n" +
+				">Visibility: " + System.Math.Round ((double)nextVisibleDistance, 2, System.MidpointRounding.AwayFromZero)
+			;
+			return info;
+		}
+		return "";
 	}
 
 	private void SetMainGhost() {
@@ -82,7 +106,7 @@ public class GhostNode : MonoBehaviour {
 	}
 
 	public void OnLevelUpButtonPressed() {
-		MenuManager.Instance.okCancelPopup.GetComponent<OkCancelPopup> ().InitializeCollectionPopup ("Level Up", "Do you want to Levelup?", LevelUpCharacter);
+		MenuManager.Instance.okCancelPopup.GetComponent<OkCancelPopup> ().InitializeCollectionPopup ("Level Up", "Do you want to Levelup?" + GetNextLevelInfo(), LevelUpCharacter);
 	}
 
 	private void LevelUpCharacter() {
@@ -111,6 +135,13 @@ public class GhostNode : MonoBehaviour {
 				GameManager.Instance.playerParam.totalSpirit -= cost2LevelUp;
 				//save to the disk
 				SaveLoadStatus.SaveUserParameters ();
+
+				//update Texts
+				attackText.text = "Attack: " + nextAtk;
+				hpText.text = "HP: " + nextHp;
+				attackSpdText.text = "Attack Speed: " + nextAtkSpeed;
+				moveSpdText.text = "Move Speed: " + nextAtkSpeed;
+				visibilityText.text = "Visibility: " + nextVisibleDistance;
 			} else {
 				//TODO: Popup window
 				MenuManager.Instance.warningPopup.GetComponent<WarningPopup>().InitializeWarningPopup("Not Enought Spirits", "");

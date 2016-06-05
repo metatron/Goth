@@ -24,13 +24,18 @@ public class SpiritBallSpitter : EnemyMotionInterface {
 		finishedSpittingCnt = 0;
 
 		for (int i=0; i<ballPositions.Length; i++) {
+			
 			yield return new WaitForSeconds(waitTime);
+
 
 //			//TODO if the multiple hit occured and enemy moved, break the attack loop
 //			if (!transform.parent.GetComponent<EnemyAI> ().enemyMotion.isMotionStarted &&) {
 //				break;
 //			}
 
+			if (transform.parent.gameObject.GetComponent<EnemyAI> ().GetStatus ().GetType () == typeof(NpcParameterStatus)) {
+				Debug.Log (transform.parent.gameObject + " **********1: " + waitTime + ", Time.timeScale: " + Time.timeScale);
+			}
 
 			//instantiate the ballObject
 			GameObject ballObject = Instantiate (spiritBallPrefab) as GameObject;
@@ -67,6 +72,9 @@ public class SpiritBallSpitter : EnemyMotionInterface {
 
 			Vector3 centerPos = targetPos.GetComponent<Collider>().bounds.center;
 			//Vector3 aimPos = new Vector3(targetPos.position.x, targetPos.position.y+250.0f, targetPos.position.z);
+
+			finishedSpittingCnt++;
+
 			//tween it
 			iTween.MoveTo(ballObject, iTween.Hash(
 				"position", centerPos,
@@ -78,8 +86,6 @@ public class SpiritBallSpitter : EnemyMotionInterface {
 	}
 
 	override public void AttackFinished() {
-		finishedSpittingCnt++;
-
 		if (finishedSpittingCnt >= ballPositions.Length) {
 			isMotionStarted = false;
 		}

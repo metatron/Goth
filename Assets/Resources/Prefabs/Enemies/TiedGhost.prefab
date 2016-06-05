@@ -1991,8 +1991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAttackDistance: 1000
-  maxAttackWait: 3
-  cumulativeAttackWaitTime: 3
+  maxAttackWait: 4
+  cumulativeAttackWaitTime: 0
   isFirstAttack: 1
   maxSpotDistance: 1800
   maxMoveTime: 30
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   cumulativeMoveWaitTime: 0
   target: {fileID: 0}
   distanceTarget: 0
-  maxNpcDetectTargetTime: 1
+  maxNpcDetectTargetTime: 5
   cumulativeNpcDetectTargetTime: 0
   charType: 1
   enemyMotion: {fileID: 11438258}

@@ -1629,8 +1629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAttackDistance: 1000
-  maxAttackWait: 3
-  cumulativeAttackWaitTime: 3
+  maxAttackWait: 4
+  cumulativeAttackWaitTime: 4
   isFirstAttack: 1
   maxSpotDistance: 1500
   maxMoveTime: 30

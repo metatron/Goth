@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour {
 
 
 	public float maxAttackDistance;
-	public float maxAttackWait;		//how long wait for another attack;
+	public float maxAttackWait;		//how long wait for another attack (minimum: about 3.0f ~ )
 	public float cumulativeAttackWaitTime;
 	public bool isFirstAttack = true;
 
@@ -238,7 +238,7 @@ public class EnemyAI : MonoBehaviour {
 				}
 				myTransform.position += myTransform.right * GetStatus ().crntMoveSpeed * Time.deltaTime;
 				if (gameObject.name.Contains("NPC")) {
-					Debug.Log ("*********************(move value): " + GetStatus ().crntMoveSpeed);
+					Debug.Log ("*********************position: " + myTransform.position);
 				}
 			}
 		}
@@ -275,13 +275,21 @@ public class EnemyAI : MonoBehaviour {
 		//wait if it is not 1st attack,
 		//if the attack is finished,
 		//and cumulative time is less than max wait time.
-		if (!isFirstAttack && !enemyMotion.isMotionStarted && cumulativeAttackWaitTime < (maxAttackWait - GetStatus ().crntAtkSpeed)) {
+//		if (GetStatus ().GetType () == typeof(NpcParameterStatus)) {
+//			Debug.LogError("cmltive: " + cumulativeAttackWaitTime + ", mxAtkWait: " + maxAttackWait + ", crntAtkSpd: " + GetStatus ().crntAtkSpeed + 
+//				", res: [" + cumulativeAttackWaitTime + " < " + (maxAttackWait - GetStatus ().crntAtkSpeed) + "]");
+//		}
+		float atkWaitTime = Mathf.Max(1.0f, (maxAttackWait - GetStatus ().crntAtkSpeed));
+		if (!isFirstAttack && !enemyMotion.isMotionStarted && cumulativeAttackWaitTime < atkWaitTime) {
 			cumulativeAttackWaitTime += Time.deltaTime;
 			return;
 		}
 
 		//attack animation begins
 		if (!enemyMotion.isMotionStarted) {
+			if (GetStatus ().GetType () == typeof(NpcParameterStatus)) {
+				Debug.LogError ("**********1: " + atkWaitTime);
+			}
 			enemyMotion.isMotionStarted = true;
 			isFirstAttack = false;
 			cumulativeAttackWaitTime = 0;
