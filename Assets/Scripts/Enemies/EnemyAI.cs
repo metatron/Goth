@@ -166,6 +166,11 @@ public class EnemyAI : MonoBehaviour {
 			return ;
 		}
 
+		//if the target is already decided and is visible, do not update the target.
+		if (IsTargetVisible()) {
+			return ;
+		}
+
 		//if it is npc find target
 		if (charType == CharacterType.NPC) {
 			//if npc is on attack searching, do not update the target of npc
@@ -202,6 +207,19 @@ public class EnemyAI : MonoBehaviour {
 
 		cumulativeNpcDetectTargetTime = 0.0f;
 	}
+
+	private bool IsTargetVisible() {
+		if (target == null) {
+			return false;
+		}
+
+		float distance = Mathf.Abs(target.transform.position.x - transform.position.x);
+		if (distance <= GetStatus ().crntVisibleDistance) {
+			return true;
+		}
+		return false;
+	}
+
 
 	private void Spot() {
 

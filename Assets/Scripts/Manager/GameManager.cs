@@ -77,13 +77,16 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 * detect if there're enemies nearby.
 	 * 
 	 */
-	public List<GameObject> GetEnemiesOnSite() {
-		if (playerCharacter == null) {
+	public List<GameObject> GetEnemiesOnSite(GameObject ghostSelf) {
+		if (playerCharacter == null || ghostSelf == null) {
 			return new List<GameObject>();
 		}
 
+		float crntVisibleDistance = 1000.0f; //just in case create the default value.
+		crntVisibleDistance = ghostSelf.GetComponent<EnemyAI>().GetStatus().crntVisibleDistance;
+
 		if (playerCharacter.status.GetCharacterDirection () == BaseParameterStatus.CharacterDirection.LEFT) {
-			float minX = player.transform.position.x - playerParam.crntVisibleDistance;
+			float minX = player.transform.position.x - crntVisibleDistance;
 			foreach (GameObject enemyObj in totalEnemyList) {
 				if (enemyObj != null && 
 					enemyObj.GetComponent<EnemyAI> ().status.crntHp > 0 && 
@@ -98,7 +101,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 				}
 			}
 		} else {
-			float manX = player.transform.position.x + playerParam.crntVisibleDistance;
+			float manX = player.transform.position.x + crntVisibleDistance;
 			foreach (GameObject enemyObj in totalEnemyList) {
 				if (enemyObj != null && 
 				    enemyObj.GetComponent<EnemyAI> ().status.crntHp > 0 && 
@@ -219,7 +222,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 */
 	public void SetNpc(NpcParameterStatus target) {
 		totalNpcList.Add (target);
-		Debug.Log ("**********SetNpc: totalNpcList count:" + totalNpcList.Count);
+//		Debug.Log ("**********SetNpc: totalNpcList count:" + totalNpcList.Count);
 	}
 
 	/**
@@ -380,7 +383,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		GameObject foundEnemyObject = null;
 		float minDistance2Enemy = float.MaxValue;
 		foreach (GameObject enemy in totalEnemyList) {
-			float distance = Vector3.Distance(enemy.transform.position, npcObject.transform.position);
+			float distance = Mathf.Abs(enemy.transform.position.x - npcObject.transform.position.x);
 			BaseParameterStatus.CharacterDirection enemyLeftRight = BaseParameterStatus.CharacterDirection.LEFT;
 			if(npcObject.transform.position.x - enemy.transform.position.x < 0) {
 				enemyLeftRight = BaseParameterStatus.CharacterDirection.RIGHT;
