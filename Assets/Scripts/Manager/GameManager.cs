@@ -77,13 +77,17 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 * detect if there're enemies nearby.
 	 * 
 	 */
-	public List<GameObject> GetEnemiesOnSite(GameObject ghostSelf) {
+	public List<GameObject> GetEnemiesOnSite(EnemyAI ghostSelf) {
 		if (playerCharacter == null || ghostSelf == null) {
 			return new List<GameObject>();
 		}
 
 		float crntVisibleDistance = 1000.0f; //just in case create the default value.
-		crntVisibleDistance = ghostSelf.GetComponent<EnemyAI>().GetStatus().crntVisibleDistance;
+		crntVisibleDistance = ghostSelf.maxSpotDistance + ghostSelf.GetStatus().crntVisibleDistance;
+
+		if (ghostSelf.GetStatus ().GetType () == typeof(NpcParameterStatus)) {
+			Debug.LogError (ghostSelf.gameObject.name + " crntVisibleDistance: " + crntVisibleDistance);
+		}
 
 		if (playerCharacter.status.GetCharacterDirection () == BaseParameterStatus.CharacterDirection.LEFT) {
 			float minX = player.transform.position.x - crntVisibleDistance;
@@ -258,14 +262,8 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		// update spot distance
 		//npcvisibility = maxSpotDist + additional + followOffset
 
-		//the base spotting distance is the players visible dist (cannot be 0)
-		float baseDistance = playerParam.crntVisibleDistance;
-		//add level up visible dist
-		enemyAI.maxSpotDistance = baseDistance + npcParam.GetBaseVisibleDistance();
-		Debug.Log("[" + npcObject.name + "] SpotDistance: " + enemyAI.maxSpotDistance);
-
-		//update attack distance (add the dist bt. npc and player
-		//enemyAI.maxAttackDistance += Mathf.Abs(followScpt.OffsetPos.x);
+		//enemyAI.maxSpotDistance the crntVisibleDist will be added on GetEnemiesOnSite.
+//		enemyAI.maxSpotDistance = baseDistance + npcParam.GetBaseVisibleDistance();
 
 
 		//initialize NPC status

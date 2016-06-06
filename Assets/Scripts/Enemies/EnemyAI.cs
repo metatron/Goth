@@ -135,7 +135,7 @@ public class EnemyAI : MonoBehaviour {
 		//Move
 		if (
 			//move by distance
-			(distanceTarget <= maxSpotDistance && distanceTarget >= maxAttackDistance) ||
+			(distanceTarget <= (maxSpotDistance + GetStatus().crntVisibleDistance) && distanceTarget >= maxAttackDistance) ||
 			//move by charlotte on attacked (NPC only)
 			((charType == CharacterType.NPC && ((NpcParameterStatus)GetStatus()).isSearchingOnAttack) && distanceTarget >= maxAttackDistance)
 		) {
@@ -145,7 +145,7 @@ public class EnemyAI : MonoBehaviour {
 		}
 
 		//Attack
-		if (distanceTarget <= maxSpotDistance && distanceTarget < maxAttackDistance) {
+		if (distanceTarget <= maxAttackDistance) {
 			Attack();
 			lastTargetPlace = target.position;
 		}
@@ -181,7 +181,7 @@ public class EnemyAI : MonoBehaviour {
 			//if the npc spotted the enemy on her site, set the target
 			GameObject targetEnemy = GameManager.Instance.GetEnemyOnNpcSite ();
 			//check if the player spotted the enemy
-			List<GameObject> targetEnemyList = GameManager.Instance.GetEnemiesOnSite();
+			List<GameObject> targetEnemyList = GameManager.Instance.GetEnemiesOnSite(this);
 			if (targetEnemy == null && targetEnemyList.Count > 0) {
 				targetEnemy = targetEnemyList [0];
 			}
@@ -255,9 +255,9 @@ public class EnemyAI : MonoBehaviour {
 					myTransform.localScale = new Vector3(-defaultSizeVec.x, defaultSizeVec.y, 1.0f);
 				}
 				myTransform.position += myTransform.right * GetStatus ().crntMoveSpeed * Time.deltaTime;
-				if (gameObject.name.Contains("NPC")) {
-					Debug.Log ("*********************position: " + myTransform.position);
-				}
+//				if (gameObject.name.Contains("NPC")) {
+//					Debug.Log ("*********************position: " + myTransform.position);
+//				}
 			}
 		}
 
