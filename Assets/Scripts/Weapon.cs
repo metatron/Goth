@@ -183,9 +183,9 @@ public class Weapon : MonoBehaviour {
 			npcParameter.maxAtkSpeed = targetParam.maxAtkSpeed;
 			npcParameter.crntAtkSpeed = targetParam.minAtkSpeed;
 
-			npcParameter.minVisibleDistance = targetParam.minVisibleDistance;
-			npcParameter.maxVisibleDistance = targetParam.maxVisibleDistance;
-			npcParameter.crntVisibleDistance = targetParam.minVisibleDistance;
+			npcParameter.minVisibleInc = targetParam.minVisibleInc;
+			npcParameter.maxVisibleInc = targetParam.maxVisibleInc;
+			npcParameter.crntVisibleInc = targetParam.crntVisibleInc;
 
 			npcParameter.level = targetParam.level;
 			npcParameter.type = targetParam.type;

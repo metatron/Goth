@@ -83,7 +83,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		}
 
 		float crntVisibleDistance = 1000.0f; //just in case create the default value.
-		crntVisibleDistance = ghostSelf.maxSpotDistance + ghostSelf.GetStatus().crntVisibleDistance;
+		crntVisibleDistance = ghostSelf.maxSpotDistance + ghostSelf.GetStatus().crntVisibleInc;
 
 		if (ghostSelf.GetStatus ().GetType () == typeof(NpcParameterStatus)) {
 			Debug.LogError (ghostSelf.gameObject.name + " crntVisibleDistance: " + crntVisibleDistance);
@@ -388,15 +388,15 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			}
 
 			//if too close, target the enemy
-			float minDist = Mathf.Max(100.0f, npcStatus.crntVisibleDistance/3);
+			float minDist = Mathf.Max(100.0f, npcObject.GetComponent<EnemyAI> ().maxAttackDistance/3);
 			if(distance <= minDist) {
-				Debug.Log ("**********Too close enemy ("+(npcStatus.crntVisibleDistance/3)+"): " + distance);
+				Debug.Log ("**********Too close enemy ("+(npcObject.GetComponent<EnemyAI> ().maxAttackDistance/3)+"): " + distance);
 				return enemy.gameObject;
 			}
 
 			//looking left
 			if (playerCharacter.status.GetCharacterDirection () == BaseParameterStatus.CharacterDirection.LEFT) {
-				if(distance <= npcStatus.crntVisibleDistance && 
+				if(distance <= (npcObject.GetComponent<EnemyAI> ().maxAttackDistance + npcObject.GetComponent<EnemyAI> ().GetStatus ().crntVisibleInc) && 
 					enemyLeftRight == BaseParameterStatus.CharacterDirection.LEFT) {
 					if(distance < minDistance2Enemy) {
 						foundEnemyObject = enemy.gameObject;
@@ -406,7 +406,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			}
 			//looking right
 			else {
-				if(distance <= npcStatus.crntVisibleDistance && 
+				if(distance <= (npcObject.GetComponent<EnemyAI> ().maxAttackDistance + npcObject.GetComponent<EnemyAI> ().GetStatus ().crntVisibleInc) && 
 					enemyLeftRight == BaseParameterStatus.CharacterDirection.RIGHT) {
 					if(distance < minDistance2Enemy) {
 						foundEnemyObject = enemy.gameObject;

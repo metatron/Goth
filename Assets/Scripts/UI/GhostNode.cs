@@ -76,7 +76,7 @@ public class GhostNode : MonoBehaviour {
 			int nextAtk = GhostLevelMaster.CalculateLevelParams (npcStatus.minAtk, npcStatus.maxAtk, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			int nextMoveSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minMoveSpeed, npcStatus.maxMoveSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			float nextAtkSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minAtkSpeed, npcStatus.maxAtkSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
-			float nextVisibleDistance =	GhostLevelMaster.CalculateLevelParams (npcStatus.minVisibleDistance, npcStatus.maxVisibleDistance, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			float nextVisibleDistance =	GhostLevelMaster.CalculateLevelParams (npcStatus.minVisibleInc, npcStatus.maxVisibleInc, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			string info = "\n[Next Level]\n" + 
 				"Cost: " + cost2LevelUp + "\n" +
 				">Hp: " + nextHp + "\n" +
@@ -117,7 +117,7 @@ public class GhostNode : MonoBehaviour {
 			int nextAtk =		GhostLevelMaster.CalculateLevelParams (npcStatus.minAtk, npcStatus.maxAtk, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			int nextMoveSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minMoveSpeed, npcStatus.maxMoveSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			float nextAtkSpeed =	GhostLevelMaster.CalculateLevelParams (npcStatus.minAtkSpeed, npcStatus.maxAtkSpeed, npcStatus.level + 1, maxLevel, npcStatus.pattern);
-			float nextVisibleDistance =	GhostLevelMaster.CalculateLevelParams (npcStatus.minVisibleDistance, npcStatus.maxVisibleDistance, npcStatus.level + 1, maxLevel, npcStatus.pattern);
+			float nextVisibleDistance =	GhostLevelMaster.CalculateLevelParams (npcStatus.minVisibleInc, npcStatus.maxVisibleInc, npcStatus.level + 1, maxLevel, npcStatus.pattern);
 			Debug.Log (
 				"cost2LevelUp: " + cost2LevelUp + 
 				", nextHp: " + nextHp + 

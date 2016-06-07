@@ -132,6 +132,6 @@ public class BaseParameterStatus {
 		return GhostLevelMaster.CalculateLevelParams (minAtkSpeed, maxAtkSpeed, level, GhostLevelMaster.GetMaxLevel(this), pattern);
 	}
 	public int GetBaseVisibleDistance() {
-		return GhostLevelMaster.CalculateLevelParams ((int)minVisibleDistance, (int)maxVisibleDistance, level, GhostLevelMaster.GetMaxLevel (this), pattern);
+		return GhostLevelMaster.CalculateLevelParams ((int)minVisibleInc, (int)maxVisibleInc, level, GhostLevelMaster.GetMaxLevel (this), pattern);
 	}
 }

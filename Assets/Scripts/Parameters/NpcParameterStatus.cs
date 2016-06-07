@@ -86,7 +86,7 @@ public class NpcParameterStatus : BaseParameterStatus {
 		this.crntHp = newHp;
 		this.crntMoveSpeed = newMoveSpeed;
 		this.crntAtkSpeed = newAtkSpeed;
-		this.crntVisibleDistance = newVisibleDistance;
+		this.crntVisibleInc = newVisibleDistance;
 
 //		//update close contact weapon atk. (if it is bullet type, no need)
 //		GameObject closeContactWeapon = SelfObj.GetComponent<EnemyAI>().enemyMotion.crntWeaponObj;
