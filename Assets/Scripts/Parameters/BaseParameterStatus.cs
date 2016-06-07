@@ -60,10 +60,10 @@ public class BaseParameterStatus {
 	public float crntAtkSpeed = 0.0f;
 
 	[SerializeField]
-	public float minVisibleDistance = 0.0f; //distance added by the level up
+	public float minVisibleInc = 0.0f; //distance added by the level up
 	[SerializeField]
-	public float maxVisibleDistance = 100.0f; //distance added by the level up
-	public float crntVisibleDistance = 0.0f;
+	public float maxVisibleInc = 100.0f; //distance added by the level up
+	public float crntVisibleInc = 0.0f;
 
 	[SerializeField]
 	public int level = 1;
@@ -79,6 +79,9 @@ public class BaseParameterStatus {
 
 	[SerializeField]
 	public int cost = 100;
+
+	[SerializeField]
+	public List<BaseSkillParameter.SkillType> skillList = new List<BaseSkillParameter.SkillType>();
 
 
 	public void InitCharacterParameterNums() {

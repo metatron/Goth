@@ -135,7 +135,7 @@ public class EnemyAI : MonoBehaviour {
 		//Move
 		if (
 			//move by distance
-			(distanceTarget <= (maxSpotDistance + GetStatus().crntVisibleDistance) && distanceTarget >= maxAttackDistance) ||
+			(distanceTarget <= (maxSpotDistance + GetStatus().crntVisibleInc) && distanceTarget >= maxAttackDistance) ||
 			//move by charlotte on attacked (NPC only)
 			((charType == CharacterType.NPC && ((NpcParameterStatus)GetStatus()).isSearchingOnAttack) && distanceTarget >= maxAttackDistance)
 		) {
@@ -214,7 +214,7 @@ public class EnemyAI : MonoBehaviour {
 		}
 
 		float distance = Mathf.Abs(target.transform.position.x - transform.position.x);
-		if (distance <= GetStatus ().crntVisibleDistance) {
+		if (distance <= (maxSpotDistance + GetStatus ().crntVisibleInc)) {
 			return true;
 		}
 		return false;
