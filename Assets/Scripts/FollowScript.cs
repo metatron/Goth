@@ -45,7 +45,7 @@ public class FollowScript : MonoBehaviour {
 
 		//if searching on attack, do not follow
 		if (enemyAi.charType == EnemyAI.CharacterType.NPC) {
-			if(((NpcParameterStatus)enemyAi.GetStatus()).isSearchingOnAttack) {
+			if(((NpcParameterStatus)enemyAi.status).isSearchingOnAttack) {
 				return ;
 			}
 		}

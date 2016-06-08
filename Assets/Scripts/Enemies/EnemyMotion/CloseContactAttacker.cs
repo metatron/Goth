@@ -21,10 +21,10 @@ public class CloseContactAttacker : EnemyMotionInterface {
 
 
 		//if it is nurse load weapon
-		if (enemyAI != null && enemyAI.GetStatus ().type == BaseParameterStatus.GhostType.Nurse) {
+		if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.Nurse) {
 			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 8.0f));
 		}
-		else if (enemyAI != null && enemyAI.GetStatus ().type == BaseParameterStatus.GhostType.WillOWisp) {
+		else if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.WillOWisp) {
 			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
 		}
 	}

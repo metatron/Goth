@@ -21,7 +21,7 @@ public class EnemyMotionInterface : MonoBehaviour {
 				crntWeaponObj.GetComponentInChildren<EnemyWeapon>().owner = GetComponent<EnemyAI>().gameObject;
 			}
 			crntWeaponObj.transform.localPosition = initPos;
-			crntWeaponObj.GetComponentInChildren<EnemyWeapon>().attack = GetComponent<EnemyAI>().GetStatus().crntAtk;
+			crntWeaponObj.GetComponentInChildren<EnemyWeapon>().attack = GetComponent<EnemyAI>().status.crntAtk;
 
 			//add to the enemy weapon list
 			GameManager.Instance.enemyWeaponList.Add(crntWeaponObj.GetComponentInChildren<EnemyWeapon>());

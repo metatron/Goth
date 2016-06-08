@@ -76,7 +76,7 @@ public class EnemyWeapon : MonoBehaviour {
 		//2. hitting enemy (enemy or npc)
 		EnemyAI target = other.gameObject.GetComponent<EnemyAI> ();
 		if (target != null) {
-			status = target.GetStatus ();
+			status = target.status;
 
 			//if npc weapon hitting npc, do not dmg
 			if (target.charType == EnemyAI.CharacterType.NPC && crntEnemyWeaponType == EnemyWeaponType.NPC) {
@@ -177,7 +177,7 @@ public class EnemyWeapon : MonoBehaviour {
 				//add to npc
 				Weapon.RegisterAsNpc((EnemyParameterStatus)status);
 				//reset npc param
-				((NpcParameterStatus)owner.GetComponent<EnemyAI>().GetStatus()).ResetSearchEnemyOnAttack();
+				((NpcParameterStatus)owner.GetComponent<EnemyAI>().status).ResetSearchEnemyOnAttack();
 			}
 
 			//if the event is set play it
@@ -193,7 +193,7 @@ public class EnemyWeapon : MonoBehaviour {
 			GameObject npcObj = GameManager.Instance.crntNpcObj;
 			if(npcObj != null) {
 				EnemyAI npcEnemyAi = npcObj.GetComponent<EnemyAI>();
-				NpcParameterStatus npcParam = (NpcParameterStatus)npcEnemyAi.GetStatus();
+				NpcParameterStatus npcParam = (NpcParameterStatus)npcEnemyAi.status;
 				npcParam.BeginSearchEnemyOnAttack(this);
 			}
 		}

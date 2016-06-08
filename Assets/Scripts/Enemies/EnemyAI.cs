@@ -17,11 +17,12 @@ public class EnemyAI : MonoBehaviour {
 
 
 	public float maxAttackDistance;
+	//******** will be decreased by level ****************//
 	public float maxAttackWait;		//how long wait for another attack (minimum: about 3.0f ~ )
 	public float cumulativeAttackWaitTime;
 	public bool isFirstAttack = true;
 
-	//need this for only enemy. npc's default = players visible dist.
+	//******** will be increased by level ****************//
 	public float maxSpotDistance = 1000.0f;	 //if the target is closer than this value enemy will start moving
 
 //	public float maxMoveSpeed;				//how fast move
@@ -53,9 +54,7 @@ public class EnemyAI : MonoBehaviour {
 	//place it manually.
 	public EnemyMotionInterface enemyMotion;
 
-	public EnemyParameterStatus status = new EnemyParameterStatus ();
-
-	public NpcParameterStatus npcStatus; //initial value must be NULL for detecting wheather it is npc or enemy
+	public BaseParameterStatus status = new BaseParameterStatus ();
 
 
 	//Force move parameters.
@@ -135,9 +134,9 @@ public class EnemyAI : MonoBehaviour {
 		//Move
 		if (
 			//move by distance
-			(distanceTarget <= (maxSpotDistance + GetStatus().crntVisibleInc) && distanceTarget >= maxAttackDistance) ||
+			(distanceTarget <= (maxSpotDistance + status.crntVisibleInc) && distanceTarget >= maxAttackDistance) ||
 			//move by charlotte on attacked (NPC only)
-			((charType == CharacterType.NPC && ((NpcParameterStatus)GetStatus()).isSearchingOnAttack) && distanceTarget >= maxAttackDistance)
+			((charType == CharacterType.NPC && ((NpcParameterStatus)status).isSearchingOnAttack) && distanceTarget >= maxAttackDistance)
 		) {
 
 			Move();
@@ -156,7 +155,7 @@ public class EnemyAI : MonoBehaviour {
 
 		//update on attack search param on NPC 
 		if (charType == CharacterType.NPC) {
-			((NpcParameterStatus)GetStatus()).UpdateSearchEnemyOnAttack(Time.deltaTime);
+			((NpcParameterStatus)status).UpdateSearchEnemyOnAttack(Time.deltaTime);
 		}
 	}
 
@@ -174,7 +173,7 @@ public class EnemyAI : MonoBehaviour {
 		//if it is npc find target
 		if (charType == CharacterType.NPC) {
 			//if npc is on attack searching, do not update the target of npc
-			if(npcStatus.isSearchingOnAttack) {
+			if(((NpcParameterStatus)status).isSearchingOnAttack) {
 				return ;
 			}
 
@@ -214,7 +213,7 @@ public class EnemyAI : MonoBehaviour {
 		}
 
 		float distance = Mathf.Abs(target.transform.position.x - transform.position.x);
-		if (distance <= (maxSpotDistance + GetStatus ().crntVisibleInc)) {
+		if (distance <= (maxSpotDistance + status.crntVisibleInc)) {
 			return true;
 		}
 		return false;
@@ -247,14 +246,14 @@ public class EnemyAI : MonoBehaviour {
 				if(myTransform.localScale.x < 0) {
 					myTransform.localScale = new Vector3(defaultSizeVec.x, defaultSizeVec.y, 1.0f);
 				}
-				myTransform.position -= myTransform.right * GetStatus ().crntMoveSpeed * Time.deltaTime;
+				myTransform.position -= myTransform.right * status.crntMoveSpeed * Time.deltaTime;
 			}
 			//move right
 			else if(target.position.x - myTransform.position.x > 0) {
 				if(myTransform.localScale.x > 0) {
 					myTransform.localScale = new Vector3(-defaultSizeVec.x, defaultSizeVec.y, 1.0f);
 				}
-				myTransform.position += myTransform.right * GetStatus ().crntMoveSpeed * Time.deltaTime;
+				myTransform.position += myTransform.right * status.crntMoveSpeed * Time.deltaTime;
 //				if (gameObject.name.Contains("NPC")) {
 //					Debug.Log ("*********************position: " + myTransform.position);
 //				}
@@ -293,11 +292,11 @@ public class EnemyAI : MonoBehaviour {
 		//wait if it is not 1st attack,
 		//if the attack is finished,
 		//and cumulative time is less than max wait time.
-//		if (GetStatus ().GetType () == typeof(NpcParameterStatus)) {
-//			Debug.LogError("cmltive: " + cumulativeAttackWaitTime + ", mxAtkWait: " + maxAttackWait + ", crntAtkSpd: " + GetStatus ().crntAtkSpeed + 
-//				", res: [" + cumulativeAttackWaitTime + " < " + (maxAttackWait - GetStatus ().crntAtkSpeed) + "]");
+//		if (status.GetType () == typeof(NpcParameterStatus)) {
+//			Debug.LogError("cmltive: " + cumulativeAttackWaitTime + ", mxAtkWait: " + maxAttackWait + ", crntAtkSpd: " + status.crntAtkSpeed + 
+//				", res: [" + cumulativeAttackWaitTime + " < " + (maxAttackWait - status.crntAtkSpeed) + "]");
 //		}
-		float atkWaitTime = Mathf.Max(1.0f, (maxAttackWait - GetStatus ().crntAtkSpeed));
+		float atkWaitTime = Mathf.Max(1.0f, (maxAttackWait - status.crntAtkSpeed));
 		if (!isFirstAttack && !enemyMotion.isMotionStarted && cumulativeAttackWaitTime < atkWaitTime) {
 			cumulativeAttackWaitTime += Time.deltaTime;
 			return;
@@ -305,7 +304,7 @@ public class EnemyAI : MonoBehaviour {
 
 		//attack animation begins
 		if (!enemyMotion.isMotionStarted) {
-			if (GetStatus ().GetType () == typeof(NpcParameterStatus)) {
+			if (status.GetType () == typeof(NpcParameterStatus)) {
 				Debug.LogError ("**********1: " + atkWaitTime);
 			}
 			enemyMotion.isMotionStarted = true;
@@ -357,14 +356,16 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 
-	public BaseParameterStatus GetStatus() {
-		if (charType != CharacterType.ENEMY) {
-			return npcStatus;
-		}
-		return status;
-	}
+//	public BaseParameterStatus GetStatus() {
+//		if (charType != CharacterType.ENEMY) {
+//			return npcStatus;
+//		}
+//		return status;
+//	}
 
 	public void CopyEnemyStatus(EnemyParameterStatus enemyStatus) {
+		status = new EnemyParameterStatus ();
+
 		status.minHp = enemyStatus.minHp;
 		status.maxHp = enemyStatus.maxHp;
 		status.crntHp = enemyStatus.crntHp;
@@ -385,11 +386,11 @@ public class EnemyAI : MonoBehaviour {
 
 		status.type = enemyStatus.type;
 
-		status.spiritNum = enemyStatus.spiritNum;
+		((EnemyParameterStatus)status).spiritNum = enemyStatus.spiritNum;
 
-		status.friendPossibility = enemyStatus.friendPossibility;
+		((EnemyParameterStatus)status).friendPossibility = enemyStatus.friendPossibility;
 
-		status.spawner = enemyStatus.spawner;
+		((EnemyParameterStatus)status).spawner = enemyStatus.spawner;
 
 		status.pattern = enemyStatus.pattern;
 		status.rarity = enemyStatus.rarity;
