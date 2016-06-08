@@ -53,7 +53,7 @@ public class GhostNode : MonoBehaviour {
 		hpText.text = "HP: " + npcStatus.GetBaseHp();
 		attackSpdText.text = "Attack Speed: " + System.Math.Round ((double)npcStatus.GetBaseAtkSpeed (), 2, System.MidpointRounding.AwayFromZero); //小数点2以下四捨五入
 		moveSpdText.text = "Move Speed: " + System.Math.Round ((double)npcStatus.GetBaseMoveSpeed(), 2, System.MidpointRounding.AwayFromZero); //小数点2以下四捨五入
-		visibilityText.text = "Visibility: " + npcStatus.GetBaseVisibleDistance();
+		visibilityText.text = "Visibility: " + System.Math.Round ((double)npcStatus.GetBaseVisibleDistance(), 2, System.MidpointRounding.AwayFromZero); //小数点2以下四捨五入;
 
 		//change color of the select button if it is selected already
 		MenuManager.Instance.resetSelectedButtonColor();
@@ -139,9 +139,9 @@ public class GhostNode : MonoBehaviour {
 				//update Texts
 				attackText.text = "Attack: " + nextAtk;
 				hpText.text = "HP: " + nextHp;
-				attackSpdText.text = "Attack Speed: " + nextAtkSpeed;
-				moveSpdText.text = "Move Speed: " + nextAtkSpeed;
-				visibilityText.text = "Visibility: " + nextVisibleDistance;
+				attackSpdText.text = "Attack Speed: " + System.Math.Round ((double)nextAtkSpeed,2 , System.MidpointRounding.AwayFromZero);
+				moveSpdText.text = "Move Speed: " + System.Math.Round ((double)nextAtkSpeed, 2, System.MidpointRounding.AwayFromZero);
+				visibilityText.text = "Visibility: " + System.Math.Round ((double)nextVisibleDistance, 2, System.MidpointRounding.AwayFromZero);
 			} else {
 				//TODO: Popup window
 				MenuManager.Instance.warningPopup.GetComponent<WarningPopup>().InitializeWarningPopup("Not Enought Spirits", "");
