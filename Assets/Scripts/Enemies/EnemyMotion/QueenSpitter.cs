@@ -73,7 +73,7 @@ public class QueenSpitter : EnemyMotionInterface {
 			//			}
 
 			//pass atk to bullet object
-			BaseParameterStatus status = transform.parent.gameObject.GetComponent<EnemyAI>().GetStatus ();
+			BaseParameterStatus status = transform.parent.gameObject.GetComponent<EnemyAI>().status;
 			ballObject.GetComponent<EnemyWeapon>().attack = status.crntAtk;
 
 			//set the starting pos

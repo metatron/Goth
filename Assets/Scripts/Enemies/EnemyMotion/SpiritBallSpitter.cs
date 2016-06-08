@@ -33,7 +33,7 @@ public class SpiritBallSpitter : EnemyMotionInterface {
 //				break;
 //			}
 
-			if (transform.parent.gameObject.GetComponent<EnemyAI> ().GetStatus ().GetType () == typeof(NpcParameterStatus)) {
+			if (transform.parent.gameObject.GetComponent<EnemyAI> ().status.GetType () == typeof(NpcParameterStatus)) {
 				Debug.Log (transform.parent.gameObject + " **********1: " + waitTime + ", Time.timeScale: " + Time.timeScale);
 			}
 
@@ -54,7 +54,7 @@ public class SpiritBallSpitter : EnemyMotionInterface {
 //			}
 
 			//pass atk to bullet object
-			BaseParameterStatus status = transform.parent.gameObject.GetComponent<EnemyAI>().GetStatus ();
+			BaseParameterStatus status = transform.parent.gameObject.GetComponent<EnemyAI>().status;
 			ballObject.GetComponent<EnemyWeapon>().attack = status.crntAtk;
 
 			//set the starting pos

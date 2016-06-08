@@ -50,8 +50,8 @@ public class BaseSkillParameter : MonoBehaviour {
 
 	public void InitSkill(GameObject selfObj) {
 		this.selfObj = selfObj;
-		status = selfObj.GetComponent<EnemyAI> ().GetStatus ();
-		level = selfObj.GetComponent<EnemyAI> ().GetStatus ().level;
+		status = selfObj.GetComponent<EnemyAI> ().status;
+		level = selfObj.GetComponent<EnemyAI> ().status.level;
 	}
 
 	public int GetBaseAtkUp() {

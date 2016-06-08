@@ -83,9 +83,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		}
 
 		float crntVisibleDistance = 1000.0f; //just in case create the default value.
-		crntVisibleDistance = ghostSelf.maxSpotDistance + ghostSelf.GetStatus().crntVisibleInc;
+		crntVisibleDistance = ghostSelf.maxSpotDistance + ghostSelf.status.crntVisibleInc;
 
-		if (ghostSelf.GetStatus ().GetType () == typeof(NpcParameterStatus)) {
+		if (ghostSelf.status.GetType () == typeof(NpcParameterStatus)) {
 			Debug.LogError (ghostSelf.gameObject.name + " crntVisibleDistance: " + crntVisibleDistance);
 		}
 
@@ -204,7 +204,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		tmpPos.z += FollowScript.DEFAULT_Z_POS;
 
 		//for TiedGhost, its y position needs to be fixed
-		if (enemyObj.GetComponent<EnemyAI> ().GetStatus ().type == BaseParameterStatus.GhostType.TiedGhost) {
+		if (enemyObj.GetComponent<EnemyAI> ().status.type == BaseParameterStatus.GhostType.TiedGhost) {
 			tmpPos.y += 300.0f;
 		}
 
@@ -268,13 +268,13 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		//initialize NPC status
 		enemyAI.status = null;
-		enemyAI.npcStatus = npcParam;
-		enemyAI.npcStatus.SelfObj = npcObject;
+		enemyAI.status = npcParam;
+		enemyAI.status.SelfObj = npcObject;
 		enemyAI.charType = EnemyAI.CharacterType.NPC;
 		//if this is true on summon, it wont follow the player.
-		enemyAI.npcStatus.isSearchingOnAttack = false;
+		((NpcParameterStatus)enemyAI.status).isSearchingOnAttack = false;
 
-		enemyAI.npcStatus.InitCharacterParameterNums ();
+		enemyAI.status.InitCharacterParameterNums ();
 
 		//if enemy is close contact attacker, init weapon
 		if (enemyAI.enemyMotion.closeWeaponPrefab != null) {
@@ -309,7 +309,6 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		//initialize NPC status
 		enemyAI.status = enemyStatus;
-		enemyAI.npcStatus = null;
 		enemyAI.charType = EnemyAI.CharacterType.ENEMY;
 
 		enemyAI.status.InitCharacterParameterNums ();
@@ -327,7 +326,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			return ;
 		}
 
-		BaseParameterStatus baseParam = crntNpcObj.GetComponent<EnemyAI> ().GetStatus ();
+		BaseParameterStatus baseParam = crntNpcObj.GetComponent<EnemyAI> ().status;
 
 		if (crntNpcObj.GetComponent<EnemyAI> ().charType != EnemyAI.CharacterType.NPC) {
 			return ;
@@ -376,7 +375,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			return null;
 		}
 
-		NpcParameterStatus npcStatus = (NpcParameterStatus)npcObject.GetComponent<EnemyAI> ().GetStatus ();
+		NpcParameterStatus npcStatus = (NpcParameterStatus)npcObject.GetComponent<EnemyAI> ().status;
 
 		GameObject foundEnemyObject = null;
 		float minDistance2Enemy = float.MaxValue;
@@ -396,7 +395,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 			//looking left
 			if (playerCharacter.status.GetCharacterDirection () == BaseParameterStatus.CharacterDirection.LEFT) {
-				if(distance <= (npcObject.GetComponent<EnemyAI> ().maxAttackDistance + npcObject.GetComponent<EnemyAI> ().GetStatus ().crntVisibleInc) && 
+				if(distance <= (npcObject.GetComponent<EnemyAI> ().maxAttackDistance + npcObject.GetComponent<EnemyAI> ().status.crntVisibleInc) && 
 					enemyLeftRight == BaseParameterStatus.CharacterDirection.LEFT) {
 					if(distance < minDistance2Enemy) {
 						foundEnemyObject = enemy.gameObject;
@@ -406,7 +405,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			}
 			//looking right
 			else {
-				if(distance <= (npcObject.GetComponent<EnemyAI> ().maxAttackDistance + npcObject.GetComponent<EnemyAI> ().GetStatus ().crntVisibleInc) && 
+				if(distance <= (npcObject.GetComponent<EnemyAI> ().maxAttackDistance + npcObject.GetComponent<EnemyAI> ().status.crntVisibleInc) && 
 					enemyLeftRight == BaseParameterStatus.CharacterDirection.RIGHT) {
 					if(distance < minDistance2Enemy) {
 						foundEnemyObject = enemy.gameObject;
@@ -482,7 +481,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 				if(distance < 500.0f) {
 					//set the enemy on attack
 					if(crntNpcObj != null) {
-						((NpcParameterStatus)crntNpcObj.GetComponent<EnemyAI>().GetStatus()).BeginSearchEnemyOnAttack(enemyWeapon);
+						((NpcParameterStatus)crntNpcObj.GetComponent<EnemyAI>().status).BeginSearchEnemyOnAttack(enemyWeapon);
 					}
 					StartCoroutine(SlowMo());
 					break;

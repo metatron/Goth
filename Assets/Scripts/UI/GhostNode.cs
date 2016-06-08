@@ -130,7 +130,7 @@ public class GhostNode : MonoBehaviour {
 			//check if the user has money
 			if (GameManager.Instance.playerParam.totalSpirit >= cost2LevelUp) {
 				//update
-				npcStatus.UpdateStatus (nextAtk, nextHp, nextMoveSpeed, nextAtkSpeed, nextVisibleDistance, npcStatus.level + 1);
+				npcStatus.UpdateStatus (npcStatus.level + 1);
 				//decrement money
 				GameManager.Instance.playerParam.totalSpirit -= cost2LevelUp;
 				//save to the disk

@@ -89,6 +89,7 @@ public class BaseParameterStatus {
 		crntAtk = GetBaseAtk ();
 		crntMoveSpeed = GetBaseMoveSpeed ();
 		crntAtkSpeed = GetBaseAtkSpeed ();
+		crntVisibleInc = GetBaseVisibleDistance ();
 	}
 
 	/**

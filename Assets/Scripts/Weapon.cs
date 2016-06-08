@@ -73,7 +73,7 @@ public class Weapon : MonoBehaviour {
 		if (other.gameObject.GetComponent<EnemyAI> () == null) {
 			return;
 		}
-		EnemyParameterStatus enemyStatus = other.gameObject.GetComponent<EnemyAI>().status;
+		EnemyParameterStatus enemyStatus = (EnemyParameterStatus)other.gameObject.GetComponent<EnemyAI>().status;
 
 		BoneAnimation enemyAnim = other.gameObject.GetComponent<BoneAnimation> ();
 

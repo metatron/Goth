@@ -80,13 +80,9 @@ public class NpcParameterStatus : BaseParameterStatus {
 		SelfObj.GetComponent<EnemyAI> ().enemyMotion.targetPos = null;
 	}
 
-	public void UpdateStatus(int newAtk, int newHp, int newMoveSpeed, float newAtkSpeed, float newVisibleDistance, int level) {
+	public void UpdateStatus(int level) {
 		this.level = level;
-		this.crntAtk = newAtk;
-		this.crntHp = newHp;
-		this.crntMoveSpeed = newMoveSpeed;
-		this.crntAtkSpeed = newAtkSpeed;
-		this.crntVisibleInc = newVisibleDistance;
+		InitCharacterParameterNums ();
 
 //		//update close contact weapon atk. (if it is bullet type, no need)
 //		GameObject closeContactWeapon = SelfObj.GetComponent<EnemyAI>().enemyMotion.crntWeaponObj;

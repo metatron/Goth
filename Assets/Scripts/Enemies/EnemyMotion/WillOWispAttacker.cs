@@ -18,7 +18,7 @@ public class WillOWispAttacker : EnemyMotionInterface {
 
 
 		//if it is nurse load weapon
-		if (enemyAI != null && enemyAI.GetStatus ().type == BaseParameterStatus.GhostType.WillOWisp) {
+		if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.WillOWisp) {
 			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
 		}
 	}
