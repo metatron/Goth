@@ -349,6 +349,12 @@ public class EnemyAI : MonoBehaviour {
 		return false;
 	}
 
+	/**
+	 * 
+	 * reset params that affect attack.
+	 * called from ForceMoveOnMultiAttak
+	 * 
+	 */
 	public void ResetForceMoveParam() {
 		crntNumOfMultiHit = 0;
 		cumulativeTimeOfMultiHit = 0.0f;

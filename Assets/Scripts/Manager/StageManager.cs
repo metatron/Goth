@@ -75,6 +75,11 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 		//move camera
 		Camera.main.transform.position = new Vector3(0.0f, 550.0f, -1200.0f);
 
+		//move npc if exists
+		if (GameManager.Instance.crntNpcObj != null) {
+			GameManager.Instance.crntNpcObj.transform.position = GameManager.Instance.player.transform.position;
+		}
+
 		//after load status, remove collected items
 		GameManager.Instance.crntStageData.InitStageCollectionItems();
 
