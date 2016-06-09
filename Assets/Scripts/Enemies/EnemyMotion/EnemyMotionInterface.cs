@@ -24,7 +24,10 @@ public class EnemyMotionInterface : MonoBehaviour {
 			crntWeaponObj.GetComponentInChildren<EnemyWeapon>().attack = GetComponent<EnemyAI>().status.crntAtk;
 
 			//add to the enemy weapon list
-			GameManager.Instance.enemyWeaponList.Add(crntWeaponObj.GetComponentInChildren<EnemyWeapon>());
+			//WARNING! InstantiateからきてるためここではEnemyか判断できない。。
+			if (GetComponent<EnemyAI> ().charType == EnemyAI.CharacterType.ENEMY) {
+				GameManager.Instance.enemyWeaponList.Add (crntWeaponObj.GetComponentInChildren<EnemyWeapon> ());
+			}
 		}
 	}
 

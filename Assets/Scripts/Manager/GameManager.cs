@@ -153,6 +153,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		Debug.Log ("enemyWeaponList: " + cnt);
 		for (int i=0; i<cnt; i++) {
 			if (enemyWeaponList[i] != null && enemyWeaponList[i].gameObject != null) {
+				//if NPC weapon and it is close contact, do not destroy it
+				if(enemyWeaponList[i].GetComponent<EnemyAI>().enemyMotion.
+
 				//if it has trail delete that first
 				if (enemyWeaponList [i].trailObject != null) {
 					enemyWeaponList [i].trailObject.DestroyMeshObj ();
