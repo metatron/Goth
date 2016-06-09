@@ -48,7 +48,6 @@ public class GhostMotion : MonoBehaviour {
 	}
 
 	private void DestroySelf() {
-		Debug.LogError ("*********1");
 		Destroy (gameObject);
 	}
 
