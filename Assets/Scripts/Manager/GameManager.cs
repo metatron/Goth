@@ -153,9 +153,6 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		Debug.Log ("enemyWeaponList: " + cnt);
 		for (int i=0; i<cnt; i++) {
 			if (enemyWeaponList[i] != null && enemyWeaponList[i].gameObject != null) {
-				//if NPC weapon and it is close contact, do not destroy it
-				if(enemyWeaponList[i].GetComponent<EnemyAI>().enemyMotion.
-
 				//if it has trail delete that first
 				if (enemyWeaponList [i].trailObject != null) {
 					enemyWeaponList [i].trailObject.DestroyMeshObj ();
@@ -214,11 +211,11 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		enemyObj.position = tmpPos;
 
 
-		//TODO test param
-//		enemyObj.GetComponent<EnemyAI> ().status.crntAtk = 10;
-//		enemyObj.GetComponent<EnemyAI> ().status.maxAtk = 10;
-//		enemyObj.GetComponent<EnemyAI> ().status.crntHp = 100;
-//		enemyObj.GetComponent<EnemyAI> ().status.maxHp = 100;
+		//if enemy is close contact attacker, init weapon
+		if (enemyObj.GetComponent<EnemyAI> ().enemyMotion.closeWeaponPrefab != null) {
+			EnemyAI enemyAi = enemyObj.GetComponent<EnemyAI> ();
+			InitCloseContactWeapon (ref enemyAi);
+		}
 	}
 
 	/**
@@ -281,7 +278,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		//if enemy is close contact attacker, init weapon
 		if (enemyAI.enemyMotion.closeWeaponPrefab != null) {
-			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 8.0f));
+			InitCloseContactWeapon (ref enemyAI);
 		}
 
 		//enable follow script
@@ -299,6 +296,11 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		totalEnemyList.Remove (npcObject);
 	}
 
+	/**
+	 * 
+	 * Called from EventData.
+	 * 
+	 */
 	public GameObject SummonEnemyByStatus(EnemyParameterStatus enemyStatus) {
 		GameObject enemyPrefab = enemyStatus.GetPrefab();
 		string enemyName = enemyPrefab.name;
@@ -318,10 +320,32 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		//if enemy is close contact attacker, init weapon
 		if (enemyAI.enemyMotion.closeWeaponPrefab != null) {
-			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 8.0f));
+			InitCloseContactWeapon (ref enemyAI);
 		}
 
 		return targetObject;
+	}
+
+	/**
+	 * 
+	 * if the ghost uses close contact weapon, need to reposition the weapon
+	 * also, if initializing Enemy, weapon need to be registered in GameManager.Instance.enemyWeaponList.
+	 * (Npc wont be registered since weapon will be destroyed on loading staging)
+	 * 
+	 * this function will be called from 
+	 * SummonEnemyByStatus:      Enemy from EventData
+	 * UpdateSummonedEnemyParam: Enemy from Stage Spawner
+	 * SummonNpc:                Npc by summoning
+	 * 
+	 */
+	private void InitCloseContactWeapon(ref EnemyAI enemyAI) { //ref: 初期化必須
+		//if it is nurse load weapon
+		if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.Nurse) {
+			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 8.0f));
+		}
+		else if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.WillOWisp) {
+			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
+		}
 	}
 
 	public void DecideNpcPosition() {
