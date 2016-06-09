@@ -20,18 +20,17 @@ public class CloseContactAttacker : EnemyMotionInterface {
 
 
 
-		//if it is nurse load weapon
-		if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.Nurse) {
-			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 8.0f));
-		}
-		else if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.WillOWisp) {
-			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
-		}
+//		//if it is nurse load weapon
+//		if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.Nurse) {
+//			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 8.0f));
+//		}
+//		else if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.WillOWisp) {
+//			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
+//		}
 	}
 
 
 	override public IEnumerator DoAttack() {
-		GetCollider ().enabled = true;
 		boneAnim.Play ("attackbefore");
 		yield break;
 	}
@@ -65,6 +64,9 @@ public class CloseContactAttacker : EnemyMotionInterface {
 
 		//after attackbefore animation ends
 		if (triggerEvent.tag == "attackbefore") {
+			//enable weapon collider
+			GetCollider ().enabled = true;
+
 			//backup 
 			backupPos = transform.position;
 			//reposition

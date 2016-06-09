@@ -24,7 +24,9 @@ public class EnemyMotionInterface : MonoBehaviour {
 			crntWeaponObj.GetComponentInChildren<EnemyWeapon>().attack = GetComponent<EnemyAI>().status.crntAtk;
 
 			//add to the enemy weapon list
-			//WARNING! InstantiateからきてるためここではEnemyか判断できない。。
+			//WARNING:
+			//NPCがclosecontact武器の場合はenemyWeaponListに登録してしまうと
+			//DeleteAllEnemiesが呼ばれた際に消されてしまう。(StageInitの場合など）敵の場合のみ登録。
 			if (GetComponent<EnemyAI> ().charType == EnemyAI.CharacterType.ENEMY) {
 				GameManager.Instance.enemyWeaponList.Add (crntWeaponObj.GetComponentInChildren<EnemyWeapon> ());
 			}
