@@ -85,6 +85,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		float crntVisibleDistance = 1000.0f; //just in case create the default value.
 		crntVisibleDistance = ghostSelf.maxSpotDistance + ghostSelf.status.crntVisibleInc;
 
+		//test output
 		if (ghostSelf.status.GetType () == typeof(NpcParameterStatus)) {
 			Debug.LogError (ghostSelf.gameObject.name + " crntVisibleDistance: " + crntVisibleDistance);
 		}
@@ -191,7 +192,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 * Called from Spawn.cs.
 	 * set enemy init params
 	 * 
-	 * 
+	 * (The other Enemy status init function is: SummonEnemyByStatus. Called from EventData)
 	 * 
 	 */
 	public void UpdateSummonedEnemyParam(Transform enemyObj) {
@@ -242,18 +243,19 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		//instantiate Npc Object
 		NpcParameterStatus npcParam = totalNpcList[index];
-		npcParam.PrintParam ();
 		GameObject npcPrefab = npcParam.GetPrefab();
 		string npcName = npcPrefab.name;
 		GameObject npcObject = (GameObject)Instantiate(npcPrefab);
 		npcObject.name = npcName + "_NPC";
 		crntNpcObj = npcObject; //register npc
 
-		//need this for setting targetPos = null after Instantiate.
+		EnemyAI enemyAI = npcObject.GetComponent<EnemyAI> ();
+		enemyAI.charType = EnemyAI.CharacterType.NPC;
+
+		//need this for setting enemyMotion.targetPos = null after Instantiate.
 		yield return new WaitForEndOfFrame ();
 		
 		//delete Enemy replated status
-		EnemyAI enemyAI = npcObject.GetComponent<EnemyAI> ();
 		enemyAI.target = null;
 		enemyAI.enemyMotion.targetPos = null;
 
@@ -270,16 +272,20 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		enemyAI.status = null;
 		enemyAI.status = npcParam;
 		enemyAI.status.SelfObj = npcObject;
-		enemyAI.charType = EnemyAI.CharacterType.NPC;
 		//if this is true on summon, it wont follow the player.
 		((NpcParameterStatus)enemyAI.status).isSearchingOnAttack = false;
 
-		enemyAI.status.InitCharacterParameterNums ();
+		//calculate the base parameters such as HP, ATK, MoveSpd, AtkSpd, Visibility.
+		enemyAI.status.InitCharacterParameters ();
+		npcParam.PrintParam ();
 
+		//init enemy weapon
+		enemyAI.enemyMotion.InitEnemyMotion ();
 		//if enemy is close contact attacker, init weapon
 		if (enemyAI.enemyMotion.closeWeaponPrefab != null) {
 			InitCloseContactWeapon (ref enemyAI);
 		}
+
 
 		//enable follow script
 		npcObject.transform.position = player.transform.position;
@@ -300,6 +306,11 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 * 
 	 * Called from EventData.
 	 * 
+	 * enemyStatus will be directly inserted into EnemyAI.status.
+	 * No increase from the LEVEL.
+	 * 
+	 * (The other Enemy status updater is: UpdateSummonedEnemyParam. Called from EventData)
+	 * 
 	 */
 	public GameObject SummonEnemyByStatus(EnemyParameterStatus enemyStatus) {
 		GameObject enemyPrefab = enemyStatus.GetPrefab();
@@ -316,7 +327,8 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		enemyAI.status = enemyStatus;
 		enemyAI.charType = EnemyAI.CharacterType.ENEMY;
 
-		enemyAI.status.InitCharacterParameterNums ();
+//		enemyAI.status.InitCharacterParameters();
+		enemyAI.status.PrintParam ();
 
 		//if enemy is close contact attacker, init weapon
 		if (enemyAI.enemyMotion.closeWeaponPrefab != null) {

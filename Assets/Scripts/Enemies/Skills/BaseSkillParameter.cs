@@ -54,19 +54,19 @@ public class BaseSkillParameter : MonoBehaviour {
 		level = selfObj.GetComponent<EnemyAI> ().status.level;
 	}
 
-	public int GetBaseAtkUp() {
+	public int GetBaseSkillAtkUp() {
 		return GhostLevelMaster.CalculateLevelParams (minPlayerAtkUp, maxPlayerAtkUp, level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public int GetBaseHpUp() {
+	public int GetBaseSkillHpUp() {
 		return GhostLevelMaster.CalculateLevelParams (minPlayerHpUp, maxPlayerHpUp, level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public float GetBasedVisiUp() {
+	public float GetBasedSkillVisiUp() {
 		return GhostLevelMaster.CalculateLevelParams (minVisibilityInc, maxVisibilityInc, level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public int GetBaseShieldNum() {
+	public int GetBaseSkillShieldNum() {
 		return GhostLevelMaster.CalculateLevelParams (minNumOfShield, maxNumOfShield, level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public int GetBaseBombNum() {
+	public int GetBaseSkillBombNum() {
 		return GhostLevelMaster.CalculateLevelParams (minNumOfBomb, maxNumOfBomb, level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
 }

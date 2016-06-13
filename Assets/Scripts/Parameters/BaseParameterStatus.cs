@@ -84,12 +84,25 @@ public class BaseParameterStatus {
 	public List<BaseSkillParameter.SkillType> skillList = new List<BaseSkillParameter.SkillType>();
 
 
-	public void InitCharacterParameterNums() {
+	/**
+	 * 
+	 * Called ONLY for NPC related function.
+	 * 
+	 * from:
+	 *  GameManager.SummonNpc
+	 *  GhostNode.LevelUpCharacter -> npcStatus.UpdateStatus
+	 * 
+	 * The enemy status will be set from either from Spawner or the EventData.
+	 * This function will not be used.
+	 * 
+	 * 
+	 */
+	public void InitCharacterParameters() {
 		crntHp = GetBaseHp ();
 		crntAtk = GetBaseAtk ();
 		crntMoveSpeed = GetBaseMoveSpeed ();
 		crntAtkSpeed = GetBaseAtkSpeed ();
-		crntVisibleInc = GetBaseVisibleDistance ();
+		crntVisibleInc = GetBaseVisibleInc ();
 	}
 
 	/**
@@ -110,11 +123,11 @@ public class BaseParameterStatus {
 
 
 	virtual public void PrintParam() {
-		Debug.LogError ("*********" + 
-			"maxHp: " + maxHp + ", crntHp: " + GetBaseHp() + 
-			", maxAtk: " + maxAtk + ", crntAtk: " + GetBaseAtk() + 
-			", maxMoveSpeed: " + maxMoveSpeed + ", crntMoveSpeed: " + GetBaseMoveSpeed() + 
-			", maxAtkSpeed: " + maxAtkSpeed + ", crntAtkSpeed: " + GetBaseAtkSpeed() + 
+		Debug.LogError (SelfObj.GetComponent<EnemyAI>().gameObject.name + " *********" + 
+			"crntHp: " + crntHp + 
+			", crntAtk: " + crntAtk + 
+			", crntMoveSpeed: " + crntMoveSpeed + 
+			", crntAtkSpeed: " + crntAtkSpeed + 
 			", level: " + level + 
 			", type: " + type
 		);
@@ -132,7 +145,7 @@ public class BaseParameterStatus {
 	public float GetBaseAtkSpeed() {
 		return GhostLevelMaster.CalculateLevelParams (minAtkSpeed, maxAtkSpeed, level, GhostLevelMaster.GetMaxLevel(this), pattern);
 	}
-	public int GetBaseVisibleDistance() {
+	public int GetBaseVisibleInc() {
 		return GhostLevelMaster.CalculateLevelParams ((int)minVisibleInc, (int)maxVisibleInc, level, GhostLevelMaster.GetMaxLevel (this), pattern);
 	}
 }

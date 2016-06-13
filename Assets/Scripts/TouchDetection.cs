@@ -83,6 +83,7 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 			EnemyWeapon enemyWpnObj = hit.collider.gameObject.GetComponent<EnemyWeapon>();
 
 			//attack on Enemy
+			//right after instanticate, the charType has not been decided. detect by name.
 			if(enemyObj != null && enemyObj.charType == EnemyAI.CharacterType.ENEMY) {
 				float distance = Vector3.Distance(girlAnimationObj.transform.position, enemyObj.transform.position);
 				if(distance < WEAPON_WIELD_DISTANCE) {
@@ -91,8 +92,8 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 				}
 				return ;
 			}
-			//attack on enemy weapon
-			else if(enemyWpnObj != null) {
+			//attack on enemy weapon (only on bullets)
+			else if(enemyWpnObj != null && enemyWpnObj.owner.GetComponent<EnemyAI>().enemyMotion.GetComponent<EnemyMotionInterface>().closeWeaponPrefab == null) {
 				float distance = Vector3.Distance(girlAnimationObj.transform.position, enemyWpnObj.transform.position);
 				//enemy weapon on right
 				if(girlAnimationObj.transform.position.x - enemyWpnObj.transform.position.x < 0) {

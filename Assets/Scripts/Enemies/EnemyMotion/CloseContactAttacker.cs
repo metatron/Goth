@@ -18,15 +18,9 @@ public class CloseContactAttacker : EnemyMotionInterface {
 		
 		boneAnim.RegisterUserTriggerDelegate (OnUserTriggerEvent);
 
+		Debug.LogError ("**************1: " + enemyAI.gameObject);
 
 
-//		//if it is nurse load weapon
-//		if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.Nurse) {
-//			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 8.0f));
-//		}
-//		else if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.WillOWisp) {
-//			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
-//		}
 	}
 
 

@@ -108,6 +108,11 @@ public class EnemyWeapon : MonoBehaviour {
 		//up a little bit
 		hitParticleObj.transform.position = new Vector3 (hitPosition.x, hitPosition.y + 100.0f, hitPosition.z);
 
+		//test output
+		if (owner.GetComponent<EnemyAI> ().status.GetType () == typeof(NpcParameterStatus)) {
+			Debug.LogError (owner.name + " attack: " + attack);
+		}
+
 		status.crntHp -= attack;
 
 
