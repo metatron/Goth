@@ -91,7 +91,7 @@ public class EnemyAI : MonoBehaviour {
 		if (enemyMotion != null) {
 			//TODO update Enemy target
 			enemyMotion.targetPos = target; //new Vector3(target.position.x, 0.0f, target.position.z);
-			enemyMotion.InitEnemyMotion();
+//			enemyMotion.InitEnemyMotion();
 		} else {
 			Debug.LogWarning("WARNING! EnemyAI.enemyMosion is null.(" + gameObject + ")");
 		}
@@ -369,6 +369,14 @@ public class EnemyAI : MonoBehaviour {
 //		return status;
 //	}
 
+	/**
+	 * 
+	 * Called from Spawner.cs After UpdateSummonedEnemyParam.
+	 * the parameter wont affect by the level.
+	 * enemyStatus is defined at the StageData.
+	 * 
+	 * 
+	 */
 	public void CopyEnemyStatus(EnemyParameterStatus enemyStatus) {
 		status = new EnemyParameterStatus ();
 
@@ -388,6 +396,9 @@ public class EnemyAI : MonoBehaviour {
 		status.maxAtkSpeed = enemyStatus.maxAtkSpeed;
 		status.crntAtkSpeed = enemyStatus.crntAtkSpeed;
 
+		status.minVisibleInc = enemyStatus.minVisibleInc;
+		status.maxVisibleInc = enemyStatus.maxVisibleInc;
+
 		status.level = enemyStatus.level;
 
 		status.type = enemyStatus.type;
@@ -400,6 +411,8 @@ public class EnemyAI : MonoBehaviour {
 
 		status.pattern = enemyStatus.pattern;
 		status.rarity = enemyStatus.rarity;
+
+		//update EnemyAI params
 	}
 
 	public bool IsMoving() {
