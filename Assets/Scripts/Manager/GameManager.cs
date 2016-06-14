@@ -316,7 +316,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		GameObject enemyPrefab = enemyStatus.GetPrefab();
 		string enemyName = enemyPrefab.name;
 		GameObject targetObject = (GameObject)Instantiate(enemyPrefab);
-		targetObject.name = enemyName + "_Event";
+		targetObject.name = targetObject.name.Replace ("(Clone)", "");
 
 		//delete Enemy replated status
 		EnemyAI enemyAI = targetObject.GetComponent<EnemyAI> ();
@@ -325,6 +325,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		//initialize NPC status
 		enemyAI.status = enemyStatus;
+		enemyAI.status.SelfObj = targetObject;
 		enemyAI.charType = EnemyAI.CharacterType.ENEMY;
 
 //		enemyAI.status.InitCharacterParameters();

@@ -5920,14 +5920,15 @@ MonoBehaviour:
     minAtkSpeed: 10
     maxAtkSpeed: 100
     crntAtkSpeed: 10
-    minVisibleDistance: 0
-    maxVisibleDistance: 1000
-    crntVisibleDistance: 0
+    minVisibleInc: 0
+    maxVisibleInc: 100
+    crntVisibleInc: 0
     level: 1
     type: 99
     pattern: 0
     rarity: 1
     cost: 100
+    skillList: 
     totalSpirit: 100
     summonNpcIndex: -1
   playerCollectedItemList: []

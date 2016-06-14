@@ -73,7 +73,9 @@ public class Weapon : MonoBehaviour {
 		if (other.gameObject.GetComponent<EnemyAI> () == null) {
 			return;
 		}
-		EnemyParameterStatus enemyStatus = (EnemyParameterStatus)other.gameObject.GetComponent<EnemyAI>().status;
+		Debug.LogError ("::::::::::" + other.gameObject.GetComponent<EnemyAI> ().status);
+
+		EnemyParameterStatus enemyStatus = (EnemyParameterStatus)(other.gameObject.GetComponent<EnemyAI>()).status;
 
 		BoneAnimation enemyAnim = other.gameObject.GetComponent<BoneAnimation> ();
 
@@ -133,7 +135,7 @@ public class Weapon : MonoBehaviour {
 		Debug.Log (gameObject + " damaged enemy, " + status.SelfObj + ", w/ attack: " + attack + ". result HP: " + status.crntHp);
 		
 		if (status.crntHp <= 0) {
-			RegisterAsNpc ((EnemyParameterStatus)status);
+			RegisterAsNpc((EnemyParameterStatus)status);
 			GameManager.Instance.DecrementEnemyCount (status.SelfObj);
 			Destroy (status.SelfObj);
 
@@ -165,27 +167,34 @@ public class Weapon : MonoBehaviour {
 		int rnd = Random.Range(0,101); //max exclusive
 		if (rnd > 0 && rnd <= targetParam.friendPossibility) {
 			Debug.LogError("RegisterAsNpc [Succeeded] friendPossibility: " + targetParam.friendPossibility + ", rnd: " + rnd);
+
+			//get the Prefab parameter
+			//the npc's parameter is based on basic ghost values.
+			//the enemy parameters are differed for each stages.
+			GameObject enemyPrefab = targetParam.SelfObj.GetComponent<EnemyAI>().status.GetPrefab();
+			BaseParameterStatus copyingStatus = enemyPrefab.GetComponent<EnemyAI> ().status;
+
 			//Convert EnemyParam to NpcParam
 			NpcParameterStatus npcParameter = new NpcParameterStatus ();
-			npcParameter.minHp = targetParam.minHp;
-			npcParameter.maxHp = targetParam.maxHp;
+			npcParameter.minHp = copyingStatus.minHp;
+			npcParameter.maxHp = copyingStatus.maxHp;
 
-			npcParameter.minHp = targetParam.minHp;
-			npcParameter.maxAtk = targetParam.maxAtk;
+			npcParameter.minHp = copyingStatus.minHp;
+			npcParameter.maxAtk = copyingStatus.maxAtk;
 
-			npcParameter.minMoveSpeed = targetParam.minMoveSpeed;
-			npcParameter.maxMoveSpeed = targetParam.maxMoveSpeed;
+			npcParameter.minMoveSpeed = copyingStatus.minMoveSpeed;
+			npcParameter.maxMoveSpeed = copyingStatus.maxMoveSpeed;
 
-			npcParameter.minAtkSpeed = targetParam.minAtkSpeed;
-			npcParameter.maxAtkSpeed = targetParam.maxAtkSpeed;
+			npcParameter.minAtkSpeed = copyingStatus.minAtkSpeed;
+			npcParameter.maxAtkSpeed = copyingStatus.maxAtkSpeed;
 
-			npcParameter.minVisibleInc = targetParam.minVisibleInc;
-			npcParameter.maxVisibleInc = targetParam.maxVisibleInc;
+			npcParameter.minVisibleInc = copyingStatus.minVisibleInc;
+			npcParameter.maxVisibleInc = copyingStatus.maxVisibleInc;
 
-			npcParameter.level = targetParam.level;
-			npcParameter.type = targetParam.type;
-			npcParameter.pattern = targetParam.pattern;
-			npcParameter.rarity = targetParam.rarity;
+			npcParameter.level = 1;
+			npcParameter.type = copyingStatus.type;
+			npcParameter.pattern = copyingStatus.pattern;
+			npcParameter.rarity = copyingStatus.rarity;
 
 			GameManager.Instance.SetNpc (npcParameter);
 

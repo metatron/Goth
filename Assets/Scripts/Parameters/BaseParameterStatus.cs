@@ -123,7 +123,8 @@ public class BaseParameterStatus {
 
 
 	virtual public void PrintParam() {
-		Debug.LogError (SelfObj.GetComponent<EnemyAI>().gameObject.name + " *********" + 
+		Debug.LogError ("@@@@@@@@@@@@@@@@@@@@@ " + SelfObj);
+		Debug.LogError (SelfObj.GetComponent<EnemyAI>() + " *********" + 
 			"crntHp: " + crntHp + 
 			", crntAtk: " + crntAtk + 
 			", crntMoveSpeed: " + crntMoveSpeed + 

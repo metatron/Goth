@@ -44,31 +44,36 @@ MonoBehaviour:
   eType: 0
   id: TotureRealize03
   eventListObj: {fileID: 0}
-  targetType: 0
-  targetPath: Prefabs/Enemies/TiedGhost
+  targetType: 1
+  targetPath: 
   targetEnemyStatus:
     minHp: 10
     maxHp: 100
-    crntHp: 100
+    crntHp: 10
     minAtk: 10
     maxAtk: 100
-    crntAtk: 100
+    crntAtk: 10
     minMoveSpeed: 100
     maxMoveSpeed: 200
     crntMoveSpeed: 100
     minAtkSpeed: 10
     maxAtkSpeed: 100
     crntAtkSpeed: 10
+    minVisibleInc: 0
+    maxVisibleInc: 100
+    crntVisibleInc: 0
     level: 1
     type: 0
     pattern: 0
     rarity: 1
     cost: 100
+    skillList: 
     spiritNum: 1
     friendPossibility: 25
     spawner: {fileID: 0}
   targetObject: {fileID: 0}
   targetByName: 
+  posSetOnInstantiate: 0
   targetInitPos: {x: 3300, y: 0, z: 0}
   targetInitScale: {x: 1, y: 1, z: 1}
   direction: 0
@@ -76,11 +81,14 @@ MonoBehaviour:
   tweenAnimType: 0
   tweenAnimTime: 0
   tweenValue: 0
+  iTweenID: 
   effectType: 0
   stagePrefPath: 
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
   totalTime: 0
+  minStageLight: -1
+  maxStageLight: -1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

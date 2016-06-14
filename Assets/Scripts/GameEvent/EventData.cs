@@ -60,7 +60,7 @@ public class EventData: MonoBehaviour {
 		Player
 	}
 	public TargetType targetType = TargetType.Path; //ディフォルトはパス指定
-	public string targetPath; //ターゲットがシーンにいない場合、Instance化する。
+	public string targetPath; //ターゲットがシーンにいない場合、Instance化する。（敵データはtargetEnemyStatusに設置推奨。
 	public EnemyParameterStatus targetEnemyStatus = null; //パスが設定されていない場合にInstance化。
 	public GameObject targetObject; //どのターゲットに設置するか
 	public string targetByName; //名前によるターゲット特定
