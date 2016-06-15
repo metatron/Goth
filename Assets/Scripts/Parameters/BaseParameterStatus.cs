@@ -103,11 +103,8 @@ public class BaseParameterStatus {
 		crntMoveSpeed = GetBaseMoveSpeed ();
 		crntAtkSpeed = GetBaseAtkSpeed ();
 		crntVisibleInc = GetBaseVisibleInc ();
-<<<<<<< HEAD
-=======
 
 		//Update
->>>>>>> refactering
 	}
 
 	public void UpdatePlayerStatusOnSummon() {
