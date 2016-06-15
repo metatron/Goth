@@ -73,8 +73,6 @@ public class Weapon : MonoBehaviour {
 		if (other.gameObject.GetComponent<EnemyAI> () == null) {
 			return;
 		}
-		Debug.LogError ("::::::::::" + other.gameObject.GetComponent<EnemyAI> ().status);
-
 		EnemyParameterStatus enemyStatus = (EnemyParameterStatus)(other.gameObject.GetComponent<EnemyAI>()).status;
 
 		BoneAnimation enemyAnim = other.gameObject.GetComponent<BoneAnimation> ();
@@ -176,6 +174,7 @@ public class Weapon : MonoBehaviour {
 
 			//Convert EnemyParam to NpcParam
 			NpcParameterStatus npcParameter = new NpcParameterStatus ();
+<<<<<<< HEAD
 			npcParameter.minHp = copyingStatus.minHp;
 			npcParameter.maxHp = copyingStatus.maxHp;
 
@@ -195,6 +194,27 @@ public class Weapon : MonoBehaviour {
 			npcParameter.type = copyingStatus.type;
 			npcParameter.pattern = copyingStatus.pattern;
 			npcParameter.rarity = copyingStatus.rarity;
+=======
+			npcParameter.minHp = targetParam.minHp;
+			npcParameter.maxHp = targetParam.maxHp;
+
+			npcParameter.minHp = targetParam.minHp;
+			npcParameter.maxAtk = targetParam.maxAtk;
+
+			npcParameter.minMoveSpeed = targetParam.minMoveSpeed;
+			npcParameter.maxMoveSpeed = targetParam.maxMoveSpeed;
+
+			npcParameter.minAtkSpeed = targetParam.minAtkSpeed;
+			npcParameter.maxAtkSpeed = targetParam.maxAtkSpeed;
+
+			npcParameter.minVisibleInc = targetParam.minVisibleInc;
+			npcParameter.maxVisibleInc = targetParam.maxVisibleInc;
+
+			npcParameter.level = targetParam.level;
+			npcParameter.type = targetParam.type;
+			npcParameter.pattern = targetParam.pattern;
+			npcParameter.rarity = targetParam.rarity;
+>>>>>>> refactering
 
 			GameManager.Instance.SetNpc (npcParameter);
 

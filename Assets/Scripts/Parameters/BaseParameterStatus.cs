@@ -103,8 +103,33 @@ public class BaseParameterStatus {
 		crntMoveSpeed = GetBaseMoveSpeed ();
 		crntAtkSpeed = GetBaseAtkSpeed ();
 		crntVisibleInc = GetBaseVisibleInc ();
+<<<<<<< HEAD
+=======
+
+		//Update
+>>>>>>> refactering
 	}
 
+	public void UpdatePlayerStatusOnSummon() {
+		if (GameManager.Instance.player == null) {
+			return;
+		}
+
+		int atkUp = 0;
+		int hpUp = 0;
+		int visiUp = 0;
+		foreach (BaseSkillParameter skill in skillList) {
+			atkUp	+= skill.GetBaseSkillPlayerAtkUp();
+			hpUp 	+= skill.GetBaseSkillPlayerHpUp();
+			visiUp	+= skill.GetBasedSkillPlayerVisiUp();
+		}
+
+		GameManager.Instance.playerParam.crntAtk = GameManager.Instance.playerParam.GetBaseAtk () + atkUp;
+		GameManager.Instance.playerParam.crntAtk = GameManager.Instance.playerParam.GetBaseHp () + hpUp;
+		GameManager.Instance.playerParam.crntAtk = GameManager.Instance.playerParam.GetBaseVisibleInc () + visiUp;
+
+	}
+	 
 	/**
 	 * 
 	 * loading prefabs of the ghost type.

@@ -318,7 +318,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		GameObject targetObject = (GameObject)Instantiate(enemyPrefab);
 		targetObject.name = targetObject.name.Replace ("(Clone)", "");
 
-		//delete Enemy replated status
+		//delete Enemy replaced status
 		EnemyAI enemyAI = targetObject.GetComponent<EnemyAI> ();
 		enemyAI.target = null;
 		enemyAI.enemyMotion.targetPos = null;
