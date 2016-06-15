@@ -81,7 +81,7 @@ public class BaseParameterStatus {
 	public int cost = 100;
 
 	[SerializeField]
-	public List<BaseSkillParameter.SkillType> skillList = new List<BaseSkillParameter.SkillType>();
+	public List<BaseSkillParameter> skillList = new List<BaseSkillParameter>();
 
 
 	/**
@@ -104,29 +104,43 @@ public class BaseParameterStatus {
 		crntAtkSpeed = GetBaseAtkSpeed ();
 		crntVisibleInc = GetBaseVisibleInc ();
 
-		//Update
+		//Update with skills
+		UpdatePlayerStatusOnSkill();
 	}
 
-	public void UpdatePlayerStatusOnSummon() {
+
+	/**
+	 * 
+	 * the skill is affected on NPC Summoning, Unsummoning, and Stage Init.
+	 * Called on:
+	 * InitCharacterParameters
+	 * InstantiateStage
+	 * 
+	 * 
+	 * 
+	 */
+	public void UpdatePlayerStatusOnSkill() {
 		if (GameManager.Instance.player == null) {
 			return;
 		}
 
 		int atkUp = 0;
 		int hpUp = 0;
-		int visiUp = 0;
+		float brightnessUp = 0;
 		foreach (BaseSkillParameter skill in skillList) {
 			atkUp	+= skill.GetBaseSkillPlayerAtkUp();
 			hpUp 	+= skill.GetBaseSkillPlayerHpUp();
-			visiUp	+= skill.GetBasedSkillPlayerVisiUp();
+			brightnessUp	+= skill.GetBasedSkillPlayerBrightUp();
 		}
 
+		//update player status
 		GameManager.Instance.playerParam.crntAtk = GameManager.Instance.playerParam.GetBaseAtk () + atkUp;
-		GameManager.Instance.playerParam.crntAtk = GameManager.Instance.playerParam.GetBaseHp () + hpUp;
-		GameManager.Instance.playerParam.crntAtk = GameManager.Instance.playerParam.GetBaseVisibleInc () + visiUp;
+		GameManager.Instance.playerParam.crntHp = GameManager.Instance.playerParam.GetBaseHp () + hpUp;
 
+		//update brightness of the stage.
+		StageManager.Instance.UpdateStageBrightness (brightnessUp);
 	}
-	 
+
 	/**
 	 * 
 	 * loading prefabs of the ghost type.

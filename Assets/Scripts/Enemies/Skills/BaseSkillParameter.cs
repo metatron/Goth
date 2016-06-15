@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseSkillParameter : MonoBehaviour {
+[System.Serializable]
+public class BaseSkillParameter {
 
 	public enum SkillType : int
 	{
@@ -9,7 +10,7 @@ public class BaseSkillParameter : MonoBehaviour {
 
 		ATKUP,
 		HPUP,
-		VISIBILITYUP,
+		BRIGHTNESS,
 		SHIELD,
 		ATTACKALL
 	};
@@ -23,9 +24,9 @@ public class BaseSkillParameter : MonoBehaviour {
 	public int minPlayerHpUp;
 	public int maxPlayerHpUp;
 
-	//Visibility increase (0.0f - 1.0f)
-	public float minVisibilityInc;
-	public float maxVisibilityInc;
+	//Brightness increase (0.0f - 1.0f)
+	public float minBrightnessInc;
+	public float maxBrightnessInc;
 
 	//Shield effect
 	public int minNumOfShield;
@@ -60,8 +61,8 @@ public class BaseSkillParameter : MonoBehaviour {
 	public int GetBaseSkillPlayerHpUp() {
 		return GhostLevelMaster.CalculateLevelParams (minPlayerHpUp, maxPlayerHpUp, level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public float GetBasedSkillPlayerVisiUp() {
-		return GhostLevelMaster.CalculateLevelParams (minVisibilityInc, maxVisibilityInc, level, GhostLevelMaster.GetMaxLevel(status), pattern);
+	public float GetBasedSkillPlayerBrightUp() {
+		return GhostLevelMaster.CalculateLevelParams (minBrightnessInc, maxBrightnessInc, level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
 	public int GetBaseSkillShieldNum() {
 		return GhostLevelMaster.CalculateLevelParams (minNumOfShield, maxNumOfShield, level, GhostLevelMaster.GetMaxLevel(status), pattern);

@@ -55,6 +55,9 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 		GameObject stageObject = (GameObject)Instantiate (Resources.Load(path));
 		stageObject.transform.position = Vector3.zero;
 		GameManager.Instance.crntStageData = stageObject.GetComponent<StageData> ();
+
+		//update stage brightness
+
 		return stageObject.GetComponent<StageData>();
 	}
 
@@ -96,5 +99,34 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 
 		//delete the enemy data
 		GameManager.Instance.DeleteAllEnemies();
+	}
+
+
+	/**
+	 * 
+	 * this function will increase the brightness of the stage.
+	 * the brightness can be increased only from NPC skill.
+	 * 
+	 * will be called during the Summoning, UnSommon, and Stage Init.
+	 * 
+	 * if the brightnessInc == 0, the default value will be set
+	 * from the prefab
+	 * 
+	 */
+	public void UpdateStageBrightness(float brightnessInc) {
+		if (GameManager.Instance.crntStageData == null) {
+			return ;
+		}
+
+		//if brightness == 0, set default
+		if (brightnessInc < 0) {
+			StageData stageDataPrefab = (StageData)Resources.Load (GameManager.Instance.crntStageData.prefabPath) as StageData;
+			GameManager.Instance.crntStageData.minStageLight = stageDataPrefab.minStageLight;
+			GameManager.Instance.crntStageData.maxStageLight = stageDataPrefab.maxStageLight;
+		}
+		else {
+			GameManager.Instance.crntStageData.minStageLight = brightnessInc;
+			GameManager.Instance.crntStageData.maxStageLight = brightnessInc;
+		}
 	}
 }
