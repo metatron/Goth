@@ -1548,7 +1548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: HomeEvent_Door
+  id: 486f6d654576656e745f446f6f72
   needClrNum4NxtEvnt: 0
   nextEventListObj: {fileID: 0}
   willStoreOnDoneList: 1
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: HomeEvent_Wakeup
+  id: 486f6d654576656e745f57616b657570
   needClrNum4NxtEvnt: 0
   nextEventListObj: {fileID: 0}
   willStoreOnDoneList: 1
@@ -1610,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a223ca5298a14ee1ba79022b87f02f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Home
+  title: 486f6d65
   level: 1
   prefabPath: Prefabs/Stage/Stage_Home
   spawnerList:
@@ -1628,14 +1628,15 @@ MonoBehaviour:
     minAtkSpeed: 0
     maxAtkSpeed: 1
     crntAtkSpeed: 0
-    minVisibleDistance: 0
-    maxVisibleDistance: 100
-    crntVisibleDistance: 0
+    minVisibleInc: 0
+    maxVisibleInc: 100
+    crntVisibleInc: 0
     level: 1
     type: 1
     pattern: 0
     rarity: 1
     cost: 100
+    skillPathList: []
     spiritNum: 1
     friendPossibility: 90
     spawner: {fileID: 0}

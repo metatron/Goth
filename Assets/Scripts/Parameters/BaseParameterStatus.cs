@@ -81,7 +81,9 @@ public class BaseParameterStatus {
 	public int cost = 100;
 
 	[SerializeField]
-	public List<BaseSkillParameter> skillList = new List<BaseSkillParameter>();
+	public List<string> skillPathList = new List<string>();
+	//
+	private static Dictionary<string, BaseSkillParameter> skillPrefabDict = new Dictionary<string, BaseSkillParameter>();
 
 
 	/**
@@ -127,10 +129,21 @@ public class BaseParameterStatus {
 		int atkUp = 0;
 		int hpUp = 0;
 		float brightnessUp = 0;
-		foreach (BaseSkillParameter skill in skillList) {
-			atkUp	+= skill.GetBaseSkillPlayerAtkUp();
-			hpUp 	+= skill.GetBaseSkillPlayerHpUp();
-			brightnessUp	+= skill.GetBasedSkillPlayerBrightUp();
+		foreach (string skillpath in skillPathList) {
+			//load resources and push it into Hashtable
+			BaseSkillParameter skillPref = null;
+			if (skillPrefabDict.ContainsKey (skillpath)) {
+				skillPref = skillPrefabDict [skillpath];
+			}
+			//load from resources and put it into buffer
+			else {
+				skillPref = (BaseSkillParameter)Resources.Load (skillpath) as BaseSkillParameter;
+				skillPrefabDict.Add(skillpath, skillPref);
+			}
+
+			atkUp			+= skillPref.GetBaseSkillPlayerAtkUp(this);
+			hpUp		 	+= skillPref.GetBaseSkillPlayerHpUp(this);
+			brightnessUp	+= skillPref.GetBasedSkillPlayerBrightUp(this);
 		}
 
 		//update player status

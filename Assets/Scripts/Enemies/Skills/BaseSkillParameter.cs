@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
-public class BaseSkillParameter {
+public class BaseSkillParameter : MonoBehaviour {
 
 	public enum SkillType : int
 	{
@@ -44,30 +43,19 @@ public class BaseSkillParameter {
 
 	public GameObject effect;
 
-	//EnemyAI's GameObject.
-	private GameObject selfObj;
-	private BaseParameterStatus status;
-	private int level;
-
-	public void InitSkill(GameObject selfObj) {
-		this.selfObj = selfObj;
-		status = selfObj.GetComponent<EnemyAI> ().status;
-		level = selfObj.GetComponent<EnemyAI> ().status.level;
+	public int GetBaseSkillPlayerAtkUp(BaseParameterStatus status) {
+		return GhostLevelMaster.CalculateLevelParams (minPlayerAtkUp, maxPlayerAtkUp, status.level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-
-	public int GetBaseSkillPlayerAtkUp() {
-		return GhostLevelMaster.CalculateLevelParams (minPlayerAtkUp, maxPlayerAtkUp, level, GhostLevelMaster.GetMaxLevel(status), pattern);
+	public int GetBaseSkillPlayerHpUp(BaseParameterStatus status) {
+		return GhostLevelMaster.CalculateLevelParams (minPlayerHpUp, maxPlayerHpUp, status.level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public int GetBaseSkillPlayerHpUp() {
-		return GhostLevelMaster.CalculateLevelParams (minPlayerHpUp, maxPlayerHpUp, level, GhostLevelMaster.GetMaxLevel(status), pattern);
+	public float GetBasedSkillPlayerBrightUp(BaseParameterStatus status) {
+		return GhostLevelMaster.CalculateLevelParams (minBrightnessInc, maxBrightnessInc, status.level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public float GetBasedSkillPlayerBrightUp() {
-		return GhostLevelMaster.CalculateLevelParams (minBrightnessInc, maxBrightnessInc, level, GhostLevelMaster.GetMaxLevel(status), pattern);
+	public int GetBaseSkillShieldNum(BaseParameterStatus status) {
+		return GhostLevelMaster.CalculateLevelParams (minNumOfShield, maxNumOfShield, status.level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
-	public int GetBaseSkillShieldNum() {
-		return GhostLevelMaster.CalculateLevelParams (minNumOfShield, maxNumOfShield, level, GhostLevelMaster.GetMaxLevel(status), pattern);
-	}
-	public int GetBaseSkillBombNum() {
-		return GhostLevelMaster.CalculateLevelParams (minNumOfBomb, maxNumOfBomb, level, GhostLevelMaster.GetMaxLevel(status), pattern);
+	public int GetBaseSkillBombNum(BaseParameterStatus status) {
+		return GhostLevelMaster.CalculateLevelParams (minNumOfBomb, maxNumOfBomb, status.level, GhostLevelMaster.GetMaxLevel(status), pattern);
 	}
 }
