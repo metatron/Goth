@@ -120,9 +120,9 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 
 		//if brightness == 0, set default
 		if (brightnessInc <= 0) {
-			StageData stageDataPrefab = (StageData)Resources.Load (GameManager.Instance.crntStageData.prefabPath) as StageData;
-			GameManager.Instance.crntStageData.minStageLight = stageDataPrefab.minStageLight;
-			GameManager.Instance.crntStageData.maxStageLight = stageDataPrefab.maxStageLight;
+			GameObject stageDataPrefab = (GameObject)Resources.Load (GameManager.Instance.crntStageData.prefabPath) as GameObject;
+			GameManager.Instance.crntStageData.minStageLight = stageDataPrefab.GetComponent<StageData>().minStageLight;
+			GameManager.Instance.crntStageData.maxStageLight = stageDataPrefab.GetComponent<StageData>().maxStageLight;
 		}
 		else {
 			GameManager.Instance.crntStageData.minStageLight = brightnessInc;

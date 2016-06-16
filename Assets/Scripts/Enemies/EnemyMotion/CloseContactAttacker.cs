@@ -18,9 +18,6 @@ public class CloseContactAttacker : EnemyMotionInterface {
 		
 		boneAnim.RegisterUserTriggerDelegate (OnUserTriggerEvent);
 
-		Debug.LogError ("**************1: " + enemyAI.gameObject);
-
-
 	}
 
 

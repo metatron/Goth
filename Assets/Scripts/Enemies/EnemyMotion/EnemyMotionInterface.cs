@@ -34,11 +34,9 @@ public class EnemyMotionInterface : MonoBehaviour {
 	}
 
 	virtual public void InitEnemyMotion() {
-		Debug.LogError ("************InitEnemyMotion1");
 		targetPos = null;
 		//disabling Weapon collider
 		if (GetCollider () != null) {
-			Debug.LogError ("************InitEnemyMotion2");
 			GetCollider ().enabled = false;
 		}
 	}

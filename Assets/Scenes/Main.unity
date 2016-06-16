@@ -5928,7 +5928,7 @@ MonoBehaviour:
     pattern: 0
     rarity: 1
     cost: 100
-    skillList: 
+    skillPathList: []
     totalSpirit: 100
     summonNpcIndex: -1
   playerCollectedItemList: []

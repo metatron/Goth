@@ -1656,41 +1656,16 @@ MonoBehaviour:
     minAtkSpeed: 0
     maxAtkSpeed: 1
     crntAtkSpeed: 0
-    minVisibleDistance: 0
-    maxVisibleDistance: 100
-    crntVisibleDistance: 0
+    minVisibleInc: 0
+    maxVisibleInc: 100
+    crntVisibleInc: 0
     level: 1
     type: 1
     pattern: 0
     rarity: 1
     cost: 100
-    spiritNum: 1
-    friendPossibility: 25
-    spawner: {fileID: 0}
-  npcStatus:
-    minHp: 10
-    maxHp: 100
-    crntHp: 10
-    minAtk: 10
-    maxAtk: 100
-    crntAtk: 10
-    minMoveSpeed: 100
-    maxMoveSpeed: 200
-    crntMoveSpeed: 100
-    minAtkSpeed: 0
-    maxAtkSpeed: 1
-    crntAtkSpeed: 0
-    minVisibleDistance: 0
-    maxVisibleDistance: 100
-    crntVisibleDistance: 0
-    level: 1
-    type: 0
-    pattern: 0
-    rarity: 1
-    cost: 100
-    intimate: 0
-    crntSearchTime: 0
-    isSearchingOnAttack: 0
+    skillPathList:
+    - Prefabs/Enemies/Skills/AtkUpSkill1
   crntNumOfMultiHit: 0
   cumulativeTimeOfMultiHit: 0
   doNothing: 0

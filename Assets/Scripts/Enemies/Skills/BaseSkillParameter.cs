@@ -14,6 +14,7 @@ public class BaseSkillParameter : MonoBehaviour {
 		ATTACKALL
 	};
 
+	public int id;
 
 	//ATK increase
 	public int minPlayerAtkUp;
