@@ -195,6 +195,9 @@ public class Weapon : MonoBehaviour {
 			npcParameter.pattern = copyingStatus.pattern;
 			npcParameter.rarity = copyingStatus.rarity;
 
+			//copy skills
+			npcParameter.skillPathList = copyingStatus.skillPathList;
+
 			GameManager.Instance.SetNpc (npcParameter);
 
 			SaveLoadStatus.SaveUserParameters ();

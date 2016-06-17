@@ -137,7 +137,8 @@ public class BaseParameterStatus {
 			}
 			//load from resources and put it into buffer
 			else {
-				skillPref = (BaseSkillParameter)Resources.Load (skillpath) as BaseSkillParameter;
+				GameObject skilltmp = (GameObject)Resources.Load (skillpath) as GameObject;
+				skillPref = skilltmp.GetComponent<BaseSkillParameter> ();
 				skillPrefabDict.Add(skillpath, skillPref);
 			}
 
