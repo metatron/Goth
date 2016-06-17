@@ -5035,11 +5035,15 @@ MonoBehaviour:
     minAtkSpeed: 10
     maxAtkSpeed: 100
     crntAtkSpeed: 100
+    minVisibleInc: 0
+    maxVisibleInc: 100
+    crntVisibleInc: 0
     level: 1
     type: 2
     pattern: 0
     rarity: 1
     cost: 100
+    skillPathList: []
     spiritNum: 1
     friendPossibility: 90
     spawner: {fileID: 0}
@@ -5050,6 +5054,8 @@ MonoBehaviour:
   stageEventList:
   - {fileID: 11478606}
   homeDoorObj: {fileID: 0}
+  minStageLight: 0.2
+  maxStageLight: 0.5
 --- !u!114 &11463522
 MonoBehaviour:
   m_ObjectHideFlags: 1

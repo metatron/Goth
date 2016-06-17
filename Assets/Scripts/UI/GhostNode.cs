@@ -103,6 +103,11 @@ public class GhostNode : MonoBehaviour {
 			Destroy (GameManager.Instance.crntNpcObj);
 			GameManager.Instance.crntNpcObj = null;
 		}
+
+
+		//reset All the parameters set w/ the NPC skills
+		GameManager.Instance.ResetPlayerParam();
+		StageManager.Instance.UpdateStageBrightnessBySkill(0);
 	}
 
 	public void OnLevelUpButtonPressed() {

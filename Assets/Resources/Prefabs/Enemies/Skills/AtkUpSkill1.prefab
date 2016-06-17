@@ -46,7 +46,7 @@ MonoBehaviour:
   minPlayerHpUp: 0
   maxPlayerHpUp: 0
   minBrightnessInc: 0.1
-  maxBrightnessInc: 0.2
+  maxBrightnessInc: 0.9
   minNumOfShield: 0
   maxNumOfShield: 0
   numShieldUsed: 0

@@ -113,20 +113,30 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 	 * from the prefab
 	 * 
 	 */
-	public void UpdateStageBrightness(float brightnessInc) {
+	public void UpdateStageBrightnessBySkill(float brightnessInc) {
 		if (GameManager.Instance.crntStageData == null) {
 			return ;
 		}
 
 		//if brightness == 0, set default
-		if (brightnessInc <= 0) {
-			GameObject stageDataPrefab = (GameObject)Resources.Load (GameManager.Instance.crntStageData.prefabPath) as GameObject;
-			GameManager.Instance.crntStageData.minStageLight = stageDataPrefab.GetComponent<StageData>().minStageLight;
-			GameManager.Instance.crntStageData.maxStageLight = stageDataPrefab.GetComponent<StageData>().maxStageLight;
+		GameObject stageDataPrefab = (GameObject)Resources.Load (GameManager.Instance.crntStageData.prefabPath) as GameObject;
+		GameManager.Instance.crntStageData.minStageLight = stageDataPrefab.GetComponent<StageData>().minStageLight;
+		GameManager.Instance.crntStageData.maxStageLight = stageDataPrefab.GetComponent<StageData>().maxStageLight;
+
+		//if theres any skills that affects brightnessInc, calculate it
+		if (brightnessInc > 0) {
+			GameManager.Instance.crntStageData.minStageLight -= brightnessInc;
+			GameManager.Instance.crntStageData.maxStageLight -= brightnessInc;
+
 		}
-		else {
-			GameManager.Instance.crntStageData.minStageLight = brightnessInc;
-			GameManager.Instance.crntStageData.maxStageLight = brightnessInc;
-		}
+		//check and decide the min and max val
+		GameManager.Instance.crntStageData.minStageLight = Mathf.Max(0.0f, GameManager.Instance.crntStageData.minStageLight);
+		GameManager.Instance.crntStageData.maxStageLight = Mathf.Min (1.0f, GameManager.Instance.crntStageData.maxStageLight);
+
+		//update the  alpha value
+		Debug.LogError("be4: " + ShakeEffect.ALPHA_MIN + ", " + ShakeEffect.ALPHA_MAX);
+		ShakeEffect.ALPHA_MIN = GameManager.Instance.crntStageData.minStageLight;
+		ShakeEffect.ALPHA_MAX = GameManager.Instance.crntStageData.maxStageLight;
+		Debug.LogError("aft: " + ShakeEffect.ALPHA_MIN + ", " + ShakeEffect.ALPHA_MAX);
 	}
 }

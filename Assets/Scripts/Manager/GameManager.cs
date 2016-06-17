@@ -46,7 +46,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		SaveLoadStatus.LoadUserParameters ();
 
 		//reset HP param
-		playerParam.crntHp = playerParam.GetBaseHp();
+		ResetPlayerParam();
 
 		//after load status, remove collected items
 		crntStageData.InitStageCollectionItems();
@@ -54,6 +54,16 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 	public void Update() {
 		Check4SlowMo ();
+	}
+
+	public void ResetPlayerParam() {
+		if (player == null) {
+			return;
+		}
+
+		playerParam.crntHp = playerParam.GetBaseHp();
+		playerParam.crntAtk = playerParam.GetBaseAtk();
+		playerParam.crntAtkSpeed = playerParam.GetBaseAtkSpeed();
 	}
 
 	/**

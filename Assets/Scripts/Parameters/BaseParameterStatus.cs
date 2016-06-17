@@ -126,6 +126,7 @@ public class BaseParameterStatus {
 			return;
 		}
 
+		//update the player status
 		int atkUp = 0;
 		int hpUp = 0;
 		float brightnessUp = 0;
@@ -152,7 +153,7 @@ public class BaseParameterStatus {
 		GameManager.Instance.playerParam.crntHp = GameManager.Instance.playerParam.GetBaseHp () + hpUp;
 
 		//update brightness of the stage.
-		StageManager.Instance.UpdateStageBrightness (brightnessUp);
+		StageManager.Instance.UpdateStageBrightnessBySkill (brightnessUp);
 	}
 
 	/**

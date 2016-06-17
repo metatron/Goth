@@ -20,8 +20,8 @@ public class StageData : MonoBehaviour {
 
 	public GameObject homeDoorObj; //only home stage has this object.
 
-	public float minStageLight = 0.0f;
-	public float maxStageLight = 0.4f;
+	public float minStageLight = 0.2f;
+	public float maxStageLight = 0.5f;
 
 
 	void Start() {

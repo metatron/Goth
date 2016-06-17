@@ -6470,8 +6470,8 @@ MonoBehaviour:
   stageEventList:
   - {fileID: 11498500}
   homeDoorObj: {fileID: 0}
-  minStageLight: 0
-  maxStageLight: 0.4
+  minStageLight: 0.2
+  maxStageLight: 0.5
 --- !u!114 &11431588
 MonoBehaviour:
   m_ObjectHideFlags: 1

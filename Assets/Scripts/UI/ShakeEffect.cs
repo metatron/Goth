@@ -8,7 +8,7 @@ public class ShakeEffect : MonoBehaviour {
 	//1.0: totally black
 	//0.0: totally transparent
 	public static float ALPHA_MIN = 0.0f;//0.0f to 1.0f
-	public static float ALPHA_MAX = 0.4f;//0.0f to 1.0f
+	public static float ALPHA_MAX = 0.5f;//0.0f to 1.0f
 	public const float CHANGE_TIME = 1.5f;
 
 	private float startValue = ALPHA_MIN;
