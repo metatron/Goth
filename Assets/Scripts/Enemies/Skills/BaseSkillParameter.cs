@@ -42,6 +42,9 @@ public class BaseSkillParameter : MonoBehaviour {
 
 	public GhostLevelMaster.LevelPattern pattern = GhostLevelMaster.LevelPattern.normal;
 
+	//TODO: in the future, it maybe developed ^^;
+//	public bool isPercentage = false;
+
 	public GameObject effect;
 
 	public int GetBaseSkillPlayerAtkUp(BaseParameterStatus status) {

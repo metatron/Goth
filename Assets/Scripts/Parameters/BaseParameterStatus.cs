@@ -165,6 +165,15 @@ public class BaseParameterStatus {
 		return (GameObject)Resources.Load(BaseParameterStatus.GhostPrefabPathList[(int)type]);
 	}
 
+	/**
+	 * 
+	 * used in Editor
+	 */
+	public static GameObject GetPrefabByType(GhostType type) {
+		return (GameObject)Resources.Load(BaseParameterStatus.GhostPrefabPathList[(int)type]);
+	}
+
+
 	public CharacterDirection GetCharacterDirection() {
 		if (SelfObj.transform.localScale.x < 0) {
 			return CharacterDirection.RIGHT;

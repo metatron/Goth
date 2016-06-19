@@ -362,13 +362,6 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 
-//	public BaseParameterStatus GetStatus() {
-//		if (charType != CharacterType.ENEMY) {
-//			return npcStatus;
-//		}
-//		return status;
-//	}
-
 	/**
 	 * 
 	 * Called from Spawner.cs After UpdateSummonedEnemyParam.

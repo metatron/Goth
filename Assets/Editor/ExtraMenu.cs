@@ -25,9 +25,37 @@ public class ExtraMenu : MonoBehaviour {
 	}
 
 	private static void AddNpcData (BaseParameterStatus.GhostType charaType) {
-		NpcParameterStatus npcStatus = new NpcParameterStatus ();
-		npcStatus.type = charaType;
+		GameObject ghostPrefab = BaseParameterStatus.GetPrefabByType (charaType);
+		NpcParameterStatus npcStatus = CopyBaseStatus2Npc(ghostPrefab.GetComponent<EnemyAI> ().status);
 		GameManager.Instance.totalNpcList.Add (npcStatus);
+	}
+
+	private static NpcParameterStatus CopyBaseStatus2Npc(BaseParameterStatus baseStatus) {
+		NpcParameterStatus status = new NpcParameterStatus ();
+
+		status.minHp = baseStatus.minHp;
+		status.maxHp = baseStatus.maxHp;
+
+		status.minAtk = baseStatus.minAtk;
+		status.maxAtk = baseStatus.maxAtk;
+
+		status.minMoveSpeed = baseStatus.minMoveSpeed;
+		status.maxMoveSpeed = baseStatus.maxMoveSpeed;
+
+		status.minAtkSpeed = baseStatus.minAtkSpeed;
+		status.maxAtkSpeed = baseStatus.maxAtkSpeed;
+
+		status.minVisibleInc = baseStatus.minVisibleInc;
+		status.maxVisibleInc = baseStatus.maxVisibleInc;
+
+		status.level = baseStatus.level;
+
+		status.type = baseStatus.type;
+		status.pattern = baseStatus.pattern;
+
+		status.skillPathList = baseStatus.skillPathList;
+
+		return status;
 	}
 
 	// Delete all Player status
