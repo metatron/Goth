@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 public var mainCamera:Transform;
 public var cameraTrs:Transform;
 public var rotSpeed:int = 20;
@@ -77,7 +77,7 @@ function  OnGUI(){
 	}
 	
 	if( haveProFlg ){
-		if (GUI.Button (Rect(50, 30, 300, 70), "+Distorsion (Pro only)" )) {
+		if (GUI.Button (Rect(50, 30, 300, 70), "+Distorsion" )) {
 			if(nowEffectObj != null)Destroy( nowEffectObj );
 			nowEffectObj = Instantiate( nonProFX );
 		}
