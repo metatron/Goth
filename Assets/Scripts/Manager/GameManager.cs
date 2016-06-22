@@ -256,11 +256,23 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		GameObject npcPrefab = npcParam.GetPrefab();
 		string npcName = npcPrefab.name;
 		GameObject npcObject = (GameObject)Instantiate(npcPrefab);
+
 		npcObject.name = npcName + "_NPC";
 		crntNpcObj = npcObject; //register npc
 
 		EnemyAI enemyAI = npcObject.GetComponent<EnemyAI> ();
 		enemyAI.charType = EnemyAI.CharacterType.NPC;
+
+		//
+
+		//init NPC's scale to 0 and animate to DefaultSizeVec
+		iTween.ScaleTo(npcObject, 
+			iTween.Hash(
+				"scale", enemyAI.defaultSizeVec,
+				"time", 3.0f
+			)
+		);
+
 
 		//need this for setting enemyMotion.targetPos = null after Instantiate.
 		yield return new WaitForEndOfFrame ();
