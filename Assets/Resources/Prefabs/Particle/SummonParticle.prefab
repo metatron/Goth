@@ -28,7 +28,7 @@ GameObject:
   - 198: {fileID: 19880482}
   - 199: {fileID: 19909188}
   m_Layer: 0
-  m_Name: Summon
+  m_Name: SummonParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -106,7 +106,6 @@ public class EnemyAI : MonoBehaviour {
 
 		//update size
 		gameObject.transform.localScale = defaultSizeVec;
-
 	}
 
 	void Update() {

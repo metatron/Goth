@@ -263,16 +263,8 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		EnemyAI enemyAI = npcObject.GetComponent<EnemyAI> ();
 		enemyAI.charType = EnemyAI.CharacterType.NPC;
 
-		//
-
-		//init NPC's scale to 0 and animate to DefaultSizeVec
-		iTween.ScaleTo(npcObject, 
-			iTween.Hash(
-				"scale", enemyAI.defaultSizeVec,
-				"time", 3.0f
-			)
-		);
-
+		//temporary set to off screen (need to set before WaitForEndOfFrame)
+		npcObject.transform.position = new Vector3(0.0f, 10000.0f, 0.0f); //player.transform.position;
 
 		//need this for setting enemyMotion.targetPos = null after Instantiate.
 		yield return new WaitForEndOfFrame ();
@@ -280,15 +272,6 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		//delete Enemy replated status
 		enemyAI.target = null;
 		enemyAI.enemyMotion.targetPos = null;
-
-		//increase spot distance (because npc is always behind the character)
-		FollowScript followScpt = npcObject.GetComponent<FollowScript> ();
-		// update spot distance
-		//npcvisibility = maxSpotDist + additional + followOffset
-
-		//enemyAI.maxSpotDistance the crntVisibleDist will be added on GetEnemiesOnSite.
-//		enemyAI.maxSpotDistance = baseDistance + npcParam.GetBaseVisibleDistance();
-
 
 		//initialize NPC status
 		enemyAI.status = null;
@@ -308,16 +291,65 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			InitCloseContactWeapon (ref enemyAI);
 		}
 
+		//do not follow until summoning finished
+		enemyAI.doNothing = true;
+
+		//initialize summon particle
+		Vector3 summonParticlePos = player.transform.position;
+		summonParticlePos.y = player.transform.position.y + 300;
+		//looking right
+		summonParticlePos.x = player.transform.position.x + 300;
+		//looking left
+		if (playerParam.GetCharacterDirection () == BaseParameterStatus.CharacterDirection.LEFT) {
+			summonParticlePos.x = player.transform.position.x - 300;
+		}
+		GameObject summonParticleObj = Instantiate ((GameObject)Resources.Load ("Prefabs/Particle/SummonParticle"));
+		summonParticleObj.transform.position = summonParticlePos;
+
+
+		//set npcObject as passing params
+		Hashtable paramTable = new Hashtable ();
+		paramTable.Add ("npcObject", npcObject);
+
+		//set the npc same position as particle
+		npcObject.transform.localScale = Vector3.zero;
+		npcObject.transform.position = new Vector3(summonParticlePos.x, 0.0f, 0.0f);
+		iTween.ScaleTo(npcObject, 
+			iTween.Hash(
+				"scale", enemyAI.defaultSizeVec,
+				"time", 3.0f,
+				"islocal", true,
+				"oncompletetarget", gameObject,
+				"oncomplete", "OnNpcSummonFinished",
+				"oncompleteparams", paramTable
+			)
+		);
+
+		//delete from the enemylist
+		totalEnemyList.Remove (npcObject);
+	}
+
+	private void OnNpcSummonFinished(object paramObject) {
+		Hashtable paramTable = (Hashtable)paramObject;
+		GameObject npcObject = null;
+		if (!paramTable.ContainsKey ("npcObject")) {
+			Debug.LogError ("Summoing NPC failed!!");
+			return;
+		}
+
+
+		npcObject = (GameObject)paramTable ["npcObject"];
+		npcObject.GetComponent<EnemyAI> ().doNothing = false;
 
 		//enable follow script
-		npcObject.transform.position = player.transform.position;
 		FollowScript followScript = npcObject.GetComponent<FollowScript> ();
 		followScript.enabled = true;
 		followScript.target = player;
-//		followScript.fixedPos = new Vector3 (0.0f, 250.0f, 0.0f);
 
 		//set follower
 		player.GetComponent<PlayerCharacter> ().npcObject = npcObject;
+
+		//set the direction
 		DecideNpcPosition ();
 
 		//delete from the enemylist
@@ -390,7 +422,8 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		BaseParameterStatus baseParam = crntNpcObj.GetComponent<EnemyAI> ().status;
 
-		if (crntNpcObj.GetComponent<EnemyAI> ().charType != EnemyAI.CharacterType.NPC) {
+		if (crntNpcObj.GetComponent<EnemyAI> ().charType != EnemyAI.CharacterType.NPC || 
+			crntNpcObj.GetComponent<EnemyAI> ().doNothing) {
 			return ;
 		}
 
