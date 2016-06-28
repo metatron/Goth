@@ -15,7 +15,7 @@ MonoBehaviour:
   uvs:
   - serializedVersion: 2
     x: 0
-    y: 0.7207031
+    y: 0.75634766
     width: 0.111328125
     height: 0.09423828
   - serializedVersion: 2
@@ -24,8 +24,8 @@ MonoBehaviour:
     width: 0.20898438
     height: 0.10644531
   - serializedVersion: 2
-    x: 0.35839844
-    y: 0.45703125
+    x: 0.5078125
+    y: 0.31103516
     width: 0.16699219
     height: 0.06542969
   - serializedVersion: 2
@@ -34,8 +34,8 @@ MonoBehaviour:
     width: 0.23046875
     height: 0.15771484
   - serializedVersion: 2
-    x: 0.12988281
-    y: 0.52978516
+    x: 0.50097656
+    y: 0.46728516
     width: 0.15332031
     height: 0.07763672
   - serializedVersion: 2
@@ -44,8 +44,8 @@ MonoBehaviour:
     width: 0.2841797
     height: 0.06201172
   - serializedVersion: 2
-    x: 0.18164062
-    y: 0.45703125
+    x: 0.32421875
+    y: 0.46728516
     width: 0.17578125
     height: 0.0703125
   - serializedVersion: 2
@@ -54,13 +54,13 @@ MonoBehaviour:
     width: 0.29882812
     height: 0.15234375
   - serializedVersion: 2
-    x: 0.5253906
-    y: 0.22509766
+    x: 0
+    y: 0.31103516
     width: 0.23730469
     height: 0.067871094
   - serializedVersion: 2
-    x: 0
-    y: 0.45703125
+    x: 0.14257812
+    y: 0.46728516
     width: 0.18066406
     height: 0.072265625
   - serializedVersion: 2
@@ -75,12 +75,12 @@ MonoBehaviour:
     height: 0.07470703
   - serializedVersion: 2
     x: 0
-    y: 0.52978516
+    y: 0.5654297
     width: 0.12890625
     height: 0.09814453
   - serializedVersion: 2
     x: 0
-    y: 0.36914062
+    y: 0.37939453
     width: 0.17578125
     height: 0.087402344
   - serializedVersion: 2
@@ -89,23 +89,23 @@ MonoBehaviour:
     width: 0.21191406
     height: 0.115722656
   - serializedVersion: 2
-    x: 0.2841797
-    y: 0.52978516
+    x: 0.8027344
+    y: 0.46728516
     width: 0.14648438
     height: 0.07763672
   - serializedVersion: 2
     x: 0
-    y: 0.62841797
+    y: 0.6640625
     width: 0.1171875
     height: 0.091796875
   - serializedVersion: 2
-    x: 0.8642578
-    y: 0.36914062
+    x: 0.7216797
+    y: 0.22509766
     width: 0.08300781
     height: 0.072265625
   - serializedVersion: 2
-    x: 0.5263672
-    y: 0.45703125
+    x: 0.67578125
+    y: 0.31103516
     width: 0.15722656
     height: 0.06591797
   - serializedVersion: 2
@@ -125,12 +125,12 @@ MonoBehaviour:
     height: 0.071777344
   - serializedVersion: 2
     x: 0.17675781
-    y: 0.36914062
+    y: 0.37939453
     width: 0.17578125
     height: 0.084472656
   - serializedVersion: 2
-    x: 0.12988281
-    y: 0.60791016
+    x: 0.65527344
+    y: 0.46728516
     width: 0.14648438
     height: 0.07910156
   - serializedVersion: 2
@@ -140,24 +140,34 @@ MonoBehaviour:
     height: 0.01953125
   - serializedVersion: 2
     x: 0.515625
-    y: 0.36914062
+    y: 0.37939453
     width: 0.17578125
     height: 0.07861328
   - serializedVersion: 2
-    x: 0
+    x: 0.23828125
     y: 0.31103516
     width: 0.2685547
     height: 0.057617188
   - serializedVersion: 2
     x: 0.6923828
-    y: 0.36914062
+    y: 0.37939453
     width: 0.17089844
     height: 0.080078125
   - serializedVersion: 2
     x: 0.35351562
-    y: 0.36914062
+    y: 0.37939453
     width: 0.16113281
     height: 0.0859375
+  - serializedVersion: 2
+    x: 0.5253906
+    y: 0.22509766
+    width: 0.1953125
+    height: 0.08251953
+  - serializedVersion: 2
+    x: 0
+    y: 0.46728516
+    width: 0.14160156
+    height: 0.09765625
   textureGUIDs:
   - aa3200b0610cf4536a36e5c4dcb4117c
   - d38a2af011d7346408711d97934e6ff8
@@ -188,6 +198,8 @@ MonoBehaviour:
   - 9d9d796aa4ba1427993deac969d743b0
   - 6f8275ec999e54d39acee224e550fb35
   - 2148abed481ea45c0960b104272cae74
+  - 4c1d08c7ea47b4fea87c85ba324d10f7
+  - 634d49df599e64fe5a1cfbf7d52d8490
   textureSizes:
   - {x: 114, y: 193}
   - {x: 214, y: 218}
@@ -218,7 +230,11 @@ MonoBehaviour:
   - {x: 275, y: 118}
   - {x: 175, y: 164}
   - {x: 165, y: 176}
+  - {x: 200, y: 169}
+  - {x: 145, y: 200}
   defaultPivotOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -278,6 +294,8 @@ MonoBehaviour:
   - blood4
   - blood3
   - blood1
+  - heart
+  - fist
   texturePaths:
   - Assets/Textures/GameEvent/bikkuri.png
   - Assets/Textures/GameEvent/taran1.png
@@ -308,7 +326,9 @@ MonoBehaviour:
   - Assets/Textures/UI/blood4.png
   - Assets/Textures/UI/blood3.png
   - Assets/Textures/UI/blood1.png
-  lastBuildID: 20160418133851145
+  - Assets/Textures/Particles/heart.png
+  - Assets/Textures/Particles/fist.png
+  lastBuildID: 20160629002832769
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 1024
