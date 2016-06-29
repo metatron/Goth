@@ -154,6 +154,9 @@ public class BaseParameterStatus {
 
 		//update brightness of the stage.
 		StageManager.Instance.UpdateStageBrightnessBySkill (brightnessUp);
+
+		//Instantiate effects
+		BaseSkillParameter.InstantilateStatusUpSkillEffects(GameManager.Instance.player, atkUp, hpUp, brightnessUp);
 	}
 
 	/**

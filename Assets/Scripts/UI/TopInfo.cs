@@ -27,13 +27,6 @@ public class TopInfo : MonoBehaviour {
 	public GameObject spiritGameObj;
 	private Text spiritGameTxt;
 
-	public void Awake() {
-		hpUpGameTxt = hpUpGameObj.GetComponent<Text> ();
-		atkUpGameTxt = atkUpGameObj.GetComponent<Text> ();
-		brightUpGameTxt = brightUpGameObj.GetComponent<Text> ();
-		spiritGameTxt = spiritGameObj.GetComponent<Text> ();
-	}
-
 	public void TurnOnOff(TOPINFO_TURNONOFF onOff, TOPINFO_TYPE type) {
 		switch (type) {
 		case TOPINFO_TYPE.HP:

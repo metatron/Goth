@@ -43,10 +43,13 @@ MonoBehaviour:
   id: 1
   minPlayerAtkUp: 1
   maxPlayerAtkUp: 10
+  atkUpEffectPrefab: {fileID: 158402, guid: f6f49104b9240484f8a9220040e5f852, type: 2}
   minPlayerHpUp: 0
   maxPlayerHpUp: 0
+  hpUpEffectPrefab: {fileID: 166474, guid: 1c702c4a521c247db9dbbdb598b18ca0, type: 2}
   minBrightnessInc: 0.1
   maxBrightnessInc: 0.9
+  brightUpEffectPrefab: {fileID: 112962, guid: d2251d40295f24ee68e1ea1994681bf6, type: 2}
   minNumOfShield: 0
   maxNumOfShield: 0
   numShieldUsed: 0
@@ -55,7 +58,6 @@ MonoBehaviour:
   numBombUsed: 0
   skillType: 1
   pattern: 0
-  effect: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
