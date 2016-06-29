@@ -99,7 +99,7 @@ public class BaseParameterStatus {
 	 * 
 	 * 
 	 */
-	public void InitCharacterParameters() {
+	public void InitCharacterParameters(bool instantiateEffect = true) {
 		crntHp = GetBaseHp ();
 		crntAtk = GetBaseAtk ();
 		crntMoveSpeed = GetBaseMoveSpeed ();
@@ -107,7 +107,7 @@ public class BaseParameterStatus {
 		crntVisibleInc = GetBaseVisibleInc ();
 
 		//Update with skills
-		UpdatePlayerStatusOnSkill();
+		UpdatePlayerStatusOnSkill(instantiateEffect);
 	}
 
 
@@ -121,7 +121,7 @@ public class BaseParameterStatus {
 	 * 
 	 * 
 	 */
-	public void UpdatePlayerStatusOnSkill() {
+	public void UpdatePlayerStatusOnSkill(bool instantiateEffect = true) {
 		if (GameManager.Instance.player == null) {
 			return;
 		}
@@ -155,8 +155,11 @@ public class BaseParameterStatus {
 		//update brightness of the stage.
 		StageManager.Instance.UpdateStageBrightnessBySkill (brightnessUp);
 
-		//Instantiate effects
-		BaseSkillParameter.InstantilateStatusUpSkillEffects(GameManager.Instance.player, atkUp, hpUp, brightnessUp);
+		//if it is not from Ghost List Menu, instantiate effect
+		if (instantiateEffect) {
+			//Instantiate effects
+			BaseSkillParameter.InstantilateStatusUpSkillEffects (GameManager.Instance.player, atkUp, hpUp, brightnessUp);
+		}
 	}
 
 	/**

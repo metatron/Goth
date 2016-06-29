@@ -14,15 +14,15 @@ public class CollectionNode : MonoBehaviour {
 		descText.text = collectionData.desc.Replace("\\n", "\n");
 
 		GameObject collectionObj = Instantiate (collectionData.gameObject) as GameObject;
+		collectionObj.transform.rotation = Quaternion.Euler(collection.collectionListSizeVec);
 		collectionObj.transform.SetParent (transform);
-		collectionObj.transform.localPosition = new Vector3(0.0f, 0.0f, -10.0f);
-
-		float resizeRatio = MenuManager.GetResizedRatio ();
-		Vector3 resizedScale = collectionData.resizeVec * resizeRatio;
-//		collectionObj.transform.localScale = resizedScale;
+		collectionObj.transform.localPosition = collection.collectionListPosVec; //new Vector3(0.0f, 0.0f, -10.0f);
+		collectionObj.transform.localScale = collection.collectionListSizeVec;
 		collectionObj.layer = 5; //UI layer.
+
+
 		foreach(Transform child in collectionObj.GetComponentsInChildren<Transform>()) {
-			child.localScale = resizedScale;
+//			child.localScale = resizedScale;
 			child.gameObject.layer = 5; //UI layer.
 			Renderer renderer = child.GetComponent<Renderer>();
 			if (renderer != null) {

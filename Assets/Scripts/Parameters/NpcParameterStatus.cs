@@ -80,9 +80,15 @@ public class NpcParameterStatus : BaseParameterStatus {
 		SelfObj.GetComponent<EnemyAI> ().enemyMotion.targetPos = null;
 	}
 
+	/**
+	 * 
+	 * This is ONLY called from GhostNode.
+	 * 
+	 * 
+	 */
 	public void UpdateStatus(int level) {
 		this.level = level;
-		InitCharacterParameters ();
+		InitCharacterParameters (false); //do not instantilate effect
 
 		//update close contact weapon atk. (if it is bullet type, no need)
 		if (SelfObj != null) {

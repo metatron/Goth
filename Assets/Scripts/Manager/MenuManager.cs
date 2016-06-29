@@ -52,7 +52,7 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 			ghostNodeObj.transform.SetParent(ghostMenuPanel.GetComponent<ScrollRect>().content.transform);
 			ghostNodeObj.transform.localPosition = Vector3.zero;
 			ghostNodeObj.transform.localScale = Vector3.one;
-			CalculateCellSize (ghostNodeObj);
+//			CalculateCellSize (ghostNodeObj);
 			ghostNodeObj.GetComponent<GhostNode>().SetGhostInfo(GameManager.Instance.totalNpcList[i], i);
 		}
 	}
@@ -98,7 +98,7 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 			stageNodeObj.transform.SetParent(selectStageMenuPanel.GetComponent<ScrollRect>().content.transform);
 			stageNodeObj.transform.localPosition = Vector3.zero;
 			stageNodeObj.transform.localScale = Vector3.one;
-			CalculateCellSize (stageNodeObj);
+//			CalculateCellSize (stageNodeObj);
 			StageData stageData = StageManager.Instance.stageList [i];
 			stageNodeObj.GetComponent<StageNode>().SetStageInfo(stageData);
 		}
@@ -144,7 +144,7 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 			collectionNodeObj.transform.SetParent(collectionMenuPanel.GetComponent<ScrollRect>().content.transform);
 			collectionNodeObj.transform.localPosition = Vector3.zero;
 			collectionNodeObj.transform.localScale = Vector3.one;
-			CalculateCellSize (collectionNodeObj);
+//			CalculateCellSize (collectionNodeObj);
 
 			//get collection prefab
 			if (collectionPrefabDict.Count == 0) {
@@ -203,53 +203,53 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 
 
 	//================= Cell size init ==============//
-	/**
-	 * 
-	 * ディフォルトの画面サイズ、セルサイズを元に、現在の画面でのセルの縦横サイズを設定する。
-	 * 
-	 * 
-	 */
-	private void CalculateCellSize(GameObject cell) {
-		//現画面サイズの比率を取得。
-		Vector2 preSize = GetResizedSize ();
-
-		cell.GetComponent<LayoutElement> ().minWidth = preSize.x;
-		cell.GetComponent<LayoutElement> ().minHeight = preSize.y;
-	}
-
-	/**
-	 * 
-	 * リスト生成する際に使用。
-	 * ノードが画面リサイズについてこれない。（Anchorが自由に設定できない）
-	 * 
-	 * ゴースト、コレクションのところではモノのリサイズにも使用。
-	 * 
-	 * 
-	 */
-	public static Vector2 GetResizedSize() {
-		float expectedWidth = 480;
-		float expectedHeight = 800;
-		float defaultWidth = 300;
-		float defaultHeight = 400;
-
-		//画面に対する一つのセルの縦横比。
-		float wRatio = defaultWidth / expectedWidth;
-		float hRatio = defaultHeight / expectedHeight;
-
-		Vector2 preSizeVec = new Vector2(Screen.width, Screen.height);
-		//現画面でのセルの縦横
-		preSizeVec.x *= wRatio;
-		preSizeVec.y *= hRatio;
-
-		return preSizeVec;
-	}
-
-	public static float GetResizedRatio() {
-		float expectedWidth = 480;
-		float expectedHeight = 800;
-		float wRatio = Screen.width / expectedWidth;
-		float hRatio = Screen.height / expectedHeight;
-
-		return Mathf.Min(wRatio, hRatio);
-	}
+//	/**
+//	 * 
+//	 * ディフォルトの画面サイズ、セルサイズを元に、現在の画面でのセルの縦横サイズを設定する。
+//	 * 
+//	 * 
+//	 */
+//	private void CalculateCellSize(GameObject cell) {
+//		//現画面サイズの比率を取得。
+//		Vector2 preSize = GetResizedSize ();
+//
+//		cell.GetComponent<LayoutElement> ().minWidth = preSize.x;
+//		cell.GetComponent<LayoutElement> ().minHeight = preSize.y;
+//	}
+//
+//	/**
+//	 * 
+//	 * リスト生成する際に使用。
+//	 * ノードが画面リサイズについてこれない。（Anchorが自由に設定できない）
+//	 * 
+//	 * ゴースト、コレクションのところではモノのリサイズにも使用。
+//	 * 
+//	 * 
+//	 */
+//	public static Vector2 GetResizedSize() {
+//		float expectedWidth = 480;
+//		float expectedHeight = 800;
+//		float defaultWidth = 300;
+//		float defaultHeight = 400;
+//
+//		//画面に対する一つのセルの縦横比。
+//		float wRatio = defaultWidth / expectedWidth;
+//		float hRatio = defaultHeight / expectedHeight;
+//
+//		Vector2 preSizeVec = new Vector2(Screen.width, Screen.height);
+//		//現画面でのセルの縦横
+//		preSizeVec.x *= wRatio;
+//		preSizeVec.y *= hRatio;
+//
+//		return preSizeVec;
+//	}
+//
+//	public static float GetResizedRatio() {
+//		float expectedWidth = 480;
+//		float expectedHeight = 800;
+//		float wRatio = Screen.width / expectedWidth;
+//		float hRatio = Screen.height / expectedHeight;
+//
+//		return Mathf.Min(wRatio, hRatio);
+//	}
 }

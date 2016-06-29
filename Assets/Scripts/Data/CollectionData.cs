@@ -13,7 +13,12 @@ public class CollectionData : MonoBehaviour {
 	[SerializeField]
 	public string prefabPath;
 
-	public Vector3 resizeVec = Vector3.one;
+	//resize when opening CollectionList window
+	public Vector3 collectionListSizeVec = Vector3.one;
+	//initial pos on CollectionList window
+	public Vector3 collectionListPosVec = Vector3.zero;
+	//initila rotation on collectionlist window
+	public Vector3 collectionListRotVec = Vector3.zero;
 
 	void OnTriggerEnter(Collider other) {
 		//if none player hits the collection, do nothing.
