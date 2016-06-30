@@ -14,9 +14,10 @@ public class CollectionNode : MonoBehaviour {
 		descText.text = collectionData.desc.Replace("\\n", "\n");
 
 		GameObject collectionObj = Instantiate (collectionData.gameObject) as GameObject;
-		collectionObj.transform.rotation = Quaternion.Euler(collection.collectionListSizeVec);
 		collectionObj.transform.SetParent (transform);
+		//resize and relocate the collection prefab.
 		collectionObj.transform.localPosition = collection.collectionListPosVec; //new Vector3(0.0f, 0.0f, -10.0f);
+		collectionObj.transform.localRotation = Quaternion.Euler(collection.collectionListRotVec);
 		collectionObj.transform.localScale = collection.collectionListSizeVec;
 		collectionObj.layer = 5; //UI layer.
 

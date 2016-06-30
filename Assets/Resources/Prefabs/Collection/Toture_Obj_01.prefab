@@ -44,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174196}
   m_LocalRotation: {x: 0, y: 0, z: -0.56917787, w: 0.8222144}
-  m_LocalPosition: {x: -0.04, y: -0.21, z: 0}
-  m_LocalScale: {x: 0.015, y: 0.015, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.385796}
   m_Children: []
   m_Father: {fileID: 471728}
@@ -57,8 +57,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4021, y: 75, z: 20}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 463530}
@@ -144,7 +144,9 @@ MonoBehaviour:
   title: "\u82E6\u75DB\u306E\u6D0B\u68A8"
   desc: "\u62F7\u554F\u7528\u5177\u306E\u4E00\u3064\u3002\u5973\u6027\u5668\u3092\u7834\u58CA\u3059\u308B\u306E\u306B\u4F7F\u308F\u308C\u305F\u3089\u3057\u3044\u3002"
   prefabPath: Prefabs/Collection/Toture_Obj_01
-  resizeVec: {x: 1, y: 1, z: 1}
+  collectionListSizeVec: {x: 1, y: 1, z: 1}
+  collectionListPosVec: {x: 0, y: -66, z: -10}
+  collectionListRotVec: {x: 0, y: 0, z: 3}
 --- !u!114 &11446234
 MonoBehaviour:
   m_ObjectHideFlags: 1

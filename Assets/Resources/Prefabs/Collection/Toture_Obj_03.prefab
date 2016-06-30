@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1015, y: 75, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 112866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04, y: -0.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 404674}
@@ -194,7 +194,9 @@ MonoBehaviour:
   title: "\u4E73\u623F\u88C2\u304D\u5668"
   desc: "\u5973\u6027\u5C02\u7528\u306E\u3053\u306E\u62F7\u554F\u5177\u306F\u5148\u304C\u92ED\u304F4\u3064\u306B\u5206\u304B\u308C\u305F\u30C8\u30F3\u30B0\u306E\u3088\u3046\u306A\u5F62\u3092\u3057\u3066\u3044\u308B\u3002\\n\u9AD8\u6E29\u306B\u71B1\u3057\u305F\u5C16\u3063\u305F\u90E8\u5206\u3067\u4E73\u623F\u3054\u3068\u5F15\u304D\u88C2\u304F\u3002"
   prefabPath: Prefabs/Collection/Toture_Obj_02
-  resizeVec: {x: 1, y: 1, z: 1}
+  collectionListSizeVec: {x: 0.8, y: 0.8, z: 1}
+  collectionListPosVec: {x: 21, y: -85, z: -10}
+  collectionListRotVec: {x: 0, y: 0, z: 321.5483}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
