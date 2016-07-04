@@ -44,9 +44,13 @@ public class EnemyWeapon : MonoBehaviour {
 	}
 
 	public EnemyWeaponType GetEnemyWeaponType() {
-		//if owner isn't set return enemy
+		if (owner == null) {
+			return EnemyWeaponType.ENEMY;
+		}
+
+		//if owner isn't set, return enemy
 		 EnemyAI enemyAi = owner.GetComponent<EnemyAI> ();
-		if (owner == null || enemyAi == null) {
+		if (enemyAi == null) {
 			return EnemyWeaponType.ENEMY;
 		}
 
@@ -65,6 +69,14 @@ public class EnemyWeapon : MonoBehaviour {
 		if (crntEnemyWeaponType == EnemyWeaponType.NPC && player != null) {
 			return;
 		}
+
+		//right before dmg check if the owner still exists
+		if (owner == null) {
+			//if owner is dead befer animating, isHit will not be able to return to false.
+			PlayerParameterStatus.isHit = false;
+			return;
+		}
+
 
 		BaseParameterStatus status = null;
 		//1. hitting player
@@ -109,7 +121,7 @@ public class EnemyWeapon : MonoBehaviour {
 		hitParticleObj.transform.position = new Vector3 (hitPosition.x, hitPosition.y + 100.0f, hitPosition.z);
 
 		//test output
-		if (owner.GetComponent<EnemyAI> ().status.GetType () == typeof(NpcParameterStatus)) {
+		if (owner != null && (owner.GetComponent<EnemyAI> ().status.GetType () == typeof(NpcParameterStatus))) {
 			Debug.LogError (owner.name + " attack: " + attack);
 		}
 
@@ -128,6 +140,9 @@ public class EnemyWeapon : MonoBehaviour {
 //			enemyAnim.Play ("damage");
 //			enemyAnim.PlayQueued("normal");
 //		}
+
+
+
 
 		//if player is dmgs, shake camera
 		//(avoid double shake)

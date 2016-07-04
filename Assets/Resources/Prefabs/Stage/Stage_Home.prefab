@@ -1632,7 +1632,7 @@ MonoBehaviour:
     maxVisibleInc: 100
     crntVisibleInc: 0
     level: 1
-    type: 1
+    type: 0
     pattern: 0
     rarity: 1
     cost: 100

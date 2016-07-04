@@ -22,7 +22,10 @@ public class FollowScriptCamera : FollowScript {
 	
 	// Update is called once per frame
 	protected override void LateUpdate () {
-		if (target == null || TouchDetection.Instance.isStartCharging || playerCharacter == null) {
+		if (target == null || 
+			TouchDetection.Instance.isStartCharging || 
+			playerCharacter == null || 
+			MenuManager.Instance.IsMenuOpen()) {
 			return;
 		}
 		

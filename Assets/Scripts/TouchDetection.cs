@@ -93,7 +93,10 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 				return ;
 			}
 			//attack on enemy weapon (only on bullets)
-			else if(enemyWpnObj != null && enemyWpnObj.owner.GetComponent<EnemyAI>().enemyMotion.GetComponent<EnemyMotionInterface>().closeWeaponPrefab == null) {
+			else if(
+				enemyWpnObj != null && 
+				enemyWpnObj.owner != null && //just in case if the ower exists
+				enemyWpnObj.owner.GetComponent<EnemyAI>().enemyMotion.GetComponent<EnemyMotionInterface>().closeWeaponPrefab == null) {
 				float distance = Vector3.Distance(girlAnimationObj.transform.position, enemyWpnObj.transform.position);
 				//enemy weapon on right
 				if(girlAnimationObj.transform.position.x - enemyWpnObj.transform.position.x < 0) {

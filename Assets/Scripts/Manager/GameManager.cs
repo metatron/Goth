@@ -313,7 +313,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 		//set the npc same position as particle
 		npcObject.transform.localScale = Vector3.zero;
-		npcObject.transform.position = new Vector3(summonParticlePos.x, 0.0f, 0.0f);
+		//get the y position from FixedPosVec
+		float ypos = npcObject.GetComponent<FollowScript>().fixedPos.y;
+		npcObject.transform.position = new Vector3(summonParticlePos.x, ypos, 0.0f);
 		iTween.ScaleTo(npcObject, 
 			iTween.Hash(
 				"scale", enemyAI.defaultSizeVec,
