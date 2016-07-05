@@ -162,6 +162,8 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 //			Debug.Log ("OnChargingStart hit Object: " + hit.collider.gameObject + ", cInfo.pos: " + cInfo.pos);
 			if (hit.collider.gameObject.name.Contains ("Charlotte")) {
 				isStartCharging = true;
+				girlAnimationObj.Play ("pray");
+
 			}
 		}
 	}
