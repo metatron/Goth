@@ -71,4 +71,20 @@ public class BaseSkillParameter : MonoBehaviour {
 			brightUpEffectObj.transform.localPosition = new Vector3 (0.0f, 140.0f, 0.0f);
 		}
 	}
+
+	/**
+	 * 
+	 * Called when Unsummoning the NPC.
+	 * 
+	 */
+	public static void RemoveAllSkillEffects(GameObject character) {
+		if (character == null) {
+			return;
+		}
+
+		ParticleSystem[] skillEffectArray = character.GetComponentsInChildren<ParticleSystem> ();
+		foreach (ParticleSystem skillEffect in skillEffectArray) {
+			Destroy (skillEffect.gameObject);
+		}
+	}
 }

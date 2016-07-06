@@ -151,6 +151,14 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 			return;
 		}
 
+		if (GameManager.Instance.crntNpcObj != null) {
+			return;
+		}
+
+		if (girlAnimationObj == null || girlAnimationObj.IsPlaying ("pray")) {
+			return;
+		}
+
 		Vector3 rayCastPos = cInfo.pos;
 		rayCastPos.z = Camera.main.nearClipPlane; //奥行きを出す
 			
@@ -163,7 +171,6 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 			if (hit.collider.gameObject.name.Contains ("Charlotte")) {
 				isStartCharging = true;
 				girlAnimationObj.Play ("pray");
-
 			}
 		}
 	}
@@ -209,7 +216,8 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 			girlAnimationObj.IsPlaying ("throw") ||
 			girlAnimationObj.IsPlaying ("pickup") ||
 			girlAnimationObj.IsPlaying ("wakeup") ||
-			girlAnimationObj.IsPlaying ("pickup_stand")) {
+			girlAnimationObj.IsPlaying ("pickup_stand") || 
+			girlAnimationObj.IsPlaying ("pray")) {
 			return false;
 		}
 

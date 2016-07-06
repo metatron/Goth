@@ -102,6 +102,9 @@ public class GhostNode : MonoBehaviour {
 		if (GameManager.Instance.crntNpcObj != null) {
 			Destroy (GameManager.Instance.crntNpcObj);
 			GameManager.Instance.crntNpcObj = null;
+
+			//remove all skill effects
+			BaseSkillParameter.RemoveAllSkillEffects(GameManager.Instance.player);
 		}
 
 
