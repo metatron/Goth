@@ -127,6 +127,12 @@ public class EnemyWeapon : MonoBehaviour {
 
 		status.crntHp -= attack;
 
+		//start animate damage
+		if (player != null) {
+			player.GetComponent<PlayerCharacter> ().playerAnimation.Play ("damage");
+			player.GetComponent<PlayerCharacter> ().playerAnimation.PlayQueued ("stand");
+		}
+
 
 		//disable collider (and rigidbody)
 //		if (destroyOnHit) {
