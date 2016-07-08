@@ -135,7 +135,8 @@ public class Weapon : MonoBehaviour {
 		if (status.crntHp <= 0) {
 			RegisterAsNpc((EnemyParameterStatus)status);
 			GameManager.Instance.DecrementEnemyCount (status.SelfObj);
-			Destroy (status.SelfObj);
+//			Destroy (status.SelfObj);
+			GameManager.Instance.DestroyEnemy (status.SelfObj);
 
 			//if the event is set play it
 			if (status.SelfObj.GetComponent<EnemyAI> () != null && status.SelfObj.GetComponent<EnemyAI> ().OnDestroyEnemyPrefab != null) {
@@ -149,6 +150,8 @@ public class Weapon : MonoBehaviour {
 		}
 
 	}
+
+
 
 	/**
 	 * 

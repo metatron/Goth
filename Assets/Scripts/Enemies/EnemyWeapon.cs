@@ -212,7 +212,8 @@ public class EnemyWeapon : MonoBehaviour {
 				enemyDeadEventList.GetComponent<EventListObject> ().PlayEventList ();
 			}
 
-			Destroy (status.SelfObj);
+//			Destroy (status.SelfObj);
+			GameManager.Instance.DestroyEnemy (status.SelfObj);
 		}
 		//if the player is alive and npc exists on the stage, let npc search the enemy
 		else {

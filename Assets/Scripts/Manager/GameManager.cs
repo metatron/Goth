@@ -626,4 +626,48 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		}
 		return num;
 	}
+
+	/**
+	 * 
+	 * this will play the destroy process of the EnemyObject.
+	 * called from Weapon.AfterDamageProcess and EnemyWeapon.AfterDamageProcess.
+	 * 
+	 * 
+	 */
+	public void DestroyEnemy(GameObject enemyObject) {
+		//init particle
+		GameObject particle = (GameObject)Instantiate(Resources.Load("Prefabs/Particle/DeathParticle"));
+		particle.transform.parent = enemyObject.transform;
+		particle.transform.localPosition = Vector3.zero;
+		particle.transform.parent = null;
+
+		//destroy enemy
+		Hashtable paramTable = new Hashtable ();
+		paramTable.Add ("enemyObject", enemyObject);
+
+		iTween.ScaleTo(enemyObject, 
+			iTween.Hash(
+				"scale", Vector3.zero,
+				"time", 0.5f,
+				"islocal", true,
+				"oncompletetarget", gameObject,
+				"oncomplete", "OnDestroyEnemyFinished",
+				"oncompleteparams", paramTable
+			)
+		);
+	}
+
+	private void OnDestroyEnemyFinished(object paramObject) {
+		Debug.LogError ("***********1");
+		Hashtable paramTable = (Hashtable)paramObject;
+		GameObject enemyObject = null;
+		if (!paramTable.ContainsKey ("enemyObject")) {
+			Debug.LogError ("Destroy Enemy failed!!");
+			return;
+		}
+		enemyObject = (GameObject)paramTable ["enemyObject"];
+		Debug.LogError ("***********2: " + enemyObject);
+
+		Destroy (enemyObject);
+	}
 }
