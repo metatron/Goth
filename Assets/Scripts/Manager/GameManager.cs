@@ -658,7 +658,6 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	}
 
 	private void OnDestroyEnemyFinished(object paramObject) {
-		Debug.LogError ("***********1");
 		Hashtable paramTable = (Hashtable)paramObject;
 		GameObject enemyObject = null;
 		if (!paramTable.ContainsKey ("enemyObject")) {
@@ -666,7 +665,6 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 			return;
 		}
 		enemyObject = (GameObject)paramTable ["enemyObject"];
-		Debug.LogError ("***********2: " + enemyObject);
 
 		Destroy (enemyObject);
 	}

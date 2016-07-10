@@ -80,7 +80,8 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 
 		//move npc if exists
 		if (GameManager.Instance.crntNpcObj != null) {
-			GameManager.Instance.crntNpcObj.transform.position = GameManager.Instance.player.transform.position;
+			float y = GameManager.Instance.crntNpcObj.GetComponent<FollowScript> ().fixedPos.y;
+			GameManager.Instance.crntNpcObj.transform.position = new Vector3 (0.0f, y, 0.0f);//GameManager.Instance.player.transform.position;
 		}
 
 		//after load status, remove collected items

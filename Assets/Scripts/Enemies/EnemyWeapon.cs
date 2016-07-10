@@ -214,6 +214,10 @@ public class EnemyWeapon : MonoBehaviour {
 
 //			Destroy (status.SelfObj);
 			GameManager.Instance.DestroyEnemy (status.SelfObj);
+			//if the target is destroyed, reset the npc target info
+			if (owner.GetComponent<EnemyAI> ().charType == EnemyAI.CharacterType.NPC) {
+				((NpcParameterStatus)owner.GetComponent<EnemyAI> ().status).ResetSearchEnemyOnAttack ();
+			}
 		}
 		//if the player is alive and npc exists on the stage, let npc search the enemy
 		else {
