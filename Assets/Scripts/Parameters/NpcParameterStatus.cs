@@ -60,6 +60,7 @@ public class NpcParameterStatus : BaseParameterStatus {
 			return ;
 		}
 
+
 		//if not searching, not necessary to do following
 		if (!isSearchingOnAttack) {
 			return ;

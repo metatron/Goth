@@ -634,7 +634,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 	 * 
 	 * 
 	 */
-	public void DestroyEnemy(GameObject enemyObject) {
+	public void DestroyEnemy(GameObject attackerObject, GameObject enemyObject) {
 		//init particle
 		GameObject particle = (GameObject)Instantiate(Resources.Load("Prefabs/Particle/DeathParticle"));
 		particle.transform.parent = enemyObject.transform;
@@ -644,6 +644,7 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		//destroy enemy
 		Hashtable paramTable = new Hashtable ();
 		paramTable.Add ("enemyObject", enemyObject);
+		paramTable.Add ("attackerObject", attackerObject);
 
 		iTween.ScaleTo(enemyObject, 
 			iTween.Hash(
@@ -667,5 +668,18 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		enemyObject = (GameObject)paramTable ["enemyObject"];
 
 		Destroy (enemyObject);
+
+		//get attacker and if it exists, turn off the isSearchingOnAttack
+		if (!paramTable.ContainsKey ("attackerObject")) {
+			Debug.LogError ("attackerObject not exists!!");
+			return;
+		}
+
+		GameObject attackerObject = (GameObject)paramTable ["attackerObject"];
+
+		//turn tis off or otherwise the npc will not follow the player. (if EnemyAI is null, could be player character)
+		if (attackerObject.GetComponent<EnemyAI> () != null) {
+			((NpcParameterStatus)attackerObject.GetComponent<EnemyAI> ().status).isSearchingOnAttack = false;
+		}
 	}
 }

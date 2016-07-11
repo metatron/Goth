@@ -213,7 +213,7 @@ public class EnemyWeapon : MonoBehaviour {
 			}
 
 //			Destroy (status.SelfObj);
-			GameManager.Instance.DestroyEnemy (status.SelfObj);
+			GameManager.Instance.DestroyEnemy (owner, status.SelfObj);
 			//if the target is destroyed, reset the npc target info
 			if (owner.GetComponent<EnemyAI> ().charType == EnemyAI.CharacterType.NPC) {
 				((NpcParameterStatus)owner.GetComponent<EnemyAI> ().status).ResetSearchEnemyOnAttack ();

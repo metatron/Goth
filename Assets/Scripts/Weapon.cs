@@ -136,7 +136,7 @@ public class Weapon : MonoBehaviour {
 			RegisterAsNpc((EnemyParameterStatus)status);
 			GameManager.Instance.DecrementEnemyCount (status.SelfObj);
 //			Destroy (status.SelfObj);
-			GameManager.Instance.DestroyEnemy (status.SelfObj);
+			GameManager.Instance.DestroyEnemy (player, status.SelfObj);
 
 			//if the event is set play it
 			if (status.SelfObj.GetComponent<EnemyAI> () != null && status.SelfObj.GetComponent<EnemyAI> ().OnDestroyEnemyPrefab != null) {

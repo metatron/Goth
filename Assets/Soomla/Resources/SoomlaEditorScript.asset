@@ -13,31 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoomlaSettings:
     values:
-    - name: SoomlaSecret
-      value: SET ONLY ONCE
-    - name: DebugUnityMessages
-      value: True
-    - name: Soomla.Store.GPlayBP
-      value: True
-    - name: Soomla.Store.AmazonBP
-      value: 
-    - name: Soomla.Core.SoomlaSecret
-      value: SET ONLY ONCE
-    - name: Soomla.Core.DebugMessages
-      value: 
-    - name: Soomla.Core.DebugUnityMessages
-      value: True
-    - name: Soomla.Store.NoneBP
-      value: 
-    - name: Soomla.Store.AndroidPublicKey
-      value: YOUR GOOGLE PLAY PUBLIC KEY
-    - name: Soomla.Store.AndroidTestPurchases
-      value: 
-    - name: Soomla.Store.PlaySsvValidation
-      value: 
-    - name: Soomla.Store.IosSSV
-      value: 
-    - name: Soomla.Store.WP8SimulatorBuild
-      value: 
-    - name: Soomla.Store.WP8TestMode
-      value: 
+    - name: 536f6f6d6c61536563726574
+      value: 534554204f4e4c59204f4e4345
+    - name: 4465627567556e6974794d65737361676573
+      value: 54727565
