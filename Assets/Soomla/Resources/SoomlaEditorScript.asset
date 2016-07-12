@@ -22,13 +22,13 @@ MonoBehaviour:
     - name: Soomla.Store.AmazonBP
       value: 
     - name: Soomla.Core.SoomlaSecret
-      value: alptraum
+      value: alptraum_soomla
     - name: Soomla.Core.DebugMessages
       value: 
     - name: Soomla.Core.DebugUnityMessages
-      value: True
+      value: 
     - name: Soomla.Store.NoneBP
-      value: False
+      value: 
     - name: Soomla.Store.AndroidPublicKey
       value: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkpCUlhMAubcD9tPGq1W3wUE36eR+ENKmxquSv0IZFJyD6tLLfK9qAeJQy2a9MgYBHTBhj1oF5purL/H/Vr2qRG+MxXSJ6f6qasBGH1XSLnY0B3KBrNpSJWGPvCJr4prYOx6bXUWz71znEujFPWbeCUfdMh2CkUDHX74/K3fjKqFYEzrkLzE8AnUoiympodBC+qxVYopOn/wJh15oPBiWfQZ+RLEJ2iKpRRZPntWCPE5AQNo2rEikBelBmewwbpgKNRijkaDuScLqIyDeYge2+H1seGdubh/RTezKho7Z8eWDzVXFhWhEVpmzyYULGyO5CSGWYYwGk6N2zAUnK+DEXwIDAQAB
     - name: Soomla.Store.AndroidTestPurchases

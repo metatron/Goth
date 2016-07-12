@@ -225,44 +225,31 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 510f1d1bc088449d581418af35b77934, type: 2}
-  m_RootGameObject: {fileID: 699759056}
+  m_RootGameObject: {fileID: 1553295687}
   m_IsPrefabParent: 0
---- !u!1 &699759056
+--- !u!1 &1553295687
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 510f1d1bc088449d581418af35b77934, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 393667965}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 699759058}
-  - 114: {fileID: 699759057}
+  - 4: {fileID: 1553295688}
   m_Layer: 0
-  m_Name: ExampleWindow
+  m_Name: Missing Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &699759057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 510f1d1bc088449d581418af35b77934,
-    type: 2}
-  m_PrefabInternal: {fileID: 393667965}
-  m_GameObject: {fileID: 699759056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c91f812985e634d2ba515e8c9f17ee23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &699759058
+--- !u!4 &1553295688
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 510f1d1bc088449d581418af35b77934, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 393667965}
-  m_GameObject: {fileID: 699759056}
+  m_GameObject: {fileID: 1553295687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.28738928, z: 0.6207099}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []

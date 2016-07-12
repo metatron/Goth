@@ -5,6 +5,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using SmoothMoves;
+using Soomla.Store;
 
 public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	public GameObject currentActiveMenu;
@@ -12,9 +13,13 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	public GameObject selectStageMenuPanel;
 	public GameObject collectionMenuPanel;
 	public GameObject collectionPopup;
+	public GameObject purchaseMenuPanel;
 
 	public GameObject okCancelPopup;
 	public GameObject warningPopup;
+
+	//Blocks the Touch on Spirit Purchase.
+	public GameObject uiTouchBlocker;
 
 
 	//store temporary collecking data.
@@ -37,6 +42,16 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		collectionPopup.SetActive (false);
 		okCancelPopup.SetActive (false);
 		warningPopup.SetActive (false);
+		uiTouchBlocker.SetActive (false);
+
+		//initialize soomla
+		SoomlaStore.Initialize (new ShopItemAssets ());
+
+		//init the store event handler
+		StoreEvents.OnMarketPurchase += OnMarketPurchase;
+		StoreEvents.OnCurrencyBalanceChanged += OnCurrencyBalanceChanged;
+		StoreEvents.OnMarketPurchaseCancelled += OnMarketPurchaseCancelled;
+		StoreEvents.OnUnexpectedStoreError += OnUnexpectedStoreError;
 	}
 
 
@@ -193,6 +208,62 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	}
 
 
+	//================= Select Purchase Spirit Menu ==============//
+
+	public void OnPurchaseMenuButtonOpened() {
+		purchaseMenuPanel.SetActive (true);
+		currentActiveMenu = purchaseMenuPanel;
+	}
+
+	public void OnPurchaseSpirit(GameObject button) {
+		//detect which button is pressed.
+		string[] splittedName = button.name.Split ('_');
+		if (splittedName.Length != 2) {
+			Debug.LogError ("Error on button Name! " + button);
+		}
+
+		//turn of touch blocker before purchase for avoid double click
+		uiTouchBlocker.SetActive (true);
+
+		string itemMod = splittedName[1];
+		switch (itemMod) {
+		case "100":
+			StoreInventory.BuyItem (ShopItemAssets.SPIRIT100PACK_ITEMID);
+			break;
+		default:
+			Debug.LogError ("Error Cannot find itemMod: " + itemMod);
+			break;
+		}
+	}
+
+
+	public void OnPurchaseMenuClose() {
+		currentActiveMenu = null;
+		purchaseMenuPanel.SetActive (false);
+	}
+
+
+	//================= Purchase Event Handling Processes ==============//
+
+	private void OnMarketPurchase(PurchasableVirtualItem pvi, string payload, Dictionary<string, string> extra) {
+		warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Purchase Conpleted", "Purchasing " + pvi.Name + " Completed.");
+		uiTouchBlocker.SetActive (false);
+	}
+
+	private void OnCurrencyBalanceChanged(VirtualCurrency virtualCurrency, int balance, int amountAdded) {
+	}
+
+	private void OnMarketPurchaseCancelled(PurchasableVirtualItem pvi) {
+		warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Purchase Canceled", "Purchase Canceled.");
+		uiTouchBlocker.SetActive (false);
+	}
+
+	private void OnUnexpectedStoreError(int errorCode) {
+		warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Purchase Error", "Something went wrong during the purchase.\nError Code: " + errorCode);
+		uiTouchBlocker.SetActive (false);
+	}
+		
+
 
 	//================= FadOut ==============//
 	public void ActivateAndStartFading(float sec, FaderObject.CompleteFadingDelegate OnCompDel) {
@@ -202,54 +273,4 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 
 
 
-	//================= Cell size init ==============//
-//	/**
-//	 * 
-//	 * ディフォルトの画面サイズ、セルサイズを元に、現在の画面でのセルの縦横サイズを設定する。
-//	 * 
-//	 * 
-//	 */
-//	private void CalculateCellSize(GameObject cell) {
-//		//現画面サイズの比率を取得。
-//		Vector2 preSize = GetResizedSize ();
-//
-//		cell.GetComponent<LayoutElement> ().minWidth = preSize.x;
-//		cell.GetComponent<LayoutElement> ().minHeight = preSize.y;
-//	}
-//
-//	/**
-//	 * 
-//	 * リスト生成する際に使用。
-//	 * ノードが画面リサイズについてこれない。（Anchorが自由に設定できない）
-//	 * 
-//	 * ゴースト、コレクションのところではモノのリサイズにも使用。
-//	 * 
-//	 * 
-//	 */
-//	public static Vector2 GetResizedSize() {
-//		float expectedWidth = 480;
-//		float expectedHeight = 800;
-//		float defaultWidth = 300;
-//		float defaultHeight = 400;
-//
-//		//画面に対する一つのセルの縦横比。
-//		float wRatio = defaultWidth / expectedWidth;
-//		float hRatio = defaultHeight / expectedHeight;
-//
-//		Vector2 preSizeVec = new Vector2(Screen.width, Screen.height);
-//		//現画面でのセルの縦横
-//		preSizeVec.x *= wRatio;
-//		preSizeVec.y *= hRatio;
-//
-//		return preSizeVec;
-//	}
-//
-//	public static float GetResizedRatio() {
-//		float expectedWidth = 480;
-//		float expectedHeight = 800;
-//		float wRatio = Screen.width / expectedWidth;
-//		float hRatio = Screen.height / expectedHeight;
-//
-//		return Mathf.Min(wRatio, hRatio);
-//	}
 }

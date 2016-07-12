@@ -9,19 +9,19 @@ public class ShopItemAssets : IStoreAssets {
 
 	//Market Items
 	public const string SPIRIT100PACK_ITEMID = "spirit_item_100";
-	public const string SPIRIT_PRODUCTID_100 = "***.*****.******.mana100";
+	public const string SPIRIT_PRODUCTID_100 = "jp.arrow.angelforest.alptraum.spirit100";
 
 	public const string SPIRIT500PACK_ITEMID = "spirit_item_500";
-	public const string SPIRIT_PRODUCTID_500 = "***.*****.******.mana500";
+	public const string SPIRIT_PRODUCTID_500 = "jp.arrow.angelforest.alptraum.spirit500";
 
 	public const string SPIRIT1000PACK_ITEMID = "spirit_item_1000";
-	public const string SPIRIT_PRODUCTID_1000 = "***.*****.******.mana1000";
+	public const string SPIRIT_PRODUCTID_1000 = "jp.arrow.angelforest.alptraum.spirit1000";
 
 	public const string SPIRIT2000PACK_ITEMID = "spirit_item_2000";
-	public const string SPIRIT_PRODUCTID_2000 = "***.*****.******.mana2000";
+	public const string SPIRIT_PRODUCTID_2000 = "jp.arrow.angelforest.alptraum.spirit2000";
 
 	public const string SPIRIT5000PACK_ITEMID = "spirit_item_5000";
-	public const string SPIRIT_PRODUCTID_5000 = "***.*****.******.mana5000";
+	public const string SPIRIT_PRODUCTID_5000 = "jp.arrow.angelforest.alptraum.spirit5000";
 
 
 	//Virtual Goods (Usages)
