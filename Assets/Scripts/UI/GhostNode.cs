@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
+using Soomla.Store;
 
 public class GhostNode : MonoBehaviour {
 	public int index;
+	public Text costText;
+	public Text levelText;
 	public Text nameText;
 	public Text attackText;
 	public Text hpText;
@@ -48,6 +51,17 @@ public class GhostNode : MonoBehaviour {
 
 		this.npcStatus = npcStatus;
 
+
+		int nextCost = 0;
+		int maxLevel = GhostLevelMaster.GetMaxLevel (npcStatus);
+		if (npcStatus.level + 1 < maxLevel) {
+			nextCost = GhostLevelMaster.CalculateCost (npcStatus.cost, npcStatus.level + 1, npcStatus.rarity);
+			costText.text = "Next Level Cost: " + nextCost;
+		} else {
+			costText.text = "";
+		}
+
+		levelText.text = "Level: " + npcStatus.level + "/" + maxLevel;
 		nameText.text = "Name: " + npcStatus.type;
 		attackText.text = "Attack: " + npcStatus.GetBaseAtk();
 		hpText.text = "HP: " + npcStatus.GetBaseHp();
@@ -135,12 +149,19 @@ public class GhostNode : MonoBehaviour {
 				", nextVisibleDistance: " + nextVisibleDistance
 			);
 
+			int totalSpirit = StoreInventory.GetItemBalance (ShopItemAssets.SPIRIT_CURRENCY_ITEMID);
+
 			//check if the user has money
-			if (GameManager.Instance.playerParam.totalSpirit >= cost2LevelUp) {
+			if (totalSpirit >= cost2LevelUp) {
 				//update
 				npcStatus.UpdateStatus (npcStatus.level + 1);
-				//decrement money
-				GameManager.Instance.playerParam.totalSpirit -= cost2LevelUp;
+
+
+				//update the Spirit balance
+				//decrement virtual currency. TakeITem canbe used to virtual currency
+				StoreInventory.TakeItem(ShopItemAssets.SPIRIT_CURRENCY_ITEMID, cost2LevelUp);
+
+
 				//save to the disk
 				SaveLoadStatus.SaveUserParameters ();
 

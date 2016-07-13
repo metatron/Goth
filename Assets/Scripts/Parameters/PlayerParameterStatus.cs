@@ -14,8 +14,8 @@ public class PlayerParameterStatus : BaseParameterStatus {
 //	[SerializeField]
 //	public float maxVisibleDistance = 1000;
 
-	[SerializeField]
-	public int totalSpirit = 1000;
+//	[SerializeField]
+//	public int totalSpirit = 1000;
 
 	[SerializeField]
 	public int summonNpcIndex = -1;

@@ -30,17 +30,18 @@ public class GhostLevelMaster {
 
 	//rarity, maxlevel, compoCostRatio, compoExpRatio
 	public static Dictionary<int, RarityLevelMaster> RarityLevelMasterDic = new Dictionary<int, RarityLevelMaster>() {
-		{1,  new RarityLevelMaster(1,  10,  0.5f,  1)},
-		{2,  new RarityLevelMaster(2,  20,  0.5f,  5)},
-		{3,  new RarityLevelMaster(3,  30,  0.75f, 10)},
-		{4,  new RarityLevelMaster(4,  40,  1.0f,  15)},
-		{5,  new RarityLevelMaster(5,  50,  1.5f,  20)},
-		{6,  new RarityLevelMaster(6,  60,  4.0f,  30)},
-		{7,  new RarityLevelMaster(7,  70,  7.0f,  40)},
-		{8,  new RarityLevelMaster(8,  80,  8.0f,  50)},
-		{9,  new RarityLevelMaster(9,  90,  9.0f,  60)},
-		{10, new RarityLevelMaster(10, 100, 10.0f, 60)},
-		{11, new RarityLevelMaster(11, 110, 11.0f, 60)}
+		{1,  new RarityLevelMaster(1,  10,  1.0f,  1)},
+		{2,  new RarityLevelMaster(2,  10,  2.0f,  5)},
+		{3,  new RarityLevelMaster(3,  10,  3.0f,  10)},
+		{4,  new RarityLevelMaster(4,  10,  4.0f,  15)},
+		{5,  new RarityLevelMaster(5,  10,  5.0f,  20)}
+//		,
+//		{6,  new RarityLevelMaster(6,  60,  4.0f,  30)},
+//		{7,  new RarityLevelMaster(7,  70,  7.0f,  40)},
+//		{8,  new RarityLevelMaster(8,  80,  8.0f,  50)},
+//		{9,  new RarityLevelMaster(9,  90,  9.0f,  60)},
+//		{10, new RarityLevelMaster(10, 100, 10.0f, 60)},
+//		{11, new RarityLevelMaster(11, 110, 11.0f, 60)}
 	};
 
 

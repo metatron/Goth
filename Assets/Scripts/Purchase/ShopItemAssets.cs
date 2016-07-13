@@ -25,11 +25,14 @@ public class ShopItemAssets : IStoreAssets {
 
 
 	//Virtual Goods (Usages)
-	public const string SPIRIT_ITEMID_100	= "SPIRIT_100";
-	public const string SPIRIT_ITEMID_500	= "SPIRIT_500";
-	public const string SPIRIT_ITEMID_1000	= "SPIRIT_1000";
-	public const string SPIRIT_ITEMID_2000	= "SPIRIT_2000";
-	public const string SPIRIT_ITEMID_5000	= "SPIRIT_5000";
+	public const string GHOSTUPGRADE			= "GHOSTUPGRADE";
+	public const string GHOSTUPGRADE_RUMTIME		= "GHOSTUPGRADE_RUNTIME";
+
+//	public const string SPIRIT_ITEMID_100	= "SPIRIT_100";
+//	public const string SPIRIT_ITEMID_500	= "SPIRIT_500";
+//	public const string SPIRIT_ITEMID_1000	= "SPIRIT_1000";
+//	public const string SPIRIT_ITEMID_2000	= "SPIRIT_2000";
+//	public const string SPIRIT_ITEMID_5000	= "SPIRIT_5000";
 
 
 	public int GetVersion() {
@@ -45,7 +48,7 @@ public class ShopItemAssets : IStoreAssets {
 	}
 
 	public VirtualGood[] GetGoods() {
-		return new VirtualGood[] {Spirits_100, Spirits_500, Spirits_1000, Spirits_2000, Spirits_5000};
+		return new VirtualGood[] { GhostUpgradeGood }; //Spirits_100, Spirits_500, Spirits_1000, Spirits_2000, Spirits_5000};
 	}
 
 
@@ -113,38 +116,45 @@ public class ShopItemAssets : IStoreAssets {
 
 	/** Virtual Goods **/
 
-	public static VirtualGood Spirits_100 = new SingleUseVG(
-		"Getting 100 Spirits",                                  	// name
-		"",															// description
-		SPIRIT_ITEMID_100,                                       	// item id
-		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 100)        // the way this virtual good is purchased
+	public static VirtualGood GhostUpgradeGood = new SingleUseVG(
+		"Upgrading Ghosts", 	                                 		// name
+		"",																// description
+		GHOSTUPGRADE,	 	                                   		   	// item id
+		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 100)        // the way this virtual good is purchased (the price will be changed)
 	);
 
-	public static VirtualGood Spirits_500 = new SingleUseVG(
-		"Getting 500 Spirits",                                  	// name
-		"",															// description
-		SPIRIT_ITEMID_500,                                       	// item id
-		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 500)       // the way this virtual good is purchased
-	);
-
-	public static VirtualGood Spirits_1000 = new SingleUseVG(
-		"Getting 1000 Spirits",                                  	// name
-		"",															// description
-		SPIRIT_ITEMID_1000,                                       	// item id
-		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 1000)       // the way this virtual good is purchased
-	);
-
-	public static VirtualGood Spirits_2000 = new SingleUseVG(
-		"Getting 2000 Spirits",                                  	// name
-		"",															// description
-		SPIRIT_ITEMID_2000,                                       	// item id
-		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 2000)       // the way this virtual good is purchased
-	);
-
-	public static VirtualGood Spirits_5000 = new SingleUseVG(
-		"Getting 5000 Spirits",                                  	// name
-		"",															// description
-		SPIRIT_ITEMID_5000,                                       	// item id
-		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 5000)       // the way this virtual good is purchased
-	);
+//	public static VirtualGood Spirits_100 = new SingleUseVG(
+//		"Getting 100 Spirits",                                  	// name
+//		"",															// description
+//		SPIRIT_ITEMID_100,                                       	// item id
+//		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 100)        // the way this virtual good is purchased
+//	);
+//
+//	public static VirtualGood Spirits_500 = new SingleUseVG(
+//		"Getting 500 Spirits",                                  	// name
+//		"",															// description
+//		SPIRIT_ITEMID_500,                                       	// item id
+//		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 500)       // the way this virtual good is purchased
+//	);
+//
+//	public static VirtualGood Spirits_1000 = new SingleUseVG(
+//		"Getting 1000 Spirits",                                  	// name
+//		"",															// description
+//		SPIRIT_ITEMID_1000,                                       	// item id
+//		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 1000)       // the way this virtual good is purchased
+//	);
+//
+//	public static VirtualGood Spirits_2000 = new SingleUseVG(
+//		"Getting 2000 Spirits",                                  	// name
+//		"",															// description
+//		SPIRIT_ITEMID_2000,                                       	// item id
+//		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 2000)       // the way this virtual good is purchased
+//	);
+//
+//	public static VirtualGood Spirits_5000 = new SingleUseVG(
+//		"Getting 5000 Spirits",                                  	// name
+//		"",															// description
+//		SPIRIT_ITEMID_5000,                                       	// item id
+//		new PurchaseWithVirtualItem(SPIRIT_CURRENCY_ITEMID, 5000)       // the way this virtual good is purchased
+//	);
 }

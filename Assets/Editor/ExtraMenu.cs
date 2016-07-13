@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEditor;
 using System.IO;
 using SmoothMoves;
+using Soomla;
+using Soomla.Store;
 
 public class ExtraMenu : MonoBehaviour {
 
@@ -61,6 +63,14 @@ public class ExtraMenu : MonoBehaviour {
 	// Delete all Player status
 	[MenuItem ("Tools/Goth/DeleteAllData")]
 	static void DeleteAllData () {
+		SaveLoadStatus.DeleteAllData ();
+		//reset soomla
+		Soomla.KeyValueStorage.Purge ();
+	}
+
+	// Delete all Player status except soomla
+	[MenuItem ("Tools/Goth/DeletePlayerData (w/out Soomla)")]
+	static void DeletePlayerData () {
 		SaveLoadStatus.DeleteAllData ();
 	}
 

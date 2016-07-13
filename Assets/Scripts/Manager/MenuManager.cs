@@ -46,15 +46,21 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		okCancelPopup.SetActive (false);
 		warningPopup.SetActive (false);
 		uiTouchBlocker.SetActive (false);
+		purchaseMenuPanel.SetActive (false);
+
+		//init the store event handler
+		StoreEvents.OnMarketPurchase 			+= OnMarketPurchase;
+		StoreEvents.OnCurrencyBalanceChanged 	+= OnCurrencyBalanceChanged;
+		StoreEvents.OnMarketPurchaseCancelled 	+= OnMarketPurchaseCancelled;
+		StoreEvents.OnUnexpectedStoreError 		+= OnUnexpectedStoreError;
+
+//		StoreEvents.OnRestoreTransactionsStarted 	+= OnRestoreTransactionsStarted;
+		StoreEvents.OnRestoreTransactionsFinished 	+= OnRestoreTransactionsFinished;
 
 		//initialize soomla
 		SoomlaStore.Initialize (new ShopItemAssets ());
 
-		//init the store event handler
-		StoreEvents.OnMarketPurchase += OnMarketPurchase;
-		StoreEvents.OnCurrencyBalanceChanged += OnCurrencyBalanceChanged;
-		StoreEvents.OnMarketPurchaseCancelled += OnMarketPurchaseCancelled;
-		StoreEvents.OnUnexpectedStoreError += OnUnexpectedStoreError;
+		SoomlaStore.StartIabServiceInBg ();
 
 		//Init balance
 		UpdateTotalSpiritBalance();
@@ -242,6 +248,12 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		}
 	}
 
+	public void OnPurchaseRestoreButton() {
+		SoomlaStore.RestoreTransactions ();
+		uiTouchBlocker.SetActive (true);
+	}
+		
+
 
 	public void OnPurchaseMenuClose() {
 		currentActiveMenu = null;
@@ -271,7 +283,19 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Purchase Error", "Something went wrong during the purchase.\nError Code: " + errorCode);
 		uiTouchBlocker.SetActive (false);
 	}
-		
+
+	private void OnRestoreTransactionsFinished(bool success) {
+		if (success) {
+			int totalSpirits = StoreInventory.GetItemBalance (ShopItemAssets.SPIRIT_CURRENCY_ITEMID);
+			if (totalSpirits > 0) {
+				warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Restore Purchase Succeeded", "Purchases now restored successfully: " + totalSpirits);
+				UpdateTotalSpiritBalance ();
+			}
+		} else {
+			warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Restore Purchase Error", "Something went wrong during the purchase.\nPlease try it again.");
+		}
+		uiTouchBlocker.SetActive (false);
+	}
 
 	//================= Updating Top Information ==============//
 
@@ -289,5 +313,8 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	}
 
 
-
+	public void OnDestroy() {
+		Debug.Log ("Stopping Soomla");
+		SoomlaStore.StopIabServiceInBg ();
+	}
 }

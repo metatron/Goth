@@ -24,7 +24,7 @@ MonoBehaviour:
     - name: Soomla.Core.SoomlaSecret
       value: alptraum_soomla
     - name: Soomla.Core.DebugMessages
-      value: 
+      value: True
     - name: Soomla.Core.DebugUnityMessages
       value: 
     - name: Soomla.Store.NoneBP
