@@ -25,7 +25,7 @@ public class TopInfo : MonoBehaviour {
 	private Text brightUpGameTxt;
 
 	public GameObject spiritGameObj;
-	private Text spiritGameTxt;
+	public Text spiritGameTxt;
 
 	public void TurnOnOff(TOPINFO_TURNONOFF onOff, TOPINFO_TYPE type) {
 		switch (type) {
@@ -64,7 +64,7 @@ public class TopInfo : MonoBehaviour {
 		}
 	}
 
-	public void UpdateHpUp(float value, TOPINFO_TYPE type) {
+	public void UpdateValue(float value, TOPINFO_TYPE type) {
 		double val = System.Math.Round ((double)value, 2, System.MidpointRounding.AwayFromZero);
 		string sign = "-";
 		if (val >= 0) {

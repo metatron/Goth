@@ -4905,6 +4905,7 @@ MonoBehaviour:
   purchaseMenuPanel: {fileID: 1218437010}
   okCancelPopup: {fileID: 1941833142}
   warningPopup: {fileID: 564458178}
+  infoObj: {fileID: 1295205807}
   uiTouchBlocker: {fileID: 1444212086}
   faderObj: {fileID: 756232786}
   grundgeObj: {fileID: 0}
@@ -5514,6 +5515,7 @@ MonoBehaviour:
   atkUpGameObj: {fileID: 0}
   brightUpGameObj: {fileID: 0}
   spiritGameObj: {fileID: 1727644706}
+  spiritGameTxt: {fileID: 1228905650}
 --- !u!1 &1298070806
 GameObject:
   m_ObjectHideFlags: 0
@@ -7878,6 +7880,7 @@ MonoBehaviour:
   atkUpGameObj: {fileID: 0}
   brightUpGameObj: {fileID: 0}
   spiritGameObj: {fileID: 0}
+  spiritGameTxt: {fileID: 0}
 --- !u!1 &2065074794
 GameObject:
   m_ObjectHideFlags: 0

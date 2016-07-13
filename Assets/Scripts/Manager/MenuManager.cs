@@ -18,6 +18,9 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	public GameObject okCancelPopup;
 	public GameObject warningPopup;
 
+	//Displays the information of the game
+	public GameObject infoObj;
+
 	//Blocks the Touch on Spirit Purchase.
 	public GameObject uiTouchBlocker;
 
@@ -52,6 +55,9 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		StoreEvents.OnCurrencyBalanceChanged += OnCurrencyBalanceChanged;
 		StoreEvents.OnMarketPurchaseCancelled += OnMarketPurchaseCancelled;
 		StoreEvents.OnUnexpectedStoreError += OnUnexpectedStoreError;
+
+		//Init balance
+		UpdateTotalSpiritBalance();
 	}
 
 
@@ -248,9 +254,12 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	private void OnMarketPurchase(PurchasableVirtualItem pvi, string payload, Dictionary<string, string> extra) {
 		warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Purchase Conpleted", "Purchasing " + pvi.Name + " Completed.");
 		uiTouchBlocker.SetActive (false);
+
+		UpdateTotalSpiritBalance ();
 	}
 
 	private void OnCurrencyBalanceChanged(VirtualCurrency virtualCurrency, int balance, int amountAdded) {
+		UpdateTotalSpiritBalance ();
 	}
 
 	private void OnMarketPurchaseCancelled(PurchasableVirtualItem pvi) {
@@ -263,6 +272,14 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		uiTouchBlocker.SetActive (false);
 	}
 		
+
+	//================= Updating Top Information ==============//
+
+	public void UpdateTotalSpiritBalance() {
+		int totalSpirits = StoreInventory.GetItemBalance (ShopItemAssets.SPIRIT_CURRENCY_ITEMID);
+		infoObj.GetComponent<TopInfo> ().UpdateValue (totalSpirits, TopInfo.TOPINFO_TYPE.SPIRIT);
+	}
+
 
 
 	//================= FadOut ==============//
