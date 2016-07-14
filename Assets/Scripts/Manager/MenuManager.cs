@@ -54,8 +54,10 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		StoreEvents.OnMarketPurchaseCancelled 	+= OnMarketPurchaseCancelled;
 		StoreEvents.OnUnexpectedStoreError 		+= OnUnexpectedStoreError;
 
+		//for restoring purchased items
 //		StoreEvents.OnRestoreTransactionsStarted 	+= OnRestoreTransactionsStarted;
 		StoreEvents.OnRestoreTransactionsFinished 	+= OnRestoreTransactionsFinished;
+
 
 		//initialize soomla
 		SoomlaStore.Initialize (new ShopItemAssets ());
@@ -264,7 +266,7 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	//================= Purchase Event Handling Processes ==============//
 
 	private void OnMarketPurchase(PurchasableVirtualItem pvi, string payload, Dictionary<string, string> extra) {
-		warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Purchase Conpleted", "Purchasing " + pvi.Name + " Completed.");
+		warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Purchase Completed", "Purchasing " + pvi.Name + " Completed.");
 		uiTouchBlocker.SetActive (false);
 
 		UpdateTotalSpiritBalance ();
@@ -287,12 +289,10 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	private void OnRestoreTransactionsFinished(bool success) {
 		if (success) {
 			int totalSpirits = StoreInventory.GetItemBalance (ShopItemAssets.SPIRIT_CURRENCY_ITEMID);
+			Debug.LogError ("*************OnRestoreTransactionsFinished: " + totalSpirits);
 			if (totalSpirits > 0) {
-				warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Restore Purchase Succeeded", "Purchases now restored successfully: " + totalSpirits);
 				UpdateTotalSpiritBalance ();
 			}
-		} else {
-			warningPopup.GetComponent<WarningPopup> ().InitializeWarningPopup ("Restore Purchase Error", "Something went wrong during the purchase.\nPlease try it again.");
 		}
 		uiTouchBlocker.SetActive (false);
 	}
