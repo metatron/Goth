@@ -27,11 +27,15 @@ public class ShopItemAssets : IStoreAssets {
 	public const string SPIRIT_PRODUCTID_10000 = "jp.arrow.angelforest.alptraum.spirit10000";
 
 
-	//Virtual Goods (Usages)
-	public const string NO_ADS_LIFETIME_PRODUCT_ID	= "NOADS_PRODUCT";
-	public const string GHOSTUPGRADE				= "GHOSTUPGRADE";
-	public const string GHOSTUPGRADE_RUMTIME		= "GHOSTUPGRADE_RUNTIME";
 
+	//Virtual Goods (Usages)
+	public const string NOADS_ITEMID	= "no_ads";
+	public const string NOADS_PRODUCTID	= "jp.arrow.angelforest.alptraum.noads";
+
+
+//	public const string GHOSTUPGRADE				= "GHOSTUPGRADE";
+//	public const string GHOSTUPGRADE_RUMTIME		= "GHOSTUPGRADE_RUNTIME";
+//
 //	public const string SPIRIT_ITEMID_100	= "SPIRIT_100";
 //	public const string SPIRIT_ITEMID_500	= "SPIRIT_500";
 //	public const string SPIRIT_ITEMID_1000	= "SPIRIT_1000";
@@ -52,7 +56,7 @@ public class ShopItemAssets : IStoreAssets {
 	}
 
 	public VirtualGood[] GetGoods() {
-		return new VirtualGood[] { GhostUpgradeGood }; //Spirits_100, Spirits_500, Spirits_1000, Spirits_2000, Spirits_5000};
+		return new VirtualGood[] { NOADS_LTVG }; //Spirits_100, Spirits_500, Spirits_1000, Spirits_2000, Spirits_5000};
 	}
 
 
@@ -125,13 +129,14 @@ public class ShopItemAssets : IStoreAssets {
 		new PurchaseWithMarket(SPIRIT_PRODUCTID_10000, 5000)
 	);
 
+
 	/** LifeTimeVGs **/
 	// Note: create non-consumable items using LifeTimeVG with PuchaseType of PurchaseWithMarket
-	public static VirtualGood NO_ADS_LTVG = new LifetimeVG(
-		"No Ads", 														// name
-		"No More Ads!",				 									// description
-		"no_ads",														// item id
-		new PurchaseWithMarket(NO_ADS_LIFETIME_PRODUCT_ID, 200)			// the way this virtual good is purchased
+	public static VirtualGood NOADS_LTVG = new LifetimeVG(
+		"No Ads", 												// name
+		"Disable Advertisement",				 				// description
+		NOADS_ITEMID,											// item id
+		new PurchaseWithMarket(NOADS_PRODUCTID, 200)			// the way this virtual good is purchased
 	);
 
 

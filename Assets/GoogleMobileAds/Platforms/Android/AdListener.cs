@@ -9,7 +9,7 @@ namespace GoogleMobileAds.Android
     {
         private IAdListener listener;
         internal AdListener(IAdListener listener)
-            : base(Utils.UnityAdListenerClassName)
+			: base(Utils.AdListenerClassName)
         {
             this.listener = listener;
         }

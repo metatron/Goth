@@ -65,7 +65,6 @@ namespace GoogleMobileAds.iOS
                     AdViewDidFailToReceiveAdWithErrorCallback,
                     AdViewWillPresentScreenCallback,
                     AdViewWillDismissScreenCallback,
-                    AdViewDidDismissScreenCallback,
                     AdViewWillLeaveApplicationCallback);
         }
 
