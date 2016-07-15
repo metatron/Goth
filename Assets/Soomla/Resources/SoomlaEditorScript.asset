@@ -24,9 +24,9 @@ MonoBehaviour:
     - name: Soomla.Core.SoomlaSecret
       value: alptraum_soomla
     - name: Soomla.Core.DebugMessages
-      value: True
+      value: False
     - name: Soomla.Core.DebugUnityMessages
-      value: 
+      value: False
     - name: Soomla.Store.NoneBP
       value: 
     - name: Soomla.Store.AndroidPublicKey

@@ -8,7 +8,7 @@
              For backward compatibility, you can only add new constant but not remove or change
              existing constants -->
     <declare-styleable name="SignInButton">
-        <attr name="buttonSize" format="reference|enum">
+        <attr name="buttonSize2" format="reference|enum">
             <enum name="standard" value="0" />
             <enum name="wide" value="1" />
             <enum name="icon_only" value="2" />
