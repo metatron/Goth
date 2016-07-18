@@ -297,6 +297,15 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 		uiTouchBlocker.SetActive (false);
 	}
 
+
+	//================= Interstitial Ads ==============//
+
+	public void OnInterstitialButton() {
+		AdMobManager.Instance.ShowInterstitialAds ();
+	}
+
+
+
 	//================= Updating Top Information ==============//
 
 	public void UpdateTotalSpiritBalance() {

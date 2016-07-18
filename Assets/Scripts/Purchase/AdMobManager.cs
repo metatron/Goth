@@ -42,6 +42,7 @@ public class AdMobManager : SingletonMonoBehaviourFast<AdMobManager> {
 		AdRequest request = new AdRequest.Builder()
 			.AddTestDevice(AdRequest.TestDeviceSimulator)       // Simulator.
 			.AddTestDevice("F7D9F6DAF5E046F7028A525895AEAAD7")
+			.AddTestDevice("065A88DF674C8C0B527647FFF568EB06") //nexus 5
 		.Build();
 		// Load the banner with the request.
 		bannerView.LoadAd(request);
@@ -63,13 +64,21 @@ public class AdMobManager : SingletonMonoBehaviourFast<AdMobManager> {
 		// Initialize an InterstitialAd.
 		interstitial = new InterstitialAd (adUnitId);
 		// Create an empty ad request.
-		request = new AdRequest.Builder ().Build ();
+		request = new AdRequest.Builder ()
+		.AddTestDevice(AdRequest.TestDeviceSimulator)       // Simulator.
+		.AddTestDevice("F7D9F6DAF5E046F7028A525895AEAAD7")
+		.AddTestDevice("065A88DF674C8C0B527647FFF568EB06") //nexus 5
+		.Build ();
 		// Load the interstitial with the request.
 		interstitial.LoadAd (request);
 
 		interstitial.OnAdClosed += HandleAdClosed;
 
 		is_close_interstitial = false;
+	}
+
+	public void ShowInterstitialAds() {
+		interstitial.Show ();
 	}
 
 	// インタースティシャル広告を閉じた時に走る
