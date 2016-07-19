@@ -301,7 +301,8 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 	//================= Interstitial Ads ==============//
 
 	public void OnInterstitialButton() {
-		AdMobManager.Instance.ShowInterstitialAds ();
+//		AdMobManager.Instance.ShowInterstitialAds ();
+		AdMobManager.Instance.ShowRewardAds();
 	}
 
 
