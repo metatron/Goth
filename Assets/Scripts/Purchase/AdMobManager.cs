@@ -78,7 +78,9 @@ public class AdMobManager : SingletonMonoBehaviourFast<AdMobManager> {
 	}
 
 	public void ShowInterstitialAds() {
-		interstitial.Show ();
+		if (interstitial.IsLoaded ()) {
+			interstitial.Show ();
+		}
 	}
 
 	// インタースティシャル広告を閉じた時に走る

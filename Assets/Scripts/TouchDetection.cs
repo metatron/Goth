@@ -218,7 +218,8 @@ public class TouchDetection : SingletonMonoBehaviourFast<TouchDetection> {
 			girlAnimationObj.IsPlaying ("wakeup") ||
 			girlAnimationObj.IsPlaying ("pickup_stand") || 
 			girlAnimationObj.IsPlaying ("pray") ||
-			girlAnimationObj.IsPlaying ("damage")
+			girlAnimationObj.IsPlaying ("damage") ||
+			girlAnimationObj.IsPlaying ("death")
 		) {
 			return false;
 		}

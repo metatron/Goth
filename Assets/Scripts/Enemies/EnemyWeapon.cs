@@ -213,10 +213,14 @@ public class EnemyWeapon : MonoBehaviour {
 			}
 
 //			Destroy (status.SelfObj);
-			GameManager.Instance.DestroyEnemy (owner, status.SelfObj);
 			//if the target is destroyed, reset the npc target info
 			if (owner.GetComponent<EnemyAI> ().charType == EnemyAI.CharacterType.NPC) {
+				GameManager.Instance.DestroyEnemy (owner, status.SelfObj);
 				((NpcParameterStatus)owner.GetComponent<EnemyAI> ().status).ResetSearchEnemyOnAttack ();
+			}
+			//player destroy
+			else {
+				DestroyPlayer ();
 			}
 		}
 		//if the player is alive and npc exists on the stage, let npc search the enemy
@@ -235,5 +239,15 @@ public class EnemyWeapon : MonoBehaviour {
 			status.SelfObj.GetComponent<EnemyAI> ().charType == EnemyAI.CharacterType.ENEMY) {
 			status.SelfObj.GetComponent<EnemyAI> ().ForceMoveOnMultiAttak ();
 		}
+	}
+
+	/**
+	 * 
+	 * after hp  become 0, animate death and trigger Stage_Home.
+	 * 
+	 */
+	private void DestroyPlayer() {
+		GameManager.Instance.player.GetComponent<Collider> ().enabled = false;
+		GameManager.Instance.player.GetComponent<PlayerCharacter> ().playerAnimation.Play ("death");
 	}
 }

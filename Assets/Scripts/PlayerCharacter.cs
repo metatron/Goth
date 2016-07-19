@@ -43,6 +43,13 @@ public class PlayerCharacter : MonoBehaviour {
 			currentWeapon.GetComponentInChildren<Collider> ().enabled = false;
 		} else if (triggerEvent.tag == "pickupend") {
 			MenuManager.Instance.OpenCollectionPopup ();
+		} else if (triggerEvent.tag == "deathend") {
+			MenuManager.Instance.ActivateAndStartFading (2.0f, () => {
+				//enable collider on player (the collider is disabled on EnemyWeapon.DestroyPlayer)
+				GameManager.Instance.player.GetComponent<Collider> ().enabled = true;
+				//return to StageHome
+				StageManager.Instance.InitStageReposPlayer("Prefabs/Stage/Stage_Home", "wakeup");//InitStage (playerParam.level);
+			});
 		}
 	}
 	
