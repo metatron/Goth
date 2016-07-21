@@ -315,11 +315,16 @@ public class MenuManager : SingletonMonoBehaviourFast<MenuManager> {
 
 
 
-	//================= FadOut ==============//
+	//================= Effect related ==============//
 	public void ActivateAndStartFading(float sec, FaderObject.CompleteFadingDelegate OnCompDel) {
 		faderObj.gameObject.SetActive (true);
 		faderObj.StargFading (sec, OnCompDel);
 	}
+
+	public void SetWindowAlpha(float alpha) { //alpha 0 to 1.0f. 1.0f is the default.
+		grundgeObj.GetComponent<RawImage> ().color = new Color (0.0f, 0.0f, 0.0f, alpha);
+	}
+
 
 
 	public void OnDestroy() {

@@ -20,10 +20,12 @@ public class StageData : MonoBehaviour {
 
 	public GameObject homeDoorObj; //only home stage has this object.
 
+	//this is the BlackObject of ShakeEffect on GrundgeEffect
 	public float minStageLight = 0.2f;
 	public float maxStageLight = 0.5f;
 
 	public Material skyBoxMat;
+	public float worldCloudness = 1.0f; //this is the alpha of the GrundgeEffect RawImage (the window)
 
 
 	void Start() {

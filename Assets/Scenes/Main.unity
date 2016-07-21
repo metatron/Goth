@@ -4692,7 +4692,7 @@ Skybox:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1166197817}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: b6a3f8bca2c865243929bac258c89b96, type: 2}
+  m_CustomSkybox: {fileID: 0}
 --- !u!20 &1166197819
 Camera:
   m_ObjectHideFlags: 0
@@ -4701,7 +4701,7 @@ Camera:
   m_GameObject: {fileID: 1166197817}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 3
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.625, g: 0.625, b: 0.625, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -5181,7 +5181,7 @@ MonoBehaviour:
   infoObj: {fileID: 1295205807}
   uiTouchBlocker: {fileID: 1444212086}
   faderObj: {fileID: 756232786}
-  grundgeObj: {fileID: 0}
+  grundgeObj: {fileID: 2038813959}
 --- !u!114 &1219834058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5676,6 +5676,7 @@ MonoBehaviour:
   - {fileID: 11408336, guid: fcac63f74793f42c593b8c361f306841, type: 2}
   - {fileID: 11423902, guid: 444e96d24961e43359b5121c285e9d54, type: 2}
   - {fileID: 11461800, guid: 8f5f6e4d2169e4320aeb7a0d7186fb7f, type: 2}
+  - {fileID: 11415064, guid: 8a7a115a2109e44c8b150457ad7e8e81, type: 2}
 --- !u!4 &1270801734
 Transform:
   m_ObjectHideFlags: 0

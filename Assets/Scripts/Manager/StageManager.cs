@@ -59,6 +59,9 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 		GameObject skyBoxCameraObj = GameObject.FindWithTag("SkyBoxCamera");
 		skyBoxCameraObj.GetComponent<Skybox> ().material = GameManager.Instance.crntStageData.skyBoxMat;
 
+		//check window alpha
+		MenuManager.Instance.SetWindowAlpha(GameManager.Instance.crntStageData.worldCloudness);
+
 		return stageObject.GetComponent<StageData>();
 	}
 

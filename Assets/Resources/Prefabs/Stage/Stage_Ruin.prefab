@@ -4023,9 +4023,10 @@ MonoBehaviour:
   stageEventList:
   - {fileID: 11455208}
   homeDoorObj: {fileID: 0}
-  minStageLight: 0
-  maxStageLight: 0.4
+  minStageLight: 0.2
+  maxStageLight: 0.5
   skyBoxMat: {fileID: 2100000, guid: 7400269f7d341bc41b1f21adeccb2a5f, type: 2}
+  worldCloudness: 0.1
 --- !u!114 &11415378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5301,10 +5302,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   _uvs:
-  - {x: 0.9277344, y: 0.07128906}
-  - {x: 0.9277344, y: 0}
-  - {x: 0.9765625, y: 0}
-  - {x: 0.9765625, y: 0.07128906}
+  - {x: 0.14697266, y: 0.71875}
+  - {x: 0.14697266, y: 0.68310547}
+  - {x: 0.19580078, y: 0.68310547}
+  - {x: 0.19580078, y: 0.71875}
   _triangles: 000000000300000001000000030000000200000001000000
   _normals:
   - {x: 0, y: 0, z: -1}

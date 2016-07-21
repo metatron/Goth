@@ -16,15 +16,6 @@ public class ShakeEffect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-//		iTween.ShakePosition (
-//			gameObject,
-//			iTween.Hash (
-//				"amount", new Vector3(0.5f, 0.5f, 0.5f),
-//				"time", 100.0f,
-//				"islocal", true
-//			)
-//		);
-
 		if (blackObject != null) {
 			iTween.ValueTo(gameObject, 
 				iTween.Hash(
