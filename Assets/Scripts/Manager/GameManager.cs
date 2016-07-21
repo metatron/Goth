@@ -96,9 +96,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		crntVisibleDistance = ghostSelf.maxSpotDistance + ghostSelf.status.crntVisibleInc;
 
 		//test output
-		if (ghostSelf.status.GetType () == typeof(NpcParameterStatus)) {
-			Debug.LogError (ghostSelf.gameObject.name + " crntVisibleDistance: " + crntVisibleDistance);
-		}
+//		if (ghostSelf.status.GetType () == typeof(NpcParameterStatus)) {
+//			Debug.LogError (ghostSelf.gameObject.name + " crntVisibleDistance: " + crntVisibleDistance);
+//		}
 
 		if (playerCharacter.status.GetCharacterDirection () == BaseParameterStatus.CharacterDirection.LEFT) {
 			float minX = player.transform.position.x - crntVisibleDistance;
@@ -640,6 +640,17 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		particle.transform.parent = enemyObject.transform;
 		particle.transform.localPosition = Vector3.zero;
 		particle.transform.parent = null;
+
+		//init spirits
+		int earningSpirits = ((EnemyParameterStatus)enemyObject.GetComponent<EnemyAI>().status).spiritNum;
+		for(int i=0; i<earningSpirits; i++) {
+			GameObject spiritParticle = (GameObject)Instantiate(Resources.Load("Prefabs/Particle/SpiritParticle"));
+			spiritParticle.transform.position = enemyObject.transform.position;
+
+			Vector3 targetPos = player.transform.position;
+			targetPos.y += 80.0f;
+			spiritParticle.GetComponent<ParticleAttraction> ().targetPos = targetPos;
+		}
 
 		//destroy enemy
 		Hashtable paramTable = new Hashtable ();

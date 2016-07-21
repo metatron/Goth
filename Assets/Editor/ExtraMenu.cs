@@ -133,6 +133,17 @@ public class ExtraMenu : MonoBehaviour {
 		GameManager.Instance.crntStageData.InitStageCollectionItems();
 	}
 
+	[MenuItem ("Tools/Goth/LoadStage/Ruin")]
+	static void LoadStage_Ruin () {
+		//delete enemy related objests
+		StageManager.Instance.DeleteCurrentStage ();
+		//instantilate stage data
+		StageManager.Instance.InstantiateStage ("Prefabs/Stage/Stage_Ruin");
+		//after load status, remove collected items
+		GameManager.Instance.crntStageData.InitStageCollectionItems();
+	}
+
+
 	[MenuItem ("Tools/Goth/RefreshAtlas")]
 	static void RefreshAtlas () {
 		StageData stage;

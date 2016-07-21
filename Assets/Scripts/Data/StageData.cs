@@ -23,6 +23,8 @@ public class StageData : MonoBehaviour {
 	public float minStageLight = 0.2f;
 	public float maxStageLight = 0.5f;
 
+	public Material skyBoxMat;
+
 
 	void Start() {
 		ShakeEffect.ALPHA_MIN = minStageLight;

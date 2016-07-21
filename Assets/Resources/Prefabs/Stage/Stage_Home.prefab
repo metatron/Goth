@@ -1618,7 +1618,7 @@ MonoBehaviour:
   enemyStatusList:
   - minHp: 10
     maxHp: 100
-    crntHp: 30
+    crntHp: 20
     minAtk: 10
     maxAtk: 100
     crntAtk: 10
@@ -1632,12 +1632,12 @@ MonoBehaviour:
     maxVisibleInc: 100
     crntVisibleInc: 0
     level: 1
-    type: 0
+    type: 2
     pattern: 0
     rarity: 1
     cost: 100
     skillPathList: []
-    spiritNum: 1
+    spiritNum: 10
     friendPossibility: 90
     spawner: {fileID: 0}
   collectionItemList: []
@@ -1647,6 +1647,7 @@ MonoBehaviour:
   homeDoorObj: {fileID: 134630}
   minStageLight: 0
   maxStageLight: 0.4
+  skyBoxMat: {fileID: 2100000, guid: 7400269f7d341bc41b1f21adeccb2a5f, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -47,7 +47,6 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 		//init enemy on spawner
 		//InitStageEnemies (loadingStage);
 
-
 		return InstantiateStage (loadingStage.prefabPath);
 	}
 
@@ -56,7 +55,9 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 		stageObject.transform.position = Vector3.zero;
 		GameManager.Instance.crntStageData = stageObject.GetComponent<StageData> ();
 
-		//update stage brightness
+		//init skybox
+		GameObject skyBoxCameraObj = GameObject.FindWithTag("SkyBoxCamera");
+		skyBoxCameraObj.GetComponent<Skybox> ().material = GameManager.Instance.crntStageData.skyBoxMat;
 
 		return stageObject.GetComponent<StageData>();
 	}
