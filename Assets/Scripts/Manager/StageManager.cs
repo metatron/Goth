@@ -58,6 +58,12 @@ public class StageManager : SingletonMonoBehaviourFast<StageManager> {
 		//init skybox
 		GameObject skyBoxCameraObj = GameObject.FindWithTag("SkyBoxCamera");
 		skyBoxCameraObj.GetComponent<Skybox> ().material = GameManager.Instance.crntStageData.skyBoxMat;
+		//rotate skybox
+		if (GameManager.Instance.crntStageData.skyBoxMat != null) {
+			skyBoxCameraObj.GetComponent<RotateSkybox> ().enabled = true;
+		} else {
+			skyBoxCameraObj.GetComponent<RotateSkybox> ().enabled = false;
+		}
 
 		//check window alpha
 		MenuManager.Instance.SetWindowAlpha(GameManager.Instance.crntStageData.worldCloudness);
