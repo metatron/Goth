@@ -8,7 +8,8 @@ public class BaseParameterStatus {
 		"Prefabs/Enemies/TiedGhost",
 		"Prefabs/Enemies/NurseGhost",
 		"Prefabs/Enemies/WillOWisp",
-		"Prefabs/Enemies/Queen"
+		"Prefabs/Enemies/Queen",
+		"Prefabs/Enemies/TeddyBear"
 	};
 
 	public enum GhostType : int
@@ -17,6 +18,7 @@ public class BaseParameterStatus {
 		Nurse,
 		WillOWisp,
 		Queen,
+		TeddyBear,
 		Player = 99
 	};
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: WillOWispAnimation
   m_EditorClassIdentifier: 
   buildID: 201602030031353164
-  needsRebuilt: 0
+  needsRebuilt: 1
   boneDataList:
   - active: 1
     boneName: Root

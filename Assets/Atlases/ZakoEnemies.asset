@@ -18,17 +18,37 @@ MonoBehaviour:
     y: 0
     width: 0.5
     height: 0.58203125
+  - serializedVersion: 2
+    x: 0.50390625
+    y: 0.4453125
+    width: 0.4140625
+    height: 0.4375
+  - serializedVersion: 2
+    x: 0.50390625
+    y: 0
+    width: 0.46484375
+    height: 0.44140625
   textureGUIDs:
   - 875df8e37a93d42feafbf6b1081d044e
+  - d33de4e4e032346318951cdf0623687b
+  - a019c40e2ee9b4dd28d39c54d9cde915
   textureSizes:
   - {x: 128, y: 149}
+  - {x: 106, y: 112}
+  - {x: 119, y: 113}
   defaultPivotOffsets:
   - {x: 0, y: 0}
+  - {x: -0.037499998, y: -0.36964285}
+  - {x: 0, y: -0.16607143}
   textureNames:
   - willowisp
+  - face
+  - body
   texturePaths:
   - Assets/Textures/ZakoEnemies/willowisp.png
-  lastBuildID: 20160201234106174
+  - Assets/Textures/ZakoEnemies/TeddyBear/face.png
+  - Assets/Textures/ZakoEnemies/TeddyBear/body.png
+  lastBuildID: 20160803001738725
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 512

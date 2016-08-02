@@ -4678,6 +4678,7 @@ GameObject:
   - 4: {fileID: 1166197820}
   - 20: {fileID: 1166197819}
   - 45: {fileID: 1166197818}
+  - 114: {fileID: 1166197821}
   m_Layer: 0
   m_Name: SkyboxCamera
   m_TagString: SkyBoxCamera
@@ -4740,6 +4741,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1166197821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166197817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e66520505f743d68cc7b45325b4f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1172181214
 GameObject:
   m_ObjectHideFlags: 0
