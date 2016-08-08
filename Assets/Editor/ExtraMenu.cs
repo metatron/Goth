@@ -25,6 +25,10 @@ public class ExtraMenu : MonoBehaviour {
 	static void AddWillOWispChar() {
 		AddNpcData (BaseParameterStatus.GhostType.WillOWisp);
 	}
+	[MenuItem ("Tools/Goth/AddNpcData/TeddyBear")]
+	static void AddTeddyBearChar() {
+		AddNpcData (BaseParameterStatus.GhostType.TeddyBear);
+	}
 
 	private static void AddNpcData (BaseParameterStatus.GhostType charaType) {
 		GameObject ghostPrefab = BaseParameterStatus.GetPrefabByType (charaType);

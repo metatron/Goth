@@ -3,6 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using SmoothMoves;
 
+
+
+/**
+ * 
+ * creates Enemy Object.
+ * for the Animation, it needs
+ * 
+ * normal
+ * walk
+ * attack:  needs attackafter trigger
+ * damage
+ * 
+ * optional: (might have to create following according to the character type)
+ * attackbefore
+ * attackafter
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (BoxCollider))]
 [RequireComponent (typeof (SpawnAI))]

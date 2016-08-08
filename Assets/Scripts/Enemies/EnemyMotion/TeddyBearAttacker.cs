@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using SmoothMoves;
 
-public class WillOWispAttacker : EnemyMotionInterface {
+public class TeddyBearAttacker : EnemyMotionInterface {
 	private EnemyAI enemyAI;
 	private BoneAnimation boneAnim;
 
@@ -22,7 +22,7 @@ public class WillOWispAttacker : EnemyMotionInterface {
 
 	override public IEnumerator DoAttack() {
 		GetCollider ().enabled = true;
-		boneAnim.Play ("attack");
+		boneAnim.Play ("attackbefore");
 		yield break;
 	}
 
@@ -63,6 +63,14 @@ public class WillOWispAttacker : EnemyMotionInterface {
 			Vector3 moveToPos = Vector3.zero; //destination pos
 
 			transform.position = reposition;
+
+
+			//play attack animation
+			boneAnim.Play ("attack");
+		}
+		//after attack animation ends
+		else if (triggerEvent.tag == "attack") {
+			boneAnim.Play ("attackafter");
 		}
 		//after standing animation ends
 		else if (triggerEvent.tag == "attackafter") {
