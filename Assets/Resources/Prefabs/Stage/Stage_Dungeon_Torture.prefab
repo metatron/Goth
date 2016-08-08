@@ -1524,6 +1524,8 @@ MonoBehaviour:
   homeDoorObj: {fileID: 0}
   minStageLight: 0.2
   maxStageLight: 0.5
+  skyBoxMat: {fileID: 0}
+  worldCloudness: 1
 --- !u!114 &11469274
 MonoBehaviour:
   m_ObjectHideFlags: 1
