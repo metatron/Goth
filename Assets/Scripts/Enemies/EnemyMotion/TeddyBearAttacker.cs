@@ -21,8 +21,10 @@ public class TeddyBearAttacker : EnemyMotionInterface {
 
 
 	override public IEnumerator DoAttack() {
-		GetCollider ().enabled = true;
-		boneAnim.Play ("attackbefore");
+		if (GetCollider () != null) {
+			GetCollider ().enabled = true;
+		}
+		boneAnim.Play ("attack");
 		yield break;
 	}
 
@@ -38,7 +40,7 @@ public class TeddyBearAttacker : EnemyMotionInterface {
 			return false;
 		}
 
-		if (boneAnim.IsPlaying ("attack") || boneAnim.IsPlaying ("attackbefore") || boneAnim.IsPlaying ("attackafter")) {
+		if (boneAnim.IsPlaying ("attack")) {
 			return false;
 		}
 		return true;
@@ -46,34 +48,15 @@ public class TeddyBearAttacker : EnemyMotionInterface {
 
 
 	private void OnUserTriggerEvent(UserTriggerEvent triggerEvent) {
-		//if target is destroyed durint attack for some reason, back to normal animation
+		//if target is destroyed during attack for some reason, back to normal animation
 		if (!IsTargetAlive ()) {
 			boneAnim.Play ("normal");
 			AttackFinished();
 			return ;
 		}
 
-		//after attackbefore animation ends
-		if (triggerEvent.tag == "attackbefore") {
-			//backup 
-			backupPos = transform.position;
-			//reposition
-			//enemy on the right
-			Vector3 reposition = transform.position; //starting position
-			Vector3 moveToPos = Vector3.zero; //destination pos
-
-			transform.position = reposition;
-
-
-			//play attack animation
-			boneAnim.Play ("attack");
-		}
 		//after attack animation ends
-		else if (triggerEvent.tag == "attack") {
-			boneAnim.Play ("attackafter");
-		}
-		//after standing animation ends
-		else if (triggerEvent.tag == "attackafter") {
+		if (triggerEvent.tag == "attackafter") {
 			//play normal animation
 			boneAnim.Play ("normal");
 

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: -1545704558, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
   m_Name: TeddyBearAnimation
   m_EditorClassIdentifier: 
-  buildID: 201608060110586969
+  buildID: 201608090057569252
   needsRebuilt: 1
   boneDataList:
   - active: 1
@@ -24,7 +24,7 @@ MonoBehaviour:
     boneColor:
       blendingWeight: 0
       color: {r: 1, g: 1, b: 1, a: 1}
-  - active: 1
+  - active: 0
     boneName: weapon
     boneColor:
       blendingWeight: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
           tag: 
         textureIndex: 1
       mixTransform: 0
-      visible: 1
+      visible: 0
       colorRCurveSerialized:
         keyframes:
         - time: 0
@@ -1255,7 +1255,7 @@ MonoBehaviour:
           tag: 
         textureIndex: 1
       mixTransform: 0
-      visible: 1
+      visible: 0
       colorRCurveSerialized:
         keyframes:
         - time: 0
@@ -2001,7 +2001,7 @@ MonoBehaviour:
           tag: 
         textureIndex: 1
       mixTransform: 0
-      visible: 1
+      visible: 0
       colorRCurveSerialized:
         keyframes:
         - time: 0
@@ -3622,11 +3622,11 @@ MonoBehaviour:
   boneTransformPaths:
   - Root
   - Root/body
-  - Root/body/head
+  - Root/body/weapon
   spriteTransformPaths:
   - Root/Root_Sprite
   - Root/body/body_Sprite
-  - Root/body/head/head_Sprite
+  - Root/body/weapon/weapon_Sprite
   meshColor: {r: 1, g: 1, b: 1, a: 1}
   importScale: 1
   dataVersion: 8

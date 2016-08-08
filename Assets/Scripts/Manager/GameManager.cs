@@ -415,6 +415,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		else if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.WillOWisp) {
 			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
 		}
+		else if (enemyAI != null && enemyAI.status.type == BaseParameterStatus.GhostType.TeddyBear) {
+			enemyAI.enemyMotion.InitCloseContactWeapon(new Vector3(0.0f, 0.0f, 0.0f));
+		}
 	}
 
 	public void DecideNpcPosition() {
