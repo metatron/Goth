@@ -25,7 +25,8 @@ public class GhostNode : MonoBehaviour {
 		0.0f,		//TiedGhost
 		-140.0f,	//Nurse
 		-140.0f,	//WillOWisp
-		-140.0f		//Queen
+		-140.0f,	//Queen
+		-140.0f,	//TeddyBear
 	};
 
 

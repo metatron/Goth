@@ -116,6 +116,7 @@ public class Spawner : MonoBehaviour
 			GameManager.Instance.UpdateSummonedEnemyParam(unit);
 			if (enemyStatus != null) {
 				unit.GetComponent<EnemyAI> ().CopyEnemyStatus (enemyStatus);
+				unit.localPosition = new Vector3 (unit.localPosition.x, unit.GetComponent<FollowScript> ().fixedPos.y, unit.localPosition.y);
 			}
 			unit.GetComponent<SpawnAI>().SetOwner(this);
             // Increase the total number of enemies spawned and the number of spawned enemies

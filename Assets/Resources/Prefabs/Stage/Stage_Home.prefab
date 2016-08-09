@@ -1632,7 +1632,7 @@ MonoBehaviour:
     maxVisibleInc: 100
     crntVisibleInc: 0
     level: 1
-    type: 2
+    type: 4
     pattern: 0
     rarity: 1
     cost: 100
@@ -1648,6 +1648,7 @@ MonoBehaviour:
   minStageLight: 0
   maxStageLight: 0.4
   skyBoxMat: {fileID: 2100000, guid: 7400269f7d341bc41b1f21adeccb2a5f, type: 2}
+  worldCloudness: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
