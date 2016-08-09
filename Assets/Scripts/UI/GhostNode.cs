@@ -45,7 +45,7 @@ public class GhostNode : MonoBehaviour {
 		ghostObj.GetComponent<EnemyAI>().defaultSizeVec = new Vector3(resizeX, resizeY, 1.0f);
 
 //		ghostObj.GetComponent<EnemyAI>().defaultSizeVec = new Vector3 (0.3f, 0.3f, 1.0f);
-//		ghostObj.layer = 5;
+		ghostObj.layer = 5;
 		ghostObj.GetComponent<MeshSortingLayer> ().SetSortingLayerNameAndOrder("UI", 5);
 //		ghostObj.GetComponent<MeshSortingLayer> ().sortingLayerName = "UI";
 		ghostObj.GetComponent<EnemyAI> ().SetAsMenuUI ();
