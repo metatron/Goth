@@ -1,28 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &114180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 415024}
-  m_Layer: 0
-  m_Name: Root
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &123766
+--- !u!1 &102302
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 430996}
+  - 4: {fileID: 481290}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -30,14 +15,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &155864
+--- !u!1 &107190
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 461978}
+  - 4: {fileID: 481580}
+  m_Layer: 0
+  m_Name: weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &107450
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 486426}
   m_Layer: 0
   m_Name: body_Sprite
   m_TagString: Untagged
@@ -45,16 +45,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &158822
+--- !u!1 &115404
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 456284}
+  - 4: {fileID: 483736}
   m_Layer: 0
   m_Name: Root_Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &169710
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 425376}
+  m_Layer: 0
+  m_Name: weapon_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +91,8 @@ GameObject:
   - 65: {fileID: 6587008}
   - 114: {fileID: 11462906}
   - 114: {fileID: 11468662}
-  - 111: {fileID: 11115946}
-  - 137: {fileID: 13746460}
+  - 111: {fileID: 11190058}
+  - 137: {fileID: 13794246}
   m_Layer: 0
   m_Name: TeddyBear
   m_TagString: Untagged
@@ -85,105 +100,78 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &184260
+--- !u!1 &181814
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 427418}
+  - 4: {fileID: 477290}
   m_Layer: 0
-  m_Name: weapon_Sprite
+  m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &192070
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 491596}
-  m_Layer: 0
-  m_Name: weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &415024
+--- !u!4 &425376
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114180}
+  m_GameObject: {fileID: 169710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 481580}
+  m_RootOrder: 0
+--- !u!4 &477290
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 456284}
-  - {fileID: 430996}
+  - {fileID: 483736}
+  - {fileID: 481290}
   m_Father: {fileID: 483682}
   m_RootOrder: 0
---- !u!4 &427418
+--- !u!4 &481290
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184260}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 491596}
-  m_RootOrder: 0
---- !u!4 &430996
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123766}
+  m_GameObject: {fileID: 102302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 461978}
-  - {fileID: 491596}
-  m_Father: {fileID: 415024}
+  - {fileID: 486426}
+  - {fileID: 481580}
+  m_Father: {fileID: 477290}
   m_RootOrder: 1
---- !u!4 &456284
+--- !u!4 &481580
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 158822}
+  m_GameObject: {fileID: 107190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15.436854, y: 58.859215, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 415024}
-  m_RootOrder: 0
---- !u!4 &461978
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155864}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 430996}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 425376}
+  m_Father: {fileID: 481290}
+  m_RootOrder: 1
 --- !u!4 &483682
 Transform:
   m_ObjectHideFlags: 1
@@ -195,23 +183,35 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 415024}
+  - {fileID: 477290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &491596
+--- !u!4 &483736
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192070}
+  m_GameObject: {fileID: 115404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.436854, y: 58.859215, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 427418}
-  m_Father: {fileID: 430996}
-  m_RootOrder: 1
+  m_Children: []
+  m_Father: {fileID: 477290}
+  m_RootOrder: 0
+--- !u!4 &486426
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 481290}
+  m_RootOrder: 0
 --- !u!54 &5419680
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -237,9 +237,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 70, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!111 &11115946
+  m_Size: {x: 110, y: 100, z: 100}
+  m_Center: {x: 0, y: -10, z: 0}
+--- !u!111 &11190058
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -333,7 +333,7 @@ MonoBehaviour:
   cumulativeTimeOfMultiHit: 0
   doNothing: 0
   defaultSizeVec: {x: 1, y: 1, z: 1}
-  ghostListSizeVec: {x: 1, y: 1, z: 1}
+  ghostListSizeVec: {x: 0.7, y: 0.7, z: 1}
   OnDestroyEnemyPrefab: {fileID: 0}
 --- !u!114 &11468662
 MonoBehaviour:
@@ -361,8 +361,8 @@ MonoBehaviour:
   m_Script: {fileID: 2146667132, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mRenderer: {fileID: 13746460}
-  mAnimation: {fileID: 11115946}
+  mRenderer: {fileID: 13794246}
+  mAnimation: {fileID: 11190058}
   mMesh: {fileID: 0}
   mVertices:
   - {x: 0, y: 0, z: 0}
@@ -414,9 +414,9 @@ MonoBehaviour:
     boneQuad:
       boneNodeIndex: 0
       vertexIndices: 000000000300000001000000030000000200000001000000
-    gameObject: {fileID: 114180}
-    boneTransform: {fileID: 415024}
-    spriteTransform: {fileID: 456284}
+    gameObject: {fileID: 181814}
+    boneTransform: {fileID: 477290}
+    spriteTransform: {fileID: 483736}
     boneAnimation: {fileID: 11469142}
     boneCollider: {fileID: 0}
     boneColor:
@@ -432,9 +432,9 @@ MonoBehaviour:
     boneQuad:
       boneNodeIndex: 1
       vertexIndices: 040000000700000005000000070000000600000005000000
-    gameObject: {fileID: 123766}
-    boneTransform: {fileID: 430996}
-    spriteTransform: {fileID: 461978}
+    gameObject: {fileID: 102302}
+    boneTransform: {fileID: 481290}
+    spriteTransform: {fileID: 486426}
     boneAnimation: {fileID: 11469142}
     boneCollider: {fileID: 0}
     boneColor:
@@ -450,9 +450,9 @@ MonoBehaviour:
     boneQuad:
       boneNodeIndex: 2
       vertexIndices: 080000000b000000090000000b0000000a00000009000000
-    gameObject: {fileID: 192070}
-    boneTransform: {fileID: 491596}
-    spriteTransform: {fileID: 427418}
+    gameObject: {fileID: 107190}
+    boneTransform: {fileID: 481580}
+    spriteTransform: {fileID: 425376}
     boneAnimation: {fileID: 11469142}
     boneCollider: {fileID: 0}
     boneColor:
@@ -463,15 +463,15 @@ MonoBehaviour:
     materialIndex: 0
     depth: 0
   mBoneTransforms:
-  - {fileID: 415024}
-  - {fileID: 456284}
-  - {fileID: 430996}
-  - {fileID: 461978}
-  - {fileID: 491596}
-  - {fileID: 427418}
+  - {fileID: 477290}
+  - {fileID: 483736}
+  - {fileID: 481290}
+  - {fileID: 486426}
+  - {fileID: 481580}
+  - {fileID: 425376}
   mMaterials:
   - {fileID: 2100000, guid: bf7c8b9390af44117b06f28282631913, type: 2}
-  buildID: 201608091329222935
+  buildID: 201608101342264990
   mFinalImportScale: 1
   mDefaultAnimationName: normal
   mLastBoneColor:
@@ -1388,135 +1388,6 @@ MonoBehaviour:
         height: 0.4375
       originalPivotOffset: {x: -0.037499998, y: -0.36964285}
   - clipIndex: 3
-    frame: 7
-    triggerFrameBones:
-    - userTriggerTag: 
-      boneNodeIndex: 2
-      triggerEventTypes: 02000000040000000300000006000000
-      pivotOffset: {x: -0.037499998, y: -0.36964285}
-      upperLeft: {x: -49.025, y: 97.4, z: 0}
-      bottomLeft: {x: -49.025, y: -14.6, z: 0}
-      bottomRight: {x: 56.975, y: -14.6, z: 0}
-      upperRight: {x: 56.975, y: 97.4, z: 0}
-      uv:
-        serializedVersion: 2
-        x: 0.50390625
-        y: 0.4453125
-        width: 0.4140625
-        height: 0.4375
-      localPosition: {x: 0, y: 0, z: 0}
-      localRotation: 0
-      localScale: {x: 0, y: 0}
-      atlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
-      textureGUID: d33de4e4e032346318951cdf0623687b
-      materialIndex: 0
-      depth: 0
-      collider:
-        type: 0
-        center: {x: 0, y: 0, z: 0}
-        boxSize: {x: 0, y: 0, z: 0}
-        sphereRadius: 0
-        useAnimationLayer: 1
-        layer: 0
-        isTrigger: 1
-        tag: 
-      originalAtlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
-      originalTextureGUID: d33de4e4e032346318951cdf0623687b
-      originalMaterialIndex: 0
-      originalUV:
-        serializedVersion: 2
-        x: 0.50390625
-        y: 0.4453125
-        width: 0.4140625
-        height: 0.4375
-      originalPivotOffset: {x: -0.037499998, y: -0.36964285}
-  - clipIndex: 3
-    frame: 8
-    triggerFrameBones:
-    - userTriggerTag: 
-      boneNodeIndex: 2
-      triggerEventTypes: 02000000040000000300000006000000
-      pivotOffset: {x: -0.037499998, y: -0.36964285}
-      upperLeft: {x: -49.025, y: 97.4, z: 0}
-      bottomLeft: {x: -49.025, y: -14.6, z: 0}
-      bottomRight: {x: 56.975, y: -14.6, z: 0}
-      upperRight: {x: 56.975, y: 97.4, z: 0}
-      uv:
-        serializedVersion: 2
-        x: 0.50390625
-        y: 0.4453125
-        width: 0.4140625
-        height: 0.4375
-      localPosition: {x: 0, y: 0, z: 0}
-      localRotation: 0
-      localScale: {x: 0, y: 0}
-      atlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
-      textureGUID: d33de4e4e032346318951cdf0623687b
-      materialIndex: 0
-      depth: 0
-      collider:
-        type: 0
-        center: {x: 0, y: 0, z: 0}
-        boxSize: {x: 0, y: 0, z: 0}
-        sphereRadius: 0
-        useAnimationLayer: 1
-        layer: 0
-        isTrigger: 1
-        tag: 
-      originalAtlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
-      originalTextureGUID: d33de4e4e032346318951cdf0623687b
-      originalMaterialIndex: 0
-      originalUV:
-        serializedVersion: 2
-        x: 0.50390625
-        y: 0.4453125
-        width: 0.4140625
-        height: 0.4375
-      originalPivotOffset: {x: -0.037499998, y: -0.36964285}
-  - clipIndex: 3
-    frame: 9
-    triggerFrameBones:
-    - userTriggerTag: 
-      boneNodeIndex: 2
-      triggerEventTypes: 02000000040000000300000006000000
-      pivotOffset: {x: -0.037499998, y: -0.36964285}
-      upperLeft: {x: -49.025, y: 97.4, z: 0}
-      bottomLeft: {x: -49.025, y: -14.6, z: 0}
-      bottomRight: {x: 56.975, y: -14.6, z: 0}
-      upperRight: {x: 56.975, y: 97.4, z: 0}
-      uv:
-        serializedVersion: 2
-        x: 0.50390625
-        y: 0.4453125
-        width: 0.4140625
-        height: 0.4375
-      localPosition: {x: 0, y: 0, z: 0}
-      localRotation: 0
-      localScale: {x: 0, y: 0}
-      atlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
-      textureGUID: d33de4e4e032346318951cdf0623687b
-      materialIndex: 0
-      depth: 0
-      collider:
-        type: 0
-        center: {x: 0, y: 0, z: 0}
-        boxSize: {x: 0, y: 0, z: 0}
-        sphereRadius: 0
-        useAnimationLayer: 1
-        layer: 0
-        isTrigger: 1
-        tag: 
-      originalAtlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
-      originalTextureGUID: d33de4e4e032346318951cdf0623687b
-      originalMaterialIndex: 0
-      originalUV:
-        serializedVersion: 2
-        x: 0.50390625
-        y: 0.4453125
-        width: 0.4140625
-        height: 0.4375
-      originalPivotOffset: {x: -0.037499998, y: -0.36964285}
-  - clipIndex: 3
     frame: 12
     triggerFrameBones:
     - userTriggerTag: 
@@ -1603,6 +1474,92 @@ MonoBehaviour:
     frame: 13
     triggerFrameBones:
     - userTriggerTag: 
+      boneNodeIndex: 2
+      triggerEventTypes: 02000000040000000300000006000000
+      pivotOffset: {x: -0.037499998, y: -0.36964285}
+      upperLeft: {x: -49.025, y: 97.4, z: 0}
+      bottomLeft: {x: -49.025, y: -14.6, z: 0}
+      bottomRight: {x: 56.975, y: -14.6, z: 0}
+      upperRight: {x: 56.975, y: 97.4, z: 0}
+      uv:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0.4453125
+        width: 0.4140625
+        height: 0.4375
+      localPosition: {x: 0, y: 0, z: 0}
+      localRotation: 0
+      localScale: {x: 0, y: 0}
+      atlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      textureGUID: d33de4e4e032346318951cdf0623687b
+      materialIndex: 0
+      depth: 0
+      collider:
+        type: 0
+        center: {x: 0, y: 0, z: 0}
+        boxSize: {x: 0, y: 0, z: 0}
+        sphereRadius: 0
+        useAnimationLayer: 1
+        layer: 0
+        isTrigger: 1
+        tag: 
+      originalAtlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      originalTextureGUID: d33de4e4e032346318951cdf0623687b
+      originalMaterialIndex: 0
+      originalUV:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0.4453125
+        width: 0.4140625
+        height: 0.4375
+      originalPivotOffset: {x: -0.037499998, y: -0.36964285}
+  - clipIndex: 3
+    frame: 14
+    triggerFrameBones:
+    - userTriggerTag: 
+      boneNodeIndex: 2
+      triggerEventTypes: 02000000040000000300000006000000
+      pivotOffset: {x: -0.037499998, y: -0.36964285}
+      upperLeft: {x: -49.025, y: 97.4, z: 0}
+      bottomLeft: {x: -49.025, y: -14.6, z: 0}
+      bottomRight: {x: 56.975, y: -14.6, z: 0}
+      upperRight: {x: 56.975, y: 97.4, z: 0}
+      uv:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0.4453125
+        width: 0.4140625
+        height: 0.4375
+      localPosition: {x: 0, y: 0, z: 0}
+      localRotation: 0
+      localScale: {x: 0, y: 0}
+      atlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      textureGUID: d33de4e4e032346318951cdf0623687b
+      materialIndex: 0
+      depth: 0
+      collider:
+        type: 0
+        center: {x: 0, y: 0, z: 0}
+        boxSize: {x: 0, y: 0, z: 0}
+        sphereRadius: 0
+        useAnimationLayer: 1
+        layer: 0
+        isTrigger: 1
+        tag: 
+      originalAtlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      originalTextureGUID: d33de4e4e032346318951cdf0623687b
+      originalMaterialIndex: 0
+      originalUV:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0.4453125
+        width: 0.4140625
+        height: 0.4375
+      originalPivotOffset: {x: -0.037499998, y: -0.36964285}
+  - clipIndex: 3
+    frame: 17
+    triggerFrameBones:
+    - userTriggerTag: 
       boneNodeIndex: 1
       triggerEventTypes: 02000000040000000300000006000000
       pivotOffset: {x: 0, y: -0.16607143}
@@ -1642,8 +1599,48 @@ MonoBehaviour:
         width: 0.46484375
         height: 0.44140625
       originalPivotOffset: {x: 0, y: -0.16607143}
+    - userTriggerTag: 
+      boneNodeIndex: 2
+      triggerEventTypes: 02000000040000000300000006000000
+      pivotOffset: {x: -0.037499998, y: -0.36964285}
+      upperLeft: {x: -49.025, y: 97.4, z: 0}
+      bottomLeft: {x: -49.025, y: -14.6, z: 0}
+      bottomRight: {x: 56.975, y: -14.6, z: 0}
+      upperRight: {x: 56.975, y: 97.4, z: 0}
+      uv:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0.4453125
+        width: 0.4140625
+        height: 0.4375
+      localPosition: {x: 0, y: 0, z: 0}
+      localRotation: 0
+      localScale: {x: 0, y: 0}
+      atlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      textureGUID: d33de4e4e032346318951cdf0623687b
+      materialIndex: 0
+      depth: 0
+      collider:
+        type: 0
+        center: {x: 0, y: 0, z: 0}
+        boxSize: {x: 0, y: 0, z: 0}
+        sphereRadius: 0
+        useAnimationLayer: 1
+        layer: 0
+        isTrigger: 1
+        tag: 
+      originalAtlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      originalTextureGUID: d33de4e4e032346318951cdf0623687b
+      originalMaterialIndex: 0
+      originalUV:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0.4453125
+        width: 0.4140625
+        height: 0.4375
+      originalPivotOffset: {x: -0.037499998, y: -0.36964285}
   - clipIndex: 3
-    frame: 16
+    frame: 18
     triggerFrameBones:
     - userTriggerTag: 
       boneNodeIndex: 1
@@ -1686,7 +1683,50 @@ MonoBehaviour:
         height: 0.44140625
       originalPivotOffset: {x: 0, y: -0.16607143}
   - clipIndex: 3
-    frame: 20
+    frame: 19
+    triggerFrameBones:
+    - userTriggerTag: 
+      boneNodeIndex: 1
+      triggerEventTypes: 02000000040000000300000006000000
+      pivotOffset: {x: 0, y: -0.16607143}
+      upperLeft: {x: -59.5, y: 75.266075, z: 0}
+      bottomLeft: {x: -59.5, y: -37.73393, z: 0}
+      bottomRight: {x: 59.5, y: -37.73393, z: 0}
+      upperRight: {x: 59.5, y: 75.266075, z: 0}
+      uv:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0
+        width: 0.46484375
+        height: 0.44140625
+      localPosition: {x: 0, y: 0, z: 0}
+      localRotation: 0
+      localScale: {x: 0, y: 0}
+      atlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      textureGUID: a019c40e2ee9b4dd28d39c54d9cde915
+      materialIndex: 0
+      depth: 1
+      collider:
+        type: 0
+        center: {x: 0, y: 0, z: 0}
+        boxSize: {x: 0, y: 0, z: 0}
+        sphereRadius: 0
+        useAnimationLayer: 1
+        layer: 0
+        isTrigger: 1
+        tag: 
+      originalAtlas: {fileID: 11400000, guid: 03ae5e156b36e421baa3fee1d35d4f34, type: 2}
+      originalTextureGUID: a019c40e2ee9b4dd28d39c54d9cde915
+      originalMaterialIndex: 0
+      originalUV:
+        serializedVersion: 2
+        x: 0.50390625
+        y: 0
+        width: 0.46484375
+        height: 0.44140625
+      originalPivotOffset: {x: 0, y: -0.16607143}
+  - clipIndex: 3
+    frame: 25
     triggerFrameBones:
     - userTriggerTag: attackafter
       boneNodeIndex: 1
@@ -2170,15 +2210,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 13
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 16
+        - time: 18
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 20
+        - time: 19
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 25
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2196,15 +2240,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 13
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 16
+        - time: 18
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 20
+        - time: 19
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 25
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2222,15 +2270,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 13
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 16
+        - time: 18
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 20
+        - time: 19
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 25
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2248,15 +2300,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 13
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 16
+        - time: 18
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 20
+        - time: 19
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 25
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2274,15 +2330,19 @@ MonoBehaviour:
           value: 0
           inTangent: 0
           outTangent: 0
-        - time: 13
+        - time: 17
           value: 0
           inTangent: 0
           outTangent: 0
-        - time: 16
+        - time: 18
           value: 0
           inTangent: 0
           outTangent: 0
-        - time: 20
+        - time: 19
+          value: 0
+          inTangent: 0
+          outTangent: 0
+        - time: 25
           value: 0
           inTangent: 0
           outTangent: 0
@@ -2299,19 +2359,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 7
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 8
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 9
-          value: 1
-          inTangent: 0
-          outTangent: 0
         - time: 12
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 13
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 14
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2325,19 +2385,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 7
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 8
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 9
-          value: 1
-          inTangent: 0
-          outTangent: 0
         - time: 12
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 13
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 14
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2351,19 +2411,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 7
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 8
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 9
-          value: 1
-          inTangent: 0
-          outTangent: 0
         - time: 12
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 13
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 14
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2377,19 +2437,19 @@ MonoBehaviour:
           value: 1
           inTangent: 0
           outTangent: 0
-        - time: 7
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 8
-          value: 1
-          inTangent: 0
-          outTangent: 0
-        - time: 9
-          value: 1
-          inTangent: 0
-          outTangent: 0
         - time: 12
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 13
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 14
+          value: 1
+          inTangent: 0
+          outTangent: 0
+        - time: 17
           value: 1
           inTangent: 0
           outTangent: 0
@@ -2403,19 +2463,19 @@ MonoBehaviour:
           value: 0
           inTangent: 0
           outTangent: 0
-        - time: 7
-          value: 0
-          inTangent: 0
-          outTangent: 0
-        - time: 8
-          value: 0
-          inTangent: 0
-          outTangent: 0
-        - time: 9
-          value: 0
-          inTangent: 0
-          outTangent: 0
         - time: 12
+          value: 0
+          inTangent: 0
+          outTangent: 0
+        - time: 13
+          value: 0
+          inTangent: 0
+          outTangent: 0
+        - time: 14
+          value: 0
+          inTangent: 0
+          outTangent: 0
+        - time: 17
           value: 0
           inTangent: 0
           outTangent: 0
@@ -2437,9 +2497,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   fixedPos: {x: 0, y: 200, z: 0}
-  OffsetPos: {x: -200, y: 200, z: 0}
+  OffsetPos: {x: -200, y: 0, z: 0}
   smoothTime: 1
---- !u!137 &13746460
+--- !u!137 &13794246
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2470,18 +2530,18 @@ SkinnedMeshRenderer:
   m_UpdateWhenOffscreen: 0
   m_Mesh: {fileID: 0}
   m_Bones:
-  - {fileID: 415024}
-  - {fileID: 456284}
-  - {fileID: 430996}
-  - {fileID: 461978}
-  - {fileID: 491596}
-  - {fileID: 427418}
+  - {fileID: 477290}
+  - {fileID: 483736}
+  - {fileID: 481290}
+  - {fileID: 486426}
+  - {fileID: 481580}
+  - {fileID: 425376}
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 6.455929, y: 59.262646, z: 0}
-    m_Extent: {x: 65.95593, y: 96.99657, z: 0}
-  m_DirtyAABB: 0
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
