@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &168720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 407236}
+  - 114: {fileID: 11452284}
+  - 33: {fileID: 3301036}
+  - 23: {fileID: 2309424}
+  m_Layer: 0
+  m_Name: StageRuin_Cross2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407236
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2309424
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168720}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ab91cd1132a8d4ca198156236c46aafb, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3301036
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168720}
+  m_Mesh: {fileID: 0}
+--- !u!114 &11452284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1951896578, guid: 289bab7cc27a12745b5df9b71d7b06c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 2309424}
+  _meshFilter: {fileID: 3301036}
+  _mesh: {fileID: 0}
+  _halfSize: {x: 74, y: 100}
+  _meshGameObject: {fileID: 168720}
+  _textureIndex: 43
+  _topLeft: {x: -77.171425, y: 73.21429}
+  _topRight: {x: 70.828575, y: 73.21429}
+  _bottomLeft: {x: -77.171425, y: -126.78571}
+  _bottomRight: {x: 70.828575, y: -126.78571}
+  _vertices:
+  - {x: -77.171425, y: 73.21429, z: 0}
+  - {x: -77.171425, y: -126.78571, z: 0}
+  - {x: 70.828575, y: -126.78571, z: 0}
+  - {x: 70.828575, y: 73.21429, z: 0}
+  _colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  _uvs:
+  - {x: 0.31298828, y: 0.7553711}
+  - {x: 0.31298828, y: 0.65771484}
+  - {x: 0.3852539, y: 0.65771484}
+  - {x: 0.3852539, y: 0.7553711}
+  _triangles: 000000000300000001000000030000000200000001000000
+  _normals:
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  atlas: {fileID: 11400000, guid: fcb3898ba22c94b90b83284beb3f71a1, type: 2}
+  textureGUID: 7008705d2fe324d98a9563393042093b
+  sizeMode: 0
+  size: {x: 148, y: 200}
+  scale: {x: 1, y: 1}
+  pivotOffsetOverride: {x: 0, y: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  useDefaultPivot: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 168720}
+  m_IsPrefabParent: 1

@@ -40,7 +40,7 @@ MonoBehaviour:
     height: 0.018554688
   - serializedVersion: 2
     x: 0.31298828
-    y: 0.46142578
+    y: 0.7558594
     width: 0.068359375
     height: 0.09863281
   - serializedVersion: 2
@@ -50,7 +50,7 @@ MonoBehaviour:
     height: 0.1953125
   - serializedVersion: 2
     x: 0.31298828
-    y: 0.3623047
+    y: 0.55859375
     width: 0.071777344
     height: 0.09863281
   - serializedVersion: 2
@@ -213,6 +213,26 @@ MonoBehaviour:
     y: 0.56689453
     width: 0.14648438
     height: 0.115722656
+  - serializedVersion: 2
+    x: 0.31298828
+    y: 0.46044922
+    width: 0.07324219
+    height: 0.09765625
+  - serializedVersion: 2
+    x: 0.31298828
+    y: 0.3623047
+    width: 0.078125
+    height: 0.09765625
+  - serializedVersion: 2
+    x: 0.24902344
+    y: 0.61328125
+    width: 0.061035156
+    height: 0.09765625
+  - serializedVersion: 2
+    x: 0.31298828
+    y: 0.65771484
+    width: 0.072265625
+    height: 0.09765625
   textureGUIDs:
   - b33deaa443144440c9542e718cec8e72
   - 0d96e43699998469582faa6a1e0bf672
@@ -254,6 +274,10 @@ MonoBehaviour:
   - 2760b91e735a8424dab78a1b042c3714
   - 691ddd8ff183142feaae4cdac34550dd
   - 47ecd5150588e4abdbab8a68a3a40aff
+  - 18e769610befa4a10b24511405d3c135
+  - b136f58c25f964992aa24460b54f3f1f
+  - 8671b32d53bb646ffbed9a46d954d957
+  - 7008705d2fe324d98a9563393042093b
   textureSizes:
   - {x: 89, y: 39}
   - {x: 400, y: 123}
@@ -295,6 +319,10 @@ MonoBehaviour:
   - {x: 231, y: 256}
   - {x: 61, y: 256}
   - {x: 300, y: 237}
+  - {x: 150, y: 200}
+  - {x: 160, y: 200}
+  - {x: 125, y: 200}
+  - {x: 148, y: 200}
   defaultPivotOffsets:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -336,6 +364,10 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
+  - {x: -0.0053571425, y: 0.13125}
+  - {x: -0.016071428, y: 0.104464285}
+  - {x: -0.010714285, y: 0.19821428}
+  - {x: 0.02142857, y: 0.13392857}
   textureNames:
   - rock2
   - field
@@ -377,6 +409,10 @@ MonoBehaviour:
   - toture6
   - toture3
   - blackwhitewall
+  - cross3
+  - cross4
+  - cross1
+  - cross2
   texturePaths:
   - Assets/Textures/Stage/Desert/rock2.png
   - Assets/Textures/Stage/Desert/field.png
@@ -418,7 +454,11 @@ MonoBehaviour:
   - Assets/Textures/Stage/Dungeon/toture6.png
   - Assets/Textures/Stage/Dungeon/toture3.png
   - Assets/Textures/Stage/Torture/blackwhitewall.jpg
-  lastBuildID: 20160506013400555
+  - Assets/Textures/Stage/Ruin/cross3.png
+  - Assets/Textures/Stage/Ruin/cross4.png
+  - Assets/Textures/Stage/Ruin/cross1.png
+  - Assets/Textures/Stage/Ruin/cross2.png
+  lastBuildID: 20160815000121972
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 1024
