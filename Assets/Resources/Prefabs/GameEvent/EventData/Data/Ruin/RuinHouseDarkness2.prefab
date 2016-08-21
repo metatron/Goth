@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &125716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400722}
+  - 114: {fileID: 11417980}
+  m_Layer: 0
+  m_Name: RuinHouseDarkness2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400722
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4600, y: 240, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11417980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e332aefc667b5436fa551bd4a2a890ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fType: 1
+  eType: 7
+  id: RuinHouseDarkness1
+  eventListObj: {fileID: 0}
+  targetType: 4
+  targetPath: 
+  targetEnemyStatus:
+    minHp: 10
+    maxHp: 100
+    crntHp: 100
+    minAtk: 10
+    maxAtk: 100
+    crntAtk: 100
+    minMoveSpeed: 100
+    maxMoveSpeed: 200
+    crntMoveSpeed: 100
+    minAtkSpeed: 10
+    maxAtkSpeed: 100
+    crntAtkSpeed: 10
+    minVisibleInc: 0
+    maxVisibleInc: 100
+    crntVisibleInc: 0
+    level: 1
+    type: 0
+    pattern: 0
+    rarity: 1
+    cost: 100
+    skillPathList: []
+    spiritNum: 1
+    friendPossibility: 25
+    spawner: {fileID: 0}
+  targetObject: {fileID: 0}
+  targetByName: 
+  posSetOnInstantiate: 0
+  targetInitPos: {x: 0, y: 0, z: 0}
+  targetInitScale: {x: 1, y: 1, z: 1}
+  direction: 1
+  animationName: stand
+  tweenAnimType: 0
+  tweenAnimTime: 0
+  tweenValue: 0
+  iTweenID: 
+  effectType: 0
+  stagePrefPath: 
+  animAftrStgLoad: 
+  OnDestroyEnemyPrefab: {fileID: 0}
+  totalTime: 3
+  minStageLight: -1
+  maxStageLight: -1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 125716}
+  m_IsPrefabParent: 1

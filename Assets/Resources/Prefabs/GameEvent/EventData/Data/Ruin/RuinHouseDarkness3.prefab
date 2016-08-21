@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400722}
   - 114: {fileID: 11417980}
   m_Layer: 0
-  m_Name: RuinHouseEvent_Darkness
+  m_Name: RuinHouseDarkness3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,9 +40,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e332aefc667b5436fa551bd4a2a890ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fType: 0
-  eType: 0
-  id: RuinMove2HouseEvent
+  fType: 1
+  eType: 7
+  id: RuinHouseDarkness3
   eventListObj: {fileID: 0}
   targetType: 4
   targetPath: 
@@ -77,16 +77,16 @@ MonoBehaviour:
   targetInitPos: {x: 0, y: 0, z: 0}
   targetInitScale: {x: 1, y: 1, z: 1}
   direction: 1
-  animationName: stand
-  tweenAnimType: 0
-  tweenAnimTime: 0
-  tweenValue: 0
-  iTweenID: 
+  animationName: walk
+  tweenAnimType: 5
+  tweenAnimTime: 1
+  tweenValue: -350
+  iTweenID: walkback
   effectType: 0
-  stagePrefPath: Prefabs/Stage/Stage_Ruin_House
+  stagePrefPath: 
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
-  totalTime: 3
+  totalTime: 1
   minStageLight: -1
   maxStageLight: -1
 --- !u!1001 &100100000
