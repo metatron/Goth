@@ -30,7 +30,7 @@ MonoBehaviour:
     height: 0.09863281
   - serializedVersion: 2
     x: 0.39160156
-    y: 0.12841797
+    y: 0.1694336
     width: 0.037109375
     height: 0.019042969
   - serializedVersion: 2
@@ -59,8 +59,8 @@ MonoBehaviour:
     width: 0.084472656
     height: 0.09863281
   - serializedVersion: 2
-    x: 0.39160156
-    y: 0.14794922
+    x: 0.18603516
+    y: 0.90478516
     width: 0.024414062
     height: 0.023925781
   - serializedVersion: 2
@@ -94,8 +94,8 @@ MonoBehaviour:
     width: 0.1430664
     height: 0.09082031
   - serializedVersion: 2
-    x: 0.08496094
-    y: 0.88623047
+    x: 0.16357422
+    y: 0.90478516
     width: 0.021972656
     height: 0.068359375
   - serializedVersion: 2
@@ -119,8 +119,8 @@ MonoBehaviour:
     width: 0.005859375
     height: 0.07128906
   - serializedVersion: 2
-    x: 0.14697266
-    y: 0.68310547
+    x: 0.1953125
+    y: 0.8676758
     width: 0.048828125
     height: 0.03564453
   - serializedVersion: 2
@@ -233,6 +233,36 @@ MonoBehaviour:
     y: 0.65771484
     width: 0.072265625
     height: 0.09765625
+  - serializedVersion: 2
+    x: 0.08496094
+    y: 0.88623047
+    width: 0.03857422
+    height: 0.092285156
+  - serializedVersion: 2
+    x: 0.19824219
+    y: 0.68310547
+    width: 0.045410156
+    height: 0.08886719
+  - serializedVersion: 2
+    x: 0.1953125
+    y: 0.7792969
+    width: 0.038085938
+    height: 0.087890625
+  - serializedVersion: 2
+    x: 0.14697266
+    y: 0.68310547
+    width: 0.05078125
+    height: 0.084472656
+  - serializedVersion: 2
+    x: 0.12548828
+    y: 0.90478516
+    width: 0.037597656
+    height: 0.07519531
+  - serializedVersion: 2
+    x: 0.39160156
+    y: 0.12841797
+    width: 0.037597656
+    height: 0.040527344
   textureGUIDs:
   - b33deaa443144440c9542e718cec8e72
   - 0d96e43699998469582faa6a1e0bf672
@@ -278,6 +308,12 @@ MonoBehaviour:
   - b136f58c25f964992aa24460b54f3f1f
   - 8671b32d53bb646ffbed9a46d954d957
   - 7008705d2fe324d98a9563393042093b
+  - 4a6314717bc23424c933aecea5c2340c
+  - e80e3f27c5b1d471592079c84aced7ef
+  - cd8bc76b677894d52a5e497be1618dca
+  - 550f9b0ce76314616a8349a9fc955aed
+  - 1e1ebf4cb5cf444e28180ed6341881a4
+  - 328723be778644fb2a7ed41bb3bde9f3
   textureSizes:
   - {x: 89, y: 39}
   - {x: 400, y: 123}
@@ -323,6 +359,12 @@ MonoBehaviour:
   - {x: 160, y: 200}
   - {x: 125, y: 200}
   - {x: 148, y: 200}
+  - {x: 79, y: 189}
+  - {x: 93, y: 182}
+  - {x: 78, y: 180}
+  - {x: 104, y: 173}
+  - {x: 77, y: 154}
+  - {x: 77, y: 83}
   defaultPivotOffsets:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -368,6 +410,12 @@ MonoBehaviour:
   - {x: -0.016071428, y: 0.104464285}
   - {x: -0.010714285, y: 0.19821428}
   - {x: 0.02142857, y: 0.13392857}
+  - {x: 0.14999999, y: 0.36499435}
+  - {x: -0.23035714, y: 0.35586733}
+  - {x: 0.21964285, y: 0.3435714}
+  - {x: 0.0053571425, y: -0.2737407}
+  - {x: -0.2142857, y: 0.31339285}
+  - {x: 0.0053571425, y: -0.24352409}
   textureNames:
   - rock2
   - field
@@ -413,6 +461,12 @@ MonoBehaviour:
   - cross4
   - cross1
   - cross2
+  - rightleg
+  - leftleg
+  - rightarm
+  - body
+  - leftarm
+  - head
   texturePaths:
   - Assets/Textures/Stage/Desert/rock2.png
   - Assets/Textures/Stage/Desert/field.png
@@ -458,7 +512,13 @@ MonoBehaviour:
   - Assets/Textures/Stage/Ruin/cross4.png
   - Assets/Textures/Stage/Ruin/cross1.png
   - Assets/Textures/Stage/Ruin/cross2.png
-  lastBuildID: 20160815000121972
+  - Assets/Textures/Stage/Human/rightleg.png
+  - Assets/Textures/Stage/Human/leftleg.png
+  - Assets/Textures/Stage/Human/rightarm.png
+  - Assets/Textures/Stage/Human/body.png
+  - Assets/Textures/Stage/Human/leftarm.png
+  - Assets/Textures/Stage/Human/head.png
+  lastBuildID: 20160902002407333
   needsRebuilt: 0
   dataVersion: 4
   maxAtlasSize: 1024
