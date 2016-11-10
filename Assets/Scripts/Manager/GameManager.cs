@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -34,7 +35,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 
 
 		//TODO stage initialize
-		crntStageData = StageManager.Instance.InstantiateStage("Prefabs/Stage/Stage_Home");//InitStage (playerParam.level);
+		if("StageTest" != SceneManager.GetActiveScene().name) {
+			crntStageData = StageManager.Instance.InstantiateStage("Prefabs/Stage/Stage_Home");//InitStage (playerParam.level);
+		}
 
 		//play wakeup animation
 		playerCharacter.playerAnimation.Play("wakeup");
@@ -49,7 +52,9 @@ public class GameManager : SingletonMonoBehaviourFast<GameManager> {
 		ResetPlayerParam();
 
 		//after load status, remove collected items
-		crntStageData.InitStageCollectionItems();
+		if (crntStageData != null) {
+			crntStageData.InitStageCollectionItems ();
+		}
 	}
 
 	public void Update() {
