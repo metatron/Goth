@@ -83,7 +83,7 @@ MonoBehaviour:
   tweenValue: 0
   iTweenID: 
   effectType: 0
-  stagePrefPath: Prefabs/Stage/Stage_Ruin_House
+  stagePrefPath: Prefabs/Stage/Stage_Ruin_TotalDark
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
   totalTime: 3

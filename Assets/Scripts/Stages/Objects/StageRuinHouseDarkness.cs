@@ -13,7 +13,7 @@ public class StageRuinHouseDarkness : MonoBehaviour {
 
 		iTween.ValueTo(gameObject, iTween.Hash(
 			"from", 1.0f, 
-			"to", 4.0f, 
+			"to", 5.0f, 
 			"time", 0.5f, 
 			"onupdate", "UpdateValue",
 			"oncompletetarget", gameObject,
