@@ -3161,7 +3161,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  animationData: {fileID: 11400000, guid: d35ebf8286e4a413aadbf9b295f06ce1, type: 2}
+  animationData: {fileID: 0}
   animationDataGUID: d35ebf8286e4a413aadbf9b295f06ce1
   mMaterialSource:
   - {fileID: 2100000, guid: ab91cd1132a8d4ca198156236c46aafb, type: 2}
@@ -3309,7 +3309,7 @@ MonoBehaviour:
   - {fileID: 481604}
   mMaterials:
   - {fileID: 2100000, guid: ab91cd1132a8d4ca198156236c46aafb, type: 2}
-  buildID: 201609020049480221
+  buildID: 
   mFinalImportScale: 1
   mDefaultAnimationName: stand
   mLastBoneColor:
@@ -6378,7 +6378,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  animationData: {fileID: 11400000, guid: d35ebf8286e4a413aadbf9b295f06ce1, type: 2}
+  animationData: {fileID: 0}
   animationDataGUID: d35ebf8286e4a413aadbf9b295f06ce1
   mMaterialSource:
   - {fileID: 2100000, guid: ab91cd1132a8d4ca198156236c46aafb, type: 2}
@@ -6526,7 +6526,7 @@ MonoBehaviour:
   - {fileID: 416000}
   mMaterials:
   - {fileID: 2100000, guid: ab91cd1132a8d4ca198156236c46aafb, type: 2}
-  buildID: 201609020049480221
+  buildID: 
   mFinalImportScale: 1
   mDefaultAnimationName: stand
   mLastBoneColor:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: HumanAnimation
   m_EditorClassIdentifier: 
   buildID: 201609020049480221
-  needsRebuilt: 0
+  needsRebuilt: 1
   boneDataList:
   - active: 1
     boneName: Root
