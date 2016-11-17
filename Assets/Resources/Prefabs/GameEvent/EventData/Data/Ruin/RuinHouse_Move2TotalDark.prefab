@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400722}
   - 114: {fileID: 11417980}
   m_Layer: 0
-  m_Name: RuinHouseDarkness2
+  m_Name: RuinHouse_Move2TotalDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,9 +40,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e332aefc667b5436fa551bd4a2a890ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fType: 1
-  eType: 7
-  id: RuinHouseDarkness1
+  fType: 0
+  eType: 0
+  id: RuinHouse_Move2TotalDark
   eventListObj: {fileID: 0}
   targetType: 4
   targetPath: 
@@ -83,7 +83,7 @@ MonoBehaviour:
   tweenValue: 0
   iTweenID: 
   effectType: 0
-  stagePrefPath: 
+  stagePrefPath: Prefabs/Stage/Stage_Ruin_TotalDark
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
   totalTime: 2

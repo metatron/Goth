@@ -11,7 +11,7 @@ GameObject:
   - 65: {fileID: 6559492}
   - 114: {fileID: 11445330}
   m_Layer: 0
-  m_Name: RuinHouseEvent_Darkness
+  m_Name: TotalDarkEvent_Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,16 +53,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dcb3feedb13f46a99dfddc19f924d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: RuinHouseEvent_Darkness
+  id: TotalDarkEvent_Apple
   needClrNum4NxtEvnt: 0
   nextEventListObj: {fileID: 0}
-  willStoreOnDoneList: 1
+  willStoreOnDoneList: 0
   eventDataList:
-  - {fileID: 11417980, guid: 25256168e08b044659981d4dee4e3d05, type: 2}
-  - {fileID: 11417980, guid: 1ba661c64a8a64e2ebf8b124fd8fbf64, type: 2}
-  - {fileID: 11417980, guid: 9731fe3206ce048a18e427e2f9068d0e, type: 2}
-  - {fileID: 11417980, guid: a193e8ea20e7246529c37fe6172e8b11, type: 2}
-  - {fileID: 11417980, guid: 0f956cb4628454155935c52b5b01f723, type: 2}
+  - {fileID: 11475822, guid: 4063538d8e5eb4a9b85890cd972ae3de, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

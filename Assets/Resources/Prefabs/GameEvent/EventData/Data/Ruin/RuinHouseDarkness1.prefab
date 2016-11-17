@@ -86,7 +86,7 @@ MonoBehaviour:
   stagePrefPath: 
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
-  totalTime: 4
+  totalTime: 1
   minStageLight: -1
   maxStageLight: -1
 --- !u!1001 &100100000

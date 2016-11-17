@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent (typeof (BoxCollider))]
 [Serializable]
 public class CollectionData : MonoBehaviour {
 	[SerializeField]

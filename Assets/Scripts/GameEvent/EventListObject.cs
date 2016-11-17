@@ -58,6 +58,7 @@ public class EventListObject : MonoBehaviour {
 			crntEventData.DestroyEventDataObj ();
 			//set the next event
 			crntEventData = eventDataList [index];
+			crntEventData.eventListObj = this;
 			//start the event
 			StartCoroutine (PlayEvent ());
 		}
@@ -92,9 +93,9 @@ public class EventListObject : MonoBehaviour {
 
 	IEnumerator Wait4FaderFinish() {
 		while (FaderObject.isFading) {
-			Debug.LogError ("====Wait4FaderFinish...");
+			Debug.LogError ("====(" + this + ") Wait4FaderFinish...");
 			yield return new WaitForSeconds (1.0f);
-			Debug.LogError ("====Wait4FaderFinished!!!");
+			Debug.LogError ("====(" + this + ") Wait4FaderFinished!!!");
 		}
 
 		Debug.LogError ("================= End  EventList =============: " + gameObject);

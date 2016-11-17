@@ -30,6 +30,5 @@ public class StageRuinHouseDarkness : MonoBehaviour {
 	}
 
 	private void OnScaleFinished() {
-		Debug.LogError ("******************1");
 	}
 }
