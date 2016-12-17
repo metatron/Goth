@@ -44,7 +44,7 @@ MonoBehaviour:
   eType: 0
   id: TotalDark_Event1
   eventListObj: {fileID: 0}
-  targetType: 4
+  targetType: 3
   targetPath: 
   targetEnemyStatus:
     minHp: 10
@@ -72,21 +72,21 @@ MonoBehaviour:
     friendPossibility: 25
     spawner: {fileID: 0}
   targetObject: {fileID: 0}
-  targetByName: 
+  targetByName: RottenApple01
   posSetOnInstantiate: 0
   targetInitPos: {x: 0, y: 0, z: 0}
   targetInitScale: {x: 1, y: 1, z: 1}
-  direction: 1
-  animationName: stand
-  tweenAnimType: 0
-  tweenAnimTime: 0
-  tweenValue: 0
+  direction: 99
+  animationName: 
+  tweenAnimType: 3
+  tweenAnimTime: 3
+  tweenValue: -734
   iTweenID: 
   effectType: 0
   stagePrefPath: 
   animAftrStgLoad: 
   OnDestroyEnemyPrefab: {fileID: 0}
-  totalTime: 3
+  totalTime: 0
   minStageLight: -1
   maxStageLight: -1
 --- !u!1001 &100100000
