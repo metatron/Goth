@@ -547,8 +547,8 @@ MonoBehaviour:
   collectionItemList: []
   stageEventList: []
   homeDoorObj: {fileID: 0}
-  minStageLight: 0.2
-  maxStageLight: 0.5
+  minStageLight: 0.1
+  maxStageLight: 0.4
   skyBoxMat: {fileID: 2100000, guid: 7400269f7d341bc41b1f21adeccb2a5f, type: 2}
   worldCloudness: 0.1
 --- !u!114 &11475218
